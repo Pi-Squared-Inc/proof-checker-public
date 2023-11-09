@@ -12,3 +12,11 @@ This repository contains implementations of the matchign logic proof checker usi
 * Build:
 * Run without generating a certificate:
 * Generate a certificate:
+
+## Cairo
+
+In the `cairo` directory:
+* Build the checker: `scarb build`
+* Build and run the checker: `scarb cairo-run`
+* Run the tests: `scarb cairo-test`
+
