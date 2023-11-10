@@ -17,6 +17,7 @@ Note that the code in this repository is experimental and exploratory.
 ## Cairo
 
 In the `cairo` directory:
+
 * Build the checker: `scarb build`
 * Build and run the checker: `scarb cairo-run`
 * Run the tests: `scarb cairo-test`
