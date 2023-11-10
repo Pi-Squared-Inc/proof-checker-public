@@ -1,0 +1,23 @@
+[package]
+name = "guest"
+version = "0.1.0"
+edition = "2021"
+
+# Always optimize; building and running the guest takes much longer without optimization.
+[profile.dev]
+opt-level = 3
+lto = true
+
+[profile.release]
+opt-level = 3
+lto = true
+
+[[bin]]
+name = "guest"
+path = "src/main.rs"
+
+[dependencies]
+checker = { path = "../../checker" }
+risc0-zkvm = { version = "0.16.1", default-features = false, features = [ "std" ] }
+
+[workspace]

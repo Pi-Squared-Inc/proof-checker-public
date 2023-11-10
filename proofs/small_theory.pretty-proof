@@ -1,0 +1,69 @@
+Symbol s0
+	Stack:
+	0: σs0
+Symbol s1
+	Stack:
+	0: σs0
+	1: σs1
+Symbol s2
+	Stack:
+	0: σs0
+	1: σs1
+	2: σs2
+Prop2
+	Stack:
+	0: σs0
+	1: σs1
+	2: σs2
+	3: ⊢ ((phi0 -> (phi1 -> phi2)) -> ((phi0 -> phi1) -> (phi0 -> phi2)))
+Instantiate 0, 1, 2
+	Stack:
+	0: ⊢ ((σs0 -> (σs1 -> σs2)) -> ((σs0 -> σs1) -> (σs0 -> σs2)))
+Symbol s1
+	Stack:
+	0: ⊢ ((σs0 -> (σs1 -> σs2)) -> ((σs0 -> σs1) -> (σs0 -> σs2)))
+	1: σs1
+Symbol s2
+	Stack:
+	0: ⊢ ((σs0 -> (σs1 -> σs2)) -> ((σs0 -> σs1) -> (σs0 -> σs2)))
+	1: σs1
+	2: σs2
+Implies
+	Stack:
+	0: ⊢ ((σs0 -> (σs1 -> σs2)) -> ((σs0 -> σs1) -> (σs0 -> σs2)))
+	1: (σs1 -> σs2)
+Symbol s0
+	Stack:
+	0: ⊢ ((σs0 -> (σs1 -> σs2)) -> ((σs0 -> σs1) -> (σs0 -> σs2)))
+	1: (σs1 -> σs2)
+	2: σs0
+Prop1
+	Stack:
+	0: ⊢ ((σs0 -> (σs1 -> σs2)) -> ((σs0 -> σs1) -> (σs0 -> σs2)))
+	1: (σs1 -> σs2)
+	2: σs0
+	3: ⊢ (phi0 -> (phi1 -> phi0))
+Instantiate 0, 1
+	Stack:
+	0: ⊢ ((σs0 -> (σs1 -> σs2)) -> ((σs0 -> σs1) -> (σs0 -> σs2)))
+	1: ⊢ ((σs1 -> σs2) -> (σs0 -> (σs1 -> σs2)))
+Load Axiom (σs1 -> σs2)=1
+	Stack:
+	0: ⊢ ((σs0 -> (σs1 -> σs2)) -> ((σs0 -> σs1) -> (σs0 -> σs2)))
+	1: ⊢ ((σs1 -> σs2) -> (σs0 -> (σs1 -> σs2)))
+	2: ⊢ (σs1 -> σs2)
+ModusPonens
+	Stack:
+	0: ⊢ ((σs0 -> (σs1 -> σs2)) -> ((σs0 -> σs1) -> (σs0 -> σs2)))
+	1: ⊢ (σs0 -> (σs1 -> σs2))
+ModusPonens
+	Stack:
+	0: ⊢ ((σs0 -> σs1) -> (σs0 -> σs2))
+Load Axiom (σs0 -> σs1)=0
+	Stack:
+	0: ⊢ ((σs0 -> σs1) -> (σs0 -> σs2))
+	1: ⊢ (σs0 -> σs1)
+ModusPonens
+	Stack:
+	0: ⊢ (σs0 -> σs2)
+Publish

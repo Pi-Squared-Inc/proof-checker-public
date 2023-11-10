@@ -1,0 +1,18 @@
+[package]
+name = "zk-host"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+risc0-zkvm = { version = "0.16.1" }
+checker = { path = "../checker" }
+
+[build-dependencies]
+risc0-build = { version = "0.16.1" }
+
+[package.metadata.risc0]
+methods = ["guest"]
+
+[[bin]]
+name = "host"
+path = "src/main.rs"
