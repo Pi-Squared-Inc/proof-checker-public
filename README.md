@@ -1,6 +1,7 @@
 # $\Pi^2$ Proof Checkers
 
 This repository contains implementations of the matchign logic proof checker using various ZK implementations.
+Note that the code in this repository is experimental and exploratory.
 
 ## Risc0
 
