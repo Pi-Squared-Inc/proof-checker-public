@@ -10,9 +10,15 @@ Note that the code in this repository is experimental and exploratory.
 
 ## zkLLVM
 
-* Build:
-* Run without generating a certificate:
-* Generate a certificate:
+* Translate binary input to zkllvm input:
+`python3 translator.py <path-to-assumption> <path-to-claim> <path-to-proof>`
+* We have a build script to generate circuit and proof:
+`build.sh src/main.cpp inputs/transfer-simple-compressed-goal.inp`
+
+The build script does the following:
+* Use `clang` to compile the proof checker
+* Use `assigner` to  circuit and assignment table.Check the circuit satisfiability with the generated assignment table.
+* Use `transpiler` to generate the proof and verify it.
 
 ## Cairo
 
