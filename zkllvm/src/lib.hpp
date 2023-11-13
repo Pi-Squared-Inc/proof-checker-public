@@ -876,7 +876,7 @@ struct Pattern {
     // Axioms
     // Prop1: phi0 => (phi1 => phi0)
     // Prop2: (phi0 => (phi1 => phi2)) => ((phi0 => phi1) => (phi0 => phi2))
-    // Prop3: (~phi0 => phi0
+    // Prop3: (~(~phi0 => phi0)
     auto prop1 = implies(phi0.clone(), implies(phi1.clone(), phi0.clone()));
     auto prop2 =
         implies(implies(phi0.clone(), implies(phi1.clone(), phi2.clone())),
@@ -894,8 +894,6 @@ struct Pattern {
     // Iteration through the input buffer
     while (iterator != buffer.end()) {
       Instruction instr_u32 = from(static_cast<int>(*iterator));
-      // std::cout << "Instruction: " << static_cast<int>(*iterator) <<
-      // std::endl;
       iterator++;
 
       switch (instr_u32) {
