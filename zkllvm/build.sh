@@ -20,7 +20,8 @@ fi
 FILE=$(basename "${1}")
 FILEPATH=$(dirname "$(realpath "${1}")")
 FILENAME=${FILE%%.*}
-OUTPUTDIR="output"
+ROOT_DIR=$(dirname "$(realpath "${0}")")/../
+OUTPUTDIR="${ROOT_DIR}/.build/zkllvm"
 EXT=${FILE##*.}
 INPUT=$2
 
@@ -40,8 +41,15 @@ OUTPUT_LLVM_LINK_2="${OUTPUTDIR}/${FILENAME}_${EXT}_example.ll"
 OUTPUT_CIRCUIT="${OUTPUTDIR}/circuit.crct"
 OUTPUT_TABLE="${OUTPUTDIR}/assignment_table.tbl"
 
-# Clean output directory
-rm -r output/*
+# Creating output directory under `.build` if it doesn't exist or clean it if it does
+if [[ ! -d "${ROOT_DIR}/.build" ]]; then
+  mkdir "${ROOT_DIR}/.build"
+fi
+if [[ ! -d "${OUTPUTDIR}" ]]; then
+  mkdir "${OUTPUTDIR}"
+else
+  rm -r "${OUTPUTDIR:?}/*"
+fi
 
 # Compile the program to LLVM IR
 ${CLANG_EXE} -target assigner -D__ZKLLVM__ \

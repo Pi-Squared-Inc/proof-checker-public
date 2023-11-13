@@ -68,7 +68,7 @@ Then you can build and execute the Proof-Checker with real input:
 
 You can also run it with g++/clang to any textual output or exception that may happen:
 ```bash
-g++ -DDEBUG=1 -std=c++20 -g src/main.cpp -o output/a.out && ./output/a.out 
+g++ -DDEBUG=1 -std=c++20 -g src/main.cpp -o ../.build/zkllvm/a.out && ../.build/zkllvm/a.out 
 ```
 
 If you want to run the Proof-Checker unit tests, you can use the followinf commands:
@@ -79,7 +79,7 @@ For zkLLVM:
 
 For g++/clang:
 ```bash
-g++ -DDEBUG=1 -std=c++20 -g src/tests.cpp -o output/a.out && ./output/a.out
+g++ -DDEBUG=1 -std=c++20 -g src/tests.cpp -o ../.build/zkllvm/a.out && ../.build/zkllvm/a.out
 ```
 
 ### Translation from binary input to zkllvm input
