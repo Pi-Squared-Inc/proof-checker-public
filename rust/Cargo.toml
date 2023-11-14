@@ -1,0 +1,15 @@
+[package]
+name = "checker"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "checker"
+path = "src/lib.rs"
+
+[[bin]]
+name = "profiler"
+path = "src/profiler.rs"
+
+[dependencies]
+

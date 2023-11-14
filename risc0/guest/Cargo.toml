@@ -17,7 +17,7 @@ name = "guest"
 path = "src/main.rs"
 
 [dependencies]
-checker = { path = "../../checker" }
+checker = { path = "../../rust" }
 risc0-zkvm = { version = "0.16.1", default-features = false, features = [ "std" ] }
 
 [workspace]
