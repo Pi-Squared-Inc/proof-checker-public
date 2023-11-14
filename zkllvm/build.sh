@@ -81,6 +81,7 @@ ${CLANG_EXE} -target assigner -D__ZKLLVM__ \
 -I "${CRYPTO3_LIB_DIR}"/libs/zk/include \
 -I "${ZKLLVM_ROOT}"/libs/stdlib/libcpp \
 -I "${ZKLLVM_ROOT}"/libs/stdlib/libc/include \
+-I "${FILEPATH}/../../cpp/src" \
 -emit-llvm -O1 -S -std=c++20 "${FILEPATH}/${FILE}" -o "${OUTPUT_CLANG}"
 
 # Link the program with the ZKLLVM libc
