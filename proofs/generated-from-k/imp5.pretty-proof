@@ -20,604 +20,604 @@ App
 	Stack:
 	0: σksort_SortInt
 	1: σ0
-	2: app(σkore_dv, phi0)
+	2: (σkore_dv · phi0)
 MetaVar 1
 	Stack:
 	0: σksort_SortInt
 	1: σ0
-	2: app(σkore_dv, phi0)
+	2: (σkore_dv · phi0)
 	3: phi1
 App
 	Stack:
 	0: σksort_SortInt
 	1: σ0
-	2: app(app(σkore_dv, phi0), phi1)
+	2: ((σkore_dv · phi0) · phi1)
 Instantiate 0, 1
 	Stack:
-	0: dv(σksort_SortInt)
+	0: σ0:σksort_SortInt
 Symbol kore_Lbl'-LT-'generatedCounter'-GT-'
 	Stack:
-	0: dv(σksort_SortInt)
+	0: σ0:σksort_SortInt
 	1: σkore_Lbl'-LT-'generatedCounter'-GT-'
 MetaVar 0
 	Stack:
-	0: dv(σksort_SortInt)
+	0: σ0:σksort_SortInt
 	1: σkore_Lbl'-LT-'generatedCounter'-GT-'
 	2: phi0
 App
 	Stack:
-	0: dv(σksort_SortInt)
-	1: app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)
+	0: σ0:σksort_SortInt
+	1: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)
 Instantiate 0
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
 Symbol ksort_SortInt
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
 	1: σksort_SortInt
 Symbol 0
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
 	1: σksort_SortInt
 	2: σ0
 Symbol kore_dv
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
 	1: σksort_SortInt
 	2: σ0
 	3: σkore_dv
 MetaVar 0
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
 	1: σksort_SortInt
 	2: σ0
 	3: σkore_dv
 	4: phi0
 App
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
 	1: σksort_SortInt
 	2: σ0
-	3: app(σkore_dv, phi0)
+	3: (σkore_dv · phi0)
 MetaVar 1
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
 	1: σksort_SortInt
 	2: σ0
-	3: app(σkore_dv, phi0)
+	3: (σkore_dv · phi0)
 	4: phi1
 App
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
 	1: σksort_SortInt
 	2: σ0
-	3: app(app(σkore_dv, phi0), phi1)
+	3: ((σkore_dv · phi0) · phi1)
 Instantiate 0, 1
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
 Symbol ksort_SortInt
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
 	2: σksort_SortInt
 Symbol 0
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
 	2: σksort_SortInt
 	3: σ0
 Symbol kore_dv
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
 	2: σksort_SortInt
 	3: σ0
 	4: σkore_dv
 MetaVar 0
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
 	2: σksort_SortInt
 	3: σ0
 	4: σkore_dv
 	5: phi0
 App
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
 	2: σksort_SortInt
 	3: σ0
-	4: app(σkore_dv, phi0)
+	4: (σkore_dv · phi0)
 MetaVar 1
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
 	2: σksort_SortInt
 	3: σ0
-	4: app(σkore_dv, phi0)
+	4: (σkore_dv · phi0)
 	5: phi1
 App
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
 	2: σksort_SortInt
 	3: σ0
-	4: app(app(σkore_dv, phi0), phi1)
+	4: ((σkore_dv · phi0) · phi1)
 Instantiate 0, 1
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
 Symbol ksort_SortInt
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
 	3: σksort_SortInt
 Symbol 0
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
 	3: σksort_SortInt
 	4: σ0
 Symbol kore_dv
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
 	3: σksort_SortInt
 	4: σ0
 	5: σkore_dv
 MetaVar 0
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
 	3: σksort_SortInt
 	4: σ0
 	5: σkore_dv
 	6: phi0
 App
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
 	3: σksort_SortInt
 	4: σ0
-	5: app(σkore_dv, phi0)
+	5: (σkore_dv · phi0)
 MetaVar 1
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
 	3: σksort_SortInt
 	4: σ0
-	5: app(σkore_dv, phi0)
+	5: (σkore_dv · phi0)
 	6: phi1
 App
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
 	3: σksort_SortInt
 	4: σ0
-	5: app(app(σkore_dv, phi0), phi1)
+	5: ((σkore_dv · phi0) · phi1)
 Instantiate 0, 1
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
 Symbol ksort_SortInt
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
 	4: σksort_SortInt
 Symbol 0
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
 	4: σksort_SortInt
 	5: σ0
 Symbol kore_dv
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
 	4: σksort_SortInt
 	5: σ0
 	6: σkore_dv
 MetaVar 0
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
 	4: σksort_SortInt
 	5: σ0
 	6: σkore_dv
 	7: phi0
 App
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
 	4: σksort_SortInt
 	5: σ0
-	6: app(σkore_dv, phi0)
+	6: (σkore_dv · phi0)
 MetaVar 1
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
 	4: σksort_SortInt
 	5: σ0
-	6: app(σkore_dv, phi0)
+	6: (σkore_dv · phi0)
 	7: phi1
 App
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
 	4: σksort_SortInt
 	5: σ0
-	6: app(app(σkore_dv, phi0), phi1)
+	6: ((σkore_dv · phi0) · phi1)
 Instantiate 0, 1
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
 Symbol ksort_SortInt
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
 	5: σksort_SortInt
 Symbol 0
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
 	5: σksort_SortInt
 	6: σ0
 Symbol kore_dv
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
 	5: σksort_SortInt
 	6: σ0
 	7: σkore_dv
 MetaVar 0
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
 	5: σksort_SortInt
 	6: σ0
 	7: σkore_dv
 	8: phi0
 App
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
 	5: σksort_SortInt
 	6: σ0
-	7: app(σkore_dv, phi0)
+	7: (σkore_dv · phi0)
 MetaVar 1
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
 	5: σksort_SortInt
 	6: σ0
-	7: app(σkore_dv, phi0)
+	7: (σkore_dv · phi0)
 	8: phi1
 App
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
 	5: σksort_SortInt
 	6: σ0
-	7: app(app(σkore_dv, phi0), phi1)
+	7: ((σkore_dv · phi0) · phi1)
 Instantiate 0, 1
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
 Symbol ksort_SortInt
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
 	6: σksort_SortInt
 Symbol 0
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
 	6: σksort_SortInt
 	7: σ0
 Symbol kore_dv
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
 	6: σksort_SortInt
 	7: σ0
 	8: σkore_dv
 MetaVar 0
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
 	6: σksort_SortInt
 	7: σ0
 	8: σkore_dv
 	9: phi0
 App
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
 	6: σksort_SortInt
 	7: σ0
-	8: app(σkore_dv, phi0)
+	8: (σkore_dv · phi0)
 MetaVar 1
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
 	6: σksort_SortInt
 	7: σ0
-	8: app(σkore_dv, phi0)
+	8: (σkore_dv · phi0)
 	9: phi1
 App
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
 	6: σksort_SortInt
 	7: σ0
-	8: app(app(σkore_dv, phi0), phi1)
+	8: ((σkore_dv · phi0) · phi1)
 Instantiate 0, 1
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
-	6: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
+	6: σ0:σksort_SortInt
 Symbol kore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
-	6: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
+	6: σ0:σksort_SortInt
 	7: σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int
 MetaVar 0
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
-	6: dv(σksort_SortInt)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
+	6: σ0:σksort_SortInt
 	7: σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int
 	8: phi0
 App
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
-	6: dv(σksort_SortInt)
-	7: app(σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int, phi0)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
+	6: σ0:σksort_SortInt
+	7: (σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int · phi0)
 MetaVar 1
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
-	6: dv(σksort_SortInt)
-	7: app(σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int, phi0)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
+	6: σ0:σksort_SortInt
+	7: (σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int · phi0)
 	8: phi1
 App
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
-	6: dv(σksort_SortInt)
-	7: app(app(σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int, phi0), phi1)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
+	6: σ0:σksort_SortInt
+	7: ((σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int · phi0) · phi1)
 MetaVar 2
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
-	6: dv(σksort_SortInt)
-	7: app(app(σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int, phi0), phi1)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
+	6: σ0:σksort_SortInt
+	7: ((σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int · phi0) · phi1)
 	8: phi2
 App
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
-	6: dv(σksort_SortInt)
-	7: app(app(app(σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int, phi0), phi1), phi2)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
+	6: σ0:σksort_SortInt
+	7: (((σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int · phi0) · phi1) · phi2)
 MetaVar 3
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
-	6: dv(σksort_SortInt)
-	7: app(app(app(σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int, phi0), phi1), phi2)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
+	6: σ0:σksort_SortInt
+	7: (((σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int · phi0) · phi1) · phi2)
 	8: phi3
 App
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
-	6: dv(σksort_SortInt)
-	7: app(app(app(app(σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int, phi0), phi1), phi2), phi3)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
+	6: σ0:σksort_SortInt
+	7: ((((σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int · phi0) · phi1) · phi2) · phi3)
 MetaVar 4
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
-	6: dv(σksort_SortInt)
-	7: app(app(app(app(σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int, phi0), phi1), phi2), phi3)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
+	6: σ0:σksort_SortInt
+	7: ((((σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int · phi0) · phi1) · phi2) · phi3)
 	8: phi4
 App
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
-	6: dv(σksort_SortInt)
-	7: app(app(app(app(app(σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int, phi0), phi1), phi2), phi3), phi4)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
+	6: σ0:σksort_SortInt
+	7: (((((σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int · phi0) · phi1) · phi2) · phi3) · phi4)
 MetaVar 5
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
-	6: dv(σksort_SortInt)
-	7: app(app(app(app(app(σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int, phi0), phi1), phi2), phi3), phi4)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
+	6: σ0:σksort_SortInt
+	7: (((((σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int · phi0) · phi1) · phi2) · phi3) · phi4)
 	8: phi5
 App
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: dv(σksort_SortInt)
-	2: dv(σksort_SortInt)
-	3: dv(σksort_SortInt)
-	4: dv(σksort_SortInt)
-	5: dv(σksort_SortInt)
-	6: dv(σksort_SortInt)
-	7: app(app(app(app(app(app(σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int, phi0), phi1), phi2), phi3), phi4), phi5)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: σ0:σksort_SortInt
+	2: σ0:σksort_SortInt
+	3: σ0:σksort_SortInt
+	4: σ0:σksort_SortInt
+	5: σ0:σksort_SortInt
+	6: σ0:σksort_SortInt
+	7: ((((((σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int · phi0) · phi1) · phi2) · phi3) · phi4) · phi5)
 Instantiate 0, 1, 2, 3, 4, 5
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: (app(app(app(app(app(app(σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int, phi0), phi1), phi2), phi3), phi4), phi5)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 1: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 2: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 3: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 4: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 5: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: ((((((σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int · phi0) · phi1) · phi2) · phi3) · phi4) · phi5)[{0: 'σ0:σksort_SortInt', 1: 'σ0:σksort_SortInt', 2: 'σ0:σksort_SortInt', 3: 'σ0:σksort_SortInt', 4: 'σ0:σksort_SortInt', 5: 'σ0:σksort_SortInt'}]
 Symbol kore_Lbl'-LT-'s'-GT-'
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: (app(app(app(app(app(app(σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int, phi0), phi1), phi2), phi3), phi4), phi5)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 1: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 2: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 3: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 4: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 5: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: ((((((σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int · phi0) · phi1) · phi2) · phi3) · phi4) · phi5)[{0: 'σ0:σksort_SortInt', 1: 'σ0:σksort_SortInt', 2: 'σ0:σksort_SortInt', 3: 'σ0:σksort_SortInt', 4: 'σ0:σksort_SortInt', 5: 'σ0:σksort_SortInt'}]
 	2: σkore_Lbl'-LT-'s'-GT-'
 MetaVar 0
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: (app(app(app(app(app(app(σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int, phi0), phi1), phi2), phi3), phi4), phi5)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 1: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 2: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 3: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 4: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 5: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: ((((((σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int · phi0) · phi1) · phi2) · phi3) · phi4) · phi5)[{0: 'σ0:σksort_SortInt', 1: 'σ0:σksort_SortInt', 2: 'σ0:σksort_SortInt', 3: 'σ0:σksort_SortInt', 4: 'σ0:σksort_SortInt', 5: 'σ0:σksort_SortInt'}]
 	2: σkore_Lbl'-LT-'s'-GT-'
 	3: phi0
 App
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: (app(app(app(app(app(app(σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int, phi0), phi1), phi2), phi3), phi4), phi5)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 1: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 2: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 3: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 4: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 5: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	2: app(σkore_Lbl'-LT-'s'-GT-', phi0)
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: ((((((σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int · phi0) · phi1) · phi2) · phi3) · phi4) · phi5)[{0: 'σ0:σksort_SortInt', 1: 'σ0:σksort_SortInt', 2: 'σ0:σksort_SortInt', 3: 'σ0:σksort_SortInt', 4: 'σ0:σksort_SortInt', 5: 'σ0:σksort_SortInt'}]
+	2: (σkore_Lbl'-LT-'s'-GT-' · phi0)
 Instantiate 0
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: (app(σkore_Lbl'-LT-'s'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=App(left=App(left=App(left=App(left=Symbol(name="kore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=2, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=3, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=4, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=5, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 1: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 2: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 3: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 4: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 5: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}))}])
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: (σkore_Lbl'-LT-'s'-GT-' · phi0)[{0: "((((((σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int · phi0) · phi1) · phi2) · phi3) · phi4) · phi5)[{0: 'σ0:σksort_SortInt', 1: 'σ0:σksort_SortInt', 2: 'σ0:σksort_SortInt', 3: 'σ0:σksort_SortInt', 4: 'σ0:σksort_SortInt', 5: 'σ0:σksort_SortInt'}]"}]
 Symbol kore_dotk
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: (app(σkore_Lbl'-LT-'s'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=App(left=App(left=App(left=App(left=Symbol(name="kore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=2, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=3, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=4, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=5, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 1: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 2: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 3: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 4: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 5: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}))}])
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: (σkore_Lbl'-LT-'s'-GT-' · phi0)[{0: "((((((σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int · phi0) · phi1) · phi2) · phi3) · phi4) · phi5)[{0: 'σ0:σksort_SortInt', 1: 'σ0:σksort_SortInt', 2: 'σ0:σksort_SortInt', 3: 'σ0:σksort_SortInt', 4: 'σ0:σksort_SortInt', 5: 'σ0:σksort_SortInt'}]"}]
 	2: σkore_dotk
 Instantiate 
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: (app(σkore_Lbl'-LT-'s'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=App(left=App(left=App(left=App(left=Symbol(name="kore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=2, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=3, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=4, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=5, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 1: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 2: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 3: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 4: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 5: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}))}])
-	2: (σkore_dotk[{}])
-Load Axiom (((((((phi0 -> ((μ X0 . X0)[{}]))[{0: MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())}]) -> phi1)[{0: MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=()), 1: MetaVar(name=2, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())}])[{0: MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=()), 1: Instantiate(pattern=Instantiate(pattern=Instantiate(pattern=Implies(left=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=()), right=Instantiate(pattern=Mu(var=0, subpattern=SVar(name=0)), inst=frozendict.frozendict({}))), inst=frozendict.frozendict({0: Implies(left=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=()), right=Instantiate(pattern=Implies(left=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=()), right=Instantiate(pattern=Mu(var=0, subpattern=SVar(name=0)), inst=frozendict.frozendict({}))), inst=frozendict.frozendict({0: MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())})))})), inst=frozendict.frozendict({0: Instantiate(pattern=Implies(left=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=()), right=Instantiate(pattern=Mu(var=0, subpattern=SVar(name=0)), inst=frozendict.frozendict({}))), inst=frozendict.frozendict({0: MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())})), 1: Instantiate(pattern=App(left=Symbol(name='inhabitant'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())}))})), inst=frozendict.frozendict({0: MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=()), 1: MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())})), 2: MetaVar(name=2, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())}])[{0: MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=()), 1: MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=()), 2: Instantiate(pattern=App(left=Symbol(name='kore_next'), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=()), 1: MetaVar(name=2, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())}))}])[{0: Symbol(name='ksort_SortGeneratedTopCell'), 1: Instantiate(pattern=App(left=App(left=Symbol(name="kore_Lbl'-LT-'generatedTop'-GT-'"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=App(left=Symbol(name="kore_Lbl'-LT-'T'-GT-'"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=Symbol(name="kore_Lbl'-LT-'k'-GT-'"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_kseq'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=Symbol(name='kore_inj'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=Symbol(name="kore_Lbl'LBraRBraUnds'IMP5-SYNTAX'Unds'Block"), inst=frozendict.frozendict({}))})), 1: MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())}))})), 1: MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())})), 1: MetaVar(name=2, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())})), 2: Instantiate(pattern=App(left=App(left=Symbol(name="kore_Lbl'-LT-'generatedTop'-GT-'"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=App(left=Symbol(name="kore_Lbl'-LT-'T'-GT-'"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=Symbol(name="kore_Lbl'-LT-'k'-GT-'"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())})), 1: MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())})), 1: MetaVar(name=2, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())}))}])=0
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: (σkore_Lbl'-LT-'s'-GT-' · phi0)[{0: "((((((σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int · phi0) · phi1) · phi2) · phi3) · phi4) · phi5)[{0: 'σ0:σksort_SortInt', 1: 'σ0:σksort_SortInt', 2: 'σ0:σksort_SortInt', 3: 'σ0:σksort_SortInt', 4: 'σ0:σksort_SortInt', 5: 'σ0:σksort_SortInt'}]"}]
+	2: σkore_dotk[{}]
+Load Axiom ((phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}] -> phi1)[{0: 'phi1', 1: 'phi2'}][{0: 'phi0', 1: '(phi0 -> (μ X0 . X0)[{}])[{0: "(phi0 -> (phi0 -> (μ X0 . X0)[{}])[{0: \'phi1\'}])"}][{0: "(phi0 -> (μ X0 . X0)[{}])[{0: \'phi1\'}]", 1: "(σinhabitant · phi0)[{0: \'phi0\'}]"}][{0: \'phi0\', 1: \'phi1\'}]', 2: 'phi2'}][{0: 'phi0', 1: 'phi1', 2: "(σkore_next · phi1)[{0: 'phi0', 1: 'phi2'}]"}][{0: 'σksort_SortGeneratedTopCell', 1: '((σkore_Lbl\'-LT-\'generatedTop\'-GT-\' · phi0) · phi1)[{0: \'((σkore_Lbl\\\'-LT-\\\'T\\\'-GT-\\\' · phi0) · phi1)[{0: \\\'(σkore_Lbl\\\\\\\'-LT-\\\\\\\'k\\\\\\\'-GT-\\\\\\\' · phi0)[{0: \\\\\\\'((σkore_kseq · phi0) · phi1)[{0: \\\\\\\\\\\\\\\'(σkore_inj · phi0)[{0: "σkore_Lbl\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\'LBraRBraUnds\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\'IMP5-SYNTAX\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\'Unds\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\'Block[{}]"}]\\\\\\\\\\\\\\\', 1: \\\\\\\\\\\\\\\'phi0\\\\\\\\\\\\\\\'}]\\\\\\\'}]\\\', 1: \\\'phi1\\\'}]\', 1: \'phi2\'}]', 2: '((σkore_Lbl\'-LT-\'generatedTop\'-GT-\' · phi0) · phi1)[{0: \'((σkore_Lbl\\\'-LT-\\\'T\\\'-GT-\\\' · phi0) · phi1)[{0: "(σkore_Lbl\\\'-LT-\\\'k\\\'-GT-\\\' · phi0)[{0: \\\'phi0\\\'}]", 1: \\\'phi1\\\'}]\', 1: \'phi2\'}]'}]=0
 	Stack:
-	0: (app(σkore_Lbl'-LT-'generatedCounter'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}])
-	1: (app(σkore_Lbl'-LT-'s'-GT-', phi0)[{0: Instantiate(pattern=App(left=App(left=App(left=App(left=App(left=App(left=Symbol(name="kore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=2, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=3, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=4, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=5, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 1: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 2: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 3: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 4: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 5: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}))}])
-	2: (σkore_dotk[{}])
-	3: ⊢ (σksort_SortGeneratedTopCell[(app(app(σkore_Lbl'-LT-'generatedTop'-GT-', phi0), phi1)[{0: Instantiate(pattern=App(left=App(left=Symbol(name="kore_Lbl'-LT-'T'-GT-'"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=Symbol(name="kore_Lbl'-LT-'k'-GT-'"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_kseq'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=Symbol(name='kore_inj'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=Symbol(name="kore_Lbl'LBraRBraUnds'IMP5-SYNTAX'Unds'Block"), inst=frozendict.frozendict({}))})), 1: MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())}))})), 1: MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())})), 1: MetaVar(name=2, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())}])] k=> σksort_SortGeneratedTopCell[(app(app(σkore_Lbl'-LT-'generatedTop'-GT-', phi0), phi1)[{0: Instantiate(pattern=App(left=App(left=Symbol(name="kore_Lbl'-LT-'T'-GT-'"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=Symbol(name="kore_Lbl'-LT-'k'-GT-'"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())})), 1: MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())})), 1: MetaVar(name=2, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())}])])
+	0: (σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]
+	1: (σkore_Lbl'-LT-'s'-GT-' · phi0)[{0: "((((((σkore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int · phi0) · phi1) · phi2) · phi3) · phi4) · phi5)[{0: 'σ0:σksort_SortInt', 1: 'σ0:σksort_SortInt', 2: 'σ0:σksort_SortInt', 3: 'σ0:σksort_SortInt', 4: 'σ0:σksort_SortInt', 5: 'σ0:σksort_SortInt'}]"}]
+	2: σkore_dotk[{}]
+	3: ⊢ (σksort_SortGeneratedTopCell[((σkore_Lbl'-LT-'generatedTop'-GT-' · phi0) · phi1)[{0: '((σkore_Lbl\'-LT-\'T\'-GT-\' · phi0) · phi1)[{0: \'(σkore_Lbl\\\'-LT-\\\'k\\\'-GT-\\\' · phi0)[{0: \\\'((σkore_kseq · phi0) · phi1)[{0: \\\\\\\'(σkore_inj · phi0)[{0: "σkore_Lbl\\\\\\\\\\\\\\\'LBraRBraUnds\\\\\\\\\\\\\\\'IMP5-SYNTAX\\\\\\\\\\\\\\\'Unds\\\\\\\\\\\\\\\'Block[{}]"}]\\\\\\\', 1: \\\\\\\'phi0\\\\\\\'}]\\\'}]\', 1: \'phi1\'}]', 1: 'phi2'}]] k=> σksort_SortGeneratedTopCell[((σkore_Lbl'-LT-'generatedTop'-GT-' · phi0) · phi1)[{0: '((σkore_Lbl\'-LT-\'T\'-GT-\' · phi0) · phi1)[{0: "(σkore_Lbl\'-LT-\'k\'-GT-\' · phi0)[{0: \'phi0\'}]", 1: \'phi1\'}]', 1: 'phi2'}]])
 Instantiate 2, 1, 0
 	Stack:
-	0: ⊢ (σksort_SortGeneratedTopCell[(app(app(σkore_Lbl'-LT-'generatedTop'-GT-', phi0), phi1)[{0: Instantiate(pattern=App(left=App(left=Symbol(name="kore_Lbl'-LT-'T'-GT-'"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=Symbol(name="kore_Lbl'-LT-'k'-GT-'"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_kseq'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=Symbol(name='kore_inj'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=Symbol(name="kore_Lbl'LBraRBraUnds'IMP5-SYNTAX'Unds'Block"), inst=frozendict.frozendict({}))})), 1: Instantiate(pattern=Symbol(name='kore_dotk'), inst=frozendict.frozendict({}))}))})), 1: Instantiate(pattern=App(left=Symbol(name="kore_Lbl'-LT-'s'-GT-'"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=App(left=App(left=App(left=App(left=App(left=Symbol(name="kore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=2, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=3, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=4, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=5, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 1: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 2: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 3: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 4: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 5: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}))}))})), 1: Instantiate(pattern=App(left=Symbol(name="kore_Lbl'-LT-'generatedCounter'-GT-'"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}))}])] k=> σksort_SortGeneratedTopCell[(app(app(σkore_Lbl'-LT-'generatedTop'-GT-', phi0), phi1)[{0: Instantiate(pattern=App(left=App(left=Symbol(name="kore_Lbl'-LT-'T'-GT-'"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=Symbol(name="kore_Lbl'-LT-'k'-GT-'"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=Symbol(name='kore_dotk'), inst=frozendict.frozendict({}))})), 1: Instantiate(pattern=App(left=Symbol(name="kore_Lbl'-LT-'s'-GT-'"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=App(left=App(left=App(left=App(left=App(left=Symbol(name="kore_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=2, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=3, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=4, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=5, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 1: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 2: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 3: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 4: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')})), 5: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}))}))})), 1: Instantiate(pattern=App(left=Symbol(name="kore_Lbl'-LT-'generatedCounter'-GT-'"), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Instantiate(pattern=App(left=App(left=Symbol(name='kore_dv'), right=MetaVar(name=0, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), right=MetaVar(name=1, e_fresh=(), s_fresh=(), positive=(), negative=(), app_ctx_holes=())), inst=frozendict.frozendict({0: Symbol(name='ksort_SortInt'), 1: Symbol(name='0')}))}))}])])
+	0: ⊢ (σksort_SortGeneratedTopCell[((σkore_Lbl'-LT-'generatedTop'-GT-' · phi0) · phi1)[{0: '((σkore_Lbl\'-LT-\'T\'-GT-\' · phi0) · phi1)[{0: \'(σkore_Lbl\\\'-LT-\\\'k\\\'-GT-\\\' · phi0)[{0: \\\'((σkore_kseq · phi0) · phi1)[{0: \\\\\\\'(σkore_inj · phi0)[{0: "σkore_Lbl\\\\\\\\\\\\\\\'LBraRBraUnds\\\\\\\\\\\\\\\'IMP5-SYNTAX\\\\\\\\\\\\\\\'Unds\\\\\\\\\\\\\\\'Block[{}]"}]\\\\\\\', 1: \\\\\\\'σkore_dotk[{}]\\\\\\\'}]\\\'}]\', 1: \'(σkore_Lbl\\\'-LT-\\\'s\\\'-GT-\\\' · phi0)[{0: "((((((σkore_Lbl\\\'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds\\\'IMP5-SYNTAX\\\'Unds\\\'Vars5\\\'Unds\\\'Int\\\'Unds\\\'Int\\\'Unds\\\'Int\\\'Unds\\\'Int\\\'Unds\\\'Int\\\'Unds\\\'Int · phi0) · phi1) · phi2) · phi3) · phi4) · phi5)[{0: \\\'σ0:σksort_SortInt\\\', 1: \\\'σ0:σksort_SortInt\\\', 2: \\\'σ0:σksort_SortInt\\\', 3: \\\'σ0:σksort_SortInt\\\', 4: \\\'σ0:σksort_SortInt\\\', 5: \\\'σ0:σksort_SortInt\\\'}]"}]\'}]', 1: "(σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]"}]] k=> σksort_SortGeneratedTopCell[((σkore_Lbl'-LT-'generatedTop'-GT-' · phi0) · phi1)[{0: '((σkore_Lbl\'-LT-\'T\'-GT-\' · phi0) · phi1)[{0: "(σkore_Lbl\'-LT-\'k\'-GT-\' · phi0)[{0: \'σkore_dotk[{}]\'}]", 1: \'(σkore_Lbl\\\'-LT-\\\'s\\\'-GT-\\\' · phi0)[{0: "((((((σkore_Lbl\\\'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds\\\'IMP5-SYNTAX\\\'Unds\\\'Vars5\\\'Unds\\\'Int\\\'Unds\\\'Int\\\'Unds\\\'Int\\\'Unds\\\'Int\\\'Unds\\\'Int\\\'Unds\\\'Int · phi0) · phi1) · phi2) · phi3) · phi4) · phi5)[{0: \\\'σ0:σksort_SortInt\\\', 1: \\\'σ0:σksort_SortInt\\\', 2: \\\'σ0:σksort_SortInt\\\', 3: \\\'σ0:σksort_SortInt\\\', 4: \\\'σ0:σksort_SortInt\\\', 5: \\\'σ0:σksort_SortInt\\\'}]"}]\'}]', 1: "(σkore_Lbl'-LT-'generatedCounter'-GT-' · phi0)[{0: 'σ0:σksort_SortInt'}]"}]])
 Publish
