@@ -1,8 +1,8 @@
-$\Pi^2$ Proof Checkers
-======================
+$\Pi^2$ Proof Checker Implementation
+====================================
 
-This repository contains implementations of the matchign logic proof checker
-using various ZK implementations. Note that the code in this repository is
+This repository contains implementations of the matching logic proof checker
+using Cairo, Risc0 and zkLLVM. Note that the code in this repository is
 experimental and exploratory.
 
 Cairo
