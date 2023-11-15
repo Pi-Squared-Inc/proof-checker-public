@@ -3,10 +3,21 @@
 This repository contains implementations of the matchign logic proof checker using various ZK implementations.
 Note that the code in this repository is experimental and exploratory.
 
+
+## Cairo
+
+In the `cairo` directory:
+
+* Build the checker: `scarb build`
+* Build and run the checker: `scarb cairo-run`
+* Run the tests: `scarb cairo-test`
+
+
 ## Risc0
 
 * Run without generating a certificate: `cargo run --bin checker ./proofs/propositional.ml-gamma ./proofs/propositional.ml-claim ./proofs/propositional.ml-proof`
 * Generate a cerificate: `cargo run --bin host ./proofs/propositional.ml-gamma ./proofs/propositional.ml-claim ./proofs/propositional.ml-proof`
+
 
 ## zkLLVM
 
@@ -19,12 +30,4 @@ The build script does the following:
 * Use `clang` to compile the proof checker
 * Use `assigner` to  circuit and assignment table.Check the circuit satisfiability with the generated assignment table.
 * Use `transpiler` to generate the proof and verify it.
-
-## Cairo
-
-In the `cairo` directory:
-
-* Build the checker: `scarb build`
-* Build and run the checker: `scarb cairo-run`
-* Run the tests: `scarb cairo-test`
 
