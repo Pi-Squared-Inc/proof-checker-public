@@ -14,6 +14,14 @@ In the `cairo` directory:
 -   Build and run the checker: `scarb cairo-run`
 -   Run the tests: `scarb cairo-test`
 
+Lurk
+-----
+
+In the `lurk` directory:
+
+- Build the checker with `lurk lib.lurk`
+- You can load the lib definition and test it on Lurk REPL with: `lurk --load lib.lurk`
+
 Risc0
 -----
 
@@ -36,4 +44,3 @@ The build script does the following:
 -   Use `assigner` to circuit and assignment table.Check the circuit
     satisfiability with the generated assignment table.
 -   Use `transpiler` to generate the proof and verify it.
-
