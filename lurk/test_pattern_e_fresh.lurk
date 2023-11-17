@@ -1,0 +1,23 @@
+!(load "pattern.lurk")
+!(load "pattern_impl.lurk")
+
+!(def evar_1 (evar 1))
+!(def left (exists 1 evar_1))
+!(assert (pattern_e_fresh 1 left))
+
+!(def right (exists 2 evar_1))
+!(assert (not (pattern_e_fresh 1 right)))
+
+!(def implication (implies left right))
+!(assert (not (pattern_e_fresh 1 implication)))
+
+!(def mvar (metavar_s_fresh 1 2 '(2) '(2)))
+!(def metaapp (app left mvar))
+!(assert (not (pattern_e_fresh 2 metaapp)))
+
+!(def esubst_1 (esubst 1 right left))
+!(assert (pattern_e_fresh 1 esubst_1))
+
+!(def ssubst_1 (ssubst 1 right left))
+!(assert (not (pattern_e_fresh 1 ssubst_1)))
+

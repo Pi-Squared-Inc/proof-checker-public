@@ -1,0 +1,91 @@
+!(load "pattern.lurk")
+
+;; Notation
+!(def bot (mu 0 (svar 0)))
+!(def negate (lambda (pattern) (implies pattern bot)))
+!(def forall (lambda (evar_id pattern) (negate (exists evar_id (negate pattern)))))
+
+;; execute_instructions
+
+;; Metavars
+;; Phi0 = MetaVar(0)
+;; Phi1 = MetaVar(1)
+;; Phi2 = MetaVar(2)
+!(def phi0 (metavar_unconstrained 0))
+!(def phi1 (metavar_unconstrained 1))
+!(def phi2 (metavar_unconstrained 2))
+
+;; Axioms
+;; Prop1: phi0 => (phi1 => phi0)
+;; Prop2: (phi0 => (phi1 => phi2)) => ((phi0 => phi1) => (phi0 => phi2))
+;; Prop3: ((~(~phi0)) => phi0)
+!(def prop1 (implies phi0 (implies phi1 phi0)))
+!(def prop2 (implies (implies phi0 (implies phi1 phi2))
+                     (implies (implies phi0 phi1)
+                              (implies phi0 phi2))))
+!(def prop3 (implies (negate (negate phi0)) phi0))
+
+;; Quantifier: forall x. phi0
+!(def quantifier (implies (esubst phi0 0 (evar 1)) (exists 0 phi0)))
+
+;; Existence: exists x. phi0
+!(def existence (exists 0 phi0))
+
+;; Definition: switch_case(stack, memory, claims, instructions) = (stack', memory', claims', instructions')
+;; Use: (switch_case stack memory claims instructions)
+;; Ex: (switch_case '(1) '(1) '(1) '(2 3 5 7))
+!(def switch_case 
+    (lambda (stack memory claims instructions)
+        (let ((instr_u32 (car instructions))
+              (instructions (cdr instructions)))
+        (if (= instr_u32 2) ; Evar
+           (cons stack (cons memory (cons claims (cons instructions nil))))
+            (if (= instr_u32 3) ; Svar
+               (cons stack (cons memory (cons claims (cons instructions nil))))
+                (if (= instr_u32 4) ; Symbol
+                   (cons stack (cons memory (cons claims (cons instructions nil))))
+                    (if (= instr_u32 5) ; Implication
+                       (cons stack (cons memory (cons claims (cons instructions nil))))
+                        (if (= instr_u32 6) ; Application
+                           (cons stack (cons memory (cons claims (cons instructions nil))))
+                            (if (= instr_u32 7) ; Mu
+                               (cons stack (cons memory (cons claims (cons instructions nil))))
+                                (if (= instr_u32 8) ; Exists
+                                   (cons stack (cons memory (cons claims (cons instructions nil))))
+                                    (if (= instr_u32 9) ; MetaVar
+                                       (cons stack (cons memory (cons claims (cons instructions nil))))
+                                        (if (= instr_u32 10) ; ESubst
+                                           (cons stack (cons memory (cons claims (cons instructions nil))))
+                                            (if (= instr_u32 11) ; SSubst
+                                               (cons stack (cons memory (cons claims (cons instructions nil))))
+                                                (if (= instr_u32 12) ; Prop1
+                                                   (cons stack (cons memory (cons claims (cons instructions nil))))
+                                                    (if (= instr_u32 13) ; Prop2
+                                                       (cons stack (cons memory (cons claims (cons instructions nil))))
+                                                        (if (= instr_u32 14) ; Prop3
+                                                           (cons stack (cons memory (cons claims (cons instructions nil))))
+                                                            (if (= instr_u32 15) ; Quantifier
+                                                               (cons stack (cons memory (cons claims (cons instructions nil))))
+                                                                (if (= instr_u32 19) ; Existence
+                                                                   (cons stack (cons memory (cons claims (cons instructions nil))))
+                                                                    (if (= instr_u32 21) ; ModusPonens
+                                                                       (cons stack (cons memory (cons claims (cons instructions nil))))
+                                                                        (if (= instr_u32 22) ; Generalization
+                                                                           (cons stack (cons memory (cons claims (cons instructions nil))))
+                                                                            (if (= instr_u32 26) ; Instantiate
+                                                                               (cons stack (cons memory (cons claims (cons instructions nil))))
+                                                                                (if (= instr_u32 27) ; Pop
+                                                                                   (cons stack (cons memory (cons claims (cons instructions nil))))
+                                                                                    (if (= instr_u32 28) ; Save
+                                                                                       (cons stack (cons memory (cons claims (cons instructions nil))))
+                                                                                        (if (= instr_u32 29) ; Load
+                                                                                           (cons stack (cons memory (cons claims (cons instructions nil))))
+                                                                                            (if (= instr_u32 30) ; Publish
+                                                                                               (cons stack (cons memory (cons claims (cons instructions nil))))
+                                                                                                (if (= instr_u32 31) ; CleanMetaVar
+                                                                                                   (cons stack (cons memory (cons claims (cons instructions nil))))
+                                                                                                    (if (= instr_u32 32) ; NO_OP
+                                                                                                       (cons stack (cons memory (cons claims (cons instructions nil))))
+                                                                                                        nil
+                                                                                                    )))))))))))))))))))))))))))
+

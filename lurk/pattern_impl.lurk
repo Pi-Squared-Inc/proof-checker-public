@@ -1,0 +1,79 @@
+!(load "pattern.lurk")
+
+;; pattern_e_fresh :: evar -> pattern -> bool
+!(defrec pattern_e_fresh
+    (lambda (evar pattern)
+        (let ((instr_u32    (get :inst pattern))
+              (p_id         (get :id pattern))
+              (p_e_fresh    (get :e_fresh pattern))
+              (p_left       (get :left pattern))
+              (p_right      (get :right pattern))
+              (p_subpattern (get :subpattern pattern))
+              (p_plug       (get :plug pattern)))
+            (if (= instr_u32 2) ; Evar
+                (not (= evar p_id))
+                (if (= instr_u32 3) ; SVar
+                    t
+                    (if (= instr_u32 4) ; Symbol
+                        t
+                        (if (= instr_u32 9) ; MetaVar
+                            (contains evar p_e_fresh)
+                            (if (= instr_u32 5) ; Implies
+                                (and (pattern_e_fresh evar p_left)
+                                     (pattern_e_fresh evar p_right))
+                                (if (= instr_u32 6) ; App
+                                    (and (pattern_e_fresh evar p_left)
+                                         (pattern_e_fresh evar p_right))
+                                    (if (= instr_u32 8) ; Exists
+                                        (or (= evar p_id)
+                                            (pattern_e_fresh evar p_subpattern))
+                                        (if (= instr_u32 7) ; Mu
+                                            (pattern_e_fresh evar p_subpattern)
+                                            (if (= instr_u32 10) ; ESubst
+                                                (if (= evar p_id)
+                                                    (pattern_e_fresh evar p_plug)
+                                                    (and (pattern_e_fresh evar p_subpattern)
+                                                         (pattern_e_fresh evar p_plug)))
+                                                (if (= instr_u32 11) ; SSubst
+                                                    (and (pattern_e_fresh evar p_subpattern)
+                                                         (pattern_e_fresh evar p_plug))
+                                                    nil)))))))))))))
+                                                    
+;; pattern_s_fresh :: svar -> pattern -> bool
+!(defrec pattern_s_fresh
+    (lambda (svar pattern)
+        (let ((instr_u32    (get :inst pattern))
+              (p_id         (get :id pattern))
+              (p_s_fresh    (get :s_fresh pattern))
+              (p_left       (get :left pattern))
+              (p_right      (get :right pattern))
+              (p_subpattern (get :subpattern pattern))
+              (p_plug       (get :plug pattern)))
+            (if (= instr_u32 2) ; Evar
+                t
+                (if (= instr_u32 3) ; SVar
+                    (not (= svar p_id))
+                    (if (= instr_u32 4) ; Symbol
+                        t
+                        (if (= instr_u32 9) ; MetaVar
+                            (contains svar p_s_fresh)
+                            (if (= instr_u32 5) ; Implies
+                                (and (pattern_s_fresh svar p_left)
+                                     (pattern_s_fresh svar p_right))
+                                (if (= instr_u32 6) ; App
+                                    (and (pattern_s_fresh svar p_left)
+                                         (pattern_s_fresh svar p_right))
+                                    (if (= instr_u32 8) ; Exists
+                                        (pattern_s_fresh svar p_subpattern)
+                                        (if (= instr_u32 7) ; Mu
+                                            (or (= svar p_id)
+                                                (pattern_s_fresh svar p_subpattern))
+                                            (if (= instr_u32 10) ; ESubst
+                                                (and (pattern_s_fresh svar p_subpattern)
+                                                     (pattern_s_fresh svar p_plug))
+                                                (if (= instr_u32 11) ; SSubst
+                                                    (if (= svar p_id)
+                                                        (pattern_s_fresh svar p_plug)
+                                                        (and (pattern_s_fresh svar p_subpattern)
+                                                             (pattern_s_fresh svar p_plug)))
+                                                    nil)))))))))))))
