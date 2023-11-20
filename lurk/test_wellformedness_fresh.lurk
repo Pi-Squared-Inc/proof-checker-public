@@ -1,0 +1,8 @@
+!(load "pattern.lurk")
+!(load "pattern_impl.lurk")
+
+!(def phi0_s_fresh_0 (metavar_s_fresh 0 0 '(0) '(0)))
+!(assert (pattern_well_formed phi0_s_fresh_0))
+
+!(def phi1 (metavar 1 '(1 2 0) nil nil nil '(2)))
+!(assert (not (pattern_well_formed phi1)))

@@ -73,6 +73,15 @@
                              (contains ele (cdr list)))
                          nil)))
 
+;; This function is used to check if list2 contains any element in list1
+!(defrec containsElement
+    (lambda (list1 list2)
+       (if list1
+           (if (contains (car list1) list2)
+               t
+               (containsElement (cdr list1) list2))
+           nil)))
+
 ;; logical and
 !(def and (lambda (cond1 cond2)
              (if cond1

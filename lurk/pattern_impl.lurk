@@ -169,3 +169,20 @@
     (lambda (svar pattern)
         (pattern_positivity :negative svar pattern)))
 
+;; pattern_well_formed :: pattern -> bool
+!(def pattern_well_formed
+    (lambda (pattern)
+        (let ((instr_u32       (get :inst pattern))
+              (p_id            (get :id pattern))
+              (p_e_fresh       (get :e_fresh pattern))
+              (p_subpattern    (get :subpattern pattern))
+              (p_app_ctx_holes (get :app_ctx_holes pattern)))
+            (if (= instr_u32 9) ; MetaVar
+                (not (containsElement p_app_ctx_holes p_e_fresh))
+                (if (= instr_u32 7) ; Mu
+                    (pattern_positive p_id p_subpattern)
+                    (if (= instr_u32 10) ; ESbust
+                        (not (pattern_e_fresh p_id p_subpattern))
+                        (if (= instr_u32 11) ; SSubst
+                            (not (pattern_s_fresh p_id p_subpattern))
+                            nil)))))))
