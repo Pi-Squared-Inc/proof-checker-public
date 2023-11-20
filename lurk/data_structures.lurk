@@ -1,0 +1,53 @@
+;;; Proof checker
+;;; =============
+
+!(def Stack nil)
+!(def Memory nil)
+!(def Claims nil)
+
+;;; Stack utilities
+;;; ===============
+
+;; Definition: push(term, stack) = stack'
+;; Use: (push (Pattern_ '(1 2 3)) Stack) => (:stack ((:type 0 :pattern (1 2 3))))
+!(def push_stack (lambda (term stack) (cons term stack)))
+
+;; Definition: pop(stack) = (term, stack')
+;; Use: (pop (push (Pattern_ '(1 2 3)) Stack)) => ((:type 0 :pattern (1 2 3)) :stack nil)
+!(def pop_stack (lambda (stack) (cons (car stack) (cdr stack))))
+
+;; Definition: pop_stack_proved(stack) = if (term.type == 1) then (term, stack') else nil
+;; Use: (pop_stack_proved (push (Pattern_ '(1 2 3)) Stack)) => nil
+;; Use: (pop_stack_proved (push (Proved_ '(1 2 3)) Stack)) => ((:type 1 :pattern (1 2 3)) :stack nil)
+!(def pop_stack_proved 
+   (lambda (stack)
+      (if (= (get :type (car stack)) 1)
+         (cons (car stack) (cdr stack)) ; TODO: Simplify it
+         nil
+      )
+   )
+)
+
+;; Definition: pop_stack_pattern(stack) = if (term.type == 0) then (term, stack') else nil
+;; Use: (pop_stack_pattern (push (Pattern_ '(1 2 3)) Stack)) => ((:type 0 :pattern (1 2 3)) :stack nil)
+;; Use: (pop_stack_pattern (push (Proved_ '(1 2 3)) Stack)) => nil
+!(def pop_stack_pattern 
+   (lambda (stack)
+      (if (= (get :type (car stack)) 0)
+         (cons (car stack) (cdr stack)) ; TODO: Simplify it
+         nil
+      )
+   )
+)
+
+
+;;; Memory and Claims utilities
+;;; ===========================
+
+;; Definition: push(pattern, list) = claims'
+;; Use: (push pattern Claims) => ((pattern) Claims)
+!(def push (lambda (pattern claims) (cons pattern claims)))
+
+;; Definition: pop(list) = (pattern, list')
+;; Use: (pop (push pattern nil)) => ((pattern) bil)
+!(def pop (lambda (claims) (cons (car claims) (cdr claims))))

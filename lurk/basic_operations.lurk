@@ -99,3 +99,9 @@
              (if cond
                  nil
                  t)))
+                 
+;; nth :: int -> [a] -> a
+!(defrec nth (lambda (n list)
+            (if (eq n 0)
+                (car list)
+                (nth (- n 1) (cdr list)))))

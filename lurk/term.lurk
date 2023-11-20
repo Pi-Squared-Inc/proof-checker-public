@@ -1,0 +1,24 @@
+!(def Term '(
+   :type 0 ; Pattern: 0, Proved 1
+   :pattern nil
+))
+
+;; Definition: Pattern(pattern) = Term{type = 0, pattern = pattern}
+;; Use: (Pattern_ '(1 2 3)) => (:type 0 :pattern (1 2 3))
+!(def Pattern_ 
+   (lambda (pattern)
+      (set :type 0 
+      (set :pattern pattern Term)
+      )
+   )
+)
+
+;; Definition: Proved(pattern) = Term{type = 1, pattern = pattern}
+;; Use: (Proved_ '(1 2 3)) => (:type 1 :pattern (1 2 3))
+!(def Proved_ 
+   (lambda (pattern)
+      (set :type 1 
+      (set :pattern pattern Term)
+      )
+   )
+)

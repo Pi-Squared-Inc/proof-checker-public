@@ -2,7 +2,7 @@
 !(load "basic_operations.lurk")
 
 ;; Lurk's Pattern definition
-!(def Pattern '((
+!(def Pattern '(
   ;; Ints
   :inst 0               ; All
   :id 0                 ; EVar, SVar, Symbol, Mu, Exists, MetaVar
@@ -19,7 +19,7 @@
   :right nil            ; Implication, Application
   :subpattern nil       ; Exists, Mu, ESubst (pattern), SSubst (pattern)
   :plug nil             ; ESubst, SSubst
-  ))
+  )
 )
 
 ;; Definition: evar(evar_id) = Pattern{inst = 2, id = evar_id}
@@ -27,7 +27,7 @@
 !(def evar 
     (lambda (evar_id) 
         (set :inst 2 
-        (set :id evar_id (car Pattern))
+        (set :id evar_id Pattern)
         )
     )
 )
@@ -37,7 +37,7 @@
 !(def svar 
     (lambda (svar_id) 
         (set :inst 3 
-        (set :id svar_id (car Pattern))
+        (set :id svar_id Pattern)
         )
     )
 )
@@ -47,7 +47,7 @@
 !(def symbol 
     (lambda (symbol_id) 
         (set :inst 4 
-        (set :id symbol_id (car Pattern))
+        (set :id symbol_id Pattern)
         )
     )
 )
@@ -58,7 +58,7 @@
     (lambda (p1 p2) 
         (set :inst 5 
         (set :left p1 
-        (set :right p2 (car Pattern))
+        (set :right p2 Pattern)
         ))
     )
 )
@@ -69,7 +69,7 @@
     (lambda (p1 p2) 
         (set :inst 6 
         (set :left p1 
-        (set :right p2 (car Pattern))
+        (set :right p2 Pattern)
         ))
     )
 )
@@ -80,7 +80,7 @@
     (lambda (var subpattern) 
         (set :inst 7 
         (set :id var 
-        (set :subpattern subpattern (car Pattern))
+        (set :subpattern subpattern Pattern)
         ))
     )
 )
@@ -91,7 +91,7 @@
     (lambda (var subpattern) 
         (set :inst 8 
         (set :id var 
-        (set :subpattern subpattern (car Pattern))
+        (set :subpattern subpattern Pattern)
         ))
     )
 )
@@ -101,7 +101,7 @@
 !(def metavar_unconstrained 
     (lambda (new_id) 
         (set :inst 9 
-        (set :id new_id (car Pattern))
+        (set :id new_id Pattern)
         )
     )
 )
@@ -116,7 +116,7 @@
         (set :s_fresh s_fresh 
         (set :positive positive 
         (set :negative negative 
-        (set :app_ctx_holes app_ctx_holes (car Pattern))
+        (set :app_ctx_holes app_ctx_holes Pattern)
         ))))))
     )
 )
@@ -129,7 +129,7 @@
         (set :id new_id 
         (set :s_fresh (cons s_fresh nil) 
         (set :positive positive 
-        (set :negative negative (car Pattern))
+        (set :negative negative Pattern)
         ))))
     )
 )
@@ -141,7 +141,7 @@
         (set :inst 10
         (set :id evar_id 
         (set :subpattern subpattern 
-        (set :plug plug (car Pattern))
+        (set :plug plug Pattern)
         )))
     )
 )
@@ -153,7 +153,7 @@
         (set :inst 11
         (set :id svar_id 
         (set :subpattern subpattern 
-        (set :plug plug (car Pattern))
+        (set :plug plug Pattern)
         )))
     )
 )
