@@ -77,3 +77,95 @@
                                                         (and (pattern_s_fresh svar p_subpattern)
                                                              (pattern_s_fresh svar p_plug)))
                                                     nil)))))))))))))
+
+!(defrec pattern_positivity
+    (lambda (func_name svar pattern)
+        (let ((instr_u32    (get :inst pattern))
+              (p_id         (get :id pattern))
+              (p_s_fresh    (get :s_fresh pattern))
+              (p_left       (get :left pattern))
+              (p_right      (get :right pattern))
+              (p_positive   (get :positive pattern))
+              (p_negative   (get :negative pattern))
+              (p_subpattern (get :subpattern pattern))
+              (p_plug       (get :plug pattern)))
+            (if (eq :positive func_name)
+                ; pattern_positive
+                (if (= instr_u32 2) ; Evar
+                    t
+                    (if (= instr_u32 3) ; SVar
+                        t
+                        (if (= instr_u32 4) ; Symbol
+                            t
+                            (if (= instr_u32 9) ; MetaVar
+                                (contains svar p_positive)
+                                (if (= instr_u32 5) ; Implies
+                                    (and (pattern_positivity :negative svar p_left)
+                                         (pattern_positivity :positive svar p_right))
+                                    (if (= instr_u32 6) ; App
+                                        (and (pattern_positivity :positive svar p_left)
+                                             (pattern_positivity :positive svar p_right))
+                                        (if (= instr_u32 8) ; Exists
+                                            (pattern_positivity :positive svar p_subpattern)
+                                            (if (= instr_u32 7) ; Mu
+                                                (or (= svar p_id)
+                                                    (pattern_positivity :positive svar p_subpattern))
+                                                (if (= instr_u32 10) ; ESubst
+                                                    (and (pattern_positivity :positive svar p_subpattern)
+                                                         (pattern_s_fresh svar p_plug))
+                                                    (if (= instr_u32 11) ; SSubst
+                                                        (let ((plug_positive_svar (or (pattern_s_fresh svar p_plug)
+                                                                                      (or (and (pattern_positivity :positive p_id p_subpattern)
+                                                                                               (pattern_positivity :positive svar p_plug))
+                                                                                          (and (pattern_positivity :negative p_id p_subpattern)
+                                                                                               (pattern_positivity :negative svar p_plug))))))
+                                                            (if (= svar p_id)
+                                                                plug_positive_svar
+                                                                (and (pattern_positivity :positive svar p_subpattern)
+                                                                     plug_positive_svar)))
+                                                        nil))))))))))
+                ; pattern_negative
+                (if (= instr_u32 2) ; Evar
+                    t
+                    (if (= instr_u32 3) ; SVar
+                        (not (= svar p_id))
+                        (if (= instr_u32 4) ; Symbol
+                            t
+                            (if (= instr_u32 9) ; MetaVar
+                                (contains svar p_negative)
+                                (if (= instr_u32 5) ; Implies
+                                    (and (pattern_positivity :positive svar p_left)
+                                         (pattern_positivity :negative svar p_right))
+                                    (if (= instr_u32 6) ; App
+                                        (and (pattern_positivity :negative svar p_left)
+                                             (pattern_positivity :negative svar p_right))
+                                        (if (= instr_u32 8) ; Exists
+                                            (pattern_s_fresh svar p_subpattern)
+                                            (if (= instr_u32 7) ; Mu
+                                                (or (= svar p_id)
+                                                    (pattern_positivity :negative svar p_subpattern))
+                                                (if (= instr_u32 10) ; ESubst
+                                                    (and (pattern_positivity :negative svar p_subpattern)
+                                                         (pattern_s_fresh svar p_plug))
+                                                    (if (= instr_u32 11) ; SSubst
+                                                        (let ((plug_negative_svar (or (pattern_s_fresh svar p_plug)
+                                                                                      (or (and (pattern_positivity :positive p_id p_subpattern)
+                                                                                               (pattern_positivity :negative svar p_plug))
+                                                                                          (and (pattern_positivity :negative p_id p_subpattern)
+                                                                                               (pattern_positivity :positive svar p_plug))))))
+                                                            (if (= svar p_id)
+                                                                plug_negative_svar
+                                                                (and (pattern_positivity :negative svar p_subpattern)
+                                                                     plug_positive_svar)))
+                                                        nil))))))))))))))
+
+;; pattern_positive :: svar -> pattern -> bool
+!(def pattern_positive
+    (lambda (svar pattern)
+        (pattern_positivity :positive svar pattern)))
+
+;; pattern_negative :: svar -> pattern -> bool
+!(def pattern_negative
+    (lambda (svar pattern)
+        (pattern_positivity :negative svar pattern)))
+

@@ -1,0 +1,125 @@
+!(load "pattern.lurk")
+!(load "pattern_impl.lurk")
+
+!(def x0 (svar 0))
+!(def x1 (svar 1))
+!(def x2 (svar 2))
+!(def c1 (symbol 1))
+!(def neg_x1 (negate x1))
+
+;; EVar
+!(def evar1 (evar 1))
+!(assert (pattern_positive 1 evar1))
+!(assert (pattern_negative 1 evar1))
+!(assert (pattern_positive 2 evar1))
+!(assert (pattern_negative 2 evar1))
+
+;; SVar
+!(assert (pattern_positive 1 x1))
+!(assert (not (pattern_negative 1 x1)))
+!(assert (pattern_positive 2 x1))
+!(assert (pattern_negative 2 x1))
+
+;; Symbol
+!(assert (pattern_positive 1 c1))
+!(assert (pattern_negative 1 c1))
+!(assert (pattern_positive 2 c1))
+!(assert (pattern_negative 2 c1))
+
+;; App
+!(def appx1x2 (app x1 x2))
+!(assert (pattern_positive 1 appx1x2))
+!(assert (pattern_positive 2 appx1x2))
+!(assert (pattern_positive 3 appx1x2))
+!(assert (not (pattern_negative 1 appx1x2)))
+!(assert (not (pattern_negative 2 appx1x2)))
+!(assert (pattern_negative 3 appx1x2))
+
+;; Implies
+!(def impliesx1x2 (implies x1 x2))
+!(assert (not (pattern_positive 1 impliesx1x2)))
+;!(assert (pattern_positive 2 impliesx1x2))
+;!(assert (pattern_positive 3 impliesx1x2))
+;!(assert (pattern_negative 1 impliesx1x2))
+;!(assert (not (pattern_negative 2 impliesx1x2)))
+;!(assert (pattern_negative 3 impliesx1x2))
+
+!(def impliesx1x1 (implies x1 x1))
+!(assert (not (pattern_positive 1 impliesx1x1)))
+!(assert (not (pattern_negative 1 impliesx1x1)))
+
+;; Exists
+!(def existsx1x2 (exists 1 x2))
+!(assert (pattern_positive 1 existsx1x2))
+!(assert (pattern_positive 2 existsx1x2))
+!(assert (pattern_positive 3 existsx1x2))
+!(assert (pattern_negative 1 existsx1x2))
+!(assert (not (pattern_negative 2 existsx1x2)))
+!(assert (pattern_negative 3 existsx1x2))
+
+;; Mu
+!(def mux1e1 (mu 1 evar1))
+!(assert (pattern_positive 1 mux1e1))
+!(assert (pattern_positive 2 mux1e1))
+!(assert (pattern_negative 1 mux1e1))
+!(assert (pattern_negative 2 mux1e1))
+
+!(def mux1x1 (mu 1 x1))
+!(assert (pattern_positive 1 mux1x1))
+!(assert (pattern_negative 1 mux1x1))
+
+!(def mux1x2 (mu 1 x2))
+!(assert (pattern_positive 1 mux1x2))
+!(assert (pattern_positive 2 mux1x2))
+!(assert (pattern_positive 3 mux1x2))
+!(assert (pattern_negative 1 mux1x2))
+!(assert (not (pattern_negative 2 mux1x2)))
+!(assert (pattern_negative 2 (mu 1 (implies x2 x1))))
+!(assert (pattern_negative 3 mux1x2))
+
+;; MetaVar
+!(def mvarun1 (metavar_unconstrained 1))
+!(assert (not (pattern_positive 1 mvarun1)))
+!(assert (not (pattern_positive 2 mvarun1)))
+!(assert (not (pattern_negative 1 mvarun1)))
+!(assert (not (pattern_negative 2 mvarun1)))
+
+;; Do not imply positivity from freshness
+!(assert (not (pattern_positive 1 (metavar_s_fresh 1  1  nil nil))))
+!(assert (not (pattern_negative 1 (metavar_s_fresh 1  1  nil nil))))
+!(assert (pattern_positive 1 (metavar_s_fresh 1 1 '(1) '(1))))
+!(assert (pattern_negative 1 (metavar_s_fresh 1 1 '(1) '(1))))
+!(assert (pattern_positive 1 (metavar_s_fresh 1 1 '(1) '(0))))
+!(assert (pattern_negative 1 (metavar_s_fresh 1 1 '(0) '(1))))
+
+;; ESubst
+!(assert (not (pattern_positive 0 (esubst 0 (metavar_unconstrained 0) x0))))
+!(assert (not (pattern_positive 0 (esubst 0 (metavar_unconstrained 0) x1))))
+!(assert (not (pattern_positive 0 (esubst 0 (metavar_s_fresh 0 1 '(1) nil) x1))))
+!(assert (not (pattern_negative 0 (esubst 0 (metavar_unconstrained 0) x0))))
+!(assert (not (pattern_negative 0 (esubst 0 (metavar_unconstrained 0) x1))))
+!(assert (not (pattern_negative 0 (esubst 0 (metavar_s_fresh 0 1 '(1) nil) x1))))
+
+;; SSubst
+!(assert (not (pattern_positive 0 (ssubst 0 (metavar_unconstrained 0) x0))))
+!(assert (pattern_positive 0 (ssubst 0 (metavar_unconstrained 0) x1)))
+!(assert (pattern_positive 0 (ssubst 0 (metavar_s_fresh 0 1 '(1) nil) x1)))
+!(assert (not (pattern_negative 0 (ssubst 0 (metavar_unconstrained 0) x0))))
+!(assert (pattern_negative 0 (ssubst 0 (metavar_unconstrained 0) x1)))
+!(assert (pattern_negative 0 (ssubst 0 (metavar_s_fresh 0 1 '(1) nil) x1)))
+
+;; Combinations
+!(assert (not (pattern_positive 1 neg_x1)))
+!(assert (pattern_positive 2 neg_x1))
+!(assert (pattern_negative 1 neg_x1))
+!(assert (pattern_negative 2 neg_x1))
+
+!(def negx1_implies_negx1 (implies neg_x1 neg_x1))
+!(assert (not (pattern_positive 1 negx1_implies_negx1)))
+!(assert (pattern_positive 2 negx1_implies_negx1))
+!(assert (not (pattern_negative 1 negx1_implies_negx1)))
+!(assert (pattern_negative 2 negx1_implies_negx1))
+
+!(def negx1_implies_x1 (implies neg_x1 x1));
+!(assert (pattern_positive 1 negx1_implies_x1))
+!(assert (not (pattern_negative 1 negx1_implies_x1)))

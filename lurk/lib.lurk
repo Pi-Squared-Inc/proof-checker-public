@@ -1,10 +1,5 @@
 !(load "pattern.lurk")
 
-;; Notation
-!(def bot (mu 0 (svar 0)))
-!(def negate (lambda (pattern) (implies pattern bot)))
-!(def forall (lambda (evar_id pattern) (negate (exists evar_id (negate pattern)))))
-
 ;; execute_instructions
 
 ;; Metavars
