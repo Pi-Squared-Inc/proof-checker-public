@@ -1,0 +1,72 @@
+!(defrec check_plugs_pos (lambda (check p idList) 
+    (if (eq idList nil)
+        nil
+        (if (not(check (car idList) p))
+            t
+            (check_plugs_pos check p (cdr idList))
+        ))))
+
+!(def is_e_fresh? (lambda (evar pattern) (pattern_e_fresh evar pattern)))
+!(def is_s_fresh? (lambda (svar pattern) (pattern_s_fresh svar pattern)))
+!(def is_positive? (lambda (svar pattern) (pattern_positive svar pattern)))
+!(def is_negative? (lambda (svar pattern) (pattern_negative svar pattern)))
+
+!(defrec for_it_vars_checks (lambda (vars plugs pos p)
+    (if (eq vars nil)
+        nil
+        (if (eq (car vars) (get :id p))
+            (if (check_plugs_pos is_e_fresh? (nth pos plugs) (get :e_fresh p))
+                nil
+                (if (check_plugs_pos is_s_fresh? (nth pos plugs) (get :s_fresh p))
+                    nil
+                    (if (check_plugs_pos is_positive? (nth pos plugs) (get :positive p))
+                        nil
+                        (if (check_plugs_pos is_negative? (nth pos plugs) (get :negative p))
+                            nil
+                            (if (>= pos (length plugs))
+                                nil
+                                (nth pos plugs)
+                            )))))
+            (for_it_vars_checks (cdr vars) plugs (+ pos 1) p)
+        ))))
+
+!(defrec instantiate_internal (lambda (p vars plugs)
+    (let ((inst (get :inst p)))
+        (if (= inst 2) ; Evar
+            nil
+            (if (= inst 3) ; SVar
+                nil
+                (if (= inst 4) ; Symbol
+                    nil
+                    (if (= inst 9) ; MetaVar
+                        (for_it_vars_checks vars plugs 0 p)
+                        (if (= inst 5) ; Implies
+                            (let ((left (get :left p))
+                                  (right (get :right p))
+
+                                  (inst_left (instantiate_internal left vars plugs))
+                                  (inst_right (instantiate_internal right vars plugs))
+                                 )
+                                 (if (and (eq inst_left nil) (eq inst_right nil))
+                                    nil
+                                    (if (eq inst_left nil)
+                                        (implies left inst_right)
+                                        (if (eq inst_right nil)
+                                            (implies inst_left right)
+                                            (implies inst_left inst_right)
+                                        )
+                                    )
+                                 )
+                            )
+                            (if (= inst 6) ; App
+                                nil
+                                (if (= inst 8) ; Exists
+                                    nil
+                                    (if (= inst 7) ; Mu
+                                        nil
+                                        (if (= inst 10) ; ESubst
+                                            nil
+                                            (if (= inst 11) ; SSubst
+                                                nil
+                                                nil
+                                            )))))))))))))

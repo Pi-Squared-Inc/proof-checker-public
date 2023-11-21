@@ -99,9 +99,26 @@
              (if cond
                  nil
                  t)))
-                 
+
 ;; nth :: int -> [a] -> a
 !(defrec nth (lambda (n list)
             (if (eq n 0)
                 (car list)
                 (nth (- n 1) (cdr list)))))
+
+;; length :: [a] -> int
+!(defrec length (lambda (list)
+                   (if list
+                       (+ 1 (length (cdr list)))
+                       0)))
+
+;; cons in the reverse order
+;; append :: (a, [a]) -> [a]
+!(defrec append
+   (lambda (elem list)
+      (if (eq list nil)
+         (cons elem nil)
+         (cons (car list) (append elem (cdr list)))
+      )
+   )
+)
