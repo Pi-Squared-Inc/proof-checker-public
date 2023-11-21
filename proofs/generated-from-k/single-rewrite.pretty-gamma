@@ -1,316 +1,420 @@
 Symbol ksort_SortGeneratedTopCell
 	Stack:
 	0: ksort_SortGeneratedTopCell
+Symbol ksort_SortFoo
+	Stack:
+	0: ksort_SortGeneratedTopCell
+	1: ksort_SortFoo
+Symbol ksort_SortKItem
+	Stack:
+	0: ksort_SortGeneratedTopCell
+	1: ksort_SortFoo
+	2: ksort_SortKItem
 Symbol kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo
+	1: ksort_SortFoo
+	2: ksort_SortKItem
+	3: kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo
 Instantiate 
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
+	1: ksort_SortFoo
+	2: ksort_SortKItem
+	3: kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
 Symbol kore_inj
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
-	2: kore_inj
+	1: ksort_SortFoo
+	2: ksort_SortKItem
+	3: kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
+	4: kore_inj
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
-	2: kore_inj
-	3: phi0
+	1: ksort_SortFoo
+	2: ksort_SortKItem
+	3: kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
+	4: kore_inj
+	5: phi0
 App
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
-	2: (kore_inj · phi0)
-Instantiate 0
+	1: ksort_SortFoo
+	2: ksort_SortKItem
+	3: kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
+	4: (kore_inj · phi0)
+MetaVar 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
+	1: ksort_SortFoo
+	2: ksort_SortKItem
+	3: kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
+	4: (kore_inj · phi0)
+	5: phi1
+App
+	Stack:
+	0: ksort_SortGeneratedTopCell
+	1: ksort_SortFoo
+	2: ksort_SortKItem
+	3: kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
+	4: ((kore_inj · phi0) · phi1)
+MetaVar 2
+	Stack:
+	0: ksort_SortGeneratedTopCell
+	1: ksort_SortFoo
+	2: ksort_SortKItem
+	3: kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
+	4: ((kore_inj · phi0) · phi1)
+	5: phi2
+App
+	Stack:
+	0: ksort_SortGeneratedTopCell
+	1: ksort_SortFoo
+	2: ksort_SortKItem
+	3: kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
+	4: (((kore_inj · phi0) · phi1) · phi2)
+Instantiate 0, 1, 2
+	Stack:
+	0: ksort_SortGeneratedTopCell
+	1: kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
+	1: kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
 	2: phi0
 Symbol kore_kseq
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
+	1: kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
 	2: phi0
 	3: kore_kseq
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
+	1: kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
 	2: phi0
 	3: kore_kseq
 	4: phi0
 App
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
+	1: kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
 	2: phi0
 	3: (kore_kseq · phi0)
 MetaVar 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
+	1: kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
 	2: phi0
 	3: (kore_kseq · phi0)
 	4: phi1
 App
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
+	1: kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
 	2: phi0
 	3: ((kore_kseq · phi0) · phi1)
 Instantiate 0, 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0)
+	1: (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0)
 Symbol kore_Lbl'-LT-'k'-GT-'
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0)
+	1: (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0)
 	2: kore_Lbl'-LT-'k'-GT-'
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0)
+	1: (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0)
 	2: kore_Lbl'-LT-'k'-GT-'
 	3: phi0
 App
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0)
+	1: (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0)
 	2: (kore_Lbl'-LT-'k'-GT-' · phi0)
 Instantiate 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
+	1: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
 MetaVar 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
+	1: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
 	2: phi1
 Symbol kore_Lbl'-LT-'generatedTop'-GT-'
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
+	1: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
 	2: phi1
 	3: kore_Lbl'-LT-'generatedTop'-GT-'
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
+	1: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
 	2: phi1
 	3: kore_Lbl'-LT-'generatedTop'-GT-'
 	4: phi0
 App
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
+	1: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
 	2: phi1
 	3: (kore_Lbl'-LT-'generatedTop'-GT-' · phi0)
 MetaVar 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
+	1: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
 	2: phi1
 	3: (kore_Lbl'-LT-'generatedTop'-GT-' · phi0)
 	4: phi1
 App
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
+	1: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
 	2: phi1
 	3: ((kore_Lbl'-LT-'generatedTop'-GT-' · phi0) · phi1)
 Instantiate 0, 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+Symbol ksort_SortFoo
+	Stack:
+	0: ksort_SortGeneratedTopCell
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: ksort_SortFoo
+Symbol ksort_SortKItem
+	Stack:
+	0: ksort_SortGeneratedTopCell
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: ksort_SortFoo
+	3: ksort_SortKItem
 Symbol kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: ksort_SortFoo
+	3: ksort_SortKItem
+	4: kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo
 Instantiate 
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: ksort_SortFoo
+	3: ksort_SortKItem
+	4: kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
 Symbol kore_inj
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
-	3: kore_inj
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: ksort_SortFoo
+	3: ksort_SortKItem
+	4: kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
+	5: kore_inj
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
-	3: kore_inj
-	4: phi0
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: ksort_SortFoo
+	3: ksort_SortKItem
+	4: kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
+	5: kore_inj
+	6: phi0
 App
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
-	3: (kore_inj · phi0)
-Instantiate 0
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: ksort_SortFoo
+	3: ksort_SortKItem
+	4: kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
+	5: (kore_inj · phi0)
+MetaVar 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: ksort_SortFoo
+	3: ksort_SortKItem
+	4: kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
+	5: (kore_inj · phi0)
+	6: phi1
+App
+	Stack:
+	0: ksort_SortGeneratedTopCell
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: ksort_SortFoo
+	3: ksort_SortKItem
+	4: kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
+	5: ((kore_inj · phi0) · phi1)
+MetaVar 2
+	Stack:
+	0: ksort_SortGeneratedTopCell
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: ksort_SortFoo
+	3: ksort_SortKItem
+	4: kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
+	5: ((kore_inj · phi0) · phi1)
+	6: phi2
+App
+	Stack:
+	0: ksort_SortGeneratedTopCell
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: ksort_SortFoo
+	3: ksort_SortKItem
+	4: kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
+	5: (((kore_inj · phi0) · phi1) · phi2)
+Instantiate 0, 1, 2
+	Stack:
+	0: ksort_SortGeneratedTopCell
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
 	3: phi0
 Symbol kore_kseq
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
 	3: phi0
 	4: kore_kseq
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
 	3: phi0
 	4: kore_kseq
 	5: phi0
 App
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
 	3: phi0
 	4: (kore_kseq · phi0)
 MetaVar 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
 	3: phi0
 	4: (kore_kseq · phi0)
 	5: phi1
 App
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
 	3: phi0
 	4: ((kore_kseq · phi0) · phi1)
 Instantiate 0, 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0)
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0)
 Symbol kore_Lbl'-LT-'k'-GT-'
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0)
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0)
 	3: kore_Lbl'-LT-'k'-GT-'
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0)
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0)
 	3: kore_Lbl'-LT-'k'-GT-'
 	4: phi0
 App
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0)
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0)
 	3: (kore_Lbl'-LT-'k'-GT-' · phi0)
 Instantiate 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
 MetaVar 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
 	3: phi1
 Symbol kore_Lbl'-LT-'generatedTop'-GT-'
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
 	3: phi1
 	4: kore_Lbl'-LT-'generatedTop'-GT-'
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
 	3: phi1
 	4: kore_Lbl'-LT-'generatedTop'-GT-'
 	5: phi0
 App
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
 	3: phi1
 	4: (kore_Lbl'-LT-'generatedTop'-GT-' · phi0)
 MetaVar 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
 	3: phi1
 	4: (kore_Lbl'-LT-'generatedTop'-GT-' · phi0)
 	5: phi1
 App
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'>
 	3: phi1
 	4: ((kore_Lbl'-LT-'generatedTop'-GT-' · phi0) · phi1)
 Instantiate 0, 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 MetaVar 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: phi0
 MetaVar 2
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: phi0
@@ -318,8 +422,8 @@ MetaVar 2
 Symbol kore_next
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: phi0
@@ -328,8 +432,8 @@ Symbol kore_next
 MetaVar 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: phi0
@@ -339,8 +443,8 @@ MetaVar 1
 App
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: phi0
@@ -349,16 +453,16 @@ App
 Instantiate 0, 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -366,8 +470,8 @@ MetaVar 0
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -376,8 +480,8 @@ MetaVar 0
 MetaVar 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -387,8 +491,8 @@ MetaVar 1
 MetaVar 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -399,8 +503,8 @@ MetaVar 1
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -412,8 +516,8 @@ MetaVar 0
 SVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -426,8 +530,8 @@ SVar 0
 Mu 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -440,8 +544,8 @@ Mu 0
 Instantiate 
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -454,8 +558,8 @@ Instantiate
 Implies
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -467,8 +571,8 @@ Implies
 Instantiate 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -479,8 +583,8 @@ Instantiate 0
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -492,8 +596,8 @@ MetaVar 0
 Symbol inhabitant
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -506,8 +610,8 @@ Symbol inhabitant
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -521,8 +625,8 @@ MetaVar 0
 App
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -535,8 +639,8 @@ App
 Instantiate 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -548,8 +652,8 @@ Instantiate 0
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -562,8 +666,8 @@ MetaVar 0
 MetaVar 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -577,8 +681,8 @@ MetaVar 1
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -593,8 +697,8 @@ MetaVar 0
 SVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -610,8 +714,8 @@ SVar 0
 Mu 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -627,8 +731,8 @@ Mu 0
 Instantiate 
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -644,8 +748,8 @@ Instantiate
 Implies
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -660,8 +764,8 @@ Implies
 Instantiate 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -675,8 +779,8 @@ Instantiate 0
 Implies
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -689,8 +793,8 @@ Implies
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -704,8 +808,8 @@ MetaVar 0
 SVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -720,8 +824,8 @@ SVar 0
 Mu 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -736,8 +840,8 @@ Mu 0
 Instantiate 
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -752,8 +856,8 @@ Instantiate
 Implies
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -767,8 +871,8 @@ Implies
 Instantiate 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -781,8 +885,8 @@ Instantiate 0
 Instantiate 0, 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -793,8 +897,8 @@ Instantiate 0, 1
 Instantiate 0, 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -803,8 +907,8 @@ Instantiate 0, 1
 MetaVar 2
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -814,8 +918,8 @@ MetaVar 2
 MetaVar 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -826,8 +930,8 @@ MetaVar 1
 MetaVar 2
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -839,8 +943,8 @@ MetaVar 2
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -853,8 +957,8 @@ MetaVar 0
 MetaVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -868,8 +972,8 @@ MetaVar 0
 SVar 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -884,8 +988,8 @@ SVar 0
 Mu 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -900,8 +1004,8 @@ Mu 0
 Instantiate 
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -916,8 +1020,8 @@ Instantiate
 Implies
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -931,8 +1035,8 @@ Implies
 Instantiate 0
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -945,8 +1049,8 @@ Instantiate 0
 MetaVar 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -960,8 +1064,8 @@ MetaVar 1
 Implies
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -974,8 +1078,8 @@ Implies
 Instantiate 0, 1
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -986,8 +1090,8 @@ Instantiate 0, 1
 Instantiate 0, 1, 2
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: phi0
 	4: phi1
 	5: ♦phi2
@@ -995,10 +1099,10 @@ Instantiate 0, 1, 2
 Instantiate 0, 1, 2
 	Stack:
 	0: ksort_SortGeneratedTopCell
-	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
-	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	1: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
+	2: <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>
 	3: (phi1 k-> ♦phi2):phi0
 Instantiate 0, 1, 2
 	Stack:
-	0: (<kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'> k=> <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	0: (<kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'> k=> <kore_Lbl'-LT-'generatedTop'-GT-'> <kore_Lbl'-LT-'k'-GT-'> (kore_inj(ksort_SortFoo, ksort_SortKItem, kore_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </kore_Lbl'-LT-'k'-GT-'> phi1 </kore_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
 Publish
