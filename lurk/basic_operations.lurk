@@ -1,19 +1,3 @@
-;; fst :: (a, b) -> a
-!(def fst (lambda (pair)
-            (car pair)))
-
-;; snd :: (a, b) -> b
-!(def snd (lambda (pair)
-            (car (cdr pair))))
-
-;; trd :: (a, b, c) -> c
-!(def trd (lambda (triple)
-            (car (cdr (cdr triple)))))
-
-;; fth :: (a, b, c, d) -> d
-!(def fth (lambda (quadruple)
-            (car (cdr (cdr (cdr quadruple))))))
-
 ; f :: [stack] -> [memory] -> [claims] -> [instruction]
 ;   -> ([stack] -> [memory] -> [claims])
 ; buffer :: [instruction]
@@ -23,7 +7,7 @@
                 (if (eq buffer nil)
                     (cons stack (cons memory (cons claims (cons buffer nil))))
                     (let ((result (f stack memory claims buffer)))
-                         (map f (fst result) (snd result) (trd result) (fth result))))))
+                         (map f (car result) (car (cdr result)) (car (cdr (cdr result)))  (car (cdr (cdr (cdr result)))))))))
 
 
 ;; This function is used to get the value of a key in a pattern.
@@ -34,35 +18,6 @@
                         (car (cdr pattern))
                         (get key (cdr pattern)))
                     nil)))
-
-;; This function is used to set a the value of a key in a pattern.
-;; set :: key -> value -> [a] -> [a]
-!(def set (lambda (key value pattern)
-             (letrec ((aux (lambda (acc pattern)
-                             (if pattern
-                                 (if (eq key (car pattern))
-                                     (aux (cons key (cons value acc))
-                                          (cdr (cdr pattern)))
-                                     (aux (cons (car pattern)
-                                                (cons (car (cdr pattern)) acc))
-                                          (cdr (cdr pattern))))
-                                 acc))))
-               (aux () pattern))))
-
-;; This function is used to update the value with a function that consumes the
-;; current value of a key in a pattern.
-;; update :: key -> (value -> value) -> [a] -> [a]
-!(def update (lambda (key update-fn pattern)
-                (letrec ((aux (lambda (acc pattern)
-                                (if pattern
-                                    (if (eq key (car pattern))
-                                        (aux (cons key (cons (update-fn (car (cdr pattern))) acc))
-                                             (cdr (cdr pattern)))
-                                        (aux (cons (car pattern)
-                                                   (cons (car (cdr pattern)) acc))
-                                             (cdr (cdr pattern))))
-                                    acc))))
-                  (aux () pattern))))
 
 ;; This function is used to check if a list contains an element
 ;; contains :: ele -> [a] -> bool

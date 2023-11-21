@@ -8,21 +8,13 @@
 ;;; Stack utilities
 ;;; ===============
 
-;; Definition: push(term, stack) = stack'
-;; Use: (push (Pattern_ '(1 2 3)) Stack) => (:stack ((:type 0 :pattern (1 2 3))))
-!(def push_stack (lambda (term stack) (cons term stack)))
-
-;; Definition: pop(stack) = (term, stack')
-;; Use: (pop (push (Pattern_ '(1 2 3)) Stack)) => ((:type 0 :pattern (1 2 3)) nil)
-!(def pop_stack (lambda (stack) (cons (car stack) (cdr stack))))
-
 ;; Definition: pop_stack_proved(stack) = if (term.type == 1) then (term, stack') else nil
 ;; Use: (pop_stack_proved (push (Pattern_ '(1 2 3)) Stack)) => nil
 ;; Use: (pop_stack_proved (push (Proved_ '(1 2 3)) Stack)) => ((1 2 3)) nil)
-!(def pop_stack_proved 
+!(def pop_stack_proved
    (lambda (stack)
-      (if (= (get :type (car stack)) 1)
-         (cons (get :pattern (car stack)) (cdr stack))
+      (if (= (car (car stack)) 1)
+         (cons (car (cdr (car stack))) (cdr stack))
          nil
       )
    )
@@ -31,24 +23,11 @@
 ;; Definition: pop_stack_pattern(stack) = if (term.type == 0) then (term, stack') else nil
 ;; Use: (pop_stack_pattern (push (Pattern_ '(1 2 3)) Stack)) => ((1 2 3)) nil)
 ;; Use: (pop_stack_pattern (push (Proved_ '(1 2 3)) Stack)) => nil
-!(def pop_stack_pattern 
+!(def pop_stack_pattern
    (lambda (stack)
-      (if (= (get :type (car stack)) 0)
-         (cons (get :pattern (car stack)) (cdr stack)) ; TODO: Simplify it
+      (if (= (car (car stack)) 0)
+         (cons (car (cdr (car stack))) (cdr stack)) ; TODO: Simplify it
          nil
       )
    )
 )
-
-
-;; Definition: push(term, memory) = memory'
-;; Use: (push (Pattern_ '(1 2 3)) Memory) => ((:type 0 :pattern (1 2 3)))
-!(def push_memory (lambda (term memory) (append term memory)))
-
-;; Definition: push(pattern, list) = claims'
-;; Use: (push pattern Claims) => ((pattern) Claims)
-!(def push_claim (lambda (pattern claims) (cons pattern claims)))
-
-;; Definition: pop(list) = (pattern, list')
-;; Use: (pop (push pattern nil)) => ((pattern) bil)
-!(def pop (lambda (claims) (cons (car claims) (cdr claims))))

@@ -27,12 +27,9 @@
    (lambda (list)
       (if (eq list nil)
          nil
-         (let ((term (car list))
-               (list (cdr list)))
-               (if (eq (get :pattern term) nil)
-                  nil
-                  (cons (pretty_print_pattern (get :pattern term)) (pretty_print list))
-               )
+         (if (eq (car (cdr (car list))) nil)
+            nil
+            (cons (pretty_print_pattern (car (cdr (car list)))) (pretty_print (cdr list)))
          )
       )
    )

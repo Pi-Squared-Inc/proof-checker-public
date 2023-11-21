@@ -1,4 +1,4 @@
-!(defrec check_plugs_pos (lambda (check p idList) 
+!(defrec check_plugs_pos (lambda (check p idList)
     (if (eq idList nil)
         nil
         (if (not(check (car idList) p))
@@ -14,20 +14,22 @@
 !(defrec for_it_vars_checks (lambda (vars plugs pos p)
     (if (eq vars nil)
         nil
-        (if (eq (car vars) (get :id p))
-            (if (check_plugs_pos is_e_fresh? (nth pos plugs) (get :e_fresh p))
-                nil
-                (if (check_plugs_pos is_s_fresh? (nth pos plugs) (get :s_fresh p))
+        (let ((plugs_pos (nth pos plugs)))
+             (if (eq (car vars) (get :id p))
+                 (if (check_plugs_pos is_e_fresh? plugs_pos (get :e_fresh p))
                     nil
-                    (if (check_plugs_pos is_positive? (nth pos plugs) (get :positive p))
+                    (if (check_plugs_pos is_s_fresh? plugs_pos (get :s_fresh p))
                         nil
-                        (if (check_plugs_pos is_negative? (nth pos plugs) (get :negative p))
+                        (if (check_plugs_pos is_positive? plugs_pos (get :positive p))
                             nil
-                            (if (>= pos (length plugs))
+                            (if (check_plugs_pos is_negative? plugs_pos (get :negative p))
                                 nil
-                                (nth pos plugs)
-                            )))))
-            (for_it_vars_checks (cdr vars) plugs (+ pos 1) p)
+                                (if (>= pos (length plugs))
+                                    nil
+                                    plugs_pos
+                                ))))
+                 )
+                 (for_it_vars_checks (cdr vars) plugs (+ pos 1) p))
         ))))
 
 !(defrec instantiate_internal (lambda (p vars plugs)
