@@ -1,0 +1,39 @@
+!(defrec pretty_print_pattern 
+   (lambda (pattern)
+      (if (eq pattern nil)
+         nil
+         (if (eq (get :inst pattern) 2)
+            (cons "evar" (cons (get :id pattern) nil))
+            (if (eq (get :inst pattern) 3)
+               (cons "svar"(cons (get :id pattern) nil))
+               (if (eq (get :inst pattern) 4)
+                  (cons "symbol" (cons (get :id pattern) nil))
+                  (if (eq (get :inst pattern) 5)
+                     (cons "implies" (cons (pretty_print_pattern (get :left pattern)) (cons (pretty_print_pattern (get :right pattern)) nil)))
+                      (if (eq (get :inst pattern) 9)
+                        (cons "phi" (cons (get :id pattern) nil)) 
+                        (cons "Pretty Print not implemented for: " (cons pattern nil)) ;; Error
+                     )
+                  )
+               )
+            )
+         )
+      )
+   )
+)
+
+;; Lets define a recursive pretty print function 
+!(defrec pretty_print
+   (lambda (list)
+      (if (eq list nil)
+         nil
+         (let ((term (car list))
+               (list (cdr list)))
+               (if (eq (get :pattern term) nil)
+                  nil
+                  (cons (pretty_print_pattern (get :pattern term)) (pretty_print list))
+               )
+         )
+      )
+   )
+)
