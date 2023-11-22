@@ -4,4 +4,4 @@
 !(def svar_0 (svar 0))
 !(def phi0_s_fresh_0 (metavar_s_fresh 0 0 '(0) '(0)))
 
-(instantiate_internal phi0_s_fresh_0 '(0) cons(svar_0 nil))
+!(assert (eq (instantiate_internal phi0_s_fresh_0 '(0) (cons svar_0 nil)) nil))
