@@ -6,7 +6,7 @@
 !(def evar
     (lambda (evar_id)
         (cons :inst (cons 2
-        (cons :id (cons evar_id nil ))))
+        (cons :id (cons evar_id nil))))
     )
 )
 
@@ -15,7 +15,7 @@
 !(def svar
     (lambda (svar_id)
        (cons :inst (cons 3
-       (cons :id (cons svar_id nil ))))
+       (cons :id (cons svar_id nil))))
     )
 )
 
@@ -24,7 +24,7 @@
 !(def symbol
     (lambda (symbol_id)
         (cons :inst (cons 4
-        (cons :id (cons symbol_id nil ))))
+        (cons :id (cons symbol_id nil))))
     )
 )
 
@@ -34,7 +34,7 @@
     (lambda (p1 p2)
         (cons :inst (cons 5
         (cons :left (cons p1
-        (cons :right (cons p2  nil))))))
+        (cons :right (cons p2 nil))))))
     )
 )
 
@@ -44,7 +44,7 @@
     (lambda (p1 p2)
         (cons :inst (cons 6
         (cons :left (cons p1
-        (cons :right (cons p2  nil))))))
+        (cons :right (cons p2 nil))))))
     )
 )
 
@@ -78,7 +78,7 @@
         (cons :s_fresh (cons nil
         (cons :positive (cons nil
         (cons :negative (cons nil
-        (cons :app_ctx_holes nil)))))))))))))
+        (cons :app_ctx_holes (cons nil nil))))))))))))))
     )
 )
 
@@ -103,10 +103,10 @@
         (cons :inst (cons 9
         (cons :id (cons new_id
         (cons :e_fresh (cons nil
-        (cons :s_fresh (cons s_fresh
+        (cons :s_fresh (cons (cons s_fresh nil)
         (cons :positive (cons positive
         (cons :negative (cons negative
-        (cons :app_ctx_holes nil)))))))))))))
+        (cons :app_ctx_holes (cons nil nil))))))))))))))
     )
 )
 
