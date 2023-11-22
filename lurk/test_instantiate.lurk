@@ -1,0 +1,141 @@
+!(load "pattern_impl.lurk")
+!(load "instantiate_in_place.lurk")
+
+!(def x0e (evar 0))
+!(def x0s (svar 0))
+!(def c0 (symbol 0))
+!(def x0e_implies_x0e (implies x0e x0e))
+!(def appx0ex0e (app x0e x0e))
+!(def existsx0x0e (exists 0 x0e))
+!(def mux0x0e (mu 0 x0e))
+
+;; Concrete patterns are unaffected by instantiate
+!(assert (eq (instantiate_internal x0e '(0) (cons x0s nil)) nil))
+!(assert (eq (instantiate_internal x0e '(1) (cons x0s nil)) nil))
+!(assert (eq (instantiate_internal x0s '(0) (cons x0e nil)) nil))
+!(assert (eq (instantiate_internal x0s '(1) (cons x0e nil)) nil))
+!(assert (eq (instantiate_internal c0  '(0) (cons x0e nil)) nil))
+!(assert (eq (instantiate_internal c0  '(1) (cons x0e nil)) nil))
+!(assert (eq (instantiate_internal x0e_implies_x0e '(0) (cons x0e nil)) nil))
+!(assert (eq (instantiate_internal x0e_implies_x0e '(1) (cons x0e nil)) nil))
+!(assert (eq (instantiate_internal appx0ex0e '(0) (cons x0e nil)) nil))
+!(assert (eq (instantiate_internal appx0ex0e '(1) (cons x0e nil)) nil))
+!(assert (eq (instantiate_internal existsx0x0e '(0) (cons x0s nil)) nil))
+!(assert (eq (instantiate_internal existsx0x0e '(1) (cons x0s nil)) nil))
+!(assert (eq (instantiate_internal mux0x0e '(0) (cons x0e nil)) nil))
+!(assert (eq (instantiate_internal mux0x0e '(1) (cons x0e nil)) nil))
+
+!(def phi0 (metavar_unconstrained 0))
+!(def phi0_implies_phi0 (implies phi0 phi0))
+!(def appphi0phi0 (app phi0 phi0))
+!(def existsx0phi0 (exists 0 phi0))
+!(def mux0phi0 (mu 0 phi0))
+!(def existsx0x0s (exists 0 x0s))
+
+!(assert (eq (instantiate_internal phi0_implies_phi0 '(0) (cons x0e nil))
+             x0e_implies_x0e))
+!(assert (eq (instantiate_internal phi0_implies_phi0 '(1) (cons x0e nil)) nil))
+!(assert (eq (instantiate_internal appphi0phi0 '(0) (cons x0e nil))
+             appx0ex0e))
+!(assert (eq (instantiate_internal appphi0phi0 '(1) (cons x0e nil)) nil))
+!(assert (eq (instantiate_internal existsx0phi0 '(0) (cons x0e nil))
+             existsx0x0e))
+!(assert (eq (instantiate_internal existsx0phi0 '(1) (cons x0e nil)) nil))
+!(assert (eq (instantiate_internal mux0phi0 '(0) (cons x0e nil))
+             mux0x0e))
+!(assert (eq (instantiate_internal mux0phi0 '(1) (cons x0e nil)) nil))
+
+;; Simultaneous instantiations
+
+!(def phi1 (metavar_unconstrained 1))
+!(def mux0phi1 (mu 0 phi1))
+!(def mux0x0s (mu 0 x0s))
+
+;; Empty substs have no effect
+!(assert (eq (instantiate_internal existsx0phi0 '(1 2) (cons x0e (cons x0s nil))) nil))
+!(assert (eq (instantiate_internal existsx0phi0 '(2 1) (cons x0e (cons x0s nil))) nil))
+!(assert (eq (instantiate_internal  mux0phi0 '(1 2) (cons x0e (cons x0s nil))) nil))
+!(assert (eq (instantiate_internal  mux0phi0 '(2 1) (cons x0e (cons x0s nil))) nil))
+
+;; Order matters if corresponding value is not moved
+!(assert (eq (instantiate_internal existsx0phi0 '(1 0) (cons x0e (cons x0s nil)))
+             existsx0x0s))
+!(assert (eq (instantiate_internal existsx0phi0 '(0 1) (cons x0e (cons x0s nil)))
+             existsx0x0e))
+!(assert (eq (instantiate_internal mux0phi0 '(1 0) (cons x0e (cons x0s nil)))
+             mux0x0s))
+!(assert (eq (instantiate_internal mux0phi0 '(0 1) (cons x0e (cons x0s nil)))
+             mux0x0e))
+
+;; Order does not matter if corresponding value is moved
+!(def mux0phi0_implies_ph1 (implies mux0phi0 phi1))
+!(def mux0x0e_implies_x0s (implies mux0x0e x0s))
+!(assert (eq (instantiate_internal mux0phi0_implies_ph1 '(0 1) (cons x0e (cons x0s nil)))
+             mux0x0e_implies_x0s))
+!(assert (eq (instantiate_internal mux0phi0_implies_ph1 '(1 0) (cons x0s (cons x0e nil)))
+             mux0x0e_implies_x0s))
+
+!(def mux0phi0_app_ph1 (app mux0phi0 phi1))
+!(def mux0x0e_app_x0s (app mux0x0e x0s))
+!(assert (eq (instantiate_internal mux0phi0_app_ph1 '(0 1) (cons x0e (cons x0s nil)))
+             mux0x0e_app_x0s))
+!(assert (eq (instantiate_internal mux0phi0_app_ph1 '(1 0) (cons x0s (cons x0e nil)))
+             mux0x0e_app_x0s))
+
+;; No side-effects
+!(def mux0ph1_implies_x0s (implies mux0phi1 x0s))
+!(assert (eq (instantiate_internal mux0phi0_implies_ph1 '(0 1) (cons phi1 (cons x0s nil)))
+             mux0ph1_implies_x0s))
+!(assert (eq (instantiate_internal mux0phi0_implies_ph1 '(1 0) (cons x0s (cons phi1 nil)))
+             mux0ph1_implies_x0s))
+
+!(def mux0ph1_app_x0s (app mux0phi1 x0s))
+!(assert (eq (instantiate_internal mux0phi0_app_ph1 '(0 1) (cons phi1 (cons x0s nil)))
+             mux0ph1_app_x0s)) 
+!(assert (eq (instantiate_internal mux0phi0_app_ph1 '(1 0) (cons x0s (cons phi1 nil)))
+             mux0ph1_app_x0s))
+
+;; First comes first
+!(assert (eq (instantiate_internal mux0phi0_app_ph1 '(0 1 1) (cons phi1 (cons x0s (cons x0e nil))))
+             mux0ph1_app_x0s))
+!(assert (eq (instantiate_internal mux0phi0_app_ph1 '(1 0 0) (cons x0s (cons phi1 (cons x0e nil))))
+             mux0ph1_app_x0s))
+
+;; Extra values are ignored
+!(assert (eq (instantiate_internal mux0phi0_app_ph1 '(0 1 1)
+                                   (cons phi1 (cons x0s (cons x0e (cons x0e (cons x0e (cons x0e (cons x0e (cons x0e nil)))))))))
+             mux0ph1_app_x0s))
+!(assert (eq (instantiate_internal mux0phi0_app_ph1 '(0 1 2) (cons phi1 (cons x0s nil)))
+             mux0ph1_app_x0s))
+
+;; Instantiate with concrete patterns applies pending substitutions
+!(def val (esubst 0 phi0 c0))
+!(assert (eq (instantiate_internal val '(0) (cons x0e nil))
+             c0))
+
+!(def val (ssubst 0 phi0 c0))
+!(assert (eq (instantiate_internal val '(0) (cons x0s nil))
+             c0))
+
+!(def val (ssubst 0 (esubst 0 phi0 x0s) c0))
+!(assert (eq (instantiate_internal val '(0) (cons x0s nil))
+             c0))
+
+;; Instantiate with metavar keeps pending substitutions
+!(def val (esubst 0 phi0 c0))
+!(assert (eq (instantiate_internal val '(0) (cons phi1 nil))
+             (esubst 0 phi1 c0)))
+
+!(def val (ssubst 0 phi0 c0))
+!(assert (eq (instantiate_internal val '(0) (cons phi1 nil))
+             (ssubst 0 phi1 c0)))
+
+;; The plug in a subst. needs to be instantiated as well
+!(def val (ssubst 0 phi0 phi0))
+!(assert (eq (instantiate_internal val '(0) (cons x0s nil))
+             x0s))
+
+!(def val (ssubst 0 phi0 phi1))
+!(assert (eq (instantiate_internal val '(0 1) (cons x0s (cons c0 nil)))
+             c0))
+

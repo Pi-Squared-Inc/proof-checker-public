@@ -82,7 +82,7 @@
     )
 )
 
-;; Definition: metavar(new_id, e_fresh, s_fresh, positive, negative, app_ctx_holes) = Pattern{inst = 10, id = new_id, e_fresh = e_fresh, s_fresh = s_fresh, positive = positive, negative = negative, app_ctx_holes = app_ctx_holes}
+;; Definition: metavar(new_id, e_fresh, s_fresh, positive, negative, app_ctx_holes) = Pattern{inst = 9, id = new_id, e_fresh = e_fresh, s_fresh = s_fresh, positive = positive, negative = negative, app_ctx_holes = app_ctx_holes}
 ;; Use: !(def new_metavar (metavar new_id e_fresh s_fresh positive negative app_ctx_holes))
 !(def metavar
     (lambda (new_id e_fresh s_fresh positive negative app_ctx_holes)
@@ -96,7 +96,7 @@
     )
 )
 
-;; Definition: metavar_s_fresh(new_id, s_fresh, positive, negative) = Pattern{inst = 11, id = new_id, s_fresh = (s_fresh nil), positive = positive, negative = negative}
+;; Definition: metavar_s_fresh(new_id, s_fresh, positive, negative) = Pattern{inst = 9, id = new_id, s_fresh = (s_fresh nil), positive = positive, negative = negative}
 ;; Use: !(def new_metavar_s_fresh (metavar_s_fresh new_id s_fresh positive negative))
 !(def metavar_s_fresh
     (lambda (new_id s_fresh positive negative)

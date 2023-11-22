@@ -32,6 +32,61 @@
                  (for_it_vars_checks (cdr vars) plugs (+ pos 1) p))
         ))))
 
+!(defrec apply_esubst (lambda (pattern evar_id plug)
+    (let ((wrap_subst (esubst evar_id pattern plug))
+          (inst (get :inst pattern)))
+         (if (= inst 2) ; Evar
+             (if (= evar_id (get :id pattern))
+                 plug
+                 pattern)
+             (if (= inst 5) ; Implies
+                 (implies (apply_esubst (get :left pattern) evar_id plug)
+                          (apply_esubst (get :right pattern) evar_id plug))
+                 (if (= inst 6) ; App
+                     (app (apply_esubst (get :left pattern) evar_id plug)
+                          (apply_esubst (get :right pattern) evar_id plug))
+                     (if (= inst 7) ; Mu
+                         (mu (get :id pattern) (apply_esubst (get :subpattern pattern) evar_id plug))
+                         (if (= inst 8) ; Exists
+                             (if (= evar_id (get :id pattern))
+                                 pattern
+                                 (exists (get :id pattern) (apply_esubst (get :subpattern pattern) evar_id plug)))
+                             (if (= inst 9) ; MetaVar
+                                 wrap_subst
+                                 (if (= inst 10) ; ESubst
+                                     wrap_subst
+                                     (if (= inst 11) ; SSubst
+                                         wrap_subst
+                                         pattern)))))))))))
+
+!(defrec apply_ssubst (lambda (pattern svar_id plug)
+    (let ((wrap_subst (ssubst svar_id pattern plug))
+          (inst (get :inst pattern)))
+         (if (= inst 3) ; Svar
+             (if (= svar_id (get :id pattern))
+                 plug
+                 pattern)
+             (if (= inst 5) ; Implies
+                 (implies (apply_ssubst (get :left pattern) svar_id plug)
+                          (apply_ssubst (get :right pattern) svar_id plug))
+                 (if (= inst 6) ; App
+                     (app (apply_ssubst (get :left pattern) svar_id plug)
+                          (apply_ssubst (get :right pattern) svar_id plug))
+                     (if (= inst 7) ; Mu
+                         (if (= svar_id (get :id pattern))
+                             pattern
+                             (mu (get :id pattern) (apply_ssubst (get :subpattern pattern) svar_id plug)))
+                         (if (= inst 8) ; Exists
+                             (exists (get :id pattern) (apply_ssubst (get :subpattern pattern) svar_id plug))
+                             (if (= inst 9) ; MetaVar
+                                 wrap_subst
+                                 (if (= inst 10) ; ESubst
+                                     wrap_subst
+                                     (if (= inst 11) ; SSubst
+                                         wrap_subst
+                                         pattern)))))))))))
+
+
 !(defrec instantiate_internal (lambda (p vars plugs)
     (let ((inst (get :inst p)))
         (if (= inst 2) ; Evar
@@ -61,14 +116,61 @@
                                  )
                             )
                             (if (= inst 6) ; App
-                                nil
-                                (if (= inst 8) ; Exists
-                                    nil
-                                    (if (= inst 7) ; Mu
-                                        nil
+                                (let ((left (get :left p))
+                                      (right (get :right p))
+
+                                      (inst_left (instantiate_internal left vars plugs))
+                                      (inst_right (instantiate_internal right vars plugs))
+                                     )
+                                     (if (and (eq inst_left nil) (eq inst_right nil))
+                                         nil
+                                         (if (eq inst_left nil)
+                                             (app left inst_right)
+                                             (if (eq inst_right nil)
+                                                 (app inst_left right)
+                                                 (app inst_left inst_right)
+                                             )
+                                         )
+                                     )
+                                )
+                                (if (= inst 7) ; Mu
+                                    (let ((new_sub (instantiate_internal (get :subpattern p) vars plugs)))
+                                         (if new_sub
+                                             (mu (get :id p) new_sub)
+                                             nil))
+                                    (if (= inst 8) ; Exists
+                                        (let ((new_sub (instantiate_internal (get :subpattern p) vars plugs)))
+                                             (if new_sub
+                                                 (exists (get :id p) new_sub)
+                                                 nil))
                                         (if (= inst 10) ; ESubst
-                                            nil
+                                            (let ((p_id (get :id p))
+                                                  (subpattern (get :subpattern p))
+                                                  (plug (get :plug p))
+
+                                                  (inst_subpattern (instantiate_internal subpattern vars plugs))
+                                                  (inst_plug (instantiate_internal plug vars plugs))
+                                                 )
+                                                 (if (and (eq inst_subpattern nil) (eq inst_plug nil))
+                                                     nil
+                                                     (if (eq inst_subpattern nil)
+                                                         (apply_esubst subpattern p_id inst_plug)
+                                                         (if (eq inst_plug nil)
+                                                             (apply_esubst inst_subpattern p_id plug)
+                                                             (apply_esubst inst_subpattern p_id inst_plug)))))
                                             (if (= inst 11) ; SSubst
-                                                nil
-                                                nil
-                                            )))))))))))))
+                                                (let ((p_id (get :id p))
+                                                      (subpattern (get :subpattern p))
+                                                      (plug (get :plug p))
+
+                                                      (inst_subpattern (instantiate_internal subpattern vars plugs))
+                                                      (inst_plug (instantiate_internal plug vars plugs))
+                                                     )
+                                                     (if (and (eq inst_subpattern nil) (eq inst_plug nil))
+                                                         nil
+                                                         (if (eq inst_subpattern nil)
+                                                             (apply_ssubst subpattern p_id inst_plug)
+                                                             (if (eq inst_plug nil)
+                                                                 (apply_ssubst inst_subpattern p_id plug)
+                                                                 (apply_ssubst inst_subpattern p_id inst_plug)))))
+                                                nil)))))))))))))
