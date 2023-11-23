@@ -81,7 +81,13 @@
             (if (= instr_u32 3) ; Svar
                nil
                (if (= instr_u32 4) ; Symbol
-                  nil
+                  (let ((id (car instructions))
+                        (instructions (cdr instructions)))
+                        (if (eq id nil)
+                           nil ;; Error
+                           (cons (cons (Pattern_ (symbol id)) stack) (cons memory (cons claims (cons instructions nil))))
+                        )
+                  )
                   (if (= instr_u32 5) ; Implication
                      (let ((pop1 (pop_stack_pattern stack))
                            (right (car pop1))
@@ -94,7 +100,16 @@
                            (cons (cons (Pattern_ implication) (cdr pop2)) (cons memory (cons claims (cons instructions nil))))
                      )
                      (if (= instr_u32 6) ; Application
-                        nil
+                        (let ((pop1 (pop_stack_pattern stack))
+                              (right (car pop1))
+
+                              (pop2 (pop_stack_pattern (cdr pop1)))
+                              (left (car pop2))
+
+                              (application (app left right))
+                              )
+                              (cons (cons (Pattern_ application) (cdr pop2)) (cons memory (cons claims (cons instructions nil))))
+                        )
                            (if (= instr_u32 7) ; Mu
                               nil
                               (if (= instr_u32 8) ; Exists
@@ -208,7 +223,7 @@
                                                                                           (pattern (car temp))
                                                                                           (stack (cdr temp))
                                                                                           )
-                                                                                          (cons stack (cons (push (Proved_ pattern) memory) (cons claims (cons instructions nil))))
+                                                                                          (cons stack (cons (append (Proved_ pattern) memory) (cons claims (cons instructions nil))))
                                                                                     )
                                                                                     (if (eq phase 1)
                                                                                           (let ((temp (pop_stack_pattern stack))
