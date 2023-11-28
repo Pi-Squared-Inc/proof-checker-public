@@ -1,0 +1,25 @@
+!(def x1 1)
+!(def x2 2)
+!(def x3 3)
+!(def x4 4)
+!(def x5 5)
+
+!(def ret 0)
+
+;; ret + w_i * x_i
+!(def ret (+ ret (* 1 x1)))
+!(def ret (+ ret (* 2 x2)))
+!(def ret (+ ret (* 1 x3)))
+!(def ret (+ ret (* 3 x4)))
+!(def ret (+ ret (* 1 x5)))
+
+; (if (< 0 (- ret 3))
+;     (let ((ret 1)) ret)
+;     (let ((ret -1)) ret)
+; )
+
+;;  ret - b
+(if (< 0 (- ret 3))
+    1
+    -1
+)

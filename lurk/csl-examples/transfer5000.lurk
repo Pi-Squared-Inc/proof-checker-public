@@ -1,0 +1,26 @@
+!(def addressTo 12345)
+!(def amount 10)
+!(def balanceSender 100)
+!(def balanceTo 200)
+
+!(defrec while
+    (lambda (i balanceSender balanceTo ret)
+        (if (>= i 5000)
+            ret
+            (if (> amount balanceSender)
+                (let ((ret 0)) ;; transfer is not successful
+                     (while (+ i 1) balanceSender balanceTo ret)
+                )
+                (let ((balanceSender (- balanceSender amount))
+                      (balanceTo (+ balanceTo amount))
+                      (ret 1) ;; transfer is successful
+                     )
+                     (while (+ i 1) balanceSender balanceTo ret)
+                )
+            )      
+        )
+    )
+)
+
+!(def i 0)
+(while i balanceSender balanceTo 0)

@@ -1,0 +1,14 @@
+!(def addressTo 12345)
+!(def amount 10)
+!(def balanceSender 100)
+!(def balanceTo 200)
+
+(if (> amount balanceSender)
+    0  ;; transfer is not successful
+    (let ((balanceSender (- balanceSender amount))
+          (balanceTo (+ balanceTo amount))
+          (ret 1)
+         )
+         ret ;; transfer is successful
+    )
+)
