@@ -179,8 +179,8 @@
                                                                            (plugs nil)
 
                                                                            (metaterm (car stack))
-                                                                           (metaterm_pattern (car (cdr metaterm))) ;(get :pattern metaterm))
-                                                                           (metaterm_type (car metaterm)) ;(get :type metaterm))
+                                                                           (metaterm_pattern (car (cdr metaterm))) ;(get :pattern metaterm)
+                                                                           (metaterm_type (car metaterm)) ;(get :type metaterm)
                                                                            (stack (cdr stack))
 
                                                                            (temp (loop_to_ids_plugs n instructions stack ids plugs))

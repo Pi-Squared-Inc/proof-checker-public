@@ -1,0 +1,41 @@
+!(load "pattern_impl.lurk")
+!(load "instantiate_in_place.lurk")
+
+;; Atomic cases
+!(assert (eq (apply_ssubst (evar 0) 0 (symbol 1)) (evar 0)))
+!(assert (eq (apply_ssubst (evar 0) 1 (evar 2)) (evar 0)))
+!(assert (eq (apply_ssubst (svar 0) 0 (symbol 0)) (symbol 0)))
+!(assert (eq (apply_ssubst (svar 1) 0 (evar 0)) (svar 1)))
+!(assert (eq (apply_ssubst (symbol 0) 0 (symbol 1)) (symbol 0)))
+
+;; Distribute over subpatterns
+!(assert (eq (apply_ssubst (implies (svar 7) (symbol 1)) 7 (symbol 0))
+             (implies (symbol 0) (symbol 1))))
+!(assert (eq (apply_ssubst (implies (svar 7) (symbol 1)) 6 (symbol 0))
+             (implies (svar 7) (symbol 1))))
+!(assert (eq (apply_ssubst (app (svar 7) (symbol 1)) 7 (symbol 0))
+             (app (symbol 0) (symbol 1))))
+!(assert (eq (apply_ssubst (app (svar 7) (symbol 1)) 6 (symbol 0))
+             (app (svar 7) (symbol 1))))
+
+;; Distribute over subpatterns unless evar_id = binder
+!(assert (eq (apply_ssubst (exists 1 (svar 0)) 0 (symbol 2))
+             (exists 1 (symbol 2))))
+!(assert (eq (apply_ssubst (exists 1 (symbol 1)) 1 (symbol 2))
+             (exists 1 (symbol 1))))
+!(assert (eq (apply_ssubst (mu 1 (svar 1)) 0 (symbol 2))
+             (mu 1 (svar 1))))
+!(assert (eq (apply_ssubst (mu 1 (svar 1)) 1 (symbol 2))
+             (mu 1 (svar 1))))
+!(assert (eq (apply_ssubst (mu 1 (svar 2)) 2 (symbol 2))
+             (mu 1 (symbol 2))))
+
+;; Subst on metavar should wrap in constructor
+!(assert (eq (apply_ssubst (metavar_unconstrained 0) 0 (symbol 1))
+             (ssubst 0 (metavar_unconstrained 0) (symbol 1))))
+
+;; Subst when evar_id is fresh should do nothing
+!(assert (eq (apply_ssubst (esubst 0 (metavar_unconstrained 0) (symbol 1)) 0 (symbol 1))
+             (ssubst 0 (esubst 0 (metavar_unconstrained 0) (symbol 1)) (symbol 1))))
+!(assert (eq (apply_ssubst (ssubst 0 (metavar_unconstrained 0) (symbol 1)) 0 (symbol 1))
+             (ssubst 0 (ssubst 0 (metavar_unconstrained 0) (symbol 1)) (symbol 1))))
