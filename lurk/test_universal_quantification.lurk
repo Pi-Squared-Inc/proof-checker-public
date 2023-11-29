@@ -1,0 +1,13 @@
+!(load "lib.lurk")
+
+!(def proof '(22 0))
+!(def stack (cons (Proved_ (implies (symbol 0) (symbol 1))) nil))
+!(def memory nil)
+!(def claims nil)
+
+!(def result (execute_instructions proof stack memory claims Proof_phase))
+
+!(assert (eq (car result)
+             (cons (Proved_ (implies (exists 0 (symbol 0)) (symbol 1))) nil))) ;; assert_eq!(stack, vec![Term::Proved(implies(exists(0, symbol(0)), symbol(1)))]);
+!(assert (eq (car (cdr result)) nil))                                          ;; assert_eq!(memory, vec![]);
+;!(assert (eq (car (cdr (cdr result))) nil))                                   ;; assert_eq!(claims, vec![]);

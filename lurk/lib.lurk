@@ -77,9 +77,13 @@
       (let ((instr_u32 (car instructions))
             (instructions (cdr instructions)))
          (if (= instr_u32 2) ; Evar
-            nil
+            (let ((id (car instructions))
+                  (instructions (cdr instructions)))
+                  (cons (cons (Pattern_ (evar id)) stack) (cons memory (cons claims (cons instructions nil)))))
             (if (= instr_u32 3) ; Svar
-               nil
+               (let ((id (car instructions))
+                     (instructions (cdr instructions)))
+                     (cons (cons (Pattern_ (svar id)) stack) (cons memory (cons claims (cons instructions nil)))))
                (if (= instr_u32 4) ; Symbol
                   (let ((id (car instructions))
                         (instructions (cdr instructions)))
@@ -111,9 +115,22 @@
                               (cons (cons (Pattern_ application) (cdr pop2)) (cons memory (cons claims (cons instructions nil))))
                         )
                            (if (= instr_u32 7) ; Mu
-                              nil
+                              (let ((id (car instructions))
+                                    (instructions (cdr instructions))
+                                    (pop (pop_stack_pattern stack))
+                                    (subpattern (car pop))
+                                    (mu_pat (mu id subpattern)))
+
+                                    (if (eq (pattern_well_formed mu_pat) nil)
+                                        nil
+                                        (cons (cons (Pattern_ mu_pat) (cdr pop)) (cons memory (cons claims (cons instructions nil))))))
                               (if (= instr_u32 8) ; Exists
-                                 nil
+                                 (let ((id (car instructions))
+                                       (instructions (cdr instructions))
+                                       (pop (pop_stack_pattern stack))
+                                       (subpattern (car pop)))
+
+                                       (cons (cons (Pattern_ (exists id subapttern)) (cdr pop)) (cons memory (cons claims (cons instructions nil)))))
                                  (if (= instr_u32 9) ; MetaVar
                                        (let ((id (car instructions))
                                              (instructions (cdr instructions)))
@@ -140,9 +157,41 @@
                                              )
                                           ))
                                        (if (= instr_u32 10) ; ESubst
-                                          nil
+                                          (let ((evar_id (car instructions))
+                                                (instructions (cdr instructions))
+                                                (pop1 (pop_stack_pattern stack))
+                                                (pattern (car pop1))
+                                                (pattern_inst (get :inst pattern))
+
+                                                (pop2 (pop_stack_pattern (cdr pop1)))
+                                                (plug (car pop2)))
+
+                                                (if (or (= pattern_inst 9)
+                                                        (or (= pattern_inst 10)
+                                                            (= pattern_inst 11)))
+                                                    (let ((esubst_pat (esubst evar_id pattern plug)))
+                                                          (if (pattern_well_formed esubst_pat)
+                                                              (cons (cons (Pattern_ pattern) (cdr pop2)) (cons memory (cons claims (cons instructions nil))))
+                                                              (cons (cons (Pattern_ esubst_pat) (cdr pop2)) (cons memory (cons claims (cons instructions nil))))))
+                                                    nil))
                                           (if (= instr_u32 11) ; SSubst
-                                             nil
+                                             (let ((svar_id (car instructions))
+                                                   (instructions (cdr instructions))
+                                                   (pop1 (pop_stack_pattern stack))
+                                                   (pattern (car pop1))
+                                                   (pattern_inst (get :inst pattern))
+
+                                                   (pop2 (pop_stack_pattern (cdr pop1)))
+                                                   (plug (car pop2)))
+
+                                                   (if (or (= pattern_inst 9)
+                                                           (or (= pattern_inst 10)
+                                                               (= pattern_inst 11)))
+                                                       (let ((ssubst_pat (ssubst svar_id pattern plug)))
+                                                             (if (eq (pattern_well_formed ssubst_pat) nil)
+                                                                 (cons (cons (Pattern_ pattern) (cdr pop2)) (cons memory (cons claims (cons instructions nil))))
+                                                                 (cons (cons (Pattern_ ssubst_pat) (cdr pop2)) (cons memory (cons claims (cons instructions nil))))))
+                                                       nil))
                                              (if (= instr_u32 12) ; Prop1
                                                 (cons (cons (Proved_ prop1) stack) (cons memory (cons claims (cons instructions nil))))
                                                 (if (= instr_u32 13) ; Prop2
@@ -150,9 +199,9 @@
                                                    (if (= instr_u32 14) ; Prop3
                                                       (cons (cons (Proved_ prop3) stack) (cons memory (cons claims (cons instructions nil))))
                                                       (if (= instr_u32 15) ; Quantifier
-                                                         nil
+                                                         (cons (cons (Proved_ quantifier) stack) (cons memory (cons claims (cons instructions nil))))
                                                          (if (= instr_u32 19) ; Existence
-                                                            nil
+                                                            (cons (cons (Proved_ existence) stack) (cons memory (cons claims (cons instructions nil))))
                                                             (if (= instr_u32 21) ; ModusPonens
                                                                (let ((temp (pop_stack_proved stack))
                                                                      (premise2 (car temp))
@@ -171,98 +220,129 @@
                                                                      )
                                                                )
                                                                (if (= instr_u32 22) ; Generalization
-                                                                  nil
-                                                                  (if (= instr_u32 26) ; Instantiate
-                                                                     (let ((n (car instructions))
-                                                                           (instructions (cdr instructions))
-                                                                           (ids nil)
-                                                                           (plugs nil)
+                                                                  (let ((pop (pop_stack_proved stack))
+                                                                        (pattern (car pop))
+                                                                        (pattern_inst (get :inst pattern)))
 
-                                                                           (metaterm (car stack))
-                                                                           (metaterm_pattern (car (cdr metaterm))) ;(get :pattern metaterm)
-                                                                           (metaterm_type (car metaterm)) ;(get :type metaterm)
-                                                                           (stack (cdr stack))
+                                                                        (if (= pattern_inst 5)
+                                                                            (let ((left (get :left pattern))
+                                                                                  (right (get :right pattern))
 
-                                                                           (temp (loop_to_ids_plugs n instructions stack ids plugs))
-                                                                           (stack (car temp))
-                                                                           (instructions (car (cdr temp)))
-                                                                           (ids (car (cdr (cdr temp))))
-                                                                           (plugs (car (cdr (cdr (cdr temp)))))
+                                                                                  (evar_id (car instructions))
+                                                                                  (instructions (cdr instructions)))
 
-                                                                           (metaterm (instantiate_internal metaterm_pattern ids plugs))
-                                                                          )
-                                                                          (if (eq metaterm_type 0)
-                                                                              (cons (cons (Pattern_ metaterm) stack) (cons memory (cons claims (cons instructions nil))))
-                                                                              (if (eq metaterm_type 1)
-                                                                                 (cons (cons (Proved_ metaterm) stack) (cons memory (cons claims (cons instructions nil))))
-                                                                                 nil ;; Error
-                                                                              )
-                                                                          )
-                                                                     )
-                                                                     (if (= instr_u32 27) ; Pop only the first item
-                                                                        (cons (cdr stack) (cons memory (cons claims (cons instructions nil))))
-                                                                        (if (= instr_u32 28) ; Save
-                                                                           (let ((term (car stack)))
-                                                                              (cons stack (cons (append term memory) (cons claims (cons instructions nil)))))
-                                                                           (if (= instr_u32 29) ; Load
-                                                                              (let ((index (car instructions))
-                                                                                    (instructions (cdr instructions)))
-                                                                                    (if (eq index nil)
+                                                                                  (if (eq (pattern_e_fresh evar_id right) nil)
+                                                                                      nil
+                                                                                      (cons (cons (Proved_ (implies (exists evar_id left) right)) (cdr pop)) (cons memory (cons claims (cons instructions nil))))))
+                                                                            nil))
+                                                                  (if (= instr_u32 24) ; Substitution
+                                                                      (let ((svar_id (car instructions))
+                                                                            (instructions (cdr instructions))
+                                                                            (pop1 (pop_stack_pattern stack))
+                                                                            (plug (car pop1))
+
+                                                                            (pop2 (pop_stack_proved (cdr pop1)))
+                                                                            (pattern (car pop2))
+                                                                            (pattern_inst (get :inst pattern)))
+                                                                           (if (or (= pattern_inst 9)
+                                                                                   (or (= pattern_inst 10)
+                                                                                       (= pattern_inst 11)))
+                                                                               (let ((ssubst_pat (ssubst svar_id pattern plug)))
+                                                                                    (if (eq (pattern_well_formed ssubst_pat) nil)
+                                                                                        (cons (cons (Proved_ pattern) (cdr pop2)) (cons memory (cons claims (cons instructions nil))))
+                                                                                        (cons (cons (Proved_ ssubst_pat) (cdr pop2)) (cons memory (cons claims (cons instructions nil))))))
+                                                                               nil))
+                                                                      (if (= instr_u32 26) ; Instantiate
+                                                                          (let ((n (car instructions))
+                                                                                (instructions (cdr instructions))
+                                                                                (ids nil)
+                                                                                (plugs nil)
+
+                                                                                (metaterm (car stack))
+                                                                                (metaterm_pattern (car (cdr metaterm))) ;(get :pattern metaterm)
+                                                                                (metaterm_type (car metaterm)) ;(get :type metaterm)
+                                                                                (stack (cdr stack))
+
+                                                                                (temp (loop_to_ids_plugs n instructions stack ids plugs))
+                                                                                (stack (car temp))
+                                                                                (instructions (car (cdr temp)))
+                                                                                (ids (car (cdr (cdr temp))))
+                                                                                (plugs (car (cdr (cdr (cdr temp)))))
+
+                                                                                (metaterm (instantiate_internal metaterm_pattern ids plugs))
+                                                                               )
+                                                                               (if (eq metaterm_type 0)
+                                                                                   (cons (cons (Pattern_ metaterm) stack) (cons memory (cons claims (cons instructions nil))))
+                                                                                   (if (eq metaterm_type 1)
+                                                                                       (cons (cons (Proved_ metaterm) stack) (cons memory (cons claims (cons instructions nil))))
                                                                                        nil ;; Error
-                                                                                       (let ((term (nth index memory)))
-                                                                                            (if (eq term nil)
+                                                                                   )
+                                                                               )
+                                                                          )
+                                                                          (if (= instr_u32 27) ; Pop only the first item
+                                                                              (cons (cdr stack) (cons memory (cons claims (cons instructions nil))))
+                                                                              (if (= instr_u32 28) ; Save
+                                                                                  (let ((term (car stack)))
+                                                                                       (cons stack (cons (append term memory) (cons claims (cons instructions nil)))))
+                                                                                  (if (= instr_u32 29) ; Load
+                                                                                      (let ((index (car instructions))
+                                                                                            (instructions (cdr instructions)))
+                                                                                           (if (eq index nil)
                                                                                                nil ;; Error
-                                                                                               (cons (cons term stack) (cons memory (cons claims (cons instructions nil))))
-                                                                                            )
-                                                                                       )
-                                                                                    )
-                                                                              )
-                                                                              (if (= instr_u32 30) ; Publish
-                                                                                 (if (eq phase 0)
-                                                                                    (let ((temp (pop_stack_pattern stack))
-                                                                                          (pattern (car temp))
-                                                                                          (stack (cdr temp))
-                                                                                          )
-                                                                                          (cons stack (cons (append (Proved_ pattern) memory) (cons claims (cons instructions nil))))
-                                                                                    )
-                                                                                    (if (eq phase 1)
-                                                                                          (let ((temp (pop_stack_pattern stack))
-                                                                                                (pattern (car temp))
-                                                                                                (stack (cdr temp))
+                                                                                               (let ((term (nth index memory)))
+                                                                                                    (if (eq term nil)
+                                                                                                        nil ;; Error
+                                                                                                        (cons (cons term stack) (cons memory (cons claims (cons instructions nil))))
+                                                                                                    )
                                                                                                )
-                                                                                             (cons stack (cons memory (cons (cons pattern claims) (cons instructions nil))))
-                                                                                          )
-                                                                                          (if (eq phase 2)
-                                                                                             (let ((pattern (car claims))
-                                                                                                   (claims (cdr claims))
+                                                                                           )
+                                                                                      )
+                                                                                      (if (= instr_u32 30) ; Publish
+                                                                                          (if (eq phase 0)
+                                                                                              (let ((temp (pop_stack_pattern stack))
+                                                                                                    (pattern (car temp))
+                                                                                                    (stack (cdr temp))
+                                                                                                   )
+                                                                                                   (cons stack (cons (append (Proved_ pattern) memory) (cons claims (cons instructions nil))))
+                                                                                              )
+                                                                                              (if (eq phase 1)
+                                                                                                  (let ((temp (pop_stack_pattern stack))
+                                                                                                        (pattern (car temp))
+                                                                                                        (stack (cdr temp))
+                                                                                                       )
+                                                                                                       (cons stack (cons memory (cons (cons pattern claims) (cons instructions nil))))
                                                                                                   )
-                                                                                                  (if (eq pattern nil)
-                                                                                                     nil ;; Error
-                                                                                                     (let ((temp (pop_stack_proved stack)) ; TODO: Should we add a check to see if the stack is empty?
-                                                                                                           (theorem (car temp))
-                                                                                                           (stack (cdr temp))
-                                                                                                          )
-                                                                                                          (if (eq pattern theorem)
-                                                                                                             (cons stack (cons memory (cons claims (cons instructions nil))))
-                                                                                                             nil ;; Error
-                                                                                                          )
-                                                                                                     )
-                                                                                                 )
-                                                                                             )
+                                                                                                  (if (eq phase 2)
+                                                                                                      (let ((pattern (car claims))
+                                                                                                            (claims (cdr claims))
+                                                                                                           )
+                                                                                                           (if (eq pattern nil)
+                                                                                                               nil ;; Error
+                                                                                                               (let ((temp (pop_stack_proved stack)) ; TODO: Should we add a check to see if the stack is empty?
+                                                                                                                     (theorem (car temp))
+                                                                                                                     (stack (cdr temp))
+                                                                                                                    )
+                                                                                                                    (if (eq pattern theorem)
+                                                                                                                        (cons stack (cons memory (cons claims (cons instructions nil))))
+                                                                                                                        nil ;; Error
+                                                                                                                    )
+                                                                                                               )
+                                                                                                           )
+                                                                                                      )
+                                                                                                  )
+                                                                                              )
                                                                                           )
-                                                                                    )
-                                                                                 )
-                                                                                 (if (= instr_u32 137) ; CleanMetaVar
-                                                                                    (let ((id (car instructions))
-                                                                                          (instructions (cdr instructions)))
-                                                                                          (if (eq id nil)
-                                                                                             nil ;; Error
-                                                                                             (cons (cons (Pattern_ (metavar_unconstrained id)) stack) (cons memory (cons claims (cons instructions nil))))
+                                                                                          (if (= instr_u32 137) ; CleanMetaVar
+                                                                                              (let ((id (car instructions))
+                                                                                                    (instructions (cdr instructions)))
+                                                                                                   (if (eq id nil)
+                                                                                                       nil ;; Error
+                                                                                                       (cons (cons (Pattern_ (metavar_unconstrained id)) stack) (cons memory (cons claims (cons instructions nil))))
 
-                                                                                          )
-                                                                                    )
-                                                                                    nil
-                                                                                 ))))))))))))))))))))))))))
+                                                                                                   )
+                                                                                              )
+                                                                                              nil
+                                                                                          )))))))))))))))))))))))))))
 
 ;; Definition: execute_instructions(buffer, stack, memory, claims, phase) = (stack', memory', claims', instructions')
 !(def execute_instructions (lambda (buffer stack memory claims phase)
