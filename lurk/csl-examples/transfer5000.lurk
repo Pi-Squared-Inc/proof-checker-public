@@ -17,10 +17,14 @@
                      )
                      (while (+ i 1) balanceSender balanceTo ret)
                 )
-            )      
+            )
         )
     )
 )
 
 !(def i 0)
 (while i balanceSender balanceTo 0)
+
+!(prove)
+
+!(verify "Nova_Pallas_500_0a6bae4f9966ee74f75f52cee64ea9d9ee6f7137031eec17e553dc937772fd59")
