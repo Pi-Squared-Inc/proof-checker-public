@@ -1,0 +1,54 @@
+Hook: MAP.element @ 0
+  Function: Lbl'UndsPipe'-'-GT-Unds'{} @ 0
+    Term: [kore]
+    Term: [kore]
+  Result: [kore]
+Hook: MAP.unit @ 0
+  Function: Lbl'Stop'Map{} @ 0
+  Result: [kore]
+Hook: MAP.concat @ 0
+  Function: Lbl'Unds'Map'Unds'{} @ 0
+    Term: [kore]
+    Term: [kore]
+  Result: [kore]
+Function: LblinitGeneratedTopCell{} @ 0
+  Term: [kore]
+Rule 163 [label: N/A] [loc: N/A] [substs: 1]
+  VarInit = [kore]
+Function: LblinitKCell{} @ 0:0
+  Term: [kore]
+Rule 164 [label: N/A] [loc: N/A] [substs: 1]
+  VarInit = [kore]
+Function: Lblproject'Coln'KItem{} @ 0:0:0
+  Hook: MAP.lookup @ 0:0:0:0:0
+    Function: LblMap'Coln'lookup{} @ 0:0:0:0:0
+      Term: [kore]
+      Term: [kore]
+    Result: [kore]
+  Term: [kore]
+Rule 207 [label: N/A] [loc: N/A] [substs: 1]
+  VarK = [kore]
+Function: LblinitGeneratedCounterCell{} @ 0:1
+Rule 162 [label: N/A] [loc: N/A] [substs: 0]
+Init config: [kore]
+Rule 127 [label: REVERSE.init] [loc: 13,16] [substs: 1]
+  Var'Unds'DotVar0 = [kore]
+Config: [kore]
+Rule 128 [label: REVERSE.next] [loc: 14,16] [substs: 1]
+  Var'Unds'DotVar0 = [kore]
+Function: Lblreverse'LParUndsRParUnds'REVERSE'Unds'Tree'Unds'Tree{} @ 0:0:0:0:0
+  Term: [kore]
+Rule 213 [label: REVERSE.rec-case] [loc: 8,21] [substs: 2]
+  VarT1 = [kore]
+  VarT2 = [kore]
+Function: Lblreverse'LParUndsRParUnds'REVERSE'Unds'Tree'Unds'Tree{} @ 0:0
+  Term: [kore]
+Rule 212 [label: REVERSE.base-case] [loc: 7,21] [substs: 2]
+  VarI = [kore]
+  Var'Unds'Gen0 = [kore]
+Function: Lblreverse'LParUndsRParUnds'REVERSE'Unds'Tree'Unds'Tree{} @ 0:1
+  Term: [kore]
+Rule 212 [label: REVERSE.base-case] [loc: 7,21] [substs: 2]
+  VarI = [kore]
+  Var'Unds'Gen0 = [kore]
+Config: [kore]
