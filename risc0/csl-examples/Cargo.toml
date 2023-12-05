@@ -1,0 +1,19 @@
+[package]
+name = "csl-examples"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+risc0-zkvm = { version = "0.16.1" } # Use 'features = ["cuda"]' to run in GPU 
+env_logger = "0.10"
+serde = "1.0"
+
+[build-dependencies]
+risc0-build = { version = "0.16.1" }
+
+[package.metadata.risc0]
+methods = ["guest"]
+
+[[bin]]
+name = "host-csl"
+path = "src/main.rs"
