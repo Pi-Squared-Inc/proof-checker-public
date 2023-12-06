@@ -1,36 +1,56 @@
-!(defrec check_plugs_pos (lambda (check p idList)
+!(defrec is_e_fresh? (lambda (p idList)
     (if (eq idList nil)
         nil
-        (if (not(check (car idList) p))
+        (if (pattern_e_fresh (car idList) p)
+            (is_e_fresh? p (cdr idList))
             t
-            (check_plugs_pos check p (cdr idList))
         ))))
 
-!(def is_e_fresh? (lambda (evar pattern) (pattern_e_fresh evar pattern)))
-!(def is_s_fresh? (lambda (svar pattern) (pattern_s_fresh svar pattern)))
-!(def is_positive? (lambda (svar pattern) (pattern_positive svar pattern)))
-!(def is_negative? (lambda (svar pattern) (pattern_negative svar pattern)))
+!(defrec is_s_fresh? (lambda (p idList)
+    (if (eq idList nil)
+        nil
+        (if (pattern_s_fresh (car idList) p)
+            (is_s_fresh? p (cdr idList))
+            t
+        ))))
+
+!(defrec is_positive? (lambda (p idList)
+    (if (eq idList nil)
+        nil
+        (if (pattern_positive (car idList) p)
+            (is_positive? p (cdr idList))
+            t
+        ))))
+
+!(defrec is_negative? (lambda (p idList)
+    (if (eq idList nil)
+        nil
+        (if (pattern_negative (car idList) p)
+            (is_negative? p (cdr idList))
+            t
+        ))))
 
 !(defrec for_it_vars_checks (lambda (vars plugs pos p)
     (if (eq vars nil)
         nil
-        (let ((plugs_pos (nth pos plugs)))
-             (if (eq (car vars) (get :id p))
-                 (if (check_plugs_pos is_e_fresh? plugs_pos (get :e_fresh p))
+        (if (eq (car vars) (car (cdr (cdr (cdr p))))) ; (get :id p))
+            (let ((plugs_pos (nth pos plugs)))
+                 (if (is_e_fresh? plugs_pos  (car (cdr (cdr (cdr (cdr (cdr p))))))) ; (get :e_fresh p))
                     nil
-                    (if (check_plugs_pos is_s_fresh? plugs_pos (get :s_fresh p))
+                    (if (is_s_fresh? plugs_pos (car (cdr (cdr (cdr (cdr (cdr (cdr (cdr p))))))))) ; (get :s_fresh p))
                         nil
-                        (if (check_plugs_pos is_positive? plugs_pos (get :positive p))
+                        (if (is_positive? plugs_pos (car (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr p))))))))))) ; (get :positive p))
                             nil
-                            (if (check_plugs_pos is_negative? plugs_pos (get :negative p))
+                            (if (is_negative? plugs_pos  (car (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr p))))))))))))) ; (get :negative p))
                                 nil
                                 (if (>= pos (length plugs))
                                     nil
                                     plugs_pos
                                 ))))
                  )
-                 (for_it_vars_checks (cdr vars) plugs (+ pos 1) p))
-        ))))
+            )
+            (for_it_vars_checks (cdr vars) plugs (+ pos 1) p))
+        )))
 
 !(defrec apply_esubst (lambda (pattern evar_id plug)
     (let ((wrap_subst (esubst evar_id pattern plug))
@@ -98,8 +118,8 @@
                     (if (= inst 9) ; MetaVar
                         (for_it_vars_checks vars plugs 0 p)
                         (if (= inst 5) ; Implies
-                            (let ((left (get :left p))
-                                  (right (get :right p))
+                            (let ((left (car (cdr (cdr (cdr p))))) ;(get :left p))
+                                  (right (car (cdr (cdr (cdr (cdr (cdr p))))))) ;(get :right p))
 
                                   (inst_left (instantiate_internal left vars plugs))
                                   (inst_right (instantiate_internal right vars plugs))
@@ -107,10 +127,20 @@
                                  (if (and (eq inst_left nil) (eq inst_right nil))
                                     nil
                                     (if (eq inst_left nil)
-                                        (implies left inst_right)
+                                        ;;(implies left inst_right)
+                                        (cons :inst (cons 5
+                                        (cons :left (cons left
+                                        (cons :right (cons inst_right nil))))))
                                         (if (eq inst_right nil)
-                                            (implies inst_left right)
-                                            (implies inst_left inst_right)
+                                            ;; (implies inst_left right)
+                                            (cons :inst (cons 5
+                                            (cons :left (cons inst_left
+                                            (cons :right (cons right nil))))))
+                                            
+                                            ;; (implies inst_left inst_right)
+                                            (cons :inst (cons 5
+                                            (cons :left (cons inst_left
+                                            (cons :right (cons inst_right nil))))))
                                         )
                                     )
                                  )

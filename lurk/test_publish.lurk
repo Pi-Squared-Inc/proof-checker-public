@@ -1,15 +1,15 @@
 !(load "lib.lurk")
 
 !(def proof '(30))
-!(def stack (cons (Pattern_ (symbol 0)) nil))
+!(def stack (cons (cons 0 (cons (symbol 0) nil)) nil))
 !(def memory nil)
 !(def claims nil)
 !(def gamma_result (execute_instructions proof stack memory claims Gamma_phase))
-!(assert (eq (car gamma_result) nil))                                    ;;assert_eq!(stack, vec![]);
-!(assert (eq (car (cdr gamma_result)) (cons (Proved_ (symbol 0)) nil)))  ;;assert_eq!(memory, vec![Entry::Proved(symbol(0))]);
-!(assert (eq (car (cdr (cdr gamma_result))) nil))                        ;;assert_eq!(claims, vec![]);
+!(assert (eq (car gamma_result) nil))                                              ;;assert_eq!(stack, vec![]);
+!(assert (eq (car (cdr gamma_result)) (cons (cons 1 (cons (symbol 0) nil)) nil)))  ;;assert_eq!(memory, vec![Entry::Proved(symbol(0))]);
+!(assert (eq (car (cdr (cdr gamma_result))) nil))                                  ;;assert_eq!(claims, vec![]);
 
-!(def stack (cons (Pattern_ (symbol 0)) nil))
+!(def stack (cons (cons 0 (cons (symbol 0) nil)) nil))
 !(def memory nil)
 !(def claims nil)
 !(def claim_result (execute_instructions proof stack memory claims Claim_phase))
@@ -17,7 +17,7 @@
 !(assert (eq (car (cdr claim_result)) nil))                          ;;assert_eq!(memory, vec![]);
 !(assert (eq (car (cdr (cdr claim_result))) (cons (symbol 0) nil)))  ;;assert_eq!(claims, vec![symbol(0)]);
 
-!(def stack (cons (Proved_ (symbol 0)) nil))
+!(def stack (cons (cons 1 (cons (symbol 0) nil)) nil))
 !(def memory nil)
 !(def claims (cons (symbol 0) nil))
 !(def proof_result (execute_instructions proof stack memory claims Proof_phase))
