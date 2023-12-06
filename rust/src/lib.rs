@@ -291,6 +291,20 @@ impl Pattern {
                 ..
             } => return !app_ctx_holes.into_iter().any(|hole| e_fresh.contains(hole)),
             Pattern::Mu { var, subpattern } => subpattern.positive(*var),
+            Pattern::ESubst { pattern, .. } => {
+                !self.is_redundant_subst()
+                    && matches!(
+                        pattern.as_ref(),
+                        Pattern::MetaVar { .. } | Pattern::ESubst { .. } | Pattern::SSubst { .. }
+                    )
+            }
+            Pattern::SSubst { pattern, .. } => {
+                !self.is_redundant_subst()
+                    && matches!(
+                        pattern.as_ref(),
+                        Pattern::MetaVar { .. } | Pattern::ESubst { .. } | Pattern::SSubst { .. }
+                    )
+            }
             _ => {
                 // TODO: If we make sure that we only use well-formed above constructs, then we should not need to check recursively
                 unimplemented!(
@@ -303,11 +317,15 @@ impl Pattern {
     fn is_redundant_subst(&self) -> bool {
         match self {
             Pattern::ESubst {
-                pattern, evar_id, ..
-            } => pattern.e_fresh(*evar_id),
+                pattern,
+                evar_id,
+                plug,
+            } => evar(*evar_id) == *plug || pattern.e_fresh(*evar_id),
             Pattern::SSubst {
-                pattern, svar_id, ..
-            } => pattern.s_fresh(*svar_id),
+                pattern,
+                svar_id,
+                plug,
+            } => svar(*svar_id) == *plug || pattern.s_fresh(*svar_id),
             _ => false,
         }
     }
@@ -346,6 +364,18 @@ fn metavar_unconstrained(var_id: Id) -> Rc<Pattern> {
         s_fresh: vec![],
         positive: vec![],
         negative: vec![],
+        app_ctx_holes: vec![],
+    });
+}
+
+#[cfg(test)]
+fn metavar_e_fresh(var_id: Id, fresh: Id, positive: IdList, negative: IdList) -> Rc<Pattern> {
+    return Rc::new(Pattern::MetaVar {
+        id: var_id,
+        e_fresh: vec![fresh],
+        s_fresh: vec![],
+        positive,
+        negative,
         app_ctx_holes: vec![],
     });
 }
@@ -838,17 +868,14 @@ fn execute_instructions<'a>(
                 let pattern = pop_stack_pattern(stack);
                 let plug = pop_stack_pattern(stack);
 
-                match pattern.as_ref() {
-                    Pattern::MetaVar { .. } | Pattern::ESubst { .. } | Pattern::SSubst { .. } => (),
-                    _ => panic!("Cannot apply ESubst on concrete term!"),
-                }
-
                 let esubst_pat = esubst(Rc::clone(&pattern), evar_id, plug);
-                stack.push(Term::Pattern(if esubst_pat.is_redundant_subst() {
-                    pattern
-                } else {
+                assert!(
+                    esubst_pat.well_formed(),
+                    "Creating an ill-formed esubst {:?}",
                     esubst_pat
-                }));
+                );
+
+                stack.push(Term::Pattern(esubst_pat));
             }
 
             Instruction::SSubst => {
@@ -859,17 +886,14 @@ fn execute_instructions<'a>(
                 let pattern = pop_stack_pattern(stack);
                 let plug = pop_stack_pattern(stack);
 
-                match pattern.as_ref() {
-                    Pattern::MetaVar { .. } | Pattern::ESubst { .. } | Pattern::SSubst { .. } => (),
-                    _ => panic!("Cannot apply SSubst on concrete term!"),
-                }
-
                 let ssubst_pat = ssubst(Rc::clone(&pattern), svar_id, plug);
-                stack.push(Term::Pattern(if ssubst_pat.is_redundant_subst() {
-                    pattern
-                } else {
+                assert!(
+                    ssubst_pat.well_formed(),
+                    "Creating an ill-formed ssubst {:?}",
                     ssubst_pat
-                }));
+                );
+
+                stack.push(Term::Pattern(ssubst_pat));
             }
 
             Instruction::Prop1 => {
@@ -1178,6 +1202,34 @@ mod tests {
         // TODO: Reason why this is not needed
         // let phi1_imp_phi1 = implies(Rc::clone(&phi1), Rc::clone(&phi1));
         // assert!(!phi1_imp_phi1.well_formed());
+    }
+
+    #[test]
+    #[allow(non_snake_case)]
+    fn test_wellformedness_esubst_ssubst() {
+        let phi0_x1_s1 = esubst(metavar_unconstrained(0), 1, symbol(1));
+        assert!(phi0_x1_s1.well_formed());
+
+        let s0_x1_s1 = esubst(symbol(0), 1, symbol(1));
+        assert!(!s0_x1_s1.well_formed());
+
+        let phi0_x1_x1 = esubst(metavar_unconstrained(0), 1, evar(1));
+        assert!(!phi0_x1_x1.well_formed());
+
+        let phi0_fresh_x1_s1 = esubst(metavar_e_fresh(0, 1, vec![], vec![]), 1, symbol(1));
+        assert!(!phi0_fresh_x1_s1.well_formed());
+
+        let phi0_X1_s1 = ssubst(metavar_unconstrained(0), 1, symbol(1));
+        assert!(phi0_X1_s1.well_formed());
+
+        let phi0_X1_X1 = ssubst(metavar_unconstrained(0), 1, svar(1));
+        assert!(!phi0_X1_X1.well_formed());
+
+        let s0_X1_s1 = ssubst(symbol(0), 1, symbol(1));
+        assert!(!s0_X1_s1.well_formed());
+
+        let phi0_fresh_X1_s1 = ssubst(metavar_s_fresh(0, 1, vec![], vec![]), 1, symbol(1));
+        assert!(!phi0_fresh_X1_s1.well_formed());
     }
 
     #[test]
