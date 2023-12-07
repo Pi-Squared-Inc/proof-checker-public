@@ -20,8 +20,8 @@ fi
 FILE=$(basename "${1}")
 FILEPATH=$(dirname "$(realpath "${1}")")
 FILENAME=${FILE%%.*}
-ROOT_DIR=$(dirname "$(realpath "${0}")")/../
-OUTPUTDIR="$FILEPATH/output"
+ROOT_DIR=$(dirname "$(realpath "${0}")")/..
+OUTPUTDIR="${ROOT_DIR}/.build/output/${FILENAME}"
 EXT=${FILE##*.}
 INPUT=$2
 
@@ -42,13 +42,14 @@ OUTPUT_CIRCUIT="${OUTPUTDIR}/circuit.crct"
 OUTPUT_TABLE="${OUTPUTDIR}/assignment_table.tbl"
 
 # Creating output directory under `.build` if it doesn't exist or clean it if it does
-if [[ ! -d "${ROOT_DIR}/.build" ]]; then
-  mkdir "${ROOT_DIR}/.build"
+if [[ ! -d "${ROOT_DIR}/.build/output" ]]; then
+  mkdir -p "${ROOT_DIR}/.build/output"
 fi
 if [[ ! -d "${OUTPUTDIR}" ]]; then
   mkdir "${OUTPUTDIR}"
 else
   rm -r "${OUTPUTDIR:?}/"
+  mkdir "${OUTPUTDIR}"
 fi
 
 # Compile the program to LLVM IR

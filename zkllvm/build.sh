@@ -20,7 +20,7 @@ fi
 FILE=$(basename "${1}")
 FILEPATH=$(dirname "$(realpath "${1}")")
 FILENAME=${FILE%%.*}
-ROOT_DIR=$(dirname "$(realpath "${0}")")/../
+ROOT_DIR=$(dirname "$(realpath "${0}")")/..
 OUTPUTDIR="${ROOT_DIR}/.build/zkllvm"
 EXT=${FILE##*.}
 INPUT=$2
@@ -48,7 +48,8 @@ fi
 if [[ ! -d "${OUTPUTDIR}" ]]; then
   mkdir "${OUTPUTDIR}"
 else
-  rm -r "${OUTPUTDIR:?}/*"
+  rm -r "${OUTPUTDIR:?}/"
+  mkdir "${OUTPUTDIR}"
 fi
 
 # Compile the program to LLVM IR
@@ -89,8 +90,22 @@ ${LLVM_LINK} -S "${OUTPUT_CLANG}" -o "${OUTPUT_LLVM_LINK_1}"
 ${LLVM_LINK} -S "${OUTPUT_LLVM_LINK_1}" "${LIB_C}/zkllvm-libc.ll" -o "${OUTPUT_LLVM_LINK_2}"
 
 # # Generate the circuit and the assignment table
-echo "Circuit Function output: "
-${ASSIGNER} -b "${OUTPUT_LLVM_LINK_2}" -i "${INPUT}" -c "${OUTPUT_CIRCUIT}" -t "${OUTPUT_TABLE}" -e pallas --print_circuit_output --check
+echo "Generate circuit"
+TIME1=$(date +%s%3N);
+
+${ASSIGNER} -b "${OUTPUT_LLVM_LINK_2}" -i "${INPUT}" -c "${OUTPUT_CIRCUIT}" -t "${OUTPUT_TABLE}" -e pallas --print_circuit_output --check > /dev/null
+
+TIME2=$(date +%s%3N);
+CIRCUIT_TIME=$(expr $TIME2 - $TIME1)
+echo $FILENAME "circuit generation .." $(expr $CIRCUIT_TIME / 1000).$(expr $CIRCUIT_TIME % 1000) "s"
 
 # Generate the test proof
-time ${TRANSPILER} -m gen-test-proof -i "${INPUT}" -c "${OUTPUT_CIRCUIT}" -t "${OUTPUT_TABLE}" -o "${OUTPUTDIR}"
+echo "Generate proof and verify"
+TIME3=$(date +%s%3N);
+
+${TRANSPILER} -m gen-test-proof -i "${INPUT}" -c "${OUTPUT_CIRCUIT}" -t "${OUTPUT_TABLE}" -o "${OUTPUTDIR}" > /dev/null
+
+TIME4=$(date +%s%3N);
+PROOF_TIME=$(expr $TIME4 - $TIME3)
+
+echo $FILENAME "proof+verification .." $(expr $PROOF_TIME / 1000).$(expr $PROOF_TIME % 1000) "s"
