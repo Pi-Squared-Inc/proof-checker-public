@@ -1177,14 +1177,6 @@ mod tests {
     }
 
     #[test]
-    #[should_panic]
-    fn test_instantiate_fresh() {
-        let svar_0 = svar(0);
-        let phi0_s_fresh_0 = metavar_s_fresh(0, 0, vec![0], vec![0]);
-        instantiate_internal(&phi0_s_fresh_0, &[0], &[svar_0]);
-    }
-
-    #[test]
     fn test_wellformedness_fresh() {
         let phi0_s_fresh_0 = metavar_s_fresh(0, 0, vec![0], vec![0]);
         assert!(phi0_s_fresh_0.well_formed());
@@ -1651,6 +1643,42 @@ mod tests {
         assert_eq!(
             instantiate_internal(&val, &[0, 1], &[Rc::clone(&X0), Rc::clone(&c0)]),
             Some(c0)
+        );
+    }
+
+    // TODO: Add more cases
+    // TODO: Add tests for app_ctx_holes once implemented
+    #[rstest]
+    #[should_panic]
+    #[case(vec![0], vec![], vec![], vec![], evar(0))]
+    #[should_panic]
+    #[case(vec![], vec![0], vec![], vec![], svar(0))]
+    #[should_panic]
+    #[case(vec![], vec![], vec![0], vec![], not(svar(0)))]
+    #[should_panic]
+    #[case(vec![], vec![], vec![], vec![0], svar(0))]
+    #[should_panic]
+    #[case(vec![], vec![], vec![0], vec![0], svar(0))]
+    // SVar(0) is both positive and negative when not included
+    #[case(vec![], vec![], vec![0], vec![0], svar(1))]
+    fn test_instantiation_breaking_constraints(
+        #[case] e_fresh: IdList,
+        #[case] s_fresh: IdList,
+        #[case] positive: IdList,
+        #[case] negative: IdList,
+        #[case] plug: Rc<Pattern>,
+    ) {
+        instantiate_internal(
+            &Rc::new(Pattern::MetaVar {
+                id: 0,
+                e_fresh,
+                s_fresh,
+                positive,
+                negative,
+                app_ctx_holes: vec![],
+            }),
+            &[0],
+            &[plug],
         );
     }
 
