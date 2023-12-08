@@ -66,17 +66,14 @@ Mu 0
 	1: phi0
 	2: phi0
 	3: (μ X0 . X0)
-Instantiate 
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: phi0
-	2: phi0
-	3: ⊥
+Save
+Save
 Implies
 	Stack:
 	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
 	1: phi0
 	2: (phi0 -> ⊥)
+Save
 Instantiate 0
 	Stack:
 	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
@@ -100,45 +97,7 @@ Implies
 	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
 	1: ((¬phi0 -> phi0) -> phi0)
 Publish
-MetaVar 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: phi0
-MetaVar 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: phi0
-	3: phi0
-SVar 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: phi0
-	3: phi0
-	4: X0
-Mu 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: phi0
-	3: phi0
-	4: (μ X0 . X0)
-Instantiate 
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: phi0
-	3: phi0
-	4: ⊥
-Implies
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: phi0
-	3: (phi0 -> ⊥)
-Instantiate 0
+Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
 	Stack:
 	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
 	1: ((¬phi0 -> phi0) -> phi0)
@@ -174,99 +133,14 @@ MetaVar 0
 	1: ((¬phi0 -> phi0) -> phi0)
 	2: (¬phi0 -> (phi0 -> phi1))
 	3: phi0
-MetaVar 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: phi0
-	4: phi0
-MetaVar 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: phi0
-	4: phi0
-	5: phi0
-SVar 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: phi0
-	4: phi0
-	5: phi0
-	6: X0
-Mu 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: phi0
-	4: phi0
-	5: phi0
-	6: (μ X0 . X0)
-Instantiate 
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: phi0
-	4: phi0
-	5: phi0
-	6: ⊥
-Implies
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: phi0
-	4: phi0
-	5: (phi0 -> ⊥)
-Instantiate 0
+Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
 	Stack:
 	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
 	1: ((¬phi0 -> phi0) -> phi0)
 	2: (¬phi0 -> (phi0 -> phi1))
 	3: phi0
 	4: ¬phi0
-MetaVar 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: phi0
-	4: ¬phi0
-	5: phi0
-SVar 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: phi0
-	4: ¬phi0
-	5: phi0
-	6: X0
-Mu 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: phi0
-	4: ¬phi0
-	5: phi0
-	6: (μ X0 . X0)
-Instantiate 
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: phi0
-	4: ¬phi0
-	5: phi0
-	6: ⊥
-Implies
+Load (phi0 -> (μ X0 . X0)[{}])=2
 	Stack:
 	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
 	1: ((¬phi0 -> phi0) -> phi0)
@@ -281,6 +155,7 @@ Instantiate 0
 	2: (¬phi0 -> (phi0 -> phi1))
 	3: phi0
 	4: ¬¬phi0
+Save
 Implies
 	Stack:
 	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
@@ -288,107 +163,7 @@ Implies
 	2: (¬phi0 -> (phi0 -> phi1))
 	3: (phi0 -> ¬¬phi0)
 Publish
-MetaVar 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: phi0
-MetaVar 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: phi0
-	5: phi0
-SVar 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: phi0
-	5: phi0
-	6: X0
-Mu 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: phi0
-	5: phi0
-	6: (μ X0 . X0)
-Instantiate 
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: phi0
-	5: phi0
-	6: ⊥
-Implies
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: phi0
-	5: (phi0 -> ⊥)
-Instantiate 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: ¬phi0
-MetaVar 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: ¬phi0
-	5: phi0
-SVar 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: ¬phi0
-	5: phi0
-	6: X0
-Mu 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: ¬phi0
-	5: phi0
-	6: (μ X0 . X0)
-Instantiate 
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: ¬phi0
-	5: phi0
-	6: ⊥
-Implies
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: ¬phi0
-	5: (phi0 -> ⊥)
-Instantiate 0
+Load (phi0 -> (μ X0 . X0)[{}])[{0: "(phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]"}]=3
 	Stack:
 	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
 	1: ((¬phi0 -> phi0) -> phi0)
@@ -410,24 +185,9 @@ Implies
 	2: (¬phi0 -> (phi0 -> phi1))
 	3: (phi0 -> ¬¬phi0)
 	4: (¬¬phi0 -> phi0)
+Save
 Publish
-SVar 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: (¬¬phi0 -> phi0)
-	5: X0
-Mu 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: (¬¬phi0 -> phi0)
-	5: (μ X0 . X0)
-Instantiate 
+Load (μ X0 . X0)[{}]=0
 	Stack:
 	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
 	1: ((¬phi0 -> phi0) -> phi0)
@@ -453,25 +213,7 @@ Implies
 	4: (¬¬phi0 -> phi0)
 	5: (⊥ -> phi0)
 Publish
-SVar 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: (¬¬phi0 -> phi0)
-	5: (⊥ -> phi0)
-	6: X0
-Mu 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: (¬¬phi0 -> phi0)
-	5: (⊥ -> phi0)
-	6: (μ X0 . X0)
-Instantiate 
+Load (μ X0 . X0)[{}]=0
 	Stack:
 	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
 	1: ((¬phi0 -> phi0) -> phi0)
@@ -480,50 +222,7 @@ Instantiate
 	4: (¬¬phi0 -> phi0)
 	5: (⊥ -> phi0)
 	6: ⊥
-MetaVar 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: (¬¬phi0 -> phi0)
-	5: (⊥ -> phi0)
-	6: ⊥
-	7: phi0
-SVar 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: (¬¬phi0 -> phi0)
-	5: (⊥ -> phi0)
-	6: ⊥
-	7: phi0
-	8: X0
-Mu 0
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: (¬¬phi0 -> phi0)
-	5: (⊥ -> phi0)
-	6: ⊥
-	7: phi0
-	8: (μ X0 . X0)
-Instantiate 
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: (¬¬phi0 -> phi0)
-	5: (⊥ -> phi0)
-	6: ⊥
-	7: phi0
-	8: ⊥
-Implies
+Load (phi0 -> (μ X0 . X0)[{}])=2
 	Stack:
 	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
 	1: ((¬phi0 -> phi0) -> phi0)
@@ -542,15 +241,6 @@ Instantiate 0
 	4: (¬¬phi0 -> phi0)
 	5: (⊥ -> phi0)
 	6: ¬⊥
-Instantiate 
-	Stack:
-	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
-	1: ((¬phi0 -> phi0) -> phi0)
-	2: (¬phi0 -> (phi0 -> phi1))
-	3: (phi0 -> ¬¬phi0)
-	4: (¬¬phi0 -> phi0)
-	5: (⊥ -> phi0)
-	6: ⊤
 Publish
 MetaVar 0
 	Stack:
@@ -560,7 +250,7 @@ MetaVar 0
 	3: (phi0 -> ¬¬phi0)
 	4: (¬¬phi0 -> phi0)
 	5: (⊥ -> phi0)
-	6: ⊤
+	6: ¬⊥
 	7: phi0
 MetaVar 0
 	Stack:
@@ -570,7 +260,7 @@ MetaVar 0
 	3: (phi0 -> ¬¬phi0)
 	4: (¬¬phi0 -> phi0)
 	5: (⊥ -> phi0)
-	6: ⊤
+	6: ¬⊥
 	7: phi0
 	8: phi0
 Implies
@@ -581,6 +271,7 @@ Implies
 	3: (phi0 -> ¬¬phi0)
 	4: (¬¬phi0 -> phi0)
 	5: (⊥ -> phi0)
-	6: ⊤
+	6: ¬⊥
 	7: (phi0 -> phi0)
+Save
 Publish

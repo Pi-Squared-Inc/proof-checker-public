@@ -19,16 +19,7 @@ Prop2
 Instantiate 0, 1, 2
 	Stack:
 	0: ⊢ ((s0 -> (s1 -> s2)) -> ((s0 -> s1) -> (s0 -> s2)))
-Symbol s1
-	Stack:
-	0: ⊢ ((s0 -> (s1 -> s2)) -> ((s0 -> s1) -> (s0 -> s2)))
-	1: s1
-Symbol s2
-	Stack:
-	0: ⊢ ((s0 -> (s1 -> s2)) -> ((s0 -> s1) -> (s0 -> s2)))
-	1: s1
-	2: s2
-Implies
+Load (s1 -> s2)=2
 	Stack:
 	0: ⊢ ((s0 -> (s1 -> s2)) -> ((s0 -> s1) -> (s0 -> s2)))
 	1: (s1 -> s2)
@@ -47,7 +38,7 @@ Instantiate 0, 1
 	Stack:
 	0: ⊢ ((s0 -> (s1 -> s2)) -> ((s0 -> s1) -> (s0 -> s2)))
 	1: ⊢ ((s1 -> s2) -> (s0 -> (s1 -> s2)))
-Load Axiom (s1 -> s2)=1
+Load Axiom (s1 -> s2)=3
 	Stack:
 	0: ⊢ ((s0 -> (s1 -> s2)) -> ((s0 -> s1) -> (s0 -> s2)))
 	1: ⊢ ((s1 -> s2) -> (s0 -> (s1 -> s2)))
@@ -59,7 +50,7 @@ ModusPonens
 ModusPonens
 	Stack:
 	0: ⊢ ((s0 -> s1) -> (s0 -> s2))
-Load Axiom (s0 -> s1)=0
+Load Axiom (s0 -> s1)=1
 	Stack:
 	0: ⊢ ((s0 -> s1) -> (s0 -> s2))
 	1: ⊢ (s0 -> s1)
