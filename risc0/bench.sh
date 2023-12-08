@@ -13,6 +13,9 @@ proofs_path="../proofs/translated"
 print_output() {
     echo "$2" >> "$output_file"
     echo "$1" | grep -E "Total cycles" >> "$output_file"
+    echo "$1" | grep -E "Ran in " >> "$output_file"
+    echo "$1" | grep -E "Proved in " >> "$output_file"
+    echo "$1" | grep -E "Verified in " >> "$output_file"
     echo "$1" | grep -E "Running execution \+ ZK certficate generation \+ verification" >> "$output_file"
     echo "-----------------------------------------------------------------------" >> "$output_file"
 }

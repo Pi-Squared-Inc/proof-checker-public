@@ -23,12 +23,22 @@ fn main() {
     // Run the executor to produce a session.
     let session = exec.run().unwrap();
 
-    println!("Ran in {} s", now.elapsed().as_secs());
+    let runtime = now.elapsed().as_millis();
+
+    println!("Ran in {} ms", runtime);
 
     println!("Generating the certificate...");
 
     // Prove the session to produce a receipt.
     let receipt = session.prove().unwrap();
+
+    let provetime = now.elapsed().as_millis() - runtime;
+
+    println!("Proved in {} ms", provetime);
+
+    receipt.verify(GUEST_CSL_ID).unwrap();
+
+    println!("Verified in {} ms", now.elapsed().as_millis() - provetime);
 
     // Get the host's size of a usize pointer
     let size_of_usize = std::mem::size_of::<usize>();
@@ -40,8 +50,6 @@ fn main() {
         return ret;
     };
 
-    receipt.verify(GUEST_CSL_ID).unwrap();
-
     // Get the result of the execution
     let _ret: usize = from_slice(next_journal_chunk(size_of_usize)).unwrap();
 
@@ -49,7 +57,7 @@ fn main() {
     println!("Total cycles {}", total_cycles);
 
     println!(
-        "Running execution + ZK certficate generation + verification took {} s",
+        "Running execution + ZK certficate generation + verification took {} ms",
         now.elapsed().as_millis()
     );
 }

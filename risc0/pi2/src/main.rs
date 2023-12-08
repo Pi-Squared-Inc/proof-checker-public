@@ -43,12 +43,28 @@ fn main() {
     // Run the executor to produce a session.
     let session = exec.run().unwrap();
 
-    println!("Ran in {} s", now.elapsed().as_secs());
+    let runtime = now.elapsed().as_millis();
+
+    println!("Ran in {} ms", runtime);
 
     println!("Generating the certificate...");
 
     // Prove the session to produce a receipt.
     let receipt = session.prove().unwrap();
+
+    let provetime = now.elapsed().as_millis() - runtime;
+
+    println!("Proved in {} ms", provetime);
+
+    // TODO: Implement code for transmitting or serializing the receipt for
+    // other parties to verify here
+
+    // Optional: Verify receipt to confirm that recipients will also be able to
+    // verify your receipt
+
+    receipt.verify(GUEST_ID).unwrap();
+
+    println!("Verified in {} ms", now.elapsed().as_millis() - provetime);
 
     // Small fetcher that returns the next chunk of given size from journal
     let mut current_index: usize = 0;
@@ -58,15 +74,8 @@ fn main() {
         return ret;
     };
 
-    // TODO: Implement code for transmitting or serializing the receipt for
-    // other parties to verify here
-
-    // Optional: Verify receipt to confirm that recipients will also be able to
-    // verify your receipt
-    receipt.verify(GUEST_ID).unwrap();
-
     println!(
-        "Running execution + ZK certficate generation + verification took {} s",
+        "Running execution + ZK certficate generation + verification took {} ms",
         now.elapsed().as_millis()
     );
 
