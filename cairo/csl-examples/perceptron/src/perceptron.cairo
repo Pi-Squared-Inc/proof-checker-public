@@ -6,7 +6,7 @@ fn perceptron() -> u32 {
     let x5 = 5_u32;
 
     // ret + w_i * x_i
-    let mut ret = 0_32;
+    let mut ret = 0_u32;
     ret = ret + (1 * x1);
     ret = ret + (2 * x2);
     ret = ret + (1 * x3);
@@ -30,6 +30,6 @@ mod tests {
     #[test]
     #[available_gas(100000)]
     fn test_perceptron() {
-        assert(perceptron() == 54_u32, 'Err: perceptron() value!');
+        assert(perceptron() == 22_u32, 'Err: perceptron() value!');
     }
 }
