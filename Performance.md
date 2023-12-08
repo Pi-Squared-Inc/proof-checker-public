@@ -7,7 +7,7 @@
 | svm5         |  21156  |     0.017     |     0.017     |      2.417     |      0.688     |      0.018      |      0.018      |      2.435     |      0.706     |
 | transfer5000 | 724258  |     0.058     |     0.056     |     38.344     |      7.787     |      0.059      |      0.057      |     38.403     |      7.844     |
 | transfer     |  21156  |     0.028     |     0.028     |      2.429     |      0.593     |      0.030      |      0.030      |      2.459     |      0.623     |
-                                        
+
 
 ## zkLLVM
 |     Examples     | CPU Circuit Gen Time | CPU Prove+Verify Time | GPU Time |
@@ -19,13 +19,12 @@
 
 
 ## Lurk
-|     Examples     |  Cycles | CPU Time** | GPU Time |
-|:----------------:|:-------:|:--------:|:--------:|
-| perceptron       |    11   |   3.979  |   2.328  |
-| svm5             |    9    |   2.263  |   2.278  |
-| transfer5000*    |  330387 | 1766.207 | 481.500  |
-| transfer         |    34   |   2.522  |   2.441  |
-
+|     Examples     |  Cycles | CPU Time** | GPU Prove Time | GPU Verify Time | GPU Total Time |
+|:----------------:|:-------:|:--------  :|:--------------:|:---------------:|:---------------|
+| perceptron       |    11   |            |           0.84 |           0.597 |          1.437 |
+| svm5             |    9    |            |           0.82 |           0.607 |          1.427 |
+| transfer         |    34   |            |          2.205 |           0.595 |          2.800 |
+| transfer5000*    |  330387 |            |        487.322 |           4.899 |        492.221 |
 
 * Using `lurk --rc 400 transfer5000.lurk`, other tests doesn't use `--rc`
 
@@ -41,6 +40,7 @@
 | transfer-task-specific          |   88225 |       27      |     0.032     |       4.909    |      1.172     |        28       |      0.033      |       4.804    |      1.205     |
 | impreflex-compressed-goal       |   66366 |       17      |     0.019     |       4.915    |      1.112     |        18       |      0.020      |       4.740    |      1.132     |
 
+
 ## zkLLVM
 |             Examples            |CPU Circuit Gen Time | CPU Prove+Verify Time | GPU Time |
 |:-------------------------------:|:-------------------:|:---------------------:|:--------:|
@@ -51,15 +51,16 @@
 | transfer-simple-compressed-goal |              91.160 |              7188.792 |          |
 | transfer-batch-1k-goal          |                ∞    |                     ∞ |          |
 
+
 ## Lurk
-|             Examples            | Cycles | CPU Time** | GPU Time |
-|:-------------------------------:|:------:|:----------:|:--------:|
-| perceptron-goal                 | 6404208|      ∞     |          |
-| svm5-goal                       | 6404208|      ∞     |          |
-| transfer-batch-1k-goal          |30122047|      ∞     |          |
-| transfer-simple-compressed-goal | 3202986|      ∞     |          |
-| transfer-task-specific*         | 148870 |   861.443  |  237.319 |
-| impreflex-compressed-goal*      | 55651  |   341.466  |  220.180 |
+|             Examples            | Cycles | CPU Time** | GPU Prove Time | GPU Verify Time | GPU Total Time |
+|:-------------------------------:|:------:|:----------:|:--------------:|:---------------:|:--------------:|
+| transfer-task-specific*         | 148870 |    861.443 |        193.836 |           4.199 |        198.035 |
+| impreflex-compressed-goal*      | 55651  |    341.466 |        108.962 |           4.209 |        113.171 |
+| perceptron-goal                 | 6404208|            |              ∞ |               ∞ |                |
+| svm5-goal                       | 6404208|            |              ∞ |               ∞ |                |
+| transfer-batch-1k-goal          |30122047|            |              ∞ |               ∞ |                |
+| transfer-simple-compressed-goal | 3202986|            |              ∞ |               ∞ |                |
 
 * Using `lurk --rc 400 ...`
 ** CPU time is outdated as we can't get only CPU execution due to a bug on Lurk's
