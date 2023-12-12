@@ -28,6 +28,16 @@
 
 * Using `lurk --rc 400 transfer5000.lurk`, other tests doesn't use `--rc`
 
+
+## Cairo0
+|     Examples     | CPU Exec Time | CPU Prove Time | CPU Verify Time | CPU Total Time |
+|:-----------------|:-------------:|:--------------:|:---------------:|:---------------|
+| perceptron       |         0.438 |          0.149 |           0.007 |          0.594 |
+| svm5             |         0.442 |          0.175 |           0.007 |          0.624 |
+| transfer         |         0.441 |          0.185 |           0.008 |          0.634 |
+| transfer5000*    |         6.799 |         26.311 |           0.867 |         33.977 |
+
+
 # Proof Checker
 
 ## Risc 0
