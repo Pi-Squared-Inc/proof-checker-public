@@ -1,4 +1,11 @@
 use debug::PrintTrait;
+use pattern::Pattern;
+use term::Term;
+use stack::Stack;
+
+mod pattern;
+mod term;
+mod stack;
 
 use verifier::verify;
 
