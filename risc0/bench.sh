@@ -87,10 +87,10 @@ clean_up() {
 
 csl() {
     echo "Running all examples"
-    svm5
     perceptron
-    transfer
+    svm5
     transfer5000
+    transfer
 }
 
 pi2() {

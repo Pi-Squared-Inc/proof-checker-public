@@ -38,7 +38,10 @@ fn main() {
 
     receipt.verify(GUEST_CSL_ID).unwrap();
 
-    println!("Verified in {} ms", now.elapsed().as_millis() - provetime);
+    println!(
+        "Verified in {} ms",
+        now.elapsed().as_millis() - provetime - runtime
+    );
 
     // Get the host's size of a usize pointer
     let size_of_usize = std::mem::size_of::<usize>();

@@ -64,7 +64,10 @@ fn main() {
 
     receipt.verify(GUEST_ID).unwrap();
 
-    println!("Verified in {} ms", now.elapsed().as_millis() - provetime);
+    println!(
+        "Verified in {} ms",
+        now.elapsed().as_millis() - provetime - runtime
+    );
 
     // Small fetcher that returns the next chunk of given size from journal
     let mut current_index: usize = 0;
