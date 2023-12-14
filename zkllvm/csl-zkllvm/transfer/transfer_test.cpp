@@ -6,7 +6,7 @@ int amount = 10;
 int balanceTo = 200;
 int ret = 0;
 
-[[circuit]]int transfer(int addressTo) {
+[[circuit]]int transfer() {
 
   if (amount > balanceSender) {
     ret = 0; // transfer is not successful
