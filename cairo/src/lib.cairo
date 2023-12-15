@@ -1,7 +1,7 @@
 use debug::PrintTrait;
 use pattern::Pattern;
 use term::Term;
-use stack::Stack;
+use stack::StackStructure;
 
 mod pattern;
 mod term;

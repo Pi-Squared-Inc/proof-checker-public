@@ -1,6 +1,6 @@
 use ml_checker_cairo::pattern;
-use ml_checker_cairo::term::{Term, Entry};
-use ml_checker_cairo::stack::{Stack, StackTrait};
+use ml_checker_cairo::term::Term;
+use ml_checker_cairo::stack::{StackStructure, StackTrait, ClaimTrait};
 
 use core::option::Option::{None, Some};
 
@@ -227,8 +227,9 @@ fn forall(evar: Id, pat: Pattern) -> Pattern {
 /// Proof checker
 /// =============
 
-type Claims = Array<Pattern>;
-type Memory = Array<Entry>;
+type Stack = StackStructure<Term>;
+type Claims = StackStructure<Pattern>;
+type Memory = Array<Term>;
 
 /// Stack manipulation
 /// ------------------
@@ -256,7 +257,7 @@ fn pop_stack_proved(ref stack: Stack) -> Pattern {
 /// Main implementation
 /// -------------------
 
-#[derive(Drop)]
+#[derive(Drop, Copy)]
 enum ExecutionPhase {
     Gamma,
     Claim,
@@ -280,7 +281,6 @@ fn read_u8_vec(ref buffer: Array<u8>) -> Array<u8> {
 fn execute_instructions(
     mut buffer: Array<u8>,
     ref stack: Stack,
-    ref stack_size: u32,
     ref memory: Memory,
     ref claims: Claims,
     phase: ExecutionPhase,
@@ -291,16 +291,16 @@ fn execute_instructions(
     let phi2 = metavar_unconstrained(2);
 
     // Axioms
-    let prop1 = implies(phi0.clone(), implies(phi1.clone(), phi0.clone()));
+    let _prop1 = implies(phi0.clone(), implies(phi1.clone(), phi0.clone()));
 
-    let prop2 = implies(
+    let _prop2 = implies(
         implies(phi0.clone(), implies(phi1.clone(), phi2.clone())),
         implies(implies(phi0.clone(), phi1), implies(phi0.clone(), phi2))
     );
-    let prop3 = implies(not(not(phi0.clone())), phi0.clone());
-    let quantifier = implies(esubst(phi0.clone(), 0, evar(1)), exists(0, phi0));
+    let _prop3 = implies(not(not(phi0.clone())), phi0.clone());
+    let _quantifier = implies(esubst(phi0.clone(), 0, evar(1)), exists(0, phi0));
 
-    let existence = exists(0, evar(0));
+    let _existence = exists(0, evar(0));
 
     // For enums we must implement all cases to make match works
     loop {
@@ -339,7 +339,7 @@ fn execute_instructions(
                     Instruction::Save => { panic!("Save not implemented!"); },
                     Instruction::Load => { panic!("Load not implemented!"); },
                     Instruction::Publish => { panic!("Publish not implemented!"); },
-                    Instruction::CleanMetaVar =>  { panic!("NoOp not implemented!"); },
+                    Instruction::CleanMetaVar => { panic!("NoOp not implemented!"); },
                     Instruction::NoOp => { panic!("NoOp not implemented!"); },
                 }
             },
@@ -352,13 +352,11 @@ fn verify(
     gamma_buffer: Array<InstByte>, claims_buffer: Array<InstByte>, proof_buffer: Array<InstByte>
 ) {
     let mut stack: Stack = StackTrait::new();
-    let mut stack_size: u32 = 0;
     let mut memory: Memory = array![];
-    let mut claims: Claims = array![];
+    let mut claims: Claims = ClaimTrait::new();
     execute_instructions(
         gamma_buffer,
         ref stack, // stack is empty initially.
-        ref stack_size, // stack_size is 0 initially.
         ref memory, // memory is empty initially.
         ref claims, // claims is unused in this phase.
         ExecutionPhase::Gamma
@@ -369,7 +367,6 @@ fn verify(
     execute_instructions(
         claims_buffer,
         ref stack, // stack is empty initially.
-        ref stack_size, // stack_size is 0 initially.
         ref memory, // reuse memory.
         ref claims, // claims populated in this phase.
         ExecutionPhase::Claim
@@ -380,7 +377,6 @@ fn verify(
     execute_instructions(
         proof_buffer,
         ref stack, // stack is empty initially.
-        ref stack_size, // stack_size is 0 initially.
         ref memory, // axioms are used as initial memory.
         ref claims, // claims are consumed by publish instruction.
         ExecutionPhase::Proof
@@ -424,11 +420,10 @@ mod tests {
     fn test_stack_pop() {
         let mut stack: Stack = StackTrait::new();
         let term = Term::Pattern(bot());
-        stack.push(term);
+        stack.push(term.clone());
         let pop_term = pop_stack(ref stack);
         assert(stack.is_empty(), 'Hmm.. stack_size should be 0!');
-    // This test ins't possible yet because of the lack of equality
-    //assert(pop_term == term, 'Hmm.. pop_term should be term!');
+        assert(pop_term == term, 'Hmm.. pop_term should be term!');
     }
 
     use super::pop_stack_pattern;
@@ -436,12 +431,12 @@ mod tests {
     #[available_gas(1000000000000000)]
     fn test_stack_pop_pattern() {
         let mut stack: Stack = StackTrait::new();
-        let term = Term::Pattern(bot());
-        stack.push(term);
+        let pat = bot();
+        stack.push(Term::Pattern(pat.clone()));
         let pop_term = pop_stack_pattern(ref stack);
         assert(stack.is_empty(), 'Hmm.. stack_size should be 0!');
-    // This test ins't possible yet because of the lack of equality
-    //assert(pop_term == term, 'Hmm.. pop_term should be term!');
+        // This test ins't possible yet because of the lack of equality
+        assert(pop_term == pat, 'Hmm.. pop_term should be term!');
     }
 
     use super::pop_stack_proved;
@@ -449,12 +444,12 @@ mod tests {
     #[available_gas(1000000000000000)]
     fn test_stack_pop_proved() {
         let mut stack: Stack = StackTrait::new();
-        let term = Term::Proved(bot());
-        stack.push(term);
+        let pat = bot();
+        stack.push(Term::Proved(pat.clone()));
         let pop_term = pop_stack_proved(ref stack);
         assert(stack.is_empty(), 'Hmm.. stack_size should be 0!');
-    // This test ins't possible yet because of the lack of equality
-    //assert(pop_term == term, 'Hmm.. pop_term should be term!');
+        // This test ins't possible yet because of the lack of equality
+        assert(pop_term == pat, 'Hmm.. pop_term should be term!');
     }
 
     use super::read_u8_vec;

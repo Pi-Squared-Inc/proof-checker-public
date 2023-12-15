@@ -1,31 +1,31 @@
 type Id = u8;
 type IdList = Array<Id>;
 
-#[derive(Drop, Clone)]
+#[derive(PartialEq, Drop, Clone)]
 struct ImpliesType {
     left: Option<Box<Pattern>>,
     right: Option<Box<Pattern>>,
 }
 
-#[derive(Drop, Clone)]
+#[derive(PartialEq, Drop, Clone)]
 struct AppType {
     left: Option<Box<Pattern>>,
     right: Option<Box<Pattern>>,
 }
 
-#[derive(Drop, Clone)]
+#[derive(PartialEq, Drop, Clone)]
 struct ExistsType {
     var: Id,
     subpattern: Option<Box<Pattern>>,
 }
 
-#[derive(Drop, Clone)]
+#[derive(PartialEq, Drop, Clone)]
 struct MuType {
     var: Id,
     subpattern: Option<Box<Pattern>>,
 }
 
-#[derive(Drop, Clone)]
+#[derive(PartialEq, Drop, Clone)]
 struct MetaVarType {
     id: Id,
     e_fresh: IdList,
@@ -35,21 +35,21 @@ struct MetaVarType {
     app_ctx_holes: IdList,
 }
 
-#[derive(Drop, Clone)]
+#[derive(PartialEq, Drop, Clone)]
 struct ESubstType {
     pattern: Option<Box<Pattern>>,
     evar_id: Id,
     plug: Option<Box<Pattern>>,
 }
 
-#[derive(Drop, Clone)]
+#[derive(PartialEq, Drop, Clone)]
 struct SSubstType {
     pattern: Option<Box<Pattern>>,
     svar_id: Id,
     plug: Option<Box<Pattern>>,
 }
 
-#[derive(Drop, Clone)]
+#[derive(PartialEq, Drop, Clone)]
 enum Pattern {
     EVar: Id,
     SVar: Id,
@@ -62,7 +62,6 @@ enum Pattern {
     ESubst: ESubstType, // pattern, evar_id, plug
     SSubst: SSubstType // pattern, svar_id, plug
 }
-
 
 /// Pattern construction utilities
 /// ------------------------------
@@ -182,29 +181,38 @@ fn ssubst(pattern: Pattern, svar_id: Id, plug: Pattern) -> Pattern {
     return Pattern::SSubst(SSubstType { pattern: pattern, svar_id: svar_id, plug: plug });
 }
 
-impl PatternOptionBoxClone of Clone<Option<Box<Pattern>>> {
-    fn clone(self: @Option<Box<Pattern>>) -> Option<Box<Pattern>> {
-        return self.clone();
+impl PatternOptionBoxPartialEq of PartialEq<Option<Box<Pattern>>> {
+    fn eq(lhs: @Option<Box<Pattern>>, rhs: @Option<Box<Pattern>>) -> core::bool {
+        match lhs {
+            Option::Some(lhs) => {
+                match (rhs) {
+                    Option::Some(rhs) => { lhs.as_snapshot().unbox() == rhs.as_snapshot().unbox() },
+                    Option::None => { false }
+                }
+            },
+            Option::None => {
+                match (rhs) {
+                    Option::Some(_) => { false },
+                    Option::None => { true }
+                }
+            }
+        }
+    }
+
+
+    fn ne(lhs: @Option<Box<Pattern>>, rhs: @Option<Box<Pattern>>) -> core::bool {
+        !(lhs == rhs)
     }
 }
-// impl PatternOptionBoxPartialEq of PartialEq<Option<Box<Pattern>>> {
-//     fn eq(lhs: @Option<Box<Pattern>>, rhs: @Option<Box<Pattern>>) -> core::bool {
-//         true
-//     }
 
-//     fn ne(lhs: @Option<Box<Pattern>>, rhs: @Option<Box<Pattern>>) -> core::bool {
-//         false
-//     }
-// }
-
-// impl PatternPartialEq of PartialEq<Pattern> {
-//     fn eq(lhs: @Pattern, rhs: @Pattern) -> core::bool {
-//         true
-//     }
-
-//     fn ne(lhs: @Pattern, rhs: @Pattern) -> core::bool {
-//         false
-//     }
-// }
-
-
+impl PatternOptionBoxClone of Clone<Option<Box<Pattern>>> {
+    fn clone(self: @Option<Box<Pattern>>) -> Option<Box<Pattern>> {
+        match self {
+            Option::Some(box_pat) => {
+                let mut result: Pattern = box_pat.as_snapshot().unbox().clone();
+                return Option::Some(BoxTrait::new(result));
+            },
+            Option::None => { Option::None }
+        }
+    }
+}

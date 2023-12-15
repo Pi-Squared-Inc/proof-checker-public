@@ -23,6 +23,20 @@ cairo: 2.3.1 (https://crates.io/crates/cairo-lang-compiler/2.3.1)
 sierra: 1.3.0
 ```
 
+We're currently using the Nightly version of Scarb for development.
+The current version of the project is in:
+```
+scarb 2.4.0+nightly-2023-12-14 (be8d24445 2023-12-14)
+cairo: 2.4.0 (764e082bc)
+sierra: 1.4.0
+```
+
+To install it with `asfg`, run:
+```bash
+asdf install scarb nightly-2023-12-14
+asdf global scarb nightly-2023-12-14
+```
+
 ## Running and Testing the Proof Checker
 
 Make sure you are in the directory of this project `cairo` when running the following commands.
