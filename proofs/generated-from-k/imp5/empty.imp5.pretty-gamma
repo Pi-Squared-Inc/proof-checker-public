@@ -36868,26 +36868,6 @@ MetaVar 1
 	14: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'T'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> phi0 </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'T'-GT-'> phi2 </ksym_Lbl'-LT-'generatedTop'-GT-'>
 	15: phi0
 	16: phi1
-MetaVar 0
-	Stack:
-	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
-	1: ⌈ x0 ⌉
-	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
-	3: ((phi2:phi0 k= (phi3 k⋀ k⊤:phi0):phi0):phi1 -> (phi2:phi0 k= phi3:phi0):phi1)
-	4: (((phi0 -> (μ X0 . X0)[{}])[{0: "(phi0 -> (phi0 -> (μ X0 . X0)[{}])[{0: 'phi1'}])"}][{0: "(phi0 -> (μ X0 . X0)[{}])[{0: 'phi1'}]", 1: "(inhabitant · phi0)[{0: 'phi0'}]"}][{0: 'phi1', 1: '(phi0 -> (μ X0 . X0)[{}])[{0: "(phi0 -> (phi0 -> (μ X0 . X0)[{}])[{0: \'phi1\'}])"}][{0: "(⌈_⌉ · phi0)[{0: \'phi2\'}]", 1: "(inhabitant · phi0)[{0: \'phi1\'}]"}][{0: \'phi0\', 1: \'phi1\', 2: \'(phi0 -> (μ X0 . X0)[{}])[{0: "(phi0 -> (phi0 -> (μ X0 . X0)[{}])[{0: \\\'phi1\\\'}])"}][{0: "(phi0 -> (μ X0 . X0)[{}])[{0: \\\'phi1\\\'}]", 1: "(inhabitant · phi0)[{0: \\\'phi0\\\'}]"}][{0: \\\'phi0\\\', 1: \\\'phi2\\\'}]\'}]'}][{0: 'phi0', 1: 'phi1', 2: '((phi0 -> (μ X0 . X0)[{}])[{0: \'phi0\'}] -> phi1)[{0: \'phi0\', 1: \'phi1\'}][{0: \'(phi0 -> (μ X0 . X0)[{}])[{0: "(phi0 -> (phi0 -> (μ X0 . X0)[{}])[{0: \\\'phi1\\\'}])"}][{0: "(phi0 -> (μ X0 . X0)[{}])[{0: \\\'phi1\\\'}]", 1: "(inhabitant · phi0)[{0: \\\'phi0\\\'}]"}][{0: \\\'phi0\\\', 1: \\\'phi1\\\'}]\', 1: \'phi2\'}][{0: \'phi0\', 1: \'phi2\', 2: \'phi3\'}]'}][{0: 'phi0', 1: 'phi1', 2: 'phi2', 3: '(phi0 -> (μ X0 . X0)[{}])[{0: "(phi0 -> (phi0 -> (μ X0 . X0)[{}])[{0: \'phi1\'}])"}][{0: \'phi0\', 1: \'phi1\'}][{0: \'phi3\', 1: \'phi4\'}]'}][{0: 'phi0', 1: 'phi1', 2: 'phi2', 3: 'phi2', 4: 'phi2'}] k-> phi3):phi1 -> phi3)
-	5: (((phi2:phi0 k⊆ phi2:phi0):phi1 k-> phi3):phi1 -> phi3)
-	6: (((k⊤:phi0 k⋀ phi1) k-> phi2):phi0 -> (phi1 k-> phi2):phi0)
-	7: (((phi1 k⋀ k⊤:phi0) k-> phi2):phi0 -> (phi1 k-> phi2):phi0)
-	8: ((k⊤:phi0 k-> phi1):phi0 -> phi1)
-	9: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
-	10: functional(<ksym_Lbl'-LT-'s'-GT-'> ksym_Lbl'UndsCommUndsCommUndsCommUndsCommUndsCommUndsUnds'IMP5-SYNTAX'Unds'Vars5'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int'Unds'Int(dv(0):ksort_SortInt, dv(0):ksort_SortInt, dv(0):ksort_SortInt, dv(0):ksort_SortInt, dv(0):ksort_SortInt, dv(0):ksort_SortInt) </ksym_Lbl'-LT-'s'-GT-'>)
-	11: functional(ksym_dotk())
-	12: ksort_SortGeneratedTopCell
-	13: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'T'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortBlock, ksort_SortKItem, ksym_Lbl'LBraRBraUnds'IMP5-SYNTAX'Unds'Block()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'T'-GT-'> phi2 </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	14: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'T'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> phi0 </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'T'-GT-'> phi2 </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	15: phi0
-	16: phi1
-	17: phi0
 MetaVar 2
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -36907,8 +36887,7 @@ MetaVar 2
 	14: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'T'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> phi0 </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'T'-GT-'> phi2 </ksym_Lbl'-LT-'generatedTop'-GT-'>
 	15: phi0
 	16: phi1
-	17: phi0
-	18: phi2
+	17: phi2
 Symbol kore_next
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -36928,10 +36907,9 @@ Symbol kore_next
 	14: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'T'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> phi0 </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'T'-GT-'> phi2 </ksym_Lbl'-LT-'generatedTop'-GT-'>
 	15: phi0
 	16: phi1
-	17: phi0
-	18: phi2
-	19: kore_next
-MetaVar 1
+	17: phi2
+	18: kore_next
+MetaVar 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
@@ -36950,10 +36928,9 @@ MetaVar 1
 	14: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'T'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> phi0 </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'T'-GT-'> phi2 </ksym_Lbl'-LT-'generatedTop'-GT-'>
 	15: phi0
 	16: phi1
-	17: phi0
-	18: phi2
-	19: kore_next
-	20: phi1
+	17: phi2
+	18: kore_next
+	19: phi0
 App
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -36973,10 +36950,9 @@ App
 	14: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'T'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> phi0 </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'T'-GT-'> phi2 </ksym_Lbl'-LT-'generatedTop'-GT-'>
 	15: phi0
 	16: phi1
-	17: phi0
-	18: phi2
-	19: (kore_next · phi1)
-Instantiate 0, 1
+	17: phi2
+	18: (kore_next · phi0)
+Instantiate 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
