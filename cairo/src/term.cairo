@@ -9,7 +9,7 @@ use ml_checker_cairo::pattern::Pattern;
 /// We only need to store the conclusion of things that are proved so far.
 /// We use the `Proved` variant for this.
 
-#[derive(PartialEq, Drop, Clone)]
+#[derive(Debug, PartialEq, Drop, Clone)]
 enum Term {
     Pattern: Pattern,
     Proved: Pattern,

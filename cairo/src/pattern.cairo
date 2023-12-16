@@ -1,31 +1,31 @@
 type Id = u8;
 type IdList = Array<Id>;
 
-#[derive(PartialEq, Drop, Clone)]
+#[derive(Debug, PartialEq, Drop, Clone)]
 struct ImpliesType {
     left: Option<Box<Pattern>>,
     right: Option<Box<Pattern>>,
 }
 
-#[derive(PartialEq, Drop, Clone)]
+#[derive(Debug, PartialEq, Drop, Clone)]
 struct AppType {
     left: Option<Box<Pattern>>,
     right: Option<Box<Pattern>>,
 }
 
-#[derive(PartialEq, Drop, Clone)]
+#[derive(Debug, PartialEq, Drop, Clone)]
 struct ExistsType {
     var: Id,
     subpattern: Option<Box<Pattern>>,
 }
 
-#[derive(PartialEq, Drop, Clone)]
+#[derive(Debug, PartialEq, Drop, Clone)]
 struct MuType {
     var: Id,
     subpattern: Option<Box<Pattern>>,
 }
 
-#[derive(PartialEq, Drop, Clone)]
+#[derive(Debug, PartialEq, Drop, Clone)]
 struct MetaVarType {
     id: Id,
     e_fresh: IdList,
@@ -35,21 +35,21 @@ struct MetaVarType {
     app_ctx_holes: IdList,
 }
 
-#[derive(PartialEq, Drop, Clone)]
+#[derive(Debug, PartialEq, Drop, Clone)]
 struct ESubstType {
     pattern: Option<Box<Pattern>>,
     evar_id: Id,
     plug: Option<Box<Pattern>>,
 }
 
-#[derive(PartialEq, Drop, Clone)]
+#[derive(Debug, PartialEq, Drop, Clone)]
 struct SSubstType {
     pattern: Option<Box<Pattern>>,
     svar_id: Id,
     plug: Option<Box<Pattern>>,
 }
 
-#[derive(PartialEq, Drop, Clone)]
+#[derive(Debug, PartialEq, Drop, Clone)]
 enum Pattern {
     EVar: Id,
     SVar: Id,
@@ -61,6 +61,36 @@ enum Pattern {
     MetaVar: MetaVarType, // id, e_fresh, s_fresh, positive, negative, app_ctx_holes
     ESubst: ESubstType, // pattern, evar_id, plug
     SSubst: SSubstType // pattern, svar_id, plug
+}
+
+trait PatternTrait {
+    fn e_fresh(self: @Pattern, evar: Id) -> core::bool;
+    fn s_fresh(self: @Pattern, svar: Id) -> core::bool;
+    fn positive(self: @Pattern, meta_var: Id) -> core::bool;
+    fn negative(self: @Pattern, meta_var: Id) -> core::bool;
+    fn well_formed(self: @Pattern) -> core::bool;
+    fn is_redundant_subst(self: @Pattern) -> core::bool;
+}
+
+impl PatternTraitImpl of PatternTrait {
+    fn e_fresh(self: @Pattern, evar: Id) -> core::bool {
+        true
+    }
+    fn s_fresh(self: @Pattern, svar: Id) -> core::bool {
+        true
+    }
+    fn positive(self: @Pattern, meta_var: Id) -> core::bool {
+        true
+    }
+    fn negative(self: @Pattern, meta_var: Id) -> core::bool {
+        true
+    }
+    fn well_formed(self: @Pattern) -> core::bool {
+        true
+    }
+    fn is_redundant_subst(self: @Pattern) -> core::bool {
+        true
+    }
 }
 
 /// Pattern construction utilities
