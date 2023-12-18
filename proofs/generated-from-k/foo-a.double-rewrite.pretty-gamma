@@ -9460,16 +9460,291 @@ MetaVar 2
 	7: phi0
 	8: phi1
 	9: phi0
-	10: phi2
-	11: phi3
-	12: phi0
-	13: phi1
-	14: phi2
+<<<<<<< HEAD
+App
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0)
+	8: (ksym_Lbl'-LT-'k'-GT-' · phi0)
+Instantiate 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'>
+MetaVar 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'>
+	8: phi1
+Symbol ksym_Lbl'-LT-'generatedTop'-GT-'
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'>
+	8: phi1
+	9: ksym_Lbl'-LT-'generatedTop'-GT-'
 MetaVar 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'>
+	8: phi1
+	9: ksym_Lbl'-LT-'generatedTop'-GT-'
+	10: phi0
+App
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'>
+	8: phi1
+	9: (ksym_Lbl'-LT-'generatedTop'-GT-' · phi0)
+MetaVar 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'>
+	8: phi1
+	9: (ksym_Lbl'-LT-'generatedTop'-GT-' · phi0)
+	10: phi1
+App
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'>
+	8: phi1
+	9: ((ksym_Lbl'-LT-'generatedTop'-GT-' · phi0) · phi1)
+Instantiate 0, 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+MetaVar 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+MetaVar 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+MetaVar 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: phi0
+MetaVar 2
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: phi0
+	11: phi2
+Symbol kore_next
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: phi0
+	11: phi2
+	12: kore_next
+MetaVar 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: phi0
+	11: phi2
+	12: kore_next
+	13: phi1
+App
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: phi0
+	11: phi2
+	12: (kore_next · phi1)
+Instantiate 0, 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+MetaVar 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+MetaVar 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+MetaVar 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: phi1
+=======
+	10: phi2
+	11: phi3
+	12: phi0
+	13: phi1
+	14: phi2
+>>>>>>> main
+MetaVar 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: phi1
+	14: phi0
+=======
 	3: phi0
 	4: phi1
 	5: phi2
@@ -9543,11 +9818,27 @@ MetaVar 0
 	16: phi1
 	17: phi1
 	18: phi0
+>>>>>>> main
 SVar 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: phi1
+	14: phi0
+	15: X0
+=======
 	3: phi0
 	4: phi1
 	5: phi2
@@ -9565,11 +9856,27 @@ SVar 0
 	17: phi1
 	18: phi0
 	19: X0
+>>>>>>> main
 Mu 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: phi1
+	14: phi0
+	15: (μ X0 . X0)
+=======
 	3: phi0
 	4: phi1
 	5: phi2
@@ -9587,11 +9894,27 @@ Mu 0
 	17: phi1
 	18: phi0
 	19: (μ X0 . X0)
+>>>>>>> main
 Instantiate 
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: phi1
+	14: phi0
+	15: ⊥
+=======
 	3: phi0
 	4: phi1
 	5: phi2
@@ -9609,11 +9932,26 @@ Instantiate
 	17: phi1
 	18: phi0
 	19: ⊥
+>>>>>>> main
 Implies
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: phi1
+	14: (phi0 -> ⊥)
+=======
 	3: phi0
 	4: phi1
 	5: phi2
@@ -9630,11 +9968,25 @@ Implies
 	16: phi1
 	17: phi1
 	18: (phi0 -> ⊥)
+>>>>>>> main
 Instantiate 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+=======
 	3: phi0
 	4: phi1
 	5: phi2
@@ -9650,11 +10002,26 @@ Instantiate 0
 	15: phi0
 	16: phi1
 	17: ¬phi1
+>>>>>>> main
 MetaVar 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+	14: phi0
+=======
 	3: phi0
 	4: phi1
 	5: phi2
@@ -9671,11 +10038,27 @@ MetaVar 0
 	16: phi1
 	17: ¬phi1
 	18: phi0
+>>>>>>> main
 Symbol inhabitant
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+	14: phi0
+	15: inhabitant
+=======
 	3: phi0
 	4: phi1
 	5: phi2
@@ -9693,11 +10076,28 @@ Symbol inhabitant
 	17: ¬phi1
 	18: phi0
 	19: inhabitant
+>>>>>>> main
 MetaVar 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+	14: phi0
+	15: inhabitant
+	16: phi0
+=======
 	3: phi0
 	4: phi1
 	5: phi2
@@ -9716,11 +10116,62 @@ MetaVar 0
 	18: phi0
 	19: inhabitant
 	20: phi0
+>>>>>>> main
 App
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+	14: phi0
+	15: (inhabitant · phi0)
+Instantiate 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+	14: k⊤:phi0
+MetaVar 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+	14: k⊤:phi0
+	15: phi0
+=======
 	3: phi0
 	4: phi1
 	5: phi2
@@ -10540,11 +10991,28 @@ MetaVar 0
 	14: phi2
 	15: phi1
 	16: phi0
+>>>>>>> main
 MetaVar 1
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+	14: k⊤:phi0
+	15: phi0
+	16: phi1
+=======
 	3: phi0
 	4: phi1
 	5: phi2
@@ -11646,11 +12114,28 @@ MetaVar 1
 	15: phi1
 	16: phi0
 	17: phi1
+>>>>>>> main
 MetaVar 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+	14: k⊤:phi0
+	15: phi0
+	16: phi1
+=======
 	3: phi0
 	4: phi1
 	5: phi2
@@ -11812,12 +12297,29 @@ MetaVar 0
 	14: phi0
 	15: phi1
 	16: (phi0 -> ¬phi1)
+>>>>>>> main
 	17: phi0
 SVar 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+	14: k⊤:phi0
+	15: phi0
+	16: phi1
+=======
 	3: phi0
 	4: phi1
 	5: phi2
@@ -11832,6 +12334,7 @@ SVar 0
 	14: phi0
 	15: phi1
 	16: (phi0 -> ¬phi1)
+>>>>>>> main
 	17: phi0
 	18: X0
 Mu 0
@@ -11839,6 +12342,22 @@ Mu 0
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+	14: k⊤:phi0
+	15: phi0
+	16: phi1
+=======
 	3: phi0
 	4: phi1
 	5: phi2
@@ -11853,6 +12372,7 @@ Mu 0
 	14: phi0
 	15: phi1
 	16: (phi0 -> ¬phi1)
+>>>>>>> main
 	17: phi0
 	18: (μ X0 . X0)
 Instantiate 
@@ -11860,6 +12380,22 @@ Instantiate
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+	14: k⊤:phi0
+	15: phi0
+	16: phi1
+=======
 	3: phi0
 	4: phi1
 	5: phi2
@@ -11874,6 +12410,7 @@ Instantiate
 	14: phi0
 	15: phi1
 	16: (phi0 -> ¬phi1)
+>>>>>>> main
 	17: phi0
 	18: ⊥
 Implies
@@ -11881,6 +12418,22 @@ Implies
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+	14: k⊤:phi0
+	15: phi0
+	16: phi1
+=======
 	3: phi0
 	4: phi1
 	5: phi2
@@ -11895,12 +12448,30 @@ Implies
 	14: phi0
 	15: phi1
 	16: (phi0 -> ¬phi1)
+>>>>>>> main
 	17: (phi0 -> ⊥)
 Instantiate 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+	14: k⊤:phi0
+	15: phi0
+	16: ¬phi1
+Implies
+=======
 	3: phi0
 	4: phi1
 	5: phi2
@@ -11916,16 +12487,711 @@ Instantiate 0
 	15: phi1
 	16: ¬(phi0 -> ¬phi1)
 Instantiate 0, 1
+>>>>>>> main
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+	14: k⊤:phi0
+	15: (phi0 -> ¬phi1)
+MetaVar 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+	14: k⊤:phi0
+	15: (phi0 -> ¬phi1)
+	16: phi0
+SVar 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+	14: k⊤:phi0
+	15: (phi0 -> ¬phi1)
+	16: phi0
+	17: X0
+Mu 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+	14: k⊤:phi0
+	15: (phi0 -> ¬phi1)
+	16: phi0
+	17: (μ X0 . X0)
+Instantiate 
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+	14: k⊤:phi0
+	15: (phi0 -> ¬phi1)
+	16: phi0
+	17: ⊥
+Implies
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+	14: k⊤:phi0
+	15: (phi0 -> ¬phi1)
+	16: (phi0 -> ⊥)
+Instantiate 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: ¬phi1
+	14: k⊤:phi0
+	15: ¬(phi0 -> ¬phi1)
+Instantiate 0, 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: phi0
+	12: phi1
+	13: (¬phi1 ⋀ k⊤:phi0)
+Instantiate 0, 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: (k¬phi1):phi0
+MetaVar 2
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: (k¬phi1):phi0
+	12: phi2
+MetaVar 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: (k¬phi1):phi0
+	12: phi2
+	13: phi0
+MetaVar 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: (k¬phi1):phi0
+	12: phi2
+	13: phi0
+	14: phi1
+MetaVar 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: (k¬phi1):phi0
+	12: phi2
+	13: phi0
+	14: phi1
+	15: phi0
+MetaVar 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: (k¬phi1):phi0
+	12: phi2
+	13: phi0
+	14: phi1
+	15: phi0
+	16: phi0
+SVar 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: (k¬phi1):phi0
+	12: phi2
+	13: phi0
+	14: phi1
+	15: phi0
+	16: phi0
+	17: X0
+Mu 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: (k¬phi1):phi0
+	12: phi2
+	13: phi0
+	14: phi1
+	15: phi0
+	16: phi0
+	17: (μ X0 . X0)
+Instantiate 
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: (k¬phi1):phi0
+	12: phi2
+	13: phi0
+	14: phi1
+	15: phi0
+	16: phi0
+	17: ⊥
+Implies
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: (k¬phi1):phi0
+	12: phi2
+	13: phi0
+	14: phi1
+	15: phi0
+	16: (phi0 -> ⊥)
+Instantiate 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: (k¬phi1):phi0
+	12: phi2
+	13: phi0
+	14: phi1
+	15: ¬phi0
+MetaVar 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: (k¬phi1):phi0
+	12: phi2
+	13: phi0
+	14: phi1
+	15: ¬phi0
+	16: phi1
+Implies
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: (k¬phi1):phi0
+	12: phi2
+	13: phi0
+	14: phi1
+	15: (¬phi0 -> phi1)
+Instantiate 0, 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: (k¬phi1):phi0
+	12: phi2
+	13: (phi0 ⋁ phi1)
+Instantiate 0, 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: phi0
+	9: phi1
+	10: ♦phi2
+	11: ((k¬phi1):phi0 k⋁ phi2)
+Instantiate 0, 1, 2
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: ksort_SortGeneratedTopCell
+	6: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: (phi1 k-> ♦phi2):phi0
+Instantiate 0, 1, 2
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+Publish
+Symbol ksort_SortGeneratedTopCell
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+Symbol ksort_SortFoo
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: ksort_SortFoo
+Symbol ksort_SortKItem
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: ksort_SortFoo
+	8: ksort_SortKItem
+Symbol ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: ksort_SortFoo
+	8: ksort_SortKItem
+	9: ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo
+Instantiate 
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: ksort_SortFoo
+	8: ksort_SortKItem
+	9: ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()
+Symbol ksym_inj
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: ksort_SortFoo
+	8: ksort_SortKItem
+	9: ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()
+	10: ksym_inj
+MetaVar 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: ksort_SortFoo
+	8: ksort_SortKItem
+	9: ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()
+	10: ksym_inj
+	11: phi0
+App
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: ksort_SortFoo
+	8: ksort_SortKItem
+	9: ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()
+	10: (ksym_inj · phi0)
+MetaVar 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: ksort_SortFoo
+	8: ksort_SortKItem
+	9: ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()
+	10: (ksym_inj · phi0)
+	11: phi1
+App
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: ksort_SortFoo
+	8: ksort_SortKItem
+	9: ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()
+	10: ((ksym_inj · phi0) · phi1)
+MetaVar 2
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: ksort_SortFoo
+	8: ksort_SortKItem
+	9: ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()
+	10: ((ksym_inj · phi0) · phi1)
+	11: phi2
+App
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: ksort_SortFoo
+	8: ksort_SortKItem
+	9: ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()
+	10: (((ksym_inj · phi0) · phi1) · phi2)
+Instantiate 0, 1, 2
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo())
+MetaVar 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo())
+	8: phi0
+Symbol kore_kseq
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo())
+	8: phi0
+	9: kore_kseq
+MetaVar 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo())
+	8: phi0
+	9: kore_kseq
+	10: phi0
+App
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo())
+	8: phi0
+	9: (kore_kseq · phi0)
+MetaVar 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo())
+	8: phi0
+	9: (kore_kseq · phi0)
+	10: phi1
+App
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo())
+	8: phi0
+	9: ((kore_kseq · phi0) · phi1)
+Instantiate 0, 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0)
+Symbol ksym_Lbl'-LT-'k'-GT-'
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0)
+	8: ksym_Lbl'-LT-'k'-GT-'
+MetaVar 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0)
+	8: ksym_Lbl'-LT-'k'-GT-'
+=======
 	3: phi0
 	4: phi1
 	5: phi2
 	6: (phi3 k⋀ k⊤:phi0)
 	7: phi0
 	8: phi1
+>>>>>>> main
 	9: phi0
 	10: phi2
 	11: phi3
@@ -12031,9 +13297,105 @@ MetaVar 2
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
 	11: phi0
+<<<<<<< HEAD
+MetaVar 2
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: phi0
+	12: phi2
+Symbol kore_next
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: phi0
+	12: phi2
+	13: kore_next
+MetaVar 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: phi0
+	12: phi2
+	13: kore_next
+	14: phi1
+App
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: phi0
+	12: phi2
+	13: (kore_next · phi1)
+Instantiate 0, 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: ♦phi2
+MetaVar 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: ♦phi2
+	12: phi0
+=======
 	12: phi1
 	13: phi0
 	14: phi2
+>>>>>>> main
 MetaVar 1
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -12047,11 +13409,34 @@ MetaVar 1
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+MetaVar 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: phi1
+=======
 	11: phi0
 	12: phi1
 	13: phi0
 	14: phi2
 	15: phi1
+>>>>>>> main
 MetaVar 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -12065,12 +13450,20 @@ MetaVar 0
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: phi1
+	15: phi0
+=======
 	11: phi0
 	12: phi1
 	13: phi0
 	14: phi2
 	15: phi1
 	16: phi0
+>>>>>>> main
 SVar 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -12084,6 +13477,14 @@ SVar 0
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: phi1
+	15: phi0
+	16: X0
+=======
 	11: phi0
 	12: phi1
 	13: phi0
@@ -12091,6 +13492,7 @@ SVar 0
 	15: phi1
 	16: phi0
 	17: X0
+>>>>>>> main
 Mu 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -12104,6 +13506,14 @@ Mu 0
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: phi1
+	15: phi0
+	16: (μ X0 . X0)
+=======
 	11: phi0
 	12: phi1
 	13: phi0
@@ -12111,6 +13521,7 @@ Mu 0
 	15: phi1
 	16: phi0
 	17: (μ X0 . X0)
+>>>>>>> main
 Instantiate 
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -12124,6 +13535,14 @@ Instantiate
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: phi1
+	15: phi0
+	16: ⊥
+=======
 	11: phi0
 	12: phi1
 	13: phi0
@@ -12131,6 +13550,7 @@ Instantiate
 	15: phi1
 	16: phi0
 	17: ⊥
+>>>>>>> main
 Implies
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -12144,12 +13564,20 @@ Implies
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: phi1
+	15: (phi0 -> ⊥)
+=======
 	11: phi0
 	12: phi1
 	13: phi0
 	14: phi2
 	15: phi1
 	16: (phi0 -> ⊥)
+>>>>>>> main
 Instantiate 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -12163,11 +13591,18 @@ Instantiate 0
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+=======
 	11: phi0
 	12: phi1
 	13: phi0
 	14: phi2
 	15: ¬phi1
+>>>>>>> main
 MetaVar 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -12181,12 +13616,20 @@ MetaVar 0
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+	15: phi0
+=======
 	11: phi0
 	12: phi1
 	13: phi0
 	14: phi2
 	15: ¬phi1
 	16: phi0
+>>>>>>> main
 Symbol inhabitant
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -12200,6 +13643,14 @@ Symbol inhabitant
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+	15: phi0
+	16: inhabitant
+=======
 	11: phi0
 	12: phi1
 	13: phi0
@@ -12207,6 +13658,7 @@ Symbol inhabitant
 	15: ¬phi1
 	16: phi0
 	17: inhabitant
+>>>>>>> main
 MetaVar 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -12220,6 +13672,15 @@ MetaVar 0
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+	15: phi0
+	16: inhabitant
+	17: phi0
+=======
 	11: phi0
 	12: phi1
 	13: phi0
@@ -12228,6 +13689,7 @@ MetaVar 0
 	16: phi0
 	17: inhabitant
 	18: phi0
+>>>>>>> main
 App
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -12241,6 +13703,51 @@ App
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+	15: phi0
+	16: (inhabitant · phi0)
+Instantiate 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+	15: k⊤:phi0
+MetaVar 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+	15: k⊤:phi0
+	16: phi0
+=======
 	11: phi0
 	12: phi1
 	13: phi0
@@ -12287,6 +13794,7 @@ MetaVar 0
 	15: ¬phi1
 	16: k⊤:phi0
 	17: phi0
+>>>>>>> main
 MetaVar 1
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -12300,6 +13808,15 @@ MetaVar 1
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+	15: k⊤:phi0
+	16: phi0
+	17: phi1
+=======
 	11: phi0
 	12: phi1
 	13: phi0
@@ -12308,6 +13825,7 @@ MetaVar 1
 	16: k⊤:phi0
 	17: phi0
 	18: phi1
+>>>>>>> main
 MetaVar 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -12321,6 +13839,15 @@ MetaVar 0
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+	15: k⊤:phi0
+	16: phi0
+	17: phi1
+=======
 	11: phi0
 	12: phi1
 	13: phi0
@@ -12482,6 +14009,7 @@ MetaVar 0
 	15: ¬phi1
 	16: k⊤:phi0
 	17: (phi0 -> ¬phi1)
+>>>>>>> main
 	18: phi0
 SVar 0
 	Stack:
@@ -12496,6 +14024,15 @@ SVar 0
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+	15: k⊤:phi0
+	16: phi0
+	17: phi1
+=======
 	11: phi0
 	12: phi1
 	13: phi0
@@ -12503,6 +14040,7 @@ SVar 0
 	15: ¬phi1
 	16: k⊤:phi0
 	17: (phi0 -> ¬phi1)
+>>>>>>> main
 	18: phi0
 	19: X0
 Mu 0
@@ -12518,6 +14056,15 @@ Mu 0
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+	15: k⊤:phi0
+	16: phi0
+	17: phi1
+=======
 	11: phi0
 	12: phi1
 	13: phi0
@@ -12525,6 +14072,7 @@ Mu 0
 	15: ¬phi1
 	16: k⊤:phi0
 	17: (phi0 -> ¬phi1)
+>>>>>>> main
 	18: phi0
 	19: (μ X0 . X0)
 Instantiate 
@@ -12540,6 +14088,15 @@ Instantiate
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+	15: k⊤:phi0
+	16: phi0
+	17: phi1
+=======
 	11: phi0
 	12: phi1
 	13: phi0
@@ -12547,6 +14104,7 @@ Instantiate
 	15: ¬phi1
 	16: k⊤:phi0
 	17: (phi0 -> ¬phi1)
+>>>>>>> main
 	18: phi0
 	19: ⊥
 Implies
@@ -12562,6 +14120,15 @@ Implies
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+	15: k⊤:phi0
+	16: phi0
+	17: phi1
+=======
 	11: phi0
 	12: phi1
 	13: phi0
@@ -12569,6 +14136,7 @@ Implies
 	15: ¬phi1
 	16: k⊤:phi0
 	17: (phi0 -> ¬phi1)
+>>>>>>> main
 	18: (phi0 -> ⊥)
 Instantiate 0
 	Stack:
@@ -12583,6 +14151,16 @@ Instantiate 0
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+	15: k⊤:phi0
+	16: phi0
+	17: ¬phi1
+Implies
+=======
 	11: phi0
 	12: phi1
 	13: phi0
@@ -12591,6 +14169,7 @@ Instantiate 0
 	16: k⊤:phi0
 	17: ¬(phi0 -> ¬phi1)
 Instantiate 0, 1
+>>>>>>> main
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
@@ -12603,6 +14182,14 @@ Instantiate 0, 1
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+	15: k⊤:phi0
+	16: (phi0 -> ¬phi1)
+=======
 	11: phi0
 	12: phi1
 	13: phi0
@@ -12750,6 +14337,7 @@ Symbol inhabitant
 	14: ⌈ phi2 ⌉
 	15: phi1
 	16: inhabitant
+>>>>>>> main
 MetaVar 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -12763,6 +14351,15 @@ MetaVar 0
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+	15: k⊤:phi0
+	16: (phi0 -> ¬phi1)
+	17: phi0
+=======
 	11: phi0
 	12: phi1
 	13: (k¬phi2):phi0
@@ -12867,6 +14464,7 @@ MetaVar 0
 	16: phi0
 	17: phi1
 	18: phi0
+>>>>>>> main
 SVar 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -12880,6 +14478,16 @@ SVar 0
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+	15: k⊤:phi0
+	16: (phi0 -> ¬phi1)
+	17: phi0
+	18: X0
+=======
 	11: phi0
 	12: phi1
 	13: (k¬phi2):phi0
@@ -12889,6 +14497,7 @@ SVar 0
 	17: phi1
 	18: phi0
 	19: X0
+>>>>>>> main
 Mu 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -12902,6 +14511,16 @@ Mu 0
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+	15: k⊤:phi0
+	16: (phi0 -> ¬phi1)
+	17: phi0
+	18: (μ X0 . X0)
+=======
 	11: phi0
 	12: phi1
 	13: (k¬phi2):phi0
@@ -12911,6 +14530,7 @@ Mu 0
 	17: phi1
 	18: phi0
 	19: (μ X0 . X0)
+>>>>>>> main
 Instantiate 
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -12924,6 +14544,16 @@ Instantiate
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+	15: k⊤:phi0
+	16: (phi0 -> ¬phi1)
+	17: phi0
+	18: ⊥
+=======
 	11: phi0
 	12: phi1
 	13: (k¬phi2):phi0
@@ -12933,6 +14563,7 @@ Instantiate
 	17: phi1
 	18: phi0
 	19: ⊥
+>>>>>>> main
 Implies
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -12946,6 +14577,15 @@ Implies
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+	15: k⊤:phi0
+	16: (phi0 -> ¬phi1)
+	17: (phi0 -> ⊥)
+=======
 	11: phi0
 	12: phi1
 	13: (k¬phi2):phi0
@@ -12954,6 +14594,7 @@ Implies
 	16: phi0
 	17: phi1
 	18: (phi0 -> ⊥)
+>>>>>>> main
 Instantiate 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
@@ -12967,6 +14608,13 @@ Instantiate 0
 	8: phi1
 	9: (phi2 k<-> phi3):phi0
 	10: phi1
+<<<<<<< HEAD
+	11: ♦phi2
+	12: phi0
+	13: phi1
+	14: ¬phi1
+	15: k⊤:phi0
+=======
 	11: phi0
 	12: phi1
 	13: (k¬phi2):phi0
@@ -13114,6 +14762,7 @@ Instantiate 0
 	13: (k¬phi2):phi0
 	14: ⌈ phi2 ⌉
 	15: k⊤:phi1
+>>>>>>> main
 	16: ¬(phi0 -> ¬phi1)
 Instantiate 0, 1
 	Stack:
@@ -16453,11 +18102,79 @@ MetaVar 0
 	10: (phi2 k<-> phi3):phi0
 	11: phi1
 	12: phi0
+<<<<<<< HEAD
+	13: phi1
+	14: (¬phi1 ⋀ k⊤:phi0)
+Instantiate 0, 1
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: ♦phi2
+	12: (k¬phi1):phi0
+MetaVar 2
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: ♦phi2
+	12: (k¬phi1):phi0
+	13: phi2
+MetaVar 0
+	Stack:
+	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
+	1: ⌈ x0 ⌉
+	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: ♦phi2
+	12: (k¬phi1):phi0
+	13: phi2
+	14: phi0
+=======
+>>>>>>> main
 MetaVar 1
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: ♦phi2
+	12: (k¬phi1):phi0
+	13: phi2
+	14: phi0
+	15: phi1
+=======
 	3: (phi2:phi0 k= (phi3 k⋀ k⊤:phi0):phi0):phi1
 	4: phi0
 	5: phi1
@@ -16469,11 +18186,28 @@ MetaVar 1
 	11: phi1
 	12: phi0
 	13: phi1
+>>>>>>> main
 MetaVar 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: ♦phi2
+	12: (k¬phi1):phi0
+	13: phi2
+	14: phi0
+	15: phi1
+	16: phi0
+=======
 	3: (phi2:phi0 k= (phi3 k⋀ k⊤:phi0):phi0):phi1
 	4: phi0
 	5: phi1
@@ -16523,11 +18257,28 @@ MetaVar 1
 	14: phi0
 	15: phi2
 	16: phi1
+>>>>>>> main
 MetaVar 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: ♦phi2
+	12: (k¬phi1):phi0
+	13: phi2
+	14: phi0
+	15: phi1
+	16: phi0
+=======
 	3: (phi2:phi0 k= (phi3 k⋀ k⊤:phi0):phi0):phi1
 	4: phi0
 	5: phi1
@@ -16542,12 +18293,29 @@ MetaVar 0
 	14: phi0
 	15: phi2
 	16: phi1
+>>>>>>> main
 	17: phi0
 SVar 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: ♦phi2
+	12: (k¬phi1):phi0
+	13: phi2
+	14: phi0
+	15: phi1
+	16: phi0
+=======
 	3: (phi2:phi0 k= (phi3 k⋀ k⊤:phi0):phi0):phi1
 	4: phi0
 	5: phi1
@@ -16562,6 +18330,7 @@ SVar 0
 	14: phi0
 	15: phi2
 	16: phi1
+>>>>>>> main
 	17: phi0
 	18: X0
 Mu 0
@@ -16569,6 +18338,22 @@ Mu 0
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: ♦phi2
+	12: (k¬phi1):phi0
+	13: phi2
+	14: phi0
+	15: phi1
+	16: phi0
+=======
 	3: (phi2:phi0 k= (phi3 k⋀ k⊤:phi0):phi0):phi1
 	4: phi0
 	5: phi1
@@ -16583,6 +18368,7 @@ Mu 0
 	14: phi0
 	15: phi2
 	16: phi1
+>>>>>>> main
 	17: phi0
 	18: (μ X0 . X0)
 Instantiate 
@@ -16590,6 +18376,22 @@ Instantiate
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: ♦phi2
+	12: (k¬phi1):phi0
+	13: phi2
+	14: phi0
+	15: phi1
+	16: phi0
+=======
 	3: (phi2:phi0 k= (phi3 k⋀ k⊤:phi0):phi0):phi1
 	4: phi0
 	5: phi1
@@ -16604,6 +18406,7 @@ Instantiate
 	14: phi0
 	15: phi2
 	16: phi1
+>>>>>>> main
 	17: phi0
 	18: ⊥
 Implies
@@ -16611,6 +18414,22 @@ Implies
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: ♦phi2
+	12: (k¬phi1):phi0
+	13: phi2
+	14: phi0
+	15: phi1
+	16: phi0
+=======
 	3: (phi2:phi0 k= (phi3 k⋀ k⊤:phi0):phi0):phi1
 	4: phi0
 	5: phi1
@@ -16625,12 +18444,29 @@ Implies
 	14: phi0
 	15: phi2
 	16: phi1
+>>>>>>> main
 	17: (phi0 -> ⊥)
 Instantiate 0
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: ♦phi2
+	12: (k¬phi1):phi0
+	13: phi2
+	14: phi0
+	15: phi1
+	16: ¬phi0
+=======
 	3: (phi2:phi0 k= (phi3 k⋀ k⊤:phi0):phi0):phi1
 	4: phi0
 	5: phi1
@@ -16770,11 +18606,29 @@ MetaVar 0
 	16: ¬phi1
 	17: k⊤:phi0
 	18: phi0
+>>>>>>> main
 MetaVar 1
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: ♦phi2
+	12: (k¬phi1):phi0
+	13: phi2
+	14: phi0
+	15: phi1
+	16: ¬phi0
+	17: phi1
+=======
 	3: (phi2:phi0 k= (phi3 k⋀ k⊤:phi0):phi0):phi1
 	4: phi0
 	5: phi1
@@ -16887,11 +18741,28 @@ Instantiate
 	19: phi1
 	20: phi0
 	21: ⊥
+>>>>>>> main
 Implies
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: ♦phi2
+	12: (k¬phi1):phi0
+	13: phi2
+	14: phi0
+	15: phi1
+	16: (¬phi0 -> phi1)
+=======
 	3: (phi2:phi0 k= (phi3 k⋀ k⊤:phi0):phi0):phi1
 	4: phi0
 	5: phi1
@@ -17087,11 +18958,27 @@ Instantiate 0
 	16: ¬phi1
 	17: k⊤:phi0
 	18: ¬(phi0 -> ¬phi1)
+>>>>>>> main
 Instantiate 0, 1
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
 	2: ((phi2:phi0 k= phi3:phi0):phi1 -> (phi4[phi2/x0]:phi0 k= phi4[phi3/x0]:phi0):phi1)
+<<<<<<< HEAD
+	3: functional(<ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>)
+	4: functional(ksym_dotk())
+	5: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	6: ksort_SortGeneratedTopCell
+	7: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	8: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooC'LParRParUnds'DOUBLE-REWRITE-SYNTAX'Unds'Foo()) ~> phi0) </ksym_Lbl'-LT-'k'-GT-'> phi1 </ksym_Lbl'-LT-'generatedTop'-GT-'>
+	9: phi0
+	10: phi1
+	11: ♦phi2
+	12: (k¬phi1):phi0
+	13: phi2
+	14: (phi0 ⋁ phi1)
+Instantiate 0, 1
+=======
 	3: (phi2:phi0 k= (phi3 k⋀ k⊤:phi0):phi0):phi1
 	4: phi0
 	5: phi1
@@ -17658,6 +19545,7 @@ Instantiate 0, 1
 	14: (k¬phi2):phi0
 	15: (⌈ phi2 ⌉ ⋀ k⊤:phi1)
 Instantiate 0, 1, 2
+>>>>>>> main
 	Stack:
 	0: ((∃ x0 . (phi0 = x0)) -> ((phi0 -> (μ X0 . X0)[{}])[{0: "(∃ x1 . (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])"}][{0: 'phi1'}] -> phi1[phi0/x1]))
 	1: ⌈ x0 ⌉
