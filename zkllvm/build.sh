@@ -26,7 +26,7 @@ EXT=${FILE##*.}
 INPUT=$2
 
 CRYPTO3_LIB_DIR="${ZKLLVM_ROOT}"/libs/crypto3
-CLANG_EXE="${ZKLLVM_ROOT}"/build/libs/circifier/llvm/bin/clang-16
+CLANG_EXE="${ZKLLVM_ROOT}"/build/libs/circifier/llvm/bin/clang-17
 LLVM_LINK="${ZKLLVM_ROOT}"/build/libs/circifier/llvm/bin/llvm-link
 LIB_C="${ZKLLVM_ROOT}/build/libs/stdlib/libc"
 ASSIGNER="${ZKLLVM_ROOT}"/build/bin/assigner/assigner
@@ -53,11 +53,13 @@ else
 fi
 
 # Compile the program to LLVM IR
-${CLANG_EXE} -target assigner -D__ZKLLVM__ \
+${CLANG_EXE} -target assigner \
+-Xclang -fpreserve-vec3-type -Werror=unknown-attributes \
+-D_LIBCPP_ENABLE_CXX17_REMOVED_UNARY_BINARY_FUNCTION -D__ZKLLVM__ \
 -I "${CRYPTO3_LIB_DIR}"/libs/algebra/include \
 -I "${ZKLLVM_ROOT}"/build/include \
 -I "${CRYPTO3_LIB_DIR}"/libs/block/include \
--I  /usr/include \
+-I /usr/include \
 -I "${ZKLLVM_ROOT}"/libs/blueprint/include \
 -I "${CRYPTO3_LIB_DIR}"/libs/codec/include \
 -I "${CRYPTO3_LIB_DIR}"/libs/containers/include \
@@ -81,6 +83,7 @@ ${CLANG_EXE} -target assigner -D__ZKLLVM__ \
 -I "${CRYPTO3_LIB_DIR}"/libs/vdf/include \
 -I "${CRYPTO3_LIB_DIR}"/libs/zk/include \
 -I "${ZKLLVM_ROOT}"/libs/stdlib/libcpp \
+-I "${ZKLLVM_ROOT}"/libs/circifier/clang/lib/Headers \
 -I "${ZKLLVM_ROOT}"/libs/stdlib/libc/include \
 -I "${FILEPATH}/../../cpp/src" \
 -emit-llvm -O1 -S -std=c++20 "${FILEPATH}/${FILE}" -o "${OUTPUT_CLANG}"
