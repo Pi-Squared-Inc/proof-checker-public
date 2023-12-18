@@ -16,7 +16,7 @@ use pattern::Pattern;
 use pattern::Pattern::{EVar, SVar, Symbol, Implies, App, Exists, Mu, MetaVar, ESubst, SSubst};
 use pattern::{
     evar, svar, symbol, implies, app, exists, mu, metavar, metavar_unconstrained, metavar_e_fresh,
-    metavar_s_fresh, esubst, ssubst
+    metavar_s_fresh, esubst, ssubst, bot, not, forall
 };
 use pattern::{
     Id, IdList, ImpliesType, AppType, ExistsType, MuType, ESubstType, SSubstType, MetaVarType
@@ -218,21 +218,6 @@ fn from(value: felt252) -> Instruction {
         137 => Instruction::CleanMetaVar,
         _ => panic!("Bad Instruction!"),
     }
-}
-
-// Notation
-#[inline(always)]
-fn bot() -> Pattern {
-    return mu(0, svar(0));
-}
-
-#[inline(always)]
-fn not(pat: Pattern) -> Pattern {
-    return implies(pat, bot());
-}
-
-fn forall(evar: Id, pat: Pattern) -> Pattern {
-    return not(exists(evar, not(pat)));
 }
 
 fn instantiate_internal(
