@@ -22,6 +22,8 @@ use pattern::{
     Id, IdList, ImpliesType, AppType, ExistsType, MuType, ESubstType, SSubstType, MetaVarType
 };
 
+use pattern::PatternOptionBoxClone;
+
 // Instructions
 // ============
 //
@@ -217,6 +219,105 @@ fn from(value: felt252) -> Instruction {
         136 => Instruction::NoOp,
         137 => Instruction::CleanMetaVar,
         _ => panic!("Bad Instruction!"),
+    }
+}
+
+/// Substitution utilities
+/// ----------------------
+
+fn apply_esubst(pattern: @Pattern, evar_id: Id, plug: @Pattern) -> Pattern {
+    let wrap_subst = esubst(pattern.clone(), evar_id, plug.clone());
+
+    match pattern {
+        Pattern::EVar(e) => { if *e == evar_id {
+            plug.clone()
+        } else {
+            pattern.clone()
+        } },
+        Pattern::Implies(ImpliesType{left,
+        right }) => {
+            let left = left.clone().unwrap().unbox();
+            let right = right.clone().unwrap().unbox();
+
+            implies(apply_esubst(@left, evar_id, plug), apply_esubst(@right, evar_id, plug))
+        },
+        Pattern::App(AppType{left,
+        right }) => {
+            let left = left.clone().unwrap().unbox();
+            let right = right.clone().unwrap().unbox();
+
+            app(apply_esubst(@left, evar_id, plug), apply_esubst(@right, evar_id, plug))
+        },
+        Pattern::Exists(ExistsType{var,
+        subpattern }) => {
+            if *var == evar_id {
+                pattern.clone()
+            } else {
+                if !plug.e_fresh(*var) {
+                    panic!("EVar substitution would capture free variable {}!", *var);
+                }
+
+                let subpattern = subpattern.clone().unwrap().unbox();
+                exists(*var, apply_esubst(@subpattern, evar_id, plug))
+            }
+        },
+        Pattern::Mu(MuType{var,
+        subpattern }) => {
+            let subpattern = subpattern.clone().unwrap().unbox();
+            mu(*var, apply_esubst(@subpattern, evar_id, plug))
+        },
+        Pattern::MetaVar(_) => wrap_subst,
+        Pattern::ESubst(_) => wrap_subst,
+        Pattern::SSubst(_) => wrap_subst,
+        _ => pattern.clone(),
+    }
+}
+
+fn apply_ssubst(pattern: @Pattern, svar_id: Id, plug: @Pattern) -> Pattern {
+    let wrap_subst = ssubst(pattern.clone(), svar_id, plug.clone());
+
+    match pattern {
+        Pattern::SVar(s) => { if *s == svar_id {
+            plug.clone()
+        } else {
+            pattern.clone()
+        } },
+        Pattern::Implies(ImpliesType{left,
+        right }) => {
+            let left = left.clone().unwrap().unbox();
+            let right = right.clone().unwrap().unbox();
+
+            implies(apply_ssubst(@left, svar_id, plug), apply_ssubst(@right, svar_id, plug))
+        },
+        Pattern::App(AppType{left,
+        right }) => {
+            let left = left.clone().unwrap().unbox();
+            let right = right.clone().unwrap().unbox();
+
+            app(apply_ssubst(@left, svar_id, plug), apply_ssubst(@right, svar_id, plug))
+        },
+        Pattern::Exists(ExistsType{var,
+        subpattern }) => {
+            let subpattern = subpattern.clone().unwrap().unbox();
+            exists(*var, apply_ssubst(@subpattern, svar_id, plug))
+        },
+        Pattern::Mu(MuType{var,
+        subpattern }) => {
+            if *var == svar_id {
+                pattern.clone()
+            } else {
+                if !plug.s_fresh(*var) {
+                    panic!("SVar substitution would capture free variable {}!", *var);
+                }
+
+                let subpattern = subpattern.clone().unwrap().unbox();
+                mu(*var, apply_ssubst(@subpattern, svar_id, plug))
+            }
+        },
+        Pattern::MetaVar(_) => wrap_subst,
+        Pattern::ESubst(_) => wrap_subst,
+        Pattern::SSubst(_) => wrap_subst,
+        _ => pattern.clone(),
     }
 }
 
@@ -885,5 +986,137 @@ mod tests {
         ];
 
         verify(gamma_buffer, claim_buffer, proof_buffer);
+    }
+
+    use super::apply_esubst;
+    use super::{svar, symbol, app, exists, mu, esubst, ssubst};
+    #[test]
+    #[available_gas(1000000000000000)]
+    fn test_apply_esubst() {
+        let mut result = apply_esubst(@evar(0), 0, @symbol(1));
+        assert_eq!(result, symbol(1));
+
+        result = apply_esubst(@evar(0), 0, @evar(2));
+        assert_eq!(result, evar(2));
+
+        result = apply_esubst(@evar(0), 1, @evar(2));
+        assert_eq!(result, evar(0));
+
+        result = apply_esubst(@svar(0), 0, @symbol(0));
+        assert_eq!(result, svar(0));
+
+        result = apply_esubst(@svar(1), 0, @evar(0));
+        assert_eq!(result, svar(1));
+
+        result = apply_esubst(@symbol(0), 0, @symbol(1));
+        assert_eq!(result, symbol(0));
+
+        // Distribute over subpatterns
+        result = apply_esubst(@implies(evar(7), symbol(1)), 7, @symbol(0));
+        assert_eq!(result, implies(symbol(0), symbol(1)));
+
+        result = apply_esubst(@implies(evar(7), symbol(1)), 6, @symbol(0));
+        assert_eq!(result, implies(evar(7), symbol(1)));
+
+        result = apply_esubst(@app(evar(7), symbol(1)), 7, @symbol(0));
+        assert_eq!(result, app(symbol(0), symbol(1)));
+
+        result = apply_esubst(@app(evar(7), symbol(1)), 6, @symbol(0));
+        assert_eq!(result, app(evar(7), symbol(1)));
+
+        // Distribute over subpatterns unless evar_id = binder
+        result = apply_esubst(@exists(1, evar(1)), 0, @symbol(2));
+        assert_eq!(result, exists(1, evar(1)));
+
+        result = apply_esubst(@exists(0, evar(1)), 1, @symbol(2));
+        assert_eq!(result, exists(0, symbol(2)));
+
+        result = apply_esubst(@mu(1, evar(1)), 0, @symbol(2));
+        assert_eq!(result, mu(1, evar(1)));
+
+        result = apply_esubst(@mu(1, evar(1)), 1, @symbol(2));
+        assert_eq!(result, mu(1, symbol(2)));
+
+        // Subst on metavar should wrap in constructor
+        result = apply_esubst(@metavar_unconstrained(0), 0, @symbol(1));
+        assert_eq!(result, esubst(metavar_unconstrained(0), 0, symbol(1)));
+
+        // Subst when evar_id is fresh should do nothing
+        //(metavar_(0).with_e_fresh((evar(0), evar(1))), 0, symbol(1), metavar_unconstrained(0).with_e_fresh((evar(0), evar(1)))),
+        // Subst on substs should stack
+        result = apply_esubst(@esubst(metavar_unconstrained(0), 0, symbol(1)), 0, @symbol(1));
+        assert_eq!(result, esubst(esubst(metavar_unconstrained(0), 0, symbol(1)), 0, symbol(1)));
+
+        result = apply_esubst(@ssubst(metavar_unconstrained(0), 0, symbol(1)), 0, @symbol(1));
+        assert_eq!(result, esubst(ssubst(metavar_unconstrained(0), 0, symbol(1)), 0, symbol(1)));
+    }
+
+    #[should_panic]
+    #[test]
+    #[available_gas(1000000000000000)]
+    fn test_apply_esubst_negative() {
+        let _ = apply_esubst(@exists(0, evar(1)), 1, @evar(0));
+    }
+
+    use super::apply_ssubst;
+    #[test]
+    #[available_gas(1000000000000000)]
+    fn test_apply_ssubst() {
+        let mut result = apply_ssubst(@evar(0), 0, @symbol(1));
+        assert_eq!(result, evar(0));
+
+        result = apply_ssubst(@evar(0), 1, @evar(2));
+        assert_eq!(result, evar(0));
+
+        result = apply_ssubst(@svar(0), 0, @symbol(0));
+        assert_eq!(result, symbol(0));
+
+        result = apply_ssubst(@svar(1), 0, @evar(0));
+        assert_eq!(result, svar(1));
+
+        result = apply_ssubst(@symbol(0), 0, @symbol(1));
+        assert_eq!(result, symbol(0));
+
+        // Distribute over subpatterns
+        result = apply_ssubst(@implies(svar(7), symbol(1)), 7, @symbol(0));
+        assert_eq!(result, implies(symbol(0), symbol(1)));
+
+        result = apply_ssubst(@implies(svar(7), symbol(1)), 6, @symbol(0));
+        assert_eq!(result, implies(svar(7), symbol(1)));
+
+        result = apply_ssubst(@app(svar(7), symbol(1)), 7, @symbol(0));
+        assert_eq!(result, app(symbol(0), symbol(1)));
+
+        result = apply_ssubst(@app(svar(7), symbol(1)), 6, @symbol(0));
+        assert_eq!(result, app(svar(7), symbol(1)));
+
+        // Distribute over subpatterns unless svar_id = binder
+        result = apply_ssubst(@exists(1, svar(0)), 0, @symbol(2));
+        assert_eq!(result, exists(1, symbol(2)));
+
+        result = apply_ssubst(@exists(1, symbol(1)), 1, @symbol(2));
+        assert_eq!(result, exists(1, symbol(1)));
+
+        result = apply_ssubst(@mu(1, svar(1)), 0, @symbol(2));
+        assert_eq!(result, mu(1, svar(1)));
+
+        result = apply_ssubst(@mu(1, svar(1)), 1, @symbol(2));
+        assert_eq!(result, mu(1, svar(1)));
+
+        result = apply_ssubst(@mu(1, svar(2)), 2, @symbol(2));
+        assert_eq!(result, mu(1, symbol(2)));
+
+        // Subst on metavar should wrap in constructor
+        result = apply_ssubst(@metavar_unconstrained(0), 0, @symbol(1));
+        assert_eq!(result, ssubst(metavar_unconstrained(0), 0, symbol(1)));
+
+        // Subst when evar_id is fresh should do nothing
+        //(metavar_unconstrained(0).with_s_fresh((svar(0), svar(1))), 0, symbol(1), metavar_unconstrained(0).with_s_fresh((svar(0), svar(1)))),
+        // Subst on substs should stack
+        result = apply_ssubst(@esubst(metavar_unconstrained(0), 0, symbol(1)), 0, @symbol(1));
+        assert_eq!(result, ssubst(esubst(metavar_unconstrained(0), 0, symbol(1)), 0, symbol(1)));
+
+        result = apply_ssubst(@ssubst(metavar_unconstrained(0), 0, symbol(1)), 0, @symbol(1));
+        assert_eq!(result, ssubst(ssubst(metavar_unconstrained(0), 0, symbol(1)), 0, symbol(1)));
     }
 }
