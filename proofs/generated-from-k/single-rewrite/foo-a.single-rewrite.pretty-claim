@@ -1,1209 +1,140 @@
 Symbol ksort_SortGeneratedTopCell
-	Stack:
-	0: ksort_SortGeneratedTopCell
 Symbol ksort_SortFoo
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: ksort_SortFoo
 Symbol ksort_SortKItem
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: ksort_SortFoo
-	2: ksort_SortKItem
 Symbol ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: ksort_SortFoo
-	2: ksort_SortKItem
-	3: ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo
 Instantiate 
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: ksort_SortFoo
-	2: ksort_SortKItem
-	3: ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
 Symbol ksym_inj
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: ksort_SortFoo
-	2: ksort_SortKItem
-	3: ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
-	4: ksym_inj
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: ksort_SortFoo
-	2: ksort_SortKItem
-	3: ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
-	4: ksym_inj
-	5: phi0
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: ksort_SortFoo
-	2: ksort_SortKItem
-	3: ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
-	4: (ksym_inj · phi0)
 MetaVar 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: ksort_SortFoo
-	2: ksort_SortKItem
-	3: ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
-	4: (ksym_inj · phi0)
-	5: phi1
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: ksort_SortFoo
-	2: ksort_SortKItem
-	3: ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
-	4: ((ksym_inj · phi0) · phi1)
 MetaVar 2
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: ksort_SortFoo
-	2: ksort_SortKItem
-	3: ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
-	4: ((ksym_inj · phi0) · phi1)
-	5: phi2
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: ksort_SortFoo
-	2: ksort_SortKItem
-	3: ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
-	4: (((ksym_inj · phi0) · phi1) · phi2)
 Instantiate 0, 1, 2
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
 Symbol ksym_dotk
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
-	2: ksym_dotk
 Instantiate 
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
-	2: ksym_dotk()
 Symbol kore_kseq
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
-	2: ksym_dotk()
-	3: kore_kseq
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
-	2: ksym_dotk()
-	3: kore_kseq
-	4: phi0
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
-	2: ksym_dotk()
-	3: (kore_kseq · phi0)
 MetaVar 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
-	2: ksym_dotk()
-	3: (kore_kseq · phi0)
-	4: phi1
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
-	2: ksym_dotk()
-	3: ((kore_kseq · phi0) · phi1)
 Instantiate 0, 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk())
 Symbol ksym_Lbl'-LT-'k'-GT-'
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk())
-	2: ksym_Lbl'-LT-'k'-GT-'
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk())
-	2: ksym_Lbl'-LT-'k'-GT-'
-	3: phi0
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk())
-	2: (ksym_Lbl'-LT-'k'-GT-' · phi0)
 Instantiate 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
 Symbol ksort_SortInt
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	2: ksort_SortInt
 Symbol 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	2: ksort_SortInt
-	3: 0
 Symbol kore_dv
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	2: ksort_SortInt
-	3: 0
-	4: kore_dv
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	2: ksort_SortInt
-	3: 0
-	4: kore_dv
-	5: phi0
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	2: ksort_SortInt
-	3: 0
-	4: (kore_dv · phi0)
 MetaVar 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	2: ksort_SortInt
-	3: 0
-	4: (kore_dv · phi0)
-	5: phi1
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	2: ksort_SortInt
-	3: 0
-	4: ((kore_dv · phi0) · phi1)
 Instantiate 0, 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	2: dv(0):ksort_SortInt
 Symbol ksym_Lbl'-LT-'generatedCounter'-GT-'
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	2: dv(0):ksort_SortInt
-	3: ksym_Lbl'-LT-'generatedCounter'-GT-'
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	2: dv(0):ksort_SortInt
-	3: ksym_Lbl'-LT-'generatedCounter'-GT-'
-	4: phi0
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	2: dv(0):ksort_SortInt
-	3: (ksym_Lbl'-LT-'generatedCounter'-GT-' · phi0)
 Instantiate 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>
 Symbol ksym_Lbl'-LT-'generatedTop'-GT-'
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>
-	3: ksym_Lbl'-LT-'generatedTop'-GT-'
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>
-	3: ksym_Lbl'-LT-'generatedTop'-GT-'
-	4: phi0
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>
-	3: (ksym_Lbl'-LT-'generatedTop'-GT-' · phi0)
 MetaVar 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>
-	3: (ksym_Lbl'-LT-'generatedTop'-GT-' · phi0)
-	4: phi1
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>
-	3: ((ksym_Lbl'-LT-'generatedTop'-GT-' · phi0) · phi1)
 Instantiate 0, 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
 Symbol ksort_SortFoo
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: ksort_SortFoo
 Symbol ksort_SortKItem
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: ksort_SortFoo
-	3: ksort_SortKItem
 Symbol ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: ksort_SortFoo
-	3: ksort_SortKItem
-	4: ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo
 Instantiate 
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: ksort_SortFoo
-	3: ksort_SortKItem
-	4: ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
 Symbol ksym_inj
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: ksort_SortFoo
-	3: ksort_SortKItem
-	4: ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
-	5: ksym_inj
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: ksort_SortFoo
-	3: ksort_SortKItem
-	4: ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
-	5: ksym_inj
-	6: phi0
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: ksort_SortFoo
-	3: ksort_SortKItem
-	4: ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
-	5: (ksym_inj · phi0)
 MetaVar 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: ksort_SortFoo
-	3: ksort_SortKItem
-	4: ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
-	5: (ksym_inj · phi0)
-	6: phi1
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: ksort_SortFoo
-	3: ksort_SortKItem
-	4: ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
-	5: ((ksym_inj · phi0) · phi1)
 MetaVar 2
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: ksort_SortFoo
-	3: ksort_SortKItem
-	4: ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
-	5: ((ksym_inj · phi0) · phi1)
-	6: phi2
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: ksort_SortFoo
-	3: ksort_SortKItem
-	4: ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()
-	5: (((ksym_inj · phi0) · phi1) · phi2)
 Instantiate 0, 1, 2
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
 Symbol ksym_dotk
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
-	3: ksym_dotk
 Instantiate 
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
-	3: ksym_dotk()
 Symbol kore_kseq
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
-	3: ksym_dotk()
-	4: kore_kseq
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
-	3: ksym_dotk()
-	4: kore_kseq
-	5: phi0
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
-	3: ksym_dotk()
-	4: (kore_kseq · phi0)
 MetaVar 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
-	3: ksym_dotk()
-	4: (kore_kseq · phi0)
-	5: phi1
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo())
-	3: ksym_dotk()
-	4: ((kore_kseq · phi0) · phi1)
 Instantiate 0, 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk())
 Symbol ksym_Lbl'-LT-'k'-GT-'
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk())
-	3: ksym_Lbl'-LT-'k'-GT-'
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk())
-	3: ksym_Lbl'-LT-'k'-GT-'
-	4: phi0
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk())
-	3: (ksym_Lbl'-LT-'k'-GT-' · phi0)
 Instantiate 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
 Symbol ksort_SortInt
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	3: ksort_SortInt
 Symbol 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	3: ksort_SortInt
-	4: 0
 Symbol kore_dv
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	3: ksort_SortInt
-	4: 0
-	5: kore_dv
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	3: ksort_SortInt
-	4: 0
-	5: kore_dv
-	6: phi0
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	3: ksort_SortInt
-	4: 0
-	5: (kore_dv · phi0)
 MetaVar 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	3: ksort_SortInt
-	4: 0
-	5: (kore_dv · phi0)
-	6: phi1
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	3: ksort_SortInt
-	4: 0
-	5: ((kore_dv · phi0) · phi1)
 Instantiate 0, 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	3: dv(0):ksort_SortInt
 Symbol ksym_Lbl'-LT-'generatedCounter'-GT-'
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	3: dv(0):ksort_SortInt
-	4: ksym_Lbl'-LT-'generatedCounter'-GT-'
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	3: dv(0):ksort_SortInt
-	4: ksym_Lbl'-LT-'generatedCounter'-GT-'
-	5: phi0
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	3: dv(0):ksort_SortInt
-	4: (ksym_Lbl'-LT-'generatedCounter'-GT-' · phi0)
 Instantiate 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	3: <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>
 Symbol ksym_Lbl'-LT-'generatedTop'-GT-'
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	3: <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>
-	4: ksym_Lbl'-LT-'generatedTop'-GT-'
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	3: <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>
-	4: ksym_Lbl'-LT-'generatedTop'-GT-'
-	5: phi0
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	3: <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>
-	4: (ksym_Lbl'-LT-'generatedTop'-GT-' · phi0)
 MetaVar 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	3: <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>
-	4: (ksym_Lbl'-LT-'generatedTop'-GT-' · phi0)
-	5: phi1
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'>
-	3: <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'>
-	4: ((ksym_Lbl'-LT-'generatedTop'-GT-' · phi0) · phi1)
 Instantiate 0, 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
 MetaVar 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
 MetaVar 2
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: phi2
 Symbol kore_next
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: phi2
-	6: kore_next
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: phi2
-	6: kore_next
-	7: phi0
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: phi2
-	6: (kore_next · phi0)
 Instantiate 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
 MetaVar 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
 MetaVar 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: phi1
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: phi1
-	9: phi0
 SVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: phi1
-	9: phi0
-	10: X0
 Mu 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: phi1
-	9: phi0
-	10: (μ X0 . X0)
 Instantiate 
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: phi1
-	9: phi0
-	10: ⊥
 Implies
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: phi1
-	9: (phi0 -> ⊥)
 Instantiate 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
-	9: phi0
 Symbol inhabitant
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
-	9: phi0
-	10: inhabitant
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
-	9: phi0
-	10: inhabitant
-	11: phi0
 App
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
-	9: phi0
-	10: (inhabitant · phi0)
 Instantiate 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
-	9: k⊤:phi0
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
-	9: k⊤:phi0
-	10: phi0
 MetaVar 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
-	9: k⊤:phi0
-	10: phi0
-	11: phi1
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
-	9: k⊤:phi0
-	10: phi0
-	11: phi1
-	12: phi0
 SVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
-	9: k⊤:phi0
-	10: phi0
-	11: phi1
-	12: phi0
-	13: X0
 Mu 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
-	9: k⊤:phi0
-	10: phi0
-	11: phi1
-	12: phi0
-	13: (μ X0 . X0)
 Instantiate 
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
-	9: k⊤:phi0
-	10: phi0
-	11: phi1
-	12: phi0
-	13: ⊥
 Implies
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
-	9: k⊤:phi0
-	10: phi0
-	11: phi1
-	12: (phi0 -> ⊥)
 Instantiate 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
-	9: k⊤:phi0
-	10: phi0
-	11: ¬phi1
 Implies
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
-	9: k⊤:phi0
-	10: (phi0 -> ¬phi1)
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
-	9: k⊤:phi0
-	10: (phi0 -> ¬phi1)
-	11: phi0
 SVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
-	9: k⊤:phi0
-	10: (phi0 -> ¬phi1)
-	11: phi0
-	12: X0
 Mu 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
-	9: k⊤:phi0
-	10: (phi0 -> ¬phi1)
-	11: phi0
-	12: (μ X0 . X0)
 Instantiate 
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
-	9: k⊤:phi0
-	10: (phi0 -> ¬phi1)
-	11: phi0
-	12: ⊥
 Implies
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
-	9: k⊤:phi0
-	10: (phi0 -> ¬phi1)
-	11: (phi0 -> ⊥)
 Instantiate 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: ¬phi1
-	9: k⊤:phi0
-	10: ¬(phi0 -> ¬phi1)
 Instantiate 0, 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: phi0
-	7: phi1
-	8: (¬phi1 ⋀ k⊤:phi0)
 Instantiate 0, 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: (k¬phi1):phi0
 MetaVar 2
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: (k¬phi1):phi0
-	7: phi2
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: (k¬phi1):phi0
-	7: phi2
-	8: phi0
 MetaVar 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: (k¬phi1):phi0
-	7: phi2
-	8: phi0
-	9: phi1
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: (k¬phi1):phi0
-	7: phi2
-	8: phi0
-	9: phi1
-	10: phi0
 MetaVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: (k¬phi1):phi0
-	7: phi2
-	8: phi0
-	9: phi1
-	10: phi0
-	11: phi0
 SVar 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: (k¬phi1):phi0
-	7: phi2
-	8: phi0
-	9: phi1
-	10: phi0
-	11: phi0
-	12: X0
 Mu 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: (k¬phi1):phi0
-	7: phi2
-	8: phi0
-	9: phi1
-	10: phi0
-	11: phi0
-	12: (μ X0 . X0)
 Instantiate 
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: (k¬phi1):phi0
-	7: phi2
-	8: phi0
-	9: phi1
-	10: phi0
-	11: phi0
-	12: ⊥
 Implies
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: (k¬phi1):phi0
-	7: phi2
-	8: phi0
-	9: phi1
-	10: phi0
-	11: (phi0 -> ⊥)
 Instantiate 0
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: (k¬phi1):phi0
-	7: phi2
-	8: phi0
-	9: phi1
-	10: ¬phi0
 MetaVar 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: (k¬phi1):phi0
-	7: phi2
-	8: phi0
-	9: phi1
-	10: ¬phi0
-	11: phi1
 Implies
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: (k¬phi1):phi0
-	7: phi2
-	8: phi0
-	9: phi1
-	10: (¬phi0 -> phi1)
 Instantiate 0, 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: (k¬phi1):phi0
-	7: phi2
-	8: (phi0 ⋁ phi1)
 Instantiate 0, 1
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: phi0
-	4: phi1
-	5: ♦phi2
-	6: ((k¬phi1):phi0 k⋁ phi2)
 Instantiate 0, 1, 2
-	Stack:
-	0: ksort_SortGeneratedTopCell
-	1: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	2: <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>
-	3: (phi1 k-> ♦phi2):phi0
 Instantiate 0, 1, 2
-	Stack:
-	0: (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortFoo, ksort_SortKItem, ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo()) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
 Publish
