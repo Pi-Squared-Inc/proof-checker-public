@@ -138,7 +138,7 @@ struct Pattern {
   // Constructor for creating instances of Pattern
   static Pattern *newPattern(Instruction inst, Id id) noexcept {
     auto pattern = static_cast<Pattern *>(malloc(sizeof(Pattern)));
-    memset_(pattern, 0, sizeof(Pattern));
+    std::memset(pattern, 0, sizeof(Pattern));
 
     pattern->id = id;
     pattern->inst = inst;

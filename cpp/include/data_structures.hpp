@@ -1,17 +1,7 @@
 #include <cassert>
 #include <cstdlib>
 #include <iostream>
-
-void *memset_(void *ptr, int value, size_t num) {
-  auto *byte_ptr = (unsigned char *)ptr;
-  auto byte_value = (unsigned char)value;
-
-  for (size_t i = 0; i < num; i++) {
-    byte_ptr[i] = byte_value;
-  }
-
-  return ptr;
-}
+#include <cstring>
 
 template <typename T> struct Node {
   T data;
@@ -32,7 +22,7 @@ template <typename T> struct Node {
 
   static Node *create(const T &value) noexcept {
     Node *newNode = static_cast<Node *>(std::malloc(sizeof(Node)));
-    memset_(newNode, 0, sizeof(Node));
+    std::memset(newNode, 0, sizeof(Node));
     newNode->data = value;
     newNode->next = nullptr;
     return newNode;
@@ -209,7 +199,7 @@ using Id = int;
 class IdList : public LinkedList<Id> {
 public:
   IdList() noexcept : LinkedList<Id>() {
-    memset_(this, 0, sizeof(IdList));
+    std::memset(this, 0, sizeof(IdList));
   }
 
   IdList(const Id &value) noexcept : LinkedList<Id>(){
