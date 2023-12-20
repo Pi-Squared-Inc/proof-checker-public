@@ -633,13 +633,21 @@ fn execute_instructions(
                 match from(inst_felt252) {
                     Instruction::EVar => { panic!("EVar not implemented!"); },
                     Instruction::SVar => { panic!("SVar not implemented!"); },
-                    Instruction::Symbol => { panic!("Symbol not implemented!"); },
+                    Instruction::Symbol => {
+                        let id = buffer.pop_front().expect('Expected id for the Symbol');
+
+                        stack.push(Term::Pattern(symbol(id)));
+                    },
                     Instruction::Implies => {
                         let left = pop_stack_pattern(ref stack);
                         let right = pop_stack_pattern(ref stack);
                         stack.push(Term::Pattern(implies(left, right)));
                     },
-                    Instruction::App => { panic!("App not implemented!"); },
+                    Instruction::App => {
+                        let left = pop_stack_pattern(ref stack);
+                        let right = pop_stack_pattern(ref stack);
+                        stack.push(Term::Pattern(app(left, right)));
+                    },
                     Instruction::Exists => { panic!("Exists not implemented!"); },
                     Instruction::Mu => { panic!("Mu not implemented!"); },
                     Instruction::MetaVar => { panic!("MetaVar not implemented!"); },
@@ -990,7 +998,7 @@ mod tests {
         let mut existsx0x0 = exists(0, x0.clone());
         let mut mux0x0 = mu(0, x0.clone());
 
-        let option_none : Option<Pattern> = Option::None;
+        let option_none: Option<Pattern> = Option::None;
         let mut array_0 = array![0];
         let mut array_1 = array![1];
         let mut array_x0 = array![x0.clone()];
@@ -1025,33 +1033,23 @@ mod tests {
         );
 
         assert_eq!(
-            instantiate_internal(ref phi0_implies_phi0, ref array_1, ref array_x0),
-            option_none
+            instantiate_internal(ref phi0_implies_phi0, ref array_1, ref array_x0), option_none
         );
         assert_eq!(
             instantiate_internal(ref appphi0phi0, ref array_0, ref array_x0),
             Option::Some(appx0x0.clone())
         );
-        assert_eq!(
-            instantiate_internal(ref appphi0phi0, ref array_1, ref array_x0),
-            option_none
-        );
+        assert_eq!(instantiate_internal(ref appphi0phi0, ref array_1, ref array_x0), option_none);
         assert_eq!(
             instantiate_internal(ref existsx0phi0, ref array_0, ref array_x0),
             Option::Some(existsx0x0.clone())
         );
-        assert_eq!(
-            instantiate_internal(ref existsx0phi0, ref array_1, ref array_x0),
-            option_none
-        );
+        assert_eq!(instantiate_internal(ref existsx0phi0, ref array_1, ref array_x0), option_none);
         assert_eq!(
             instantiate_internal(ref mux0phi0, ref array_0, ref array_x0),
             Option::Some(mux0x0.clone())
         );
-        assert_eq!(
-            instantiate_internal(ref mux0phi0, ref array_1, ref array_x0),
-            option_none
-        );
+        assert_eq!(instantiate_internal(ref mux0phi0, ref array_1, ref array_x0), option_none);
 
         // Simultaneous instantiations
         let mut phi1 = metavar_unconstrained(1);
@@ -1062,21 +1060,13 @@ mod tests {
         let mut array_x0xs0 = array![x0.clone(), xs0.clone()];
         // Empty substs have no effect
         assert_eq!(
-            instantiate_internal(ref existsx0phi0, ref array_12, ref array_x0xs0),
-            option_none
+            instantiate_internal(ref existsx0phi0, ref array_12, ref array_x0xs0), option_none
         );
         assert_eq!(
-            instantiate_internal(ref existsx0phi0, ref array_21, ref array_x0xs0),
-            option_none
+            instantiate_internal(ref existsx0phi0, ref array_21, ref array_x0xs0), option_none
         );
-        assert_eq!(
-            instantiate_internal(ref mux0phi0, ref array_12, ref array_x0xs0),
-            option_none
-        );
-        assert_eq!(
-            instantiate_internal(ref mux0phi0, ref array_21, ref array_x0xs0),
-            option_none
-        );
+        assert_eq!(instantiate_internal(ref mux0phi0, ref array_12, ref array_x0xs0), option_none);
+        assert_eq!(instantiate_internal(ref mux0phi0, ref array_21, ref array_x0xs0), option_none);
 
         // Order matters if corresponding value is not moved
         let mut array_01 = array![0, 1];
@@ -1159,8 +1149,16 @@ mod tests {
         );
 
         // Extra values are ignored
-        let mut array_phi1xs0x0duplicate = array![phi1.clone(), xs0.clone(), x0.clone(),
-            x0.clone(), x0.clone(), x0.clone(), x0.clone(), x0.clone()];
+        let mut array_phi1xs0x0duplicate = array![
+            phi1.clone(),
+            xs0.clone(),
+            x0.clone(),
+            x0.clone(),
+            x0.clone(),
+            x0.clone(),
+            x0.clone(),
+            x0.clone()
+        ];
         let mut array_012 = array![0, 1, 2];
         assert_eq!(
             instantiate_internal(ref mux0phi0_app_ph1, ref array_011, ref array_phi1xs0x0duplicate),
@@ -1174,18 +1172,15 @@ mod tests {
         // Instantiate with concrete patterns applies pending substitutions
         let mut val = esubst(phi0.clone(), 0, c0.clone());
         assert_eq!(
-            instantiate_internal(ref val, ref array_0, ref array_x0),
-            Option::Some(c0.clone())
+            instantiate_internal(ref val, ref array_0, ref array_x0), Option::Some(c0.clone())
         );
         let mut val = ssubst(phi0.clone(), 0, c0.clone());
         assert_eq!(
-            instantiate_internal(ref val, ref array_0, ref array_xs0),
-            Option::Some(c0.clone())
+            instantiate_internal(ref val, ref array_0, ref array_xs0), Option::Some(c0.clone())
         );
         let mut val = ssubst(esubst(phi0.clone(), 0, xs0.clone()), 0, c0.clone());
         assert_eq!(
-            instantiate_internal(ref val, ref array_0, ref array_xs0),
-            Option::Some(c0.clone())
+            instantiate_internal(ref val, ref array_0, ref array_xs0), Option::Some(c0.clone())
         );
 
         // Instantiate with metavar keeps pending substitutions
@@ -1204,14 +1199,12 @@ mod tests {
         // The plug in a subst. needs to be instantiated as well
         let mut val = ssubst(phi0.clone(), 0, phi0.clone());
         assert_eq!(
-            instantiate_internal(ref val, ref array_0, ref array_xs0),
-            Option::Some(xs0.clone())
+            instantiate_internal(ref val, ref array_0, ref array_xs0), Option::Some(xs0.clone())
         );
         let mut val = ssubst(phi0.clone(), 0, phi1.clone());
         let mut array_xs0c0 = array![xs0.clone(), c0.clone()];
         assert_eq!(
-            instantiate_internal(ref val, ref array_01, ref array_xs0c0),
-            Option::Some(c0.clone())
+            instantiate_internal(ref val, ref array_01, ref array_xs0c0), Option::Some(c0.clone())
         );
     }
 

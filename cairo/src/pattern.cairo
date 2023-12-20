@@ -77,11 +77,9 @@ fn contains(idlist: @IdList, id: Id) -> bool {
 
     loop {
         match list_span.pop_front() {
-            Option::Some(v) => {
-                if *v == id {
-                    break true;
-                }
-            },
+            Option::Some(v) => { if *v == id {
+                break true;
+            } },
             Option::None => { break false; },
         };
     }
@@ -92,11 +90,9 @@ fn containsElementOf(thislist: @IdList, otherlist: @IdList) -> bool {
 
     loop {
         match thislist_span.pop_front() {
-            Option::Some(v) => {
-                if contains(otherlist, *v) {
-                    break true;
-                }
-            },
+            Option::Some(v) => { if contains(otherlist, *v) {
+                break true;
+            } },
             Option::None => { break false; },
         };
     }
@@ -110,47 +106,55 @@ impl PatternTraitImpl of PatternTrait {
             Pattern::EVar(name) => *name != evar,
             Pattern::SVar(_) => true,
             Pattern::Symbol(_) => true,
-            Pattern::Implies(ImpliesType{left, right}) => {
-                let left_unbox = left.clone().unwrap().unbox();
-                let right_unbox = right.clone().unwrap().unbox();
-                left_unbox.e_fresh(evar) && right_unbox.e_fresh(evar)
+            Pattern::Implies(ImpliesType{left,
+            right }) => {
+                let left = left.clone().unwrap().unbox();
+                let right = right.clone().unwrap().unbox();
+                left.e_fresh(evar) && right.e_fresh(evar)
             },
-            Pattern::App(AppType{left, right}) => {
-                let left_unbox = left.clone().unwrap().unbox();
-                let right_unbox = right.clone().unwrap().unbox();
-                left_unbox.e_fresh(evar) && right_unbox.e_fresh(evar)
+            Pattern::App(AppType{left,
+            right }) => {
+                let left = left.clone().unwrap().unbox();
+                let right = right.clone().unwrap().unbox();
+                left.e_fresh(evar) && right.e_fresh(evar)
             },
-            Pattern::Exists(ExistsType{var, subpattern}) => {
-                let subpattern_unbox = subpattern.clone().unwrap().unbox();
-                evar == *var || subpattern_unbox.e_fresh(evar)
+            Pattern::Exists(ExistsType{var,
+            subpattern }) => {
+                let subpattern = subpattern.clone().unwrap().unbox();
+                evar == *var || subpattern.e_fresh(evar)
             },
-            Pattern::Mu(MuType{subpattern, ..}) => {
-                let subpattern_unbox = subpattern.clone().unwrap().unbox();
-                subpattern_unbox.e_fresh(evar)
+            Pattern::Mu(MuType{subpattern,
+            .. }) => {
+                let subpattern = subpattern.clone().unwrap().unbox();
+                subpattern.e_fresh(evar)
             },
-            Pattern::MetaVar(MetaVarType{e_fresh, ..}) => { contains(e_fresh, evar) },
-            Pattern::ESubst(ESubstType{pattern, evar_id, plug})  => {
-                let plug_unbox = plug.clone().unwrap().unbox();
+            Pattern::MetaVar(MetaVarType{e_fresh, .. }) => { contains(e_fresh, evar) },
+            Pattern::ESubst(ESubstType{pattern,
+            evar_id,
+            plug }) => {
+                let plug = plug.clone().unwrap().unbox();
 
                 // Assume: substitution is well-formed => plug occurs in the result
 
                 if evar == *evar_id {
                     // Freshness depends only on plug, as all the free instances
                     // of the requested variable are being substituted
-                    return plug_unbox.e_fresh(evar);
+                    return plug.e_fresh(evar);
                 }
 
-                let pattern_unbox = pattern.clone().unwrap().unbox();
+                let pattern = pattern.clone().unwrap().unbox();
 
                 // Freshness depends on both input and plug,
                 // as evar != evar_id (note that instances of evar_id
                 // in pattern do not influence the result)
-                pattern_unbox.e_fresh(evar) && plug_unbox.e_fresh(evar)
+                pattern.e_fresh(evar) && plug.e_fresh(evar)
             },
-            Pattern::SSubst(SSubstType{pattern, plug, ..}) => {
-                let pattern_unbox = pattern.clone().unwrap().unbox();
-                let plug_unbox = plug.clone().unwrap().unbox();
-                pattern_unbox.e_fresh(evar) && plug_unbox.e_fresh(evar)
+            Pattern::SSubst(SSubstType{pattern,
+            plug,
+            .. }) => {
+                let pattern = pattern.clone().unwrap().unbox();
+                let plug = plug.clone().unwrap().unbox();
+                pattern.e_fresh(evar) && plug.e_fresh(evar)
             },
         }
     }
@@ -160,26 +164,32 @@ impl PatternTraitImpl of PatternTrait {
             Pattern::EVar(_) => true,
             Pattern::SVar(name) => *name != svar,
             Pattern::Symbol(_) => true,
-            Pattern::Implies(ImpliesType{left, right}) => {
-                let left_unbox = left.clone().unwrap().unbox();
-                let right_unbox = right.clone().unwrap().unbox();
-                left_unbox.s_fresh(svar) && right_unbox.s_fresh(svar)
+            Pattern::Implies(ImpliesType{left,
+            right }) => {
+                let left = left.clone().unwrap().unbox();
+                let right = right.clone().unwrap().unbox();
+                left.s_fresh(svar) && right.s_fresh(svar)
             },
-            Pattern::App(AppType{left, right}) => {
-                let left_unbox = left.clone().unwrap().unbox();
-                let right_unbox = right.clone().unwrap().unbox();
-                left_unbox.s_fresh(svar) && right_unbox.s_fresh(svar)
+            Pattern::App(AppType{left,
+            right }) => {
+                let left = left.clone().unwrap().unbox();
+                let right = right.clone().unwrap().unbox();
+                left.s_fresh(svar) && right.s_fresh(svar)
             },
-            Pattern::Exists(ExistsType{subpattern, ..}) => {
-                let subpattern_unbox = subpattern.clone().unwrap().unbox();
-                subpattern_unbox.s_fresh(svar)
+            Pattern::Exists(ExistsType{subpattern,
+            .. }) => {
+                let subpattern = subpattern.clone().unwrap().unbox();
+                subpattern.s_fresh(svar)
             },
-            Pattern::Mu(MuType{var, subpattern}) => {
-                let subpattern_unbox = subpattern.clone().unwrap().unbox();
-                svar == *var || subpattern_unbox.s_fresh(svar)
+            Pattern::Mu(MuType{var,
+            subpattern }) => {
+                let subpattern = subpattern.clone().unwrap().unbox();
+                svar == *var || subpattern.s_fresh(svar)
             },
-            Pattern::MetaVar(MetaVarType{s_fresh, ..}) => { contains(s_fresh, svar) },
-            Pattern::ESubst(ESubstType{pattern, plug, ..}) => {
+            Pattern::MetaVar(MetaVarType{s_fresh, .. }) => { contains(s_fresh, svar) },
+            Pattern::ESubst(ESubstType{pattern,
+            plug,
+            .. }) => {
                 // Assume: substitution is well-formed => plug occurs in the result
 
                 // We can skip checking svar == evar_id, because different types
@@ -187,26 +197,28 @@ impl PatternTraitImpl of PatternTrait {
                 // Freshness depends on both input and plug,
                 // as evar_id != svar (note that instances of evar_id
                 // in pattern do not influence the result)
-                let pattern_unbox = pattern.clone().unwrap().unbox();
-                let plug_unbox = plug.clone().unwrap().unbox();
-                pattern_unbox.s_fresh(svar) && plug_unbox.s_fresh(svar)
+                let pattern = pattern.clone().unwrap().unbox();
+                let plug = plug.clone().unwrap().unbox();
+                pattern.s_fresh(svar) && plug.s_fresh(svar)
             },
-            Pattern::SSubst(SSubstType{pattern, svar_id, plug}) => {
-                let plug_unbox = plug.clone().unwrap().unbox();
+            Pattern::SSubst(SSubstType{pattern,
+            svar_id,
+            plug }) => {
+                let plug = plug.clone().unwrap().unbox();
 
                 // Assume: substitution is well-formed => plug occurs in the result
                 if svar == *svar_id {
                     // Freshness depends only on plug as all the free instances
                     // of the requested variable are being substituted
-                    return plug_unbox.s_fresh(svar);
+                    return plug.s_fresh(svar);
                 }
 
-                let pattern_unbox = pattern.clone().unwrap().unbox();
+                let pattern = pattern.clone().unwrap().unbox();
 
                 // Freshness depends on both input and plug,
                 // as evar != evar_id (note that instances of evar_id
                 // in pattern do not influence the result)
-                pattern_unbox.s_fresh(svar) && plug_unbox.s_fresh(svar)
+                pattern.s_fresh(svar) && plug.s_fresh(svar)
             },
         }
     }
@@ -217,41 +229,51 @@ impl PatternTraitImpl of PatternTrait {
             Pattern::EVar(_) => true,
             Pattern::SVar(_) => true,
             Pattern::Symbol(_) => true,
-            Pattern::Implies(ImpliesType{left, right}) => {
-                let left_unbox = left.clone().unwrap().unbox();
-                let right_unbox = right.clone().unwrap().unbox();
-                left_unbox.negative(svar) && right_unbox.positive(svar)
+            Pattern::Implies(ImpliesType{left,
+            right }) => {
+                let left = left.clone().unwrap().unbox();
+                let right = right.clone().unwrap().unbox();
+                left.negative(svar) && right.positive(svar)
             },
-            Pattern::App(AppType{left, right}) => {
-                let left_unbox = left.clone().unwrap().unbox();
-                let right_unbox = right.clone().unwrap().unbox();
-                left_unbox.positive(svar) && right_unbox.positive(svar)
+            Pattern::App(AppType{left,
+            right }) => {
+                let left = left.clone().unwrap().unbox();
+                let right = right.clone().unwrap().unbox();
+                left.positive(svar) && right.positive(svar)
             },
-            Pattern::Exists(ExistsType{subpattern, ..}) => {
-                let subpattern_unbox = subpattern.clone().unwrap().unbox();
-                subpattern_unbox.positive(svar)
+            Pattern::Exists(ExistsType{subpattern,
+            .. }) => {
+                let subpattern = subpattern.clone().unwrap().unbox();
+                subpattern.positive(svar)
             },
-            Pattern::Mu(MuType{var, subpattern}) => {
-                let subpattern_unbox = subpattern.clone().unwrap().unbox();
-                svar == *var ||  subpattern_unbox.positive(svar)
+            Pattern::Mu(MuType{var,
+            subpattern }) => {
+                let subpattern = subpattern.clone().unwrap().unbox();
+                svar == *var || subpattern.positive(svar)
             },
-            Pattern::MetaVar(MetaVarType{positive, ..}) => { contains(positive, svar) },
-            Pattern::ESubst(ESubstType{pattern, plug, ..}) => {
+            Pattern::MetaVar(MetaVarType{positive, .. }) => { contains(positive, svar) },
+            Pattern::ESubst(ESubstType{pattern,
+            plug,
+            .. }) => {
                 // best-effort for now, see spec
-                let pattern_unbox = pattern.clone().unwrap().unbox();
-                let plug_unbox = plug.clone().unwrap().unbox();
-                pattern_unbox.positive(svar) && plug_unbox.s_fresh(svar)
+                let pattern = pattern.clone().unwrap().unbox();
+                let plug = plug.clone().unwrap().unbox();
+                pattern.positive(svar) && plug.s_fresh(svar)
             },
-            Pattern::SSubst(SSubstType{pattern, svar_id, plug}) => {
-                let pattern_unbox = pattern.clone().unwrap().unbox();
-                let plug_unbox = plug.clone().unwrap().unbox();
-                let plug_positive_svar = plug_unbox.s_fresh(svar)
-                    || (pattern_unbox.positive(*svar_id) && plug_unbox.positive(svar))
-                    || (pattern_unbox.negative(*svar_id) && plug_unbox.negative(svar));
+            Pattern::SSubst(SSubstType{pattern,
+            svar_id,
+            plug }) => {
+                let pattern = pattern.clone().unwrap().unbox();
+                let plug = plug.clone().unwrap().unbox();
+                let plug_positive_svar = plug.s_fresh(svar)
+                    || (pattern.positive(*svar_id) && plug.positive(svar))
+                    || (pattern.negative(*svar_id) && plug.negative(svar));
 
-                    if svar == *svar_id { return plug_positive_svar; }
+                if svar == *svar_id {
+                    return plug_positive_svar;
+                }
 
-                    return pattern_unbox.positive(svar) && plug_positive_svar;
+                return pattern.positive(svar) && plug_positive_svar;
             },
         }
     }
@@ -262,41 +284,51 @@ impl PatternTraitImpl of PatternTrait {
             Pattern::EVar(_) => true,
             Pattern::SVar(name) => *name != svar,
             Pattern::Symbol(_) => true,
-            Pattern::Implies(ImpliesType{left, right}) => {
-                let left_unbox = left.clone().unwrap().unbox();
-                let right_unbox = right.clone().unwrap().unbox();
-                left_unbox.positive(svar) && right_unbox.negative(svar)
+            Pattern::Implies(ImpliesType{left,
+            right }) => {
+                let left = left.clone().unwrap().unbox();
+                let right = right.clone().unwrap().unbox();
+                left.positive(svar) && right.negative(svar)
             },
-            Pattern::App(AppType{left, right}) => {
-                let left_unbox = left.clone().unwrap().unbox();
-                let right_unbox = right.clone().unwrap().unbox();
-                left_unbox.negative(svar) && right_unbox.negative(svar)
+            Pattern::App(AppType{left,
+            right }) => {
+                let left = left.clone().unwrap().unbox();
+                let right = right.clone().unwrap().unbox();
+                left.negative(svar) && right.negative(svar)
             },
-            Pattern::Exists(ExistsType{subpattern, ..}) => {
-                let subpattern_unbox = subpattern.clone().unwrap().unbox();
-                subpattern_unbox.negative(svar)
+            Pattern::Exists(ExistsType{subpattern,
+            .. }) => {
+                let subpattern = subpattern.clone().unwrap().unbox();
+                subpattern.negative(svar)
             },
-            Pattern::Mu(MuType{var, subpattern}) => {
-                let subpattern_unbox = subpattern.clone().unwrap().unbox();
-                svar == *var || subpattern_unbox.negative(svar)
+            Pattern::Mu(MuType{var,
+            subpattern }) => {
+                let subpattern = subpattern.clone().unwrap().unbox();
+                svar == *var || subpattern.negative(svar)
             },
-            Pattern::MetaVar(MetaVarType{negative, ..}) => { contains(negative, svar) },
-            Pattern::ESubst(ESubstType{pattern, plug, ..}) => {
+            Pattern::MetaVar(MetaVarType{negative, .. }) => { contains(negative, svar) },
+            Pattern::ESubst(ESubstType{pattern,
+            plug,
+            .. }) => {
                 // best-effort for now, see spec
-                let pattern_unbox = pattern.clone().unwrap().unbox();
-                let plug_unbox = plug.clone().unwrap().unbox();
-                pattern_unbox.negative(svar) && plug_unbox.s_fresh(svar)
+                let pattern = pattern.clone().unwrap().unbox();
+                let plug = plug.clone().unwrap().unbox();
+                pattern.negative(svar) && plug.s_fresh(svar)
             },
-            Pattern::SSubst(SSubstType{pattern, svar_id, plug}) => {
-                let pattern_unbox = pattern.clone().unwrap().unbox();
-                let plug_unbox = plug.clone().unwrap().unbox();
-                let plug_negative_svar = plug_unbox.s_fresh(svar)
-                    || (pattern_unbox.positive(*svar_id) && plug_unbox.negative(svar))
-                    || (pattern_unbox.negative(*svar_id) && plug_unbox.positive(svar));
+            Pattern::SSubst(SSubstType{pattern,
+            svar_id,
+            plug }) => {
+                let pattern = pattern.clone().unwrap().unbox();
+                let plug = plug.clone().unwrap().unbox();
+                let plug_negative_svar = plug.s_fresh(svar)
+                    || (pattern.positive(*svar_id) && plug.negative(svar))
+                    || (pattern.negative(*svar_id) && plug.positive(svar));
 
-                if svar == *svar_id { return plug_negative_svar; }
+                if svar == *svar_id {
+                    return plug_negative_svar;
+                }
 
-                return  pattern_unbox.negative(svar) && plug_negative_svar;
+                return pattern.negative(svar) && plug_negative_svar;
             },
         }
     }
@@ -306,49 +338,70 @@ impl PatternTraitImpl of PatternTrait {
     // TODO: Audit this function to see if we need to add any more cases
     fn well_formed(self: @Pattern) -> core::bool {
         match self {
-            Pattern::EVar(_) => { panic!("Not implemented!"); true },
-            Pattern::SVar(_) => { panic!("Not implemented!"); true },
-            Pattern::Symbol(_) => { panic!("Not implemented!"); true },
-            Pattern::Implies(_) => { panic!("Not implemented!"); true },
-            Pattern::App(_) => { panic!("Not implemented!"); true },
-            Pattern::Exists(_) => { panic!("Not implemented!"); true },
-            Pattern::Mu(MuType{var, subpattern}) => {
-                let subpattern_unbox = subpattern.clone().unwrap().unbox();
-                subpattern_unbox.positive(*var)
+            Pattern::EVar(_) => {
+                panic!("Not implemented!");
+                true
             },
-            Pattern::MetaVar(MetaVarType{e_fresh, app_ctx_holes, ..}) => {
-                !containsElementOf(app_ctx_holes, e_fresh)
+            Pattern::SVar(_) => {
+                panic!("Not implemented!");
+                true
             },
-            Pattern::ESubst(ESubstType{pattern, ..}) => {
+            Pattern::Symbol(_) => {
+                panic!("Not implemented!");
+                true
+            },
+            Pattern::Implies(_) => {
+                panic!("Not implemented!");
+                true
+            },
+            Pattern::App(_) => {
+                panic!("Not implemented!");
+                true
+            },
+            Pattern::Exists(_) => {
+                panic!("Not implemented!");
+                true
+            },
+            Pattern::Mu(MuType{var,
+            subpattern }) => {
+                let subpattern = subpattern.clone().unwrap().unbox();
+                subpattern.positive(*var)
+            },
+            Pattern::MetaVar(MetaVarType{e_fresh,
+            app_ctx_holes,
+            .. }) => { !containsElementOf(app_ctx_holes, e_fresh) },
+            Pattern::ESubst(ESubstType{pattern,
+            .. }) => {
                 let not_redundant_subst = !self.is_redundant_subst();
-                let pattern_unbox = pattern.clone().unwrap().unbox();
-                match pattern_unbox {
-                     Pattern::EVar(_) => false,
-                     Pattern::SVar(_) => false,
-                     Pattern::Symbol(_) => false,
-                     Pattern::Implies(_) => false,
-                     Pattern::App(_) => false,
-                     Pattern::Exists(_) => false,
-                     Pattern::Mu(_) => false,
-                     Pattern::MetaVar(_) => not_redundant_subst,
-                     Pattern::ESubst(_) => not_redundant_subst,
-                     Pattern::SSubst(_) => not_redundant_subst,
+                let pattern = pattern.clone().unwrap().unbox();
+                match pattern {
+                    Pattern::EVar(_) => false,
+                    Pattern::SVar(_) => false,
+                    Pattern::Symbol(_) => false,
+                    Pattern::Implies(_) => false,
+                    Pattern::App(_) => false,
+                    Pattern::Exists(_) => false,
+                    Pattern::Mu(_) => false,
+                    Pattern::MetaVar(_) => not_redundant_subst,
+                    Pattern::ESubst(_) => not_redundant_subst,
+                    Pattern::SSubst(_) => not_redundant_subst,
                 }
             },
-            Pattern::SSubst(SSubstType{pattern, ..}) => {
+            Pattern::SSubst(SSubstType{pattern,
+            .. }) => {
                 let not_redundant_subst = !self.is_redundant_subst();
-                let pattern_unbox = pattern.clone().unwrap().unbox();
-                match pattern_unbox {
-                     Pattern::EVar(_) => false,
-                     Pattern::SVar(_) => false,
-                     Pattern::Symbol(_) => false,
-                     Pattern::Implies(_) => false,
-                     Pattern::App(_) => false,
-                     Pattern::Exists(_) => false,
-                     Pattern::Mu(_) => false,
-                     Pattern::MetaVar(_) => not_redundant_subst,
-                     Pattern::ESubst(_) => not_redundant_subst,
-                     Pattern::SSubst(_) => not_redundant_subst,
+                let pattern = pattern.clone().unwrap().unbox();
+                match pattern {
+                    Pattern::EVar(_) => false,
+                    Pattern::SVar(_) => false,
+                    Pattern::Symbol(_) => false,
+                    Pattern::Implies(_) => false,
+                    Pattern::App(_) => false,
+                    Pattern::Exists(_) => false,
+                    Pattern::Mu(_) => false,
+                    Pattern::MetaVar(_) => not_redundant_subst,
+                    Pattern::ESubst(_) => not_redundant_subst,
+                    Pattern::SSubst(_) => not_redundant_subst,
                 }
             },
         }
@@ -364,15 +417,19 @@ impl PatternTraitImpl of PatternTrait {
             Pattern::Exists(_) => false,
             Pattern::Mu(_) => false,
             Pattern::MetaVar(_) => false,
-            Pattern::ESubst(ESubstType{pattern, evar_id, plug}) => {
-                let pattern_unbox = pattern.clone().unwrap().unbox();
-                let plug_unbox = plug.clone().unwrap().unbox();
-                evar(*evar_id) == plug_unbox || pattern_unbox.e_fresh(*evar_id)
+            Pattern::ESubst(ESubstType{pattern,
+            evar_id,
+            plug }) => {
+                let pattern = pattern.clone().unwrap().unbox();
+                let plug = plug.clone().unwrap().unbox();
+                evar(*evar_id) == plug || pattern.e_fresh(*evar_id)
             },
-            Pattern::SSubst(SSubstType{pattern, svar_id, plug}) => {
-                let pattern_unbox = pattern.clone().unwrap().unbox();
-                let plug_unbox = plug.clone().unwrap().unbox();
-                svar(*svar_id) == plug_unbox || pattern_unbox.s_fresh(*svar_id)
+            Pattern::SSubst(SSubstType{pattern,
+            svar_id,
+            plug }) => {
+                let pattern = pattern.clone().unwrap().unbox();
+                let plug = plug.clone().unwrap().unbox();
+                svar(*svar_id) == plug || pattern.s_fresh(*svar_id)
             },
         }
     }
@@ -783,7 +840,7 @@ mod tests {
         assert!(!negx1_implies_negx1.negative(1));
         assert!(negx1_implies_negx1.negative(2));
 
-        let negx1_implies_x1 = implies( neg_x1.clone(), x1.clone());
+        let negx1_implies_x1 = implies(neg_x1.clone(), x1.clone());
         assert!(negx1_implies_x1.positive(1));
         assert!(!negx1_implies_x1.negative(1));
     }
