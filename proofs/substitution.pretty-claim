@@ -1,14 +1,14 @@
-Load (μ X0 . X0)[{}]=1
+Load (μ X0 . X0)[]=1
 	Stack:
 	0: ⊥
-Load (phi0 -> (μ X0 . X0)[{}])=2
+Load (phi0 -> (μ X0 . X0)[])=2
 	Stack:
 	0: ⊥
 	1: (phi0 -> ⊥)
 Instantiate 0
 	Stack:
 	0: ¬⊥
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ¬⊥
 	1: ¬phi0
@@ -16,7 +16,7 @@ Exists 0
 	Stack:
 	0: ¬⊥
 	1: (∃ x0 . ¬phi0)
-Load (phi0 -> (μ X0 . X0)[{}])=2
+Load (phi0 -> (μ X0 . X0)[])=2
 	Stack:
 	0: ¬⊥
 	1: (∃ x0 . ¬phi0)

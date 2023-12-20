@@ -46,16 +46,16 @@ ModusPonens
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 Publish
-Load (μ X0 . X0)[{}]=0
+Load (μ X0 . X0)[]=0
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊥
-Load (μ X0 . X0)[{}]=0
+Load (μ X0 . X0)[]=0
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊥
 	2: ⊥
-Load (μ X0 . X0)[{}]=0
+Load (μ X0 . X0)[]=0
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊥
@@ -67,7 +67,7 @@ Implies
 	1: ⊥
 	2: (⊥ -> ⊥)
 Save
-Load (μ X0 . X0)[{}]=0
+Load (μ X0 . X0)[]=0
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊥
@@ -84,12 +84,12 @@ Instantiate 0, 1, 2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ ((⊥ -> ((⊥ -> ⊥) -> ⊥)) -> ((⊥ -> (⊥ -> ⊥)) -> (⊥ -> ⊥)))
-Load (μ X0 . X0)[{}]=0
+Load (μ X0 . X0)[]=0
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ ((⊥ -> ((⊥ -> ⊥) -> ⊥)) -> ((⊥ -> (⊥ -> ⊥)) -> (⊥ -> ⊥)))
 	2: ⊥
-Load ((μ X0 . X0)[{}] -> (μ X0 . X0)[{}])=6
+Load ((μ X0 . X0)[] -> (μ X0 . X0)[])=6
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ ((⊥ -> ((⊥ -> ⊥) -> ⊥)) -> ((⊥ -> (⊥ -> ⊥)) -> (⊥ -> ⊥)))
@@ -111,12 +111,12 @@ ModusPonens
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ ((⊥ -> (⊥ -> ⊥)) -> (⊥ -> ⊥))
-Load (μ X0 . X0)[{}]=0
+Load (μ X0 . X0)[]=0
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ ((⊥ -> (⊥ -> ⊥)) -> (⊥ -> ⊥))
 	2: ⊥
-Load (μ X0 . X0)[{}]=0
+Load (μ X0 . X0)[]=0
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ ((⊥ -> (⊥ -> ⊥)) -> (⊥ -> ⊥))
@@ -139,12 +139,12 @@ ModusPonens
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
 Publish
-Load (μ X0 . X0)[{}]=0
+Load (μ X0 . X0)[]=0
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
 	2: ⊥
-Load (phi0 -> (μ X0 . X0)[{}])[{0: "(phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]"}]=3
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]=3
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -170,13 +170,13 @@ Instantiate 0, 1, 2
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
 	2: ⊢ ((⊥ -> (¬¬phi0 -> phi0)) -> ((⊥ -> ¬¬phi0) -> (⊥ -> phi0)))
-Load (((phi0 -> (μ X0 . X0)[{}]) -> (μ X0 . X0)[{}]) -> phi0)=4
+Load (((phi0 -> (μ X0 . X0)[]) -> (μ X0 . X0)[]) -> phi0)=4
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
 	2: ⊢ ((⊥ -> (¬¬phi0 -> phi0)) -> ((⊥ -> ¬¬phi0) -> (⊥ -> phi0)))
 	3: (((phi0 -> ⊥) -> ⊥) -> phi0)
-Load (μ X0 . X0)[{}]=0
+Load (μ X0 . X0)[]=0
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -215,13 +215,13 @@ ModusPonens
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
 	2: ⊢ ((⊥ -> ¬¬phi0) -> (⊥ -> phi0))
-Load (μ X0 . X0)[{}]=0
+Load (μ X0 . X0)[]=0
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
 	2: ⊢ ((⊥ -> ¬¬phi0) -> (⊥ -> phi0))
 	3: ⊥
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -255,7 +255,7 @@ Prop3
 	2: ⊢ (⊥ -> phi0)
 	3: ⊢ (((phi0 -> ⊥) -> ⊥) -> phi0)
 Publish
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -277,7 +277,7 @@ Implies
 	2: ⊢ (⊥ -> phi0)
 	3: ⊢ (((phi0 -> ⊥) -> ⊥) -> phi0)
 	4: (¬phi0 -> phi0)
-Load ((phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}] -> (μ X0 . X0)[{}])=3
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (μ X0 . X0)[])=3
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -301,7 +301,7 @@ Instantiate 1, 2
 	2: ⊢ (⊥ -> phi0)
 	3: ⊢ (((phi0 -> ⊥) -> ⊥) -> phi0)
 	4: ⊢ ((phi0 -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥))) -> ((phi0 -> (¬phi0 -> phi0)) -> (phi0 -> (¬phi0 -> ⊥))))
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -326,7 +326,7 @@ Implies
 	3: ⊢ (((phi0 -> ⊥) -> ⊥) -> phi0)
 	4: ⊢ ((phi0 -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥))) -> ((phi0 -> (¬phi0 -> phi0)) -> (phi0 -> (¬phi0 -> ⊥))))
 	5: (¬phi0 -> phi0)
-Load ((phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}] -> (μ X0 . X0)[{}])=3
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (μ X0 . X0)[])=3
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -371,7 +371,7 @@ Instantiate 0, 1
 	3: ⊢ (((phi0 -> ⊥) -> ⊥) -> phi0)
 	4: ⊢ ((phi0 -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥))) -> ((phi0 -> (¬phi0 -> phi0)) -> (phi0 -> (¬phi0 -> ⊥))))
 	5: ⊢ (((¬phi0 -> phi0) -> (¬phi0 -> ⊥)) -> (phi0 -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥))))
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -390,7 +390,7 @@ MetaVar 0
 	5: ⊢ (((¬phi0 -> phi0) -> (¬phi0 -> ⊥)) -> (phi0 -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥))))
 	6: ¬phi0
 	7: phi0
-Load (μ X0 . X0)[{}]=0
+Load (μ X0 . X0)[]=0
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -422,7 +422,7 @@ Instantiate 0, 1, 2
 	4: ⊢ ((phi0 -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥))) -> ((phi0 -> (¬phi0 -> phi0)) -> (phi0 -> (¬phi0 -> ⊥))))
 	5: ⊢ (((¬phi0 -> phi0) -> (¬phi0 -> ⊥)) -> (phi0 -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥))))
 	6: ⊢ ((¬phi0 -> (phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥)))
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -432,7 +432,7 @@ Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
 	5: ⊢ (((¬phi0 -> phi0) -> (¬phi0 -> ⊥)) -> (phi0 -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥))))
 	6: ⊢ ((¬phi0 -> (phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥)))
 	7: ¬phi0
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -443,7 +443,7 @@ Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
 	6: ⊢ ((¬phi0 -> (phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥)))
 	7: ¬phi0
 	8: ¬phi0
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -467,7 +467,7 @@ Implies
 	7: ¬phi0
 	8: (¬phi0 -> ¬phi0)
 Save
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -502,7 +502,7 @@ Instantiate 0, 1, 2
 	5: ⊢ (((¬phi0 -> phi0) -> (¬phi0 -> ⊥)) -> (phi0 -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥))))
 	6: ⊢ ((¬phi0 -> (phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥)))
 	7: ⊢ ((¬phi0 -> ((¬phi0 -> ¬phi0) -> ¬phi0)) -> ((¬phi0 -> (¬phi0 -> ¬phi0)) -> (¬phi0 -> ¬phi0)))
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -513,7 +513,7 @@ Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
 	6: ⊢ ((¬phi0 -> (phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥)))
 	7: ⊢ ((¬phi0 -> ((¬phi0 -> ¬phi0) -> ¬phi0)) -> ((¬phi0 -> (¬phi0 -> ¬phi0)) -> (¬phi0 -> ¬phi0)))
 	8: ¬phi0
-Load ((phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}] -> (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])=8
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (phi0 -> (μ X0 . X0)[])[0: phi0])=8
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -559,7 +559,7 @@ ModusPonens
 	5: ⊢ (((¬phi0 -> phi0) -> (¬phi0 -> ⊥)) -> (phi0 -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥))))
 	6: ⊢ ((¬phi0 -> (phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥)))
 	7: ⊢ ((¬phi0 -> (¬phi0 -> ¬phi0)) -> (¬phi0 -> ¬phi0))
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -570,7 +570,7 @@ Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
 	6: ⊢ ((¬phi0 -> (phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥)))
 	7: ⊢ ((¬phi0 -> (¬phi0 -> ¬phi0)) -> (¬phi0 -> ¬phi0))
 	8: ¬phi0
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -640,7 +640,7 @@ ModusPonens
 	2: ⊢ (⊥ -> phi0)
 	3: ⊢ (((phi0 -> ⊥) -> ⊥) -> phi0)
 	4: ⊢ ((phi0 -> (¬phi0 -> phi0)) -> (phi0 -> (¬phi0 -> ⊥)))
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -673,7 +673,7 @@ ModusPonens
 	3: ⊢ (((phi0 -> ⊥) -> ⊥) -> phi0)
 	4: ⊢ (phi0 -> (¬phi0 -> ⊥))
 Publish
-Load (μ X0 . X0)[{}]=0
+Load (μ X0 . X0)[]=0
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -708,7 +708,7 @@ Instantiate 1, 2
 	3: ⊢ (((phi0 -> ⊥) -> ⊥) -> phi0)
 	4: ⊢ (phi0 -> (¬phi0 -> ⊥))
 	5: ⊢ ((phi0 -> (⊥ -> phi1)) -> ((phi0 -> ⊥) -> (phi0 -> phi1)))
-Load (μ X0 . X0)[{}]=0
+Load (μ X0 . X0)[]=0
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -766,7 +766,7 @@ Instantiate 0, 1
 	4: ⊢ (phi0 -> (¬phi0 -> ⊥))
 	5: ⊢ ((phi0 -> (⊥ -> phi1)) -> ((phi0 -> ⊥) -> (phi0 -> phi1)))
 	6: ⊢ ((⊥ -> phi1) -> (phi0 -> (⊥ -> phi1)))
-Load (μ X0 . X0)[{}]=0
+Load (μ X0 . X0)[]=0
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -787,7 +787,7 @@ MetaVar 1
 	6: ⊢ ((⊥ -> phi1) -> (phi0 -> (⊥ -> phi1)))
 	7: ⊥
 	8: phi1
-Load (phi0 -> (μ X0 . X0)[{}])=2
+Load (phi0 -> (μ X0 . X0)[])=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -811,7 +811,7 @@ Instantiate 0
 	7: ⊥
 	8: ¬phi1
 Save
-Load (phi0 -> (μ X0 . X0)[{}])=2
+Load (phi0 -> (μ X0 . X0)[])=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -869,7 +869,7 @@ Instantiate 0, 1, 2
 	5: ⊢ ((phi0 -> (⊥ -> phi1)) -> ((phi0 -> ⊥) -> (phi0 -> phi1)))
 	6: ⊢ ((⊥ -> phi1) -> (phi0 -> (⊥ -> phi1)))
 	7: ⊢ ((⊥ -> (¬¬phi1 -> phi1)) -> ((⊥ -> ¬¬phi1) -> (⊥ -> phi1)))
-Load (phi1 -> (μ X0 . X0)[{}])=9
+Load (phi1 -> (μ X0 . X0)[])=9
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -880,7 +880,7 @@ Load (phi1 -> (μ X0 . X0)[{}])=9
 	6: ⊢ ((⊥ -> phi1) -> (phi0 -> (⊥ -> phi1)))
 	7: ⊢ ((⊥ -> (¬¬phi1 -> phi1)) -> ((⊥ -> ¬¬phi1) -> (⊥ -> phi1)))
 	8: (phi1 -> ⊥)
-Load (μ X0 . X0)[{}]=0
+Load (μ X0 . X0)[]=0
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -927,7 +927,7 @@ Implies
 	7: ⊢ ((⊥ -> (¬¬phi1 -> phi1)) -> ((⊥ -> ¬¬phi1) -> (⊥ -> phi1)))
 	8: (((phi1 -> ⊥) -> ⊥) -> phi1)
 Save
-Load (μ X0 . X0)[{}]=0
+Load (μ X0 . X0)[]=0
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -1021,7 +1021,7 @@ ModusPonens
 	5: ⊢ ((phi0 -> (⊥ -> phi1)) -> ((phi0 -> ⊥) -> (phi0 -> phi1)))
 	6: ⊢ ((⊥ -> phi1) -> (phi0 -> (⊥ -> phi1)))
 	7: ⊢ ((⊥ -> ¬¬phi1) -> (⊥ -> phi1))
-Load (μ X0 . X0)[{}]=0
+Load (μ X0 . X0)[]=0
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -1032,7 +1032,7 @@ Load (μ X0 . X0)[{}]=0
 	6: ⊢ ((⊥ -> phi1) -> (phi0 -> (⊥ -> phi1)))
 	7: ⊢ ((⊥ -> ¬¬phi1) -> (⊥ -> phi1))
 	8: ⊥
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi1'}]=9
+Load (phi0 -> (μ X0 . X0)[])[0: phi1]=9
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -1096,7 +1096,7 @@ ModusPonens
 	4: ⊢ (phi0 -> (¬phi0 -> ⊥))
 	5: ⊢ ((phi0 -> ⊥) -> (phi0 -> phi1))
 Publish
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -1124,7 +1124,7 @@ Implies
 	4: ⊢ (phi0 -> (¬phi0 -> ⊥))
 	5: ⊢ ((phi0 -> ⊥) -> (phi0 -> phi1))
 	6: (¬phi0 -> phi0)
-Load ((phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}] -> (μ X0 . X0)[{}])=3
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (μ X0 . X0)[])=3
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -1166,7 +1166,7 @@ Instantiate 0, 1, 2
 	4: ⊢ (phi0 -> (¬phi0 -> ⊥))
 	5: ⊢ ((phi0 -> ⊥) -> (phi0 -> phi1))
 	6: ⊢ (((¬phi0 -> phi0) -> ((¬phi0 -> ⊥) -> phi0)) -> (((¬phi0 -> phi0) -> (¬phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> phi0)))
-Load (((phi0 -> (μ X0 . X0)[{}]) -> (μ X0 . X0)[{}]) -> phi0)=4
+Load (((phi0 -> (μ X0 . X0)[]) -> (μ X0 . X0)[]) -> phi0)=4
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -1176,7 +1176,7 @@ Load (((phi0 -> (μ X0 . X0)[{}]) -> (μ X0 . X0)[{}]) -> phi0)=4
 	5: ⊢ ((phi0 -> ⊥) -> (phi0 -> phi1))
 	6: ⊢ (((¬phi0 -> phi0) -> ((¬phi0 -> ⊥) -> phi0)) -> (((¬phi0 -> phi0) -> (¬phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> phi0)))
 	7: (((phi0 -> ⊥) -> ⊥) -> phi0)
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -1262,7 +1262,7 @@ ModusPonens
 	4: ⊢ (phi0 -> (¬phi0 -> ⊥))
 	5: ⊢ ((phi0 -> ⊥) -> (phi0 -> phi1))
 	6: ⊢ (((¬phi0 -> phi0) -> (¬phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> phi0))
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -1283,7 +1283,7 @@ MetaVar 0
 	6: ⊢ (((¬phi0 -> phi0) -> (¬phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> phi0))
 	7: ¬phi0
 	8: phi0
-Load (μ X0 . X0)[{}]=0
+Load (μ X0 . X0)[]=0
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -1318,7 +1318,7 @@ Instantiate 0, 1, 2
 	5: ⊢ ((phi0 -> ⊥) -> (phi0 -> phi1))
 	6: ⊢ (((¬phi0 -> phi0) -> (¬phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> phi0))
 	7: ⊢ ((¬phi0 -> (phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥)))
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -1329,7 +1329,7 @@ Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
 	6: ⊢ (((¬phi0 -> phi0) -> (¬phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> phi0))
 	7: ⊢ ((¬phi0 -> (phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥)))
 	8: ¬phi0
-Load ((phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}] -> (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])=8
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (phi0 -> (μ X0 . X0)[])[0: phi0])=8
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -1341,7 +1341,7 @@ Load ((phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}] -> (phi0 -> (μ X0 . X0)[{}])[{0: 
 	7: ⊢ ((¬phi0 -> (phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥)))
 	8: ¬phi0
 	9: (¬phi0 -> ¬phi0)
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -1379,7 +1379,7 @@ Instantiate 0, 1, 2
 	6: ⊢ (((¬phi0 -> phi0) -> (¬phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> phi0))
 	7: ⊢ ((¬phi0 -> (phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥)))
 	8: ⊢ ((¬phi0 -> ((¬phi0 -> ¬phi0) -> ¬phi0)) -> ((¬phi0 -> (¬phi0 -> ¬phi0)) -> (¬phi0 -> ¬phi0)))
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -1391,7 +1391,7 @@ Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
 	7: ⊢ ((¬phi0 -> (phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥)))
 	8: ⊢ ((¬phi0 -> ((¬phi0 -> ¬phi0) -> ¬phi0)) -> ((¬phi0 -> (¬phi0 -> ¬phi0)) -> (¬phi0 -> ¬phi0)))
 	9: ¬phi0
-Load ((phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}] -> (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}])=8
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (phi0 -> (μ X0 . X0)[])[0: phi0])=8
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -1441,7 +1441,7 @@ ModusPonens
 	6: ⊢ (((¬phi0 -> phi0) -> (¬phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> phi0))
 	7: ⊢ ((¬phi0 -> (phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥)))
 	8: ⊢ ((¬phi0 -> (¬phi0 -> ¬phi0)) -> (¬phi0 -> ¬phi0))
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
@@ -1453,7 +1453,7 @@ Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
 	7: ⊢ ((¬phi0 -> (phi0 -> ⊥)) -> ((¬phi0 -> phi0) -> (¬phi0 -> ⊥)))
 	8: ⊢ ((¬phi0 -> (¬phi0 -> ¬phi0)) -> (¬phi0 -> ¬phi0))
 	9: ¬phi0
-Load (phi0 -> (μ X0 . X0)[{}])[{0: 'phi0'}]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
