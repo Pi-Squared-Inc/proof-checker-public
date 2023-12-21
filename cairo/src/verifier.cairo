@@ -6,6 +6,7 @@ use core::clone::Clone;
 use core::box::BoxTrait;
 use core::array::ArrayTrait;
 use core::option::OptionTrait;
+use debug::PrintTrait;
 use ml_checker_cairo::pattern;
 use ml_checker_cairo::term::Term;
 use ml_checker_cairo::stack::{StackStructure, StackTrait, ClaimTrait};
@@ -639,13 +640,13 @@ fn execute_instructions(
                         stack.push(Term::Pattern(symbol(id)));
                     },
                     Instruction::Implies => {
-                        let left = pop_stack_pattern(ref stack);
                         let right = pop_stack_pattern(ref stack);
+                        let left = pop_stack_pattern(ref stack);
                         stack.push(Term::Pattern(implies(left, right)));
                     },
                     Instruction::App => {
-                        let left = pop_stack_pattern(ref stack);
                         let right = pop_stack_pattern(ref stack);
+                        let left = pop_stack_pattern(ref stack);
                         stack.push(Term::Pattern(app(left, right)));
                     },
                     Instruction::Exists => { panic!("Exists not implemented!"); },
@@ -803,6 +804,7 @@ fn verify(
     let mut stack: Stack = StackTrait::new();
     let mut memory: Memory = array![];
     let mut claims: Claims = ClaimTrait::new();
+    'Executing Gamma phase'.print();
     execute_instructions(
         gamma_buffer,
         ref stack, // stack is empty initially.
@@ -813,6 +815,7 @@ fn verify(
 
     stack.clear();
 
+    'Executing Claim phase'.print();
     execute_instructions(
         claims_buffer,
         ref stack, // stack is empty initially.
@@ -823,6 +826,7 @@ fn verify(
 
     stack.clear();
 
+    'Executing Proof phase'.print();
     execute_instructions(
         proof_buffer,
         ref stack, // stack is empty initially.
