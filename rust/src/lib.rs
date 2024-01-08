@@ -1177,6 +1177,14 @@ mod tests {
     }
 
     #[test]
+    #[should_panic]
+    fn test_instantiate_fresh() {
+        let svar_0 = svar(0);
+        let phi0_s_fresh_0 = metavar_s_fresh(0, 0, vec![0], vec![0]);
+        instantiate_internal(&phi0_s_fresh_0, &[0], &[svar_0]);
+    }
+
+    #[test]
     fn test_wellformedness_fresh() {
         let phi0_s_fresh_0 = metavar_s_fresh(0, 0, vec![0], vec![0]);
         assert!(phi0_s_fresh_0.well_formed());
