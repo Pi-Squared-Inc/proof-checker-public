@@ -3,7 +3,7 @@ use ml_checker_cairo::term::Term;
 use ml_checker_cairo::term::Pattern;
 use ml_checker_cairo::verifier::bot;
 
-#[derive(Drop)]
+#[derive(Debug, Drop, PartialEq)]
 struct StackStructure<T> {
     elements: Array<T>,
     len: u32,

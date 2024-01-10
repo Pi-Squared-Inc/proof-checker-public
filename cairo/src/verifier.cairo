@@ -24,43 +24,24 @@ use pattern::{
 };
 
 use pattern::PatternOptionBoxClone;
-
 // Instructions
 // ============
 //
 // Instructions are used to define the on-the-wire representation of matching
 // logic proofs.
 
+#[cairofmt::skip]
 #[derive(Debug, Eq, PartialEq)]
 enum Instruction {
     // Patterns
-    EVar,
-    SVar,
-    Symbol,
-    Implies,
-    App,
-    Exists,
-    Mu,
+    EVar, SVar, Symbol, Implies, App, Exists, Mu,
     // Meta Patterns,
-    MetaVar,
-    ESubst,
-    SSubst,
+    MetaVar, ESubst, SSubst,
     // Axiom Schemas,
-    Prop1,
-    Prop2,
-    Prop3,
-    Quantifier,
-    PropagationOr,
-    PropagationExists,
-    PreFixpoint,
-    Existence,
-    Singleton,
+    Prop1, Prop2, Prop3, Quantifier, PropagationOr, PropagationExists,
+    PreFixpoint, Existence, Singleton,
     // Inference rules,
-    ModusPonens,
-    Generalization,
-    Frame,
-    Substitution,
-    KnasterTarski,
+    ModusPonens, Generalization, Frame, Substitution, KnasterTarski,
     // Meta Incference rules,
     Instantiate,
     // Stack Manipulation,
@@ -721,13 +702,7 @@ fn execute_instructions(
                     Instruction::Prop2 => stack.push(Term::Proved(prop2.clone())),
                     Instruction::Prop3 => stack.push(Term::Proved(prop3.clone())),
                     Instruction::Quantifier => stack.push(Term::Proved(quantifier.clone())),
-                    Instruction::PropagationOr => { panic!("PropagationOr not implemented!"); },
-                    Instruction::PropagationExists => {
-                        panic!("PropagationExists not implemented!");
-                    },
-                    Instruction::PreFixpoint => { panic!("PreFixpoint not implemented!"); },
                     Instruction::Existence => stack.push(Term::Proved(existence.clone())),
-                    Instruction::Singleton => { panic!("Singleton not implemented!"); },
                     Instruction::ModusPonens => {
                         let premise2 = pop_stack_proved(ref stack);
                         let premise1: Pattern = pop_stack_proved(ref stack);
@@ -772,7 +747,6 @@ fn execute_instructions(
                             _ => { panic!("Expected an implication as a first parameter."); }
                         };
                     },
-                    Instruction::Frame => { panic!("Frame not implemented!"); },
                     Instruction::Substitution => {
                         let svar_id = buffer.pop_front().expect('Insufficient params Subst').into();
                         let pattern = pop_stack_proved(ref stack);
@@ -780,7 +754,6 @@ fn execute_instructions(
 
                         stack.push(Term::Proved(apply_ssubst(@pattern, svar_id, @plug)));
                     },
-                    Instruction::KnasterTarski => { panic!("KnasterTarski not implemented!"); },
                     Instruction::Instantiate => {
                         let n: u8 = buffer.pop_front().expect('Insufficient parms Instantiate');
                         let mut ids: IdList = ArrayTrait::new();
@@ -857,7 +830,7 @@ fn execute_instructions(
                         // Clean metavars are always well-formed
                         stack.push(Term::Pattern(metavar_pat));
                     },
-                    Instruction::NoOp => { panic!("NoOp not implemented!"); },
+                    _ => { panic!("Instruction: {} not implemented!", inst_felt252); },
                 }
             },
             Option::None => { break; }
@@ -918,9 +891,9 @@ mod tests {
     #[test]
     #[available_gas(1000000000000000)]
     fn it_works() {
-        let mut gamma = ArrayTrait::<u8>::new();
-        let mut claims = ArrayTrait::<u8>::new();
-        let mut proofs = ArrayTrait::<u8>::new();
+        let mut gamma = array![];
+        let mut claims = array![];
+        let mut proofs = array![];
 
         verify(gamma, claims, proofs);
     }
@@ -1000,42 +973,12 @@ mod tests {
     use super::Claims;
     #[test]
     #[available_gas(1000000000000000)]
-    fn test_construct_phi_implies_phi() {
-        let proof: Array<InstByte> = array![
-            137,
-            0, // CleanMetaVar
-            137,
-            0, // CleanMetaVar
-            5, // Implies 
-            28, // Save 
-            30 // Publish
-        ];
-
-        let mut stack: Stack = StackTrait::new();
-        let mut memory: Array<Term> = array![];
-        let mut claims: Claims = ClaimTrait::new();
-
-        let phi = metavar_unconstrained(0);
-        let phi_implies_phi = implies(phi.clone(), phi.clone());
-
-        execute_instructions(proof, ref stack, ref memory, ref claims, ExecutionPhase::Gamma);
-        let mut pattern_phi_implies_phi = memory.pop_front().expect('Expected memory element');
-        assert(
-            pattern_phi_implies_phi == Term::Pattern(phi_implies_phi.clone()),
-            'Expect pattern::phi_implies_phi'
-        );
-        let proved_phi_implies_phi = memory.pop_front().expect('Expected memory element');
-        assert(
-            proved_phi_implies_phi == Term::Proved(phi_implies_phi),
-            'Expect proved::phi_implies_phi'
-        );
-    }
-
-    #[test]
-    #[available_gas(1000000000000000)]
     fn test_save_and_load() {
-        let proof: Array<InstByte> = array![137, 0, // CleanMetaVar
-         28, // Save 
+        #[cairofmt::skip]
+        let proof: Array<InstByte> = array![
+            137, // CleanMetaVar
+            0,
+            28, // Save
         ];
 
         let mut stack: Stack = StackTrait::new();
@@ -1052,6 +995,54 @@ mod tests {
         );
         pattern_phi = stack.pop();
         assert(pattern_phi == Term::Pattern(phi.clone()), 'Expect pattern::phi');
+    }
+
+    #[test]
+    #[available_gas(1000000000000000)]
+    fn test_pattern_construction() {
+        #[cairofmt::skip]
+        let instructions: Array<InstByte> = array![
+            3, // Svar
+            0,
+            137, // CleanMetaVar
+            0,
+            10, // ESubst
+            0
+        ];
+
+        let mut stack = StackTrait::new();
+        let mut memory = array![];
+        let mut claims = ClaimTrait::new();
+        execute_instructions(
+            instructions, ref stack, ref memory, ref claims, ExecutionPhase::Gamma,
+        );
+        assert_eq!(stack.len(), 1);
+        assert_eq!(stack.pop(), Term::Pattern(esubst(metavar_unconstrained(0), 0, svar(0))));
+    }
+
+    #[test]
+    #[should_panic]
+    #[available_gas(1000000000000000)]
+    fn test_pop_instruction() {
+        let instructions = array![27];
+        let mut stack = StackTrait::new();
+        let mut memory = array![];
+        let mut claims = ClaimTrait::new();
+        execute_instructions(
+            instructions, ref stack, ref memory, ref claims, ExecutionPhase::Gamma,
+        );
+    }
+
+    use super::metavar_s_fresh;
+    #[test]
+    #[should_panic]
+    #[available_gas(1000000000000000)]
+    fn test_instantiate_fresh() {
+        let svar_0 = svar(0);
+        let mut phi0_s_fresh_0 = metavar_s_fresh(0, 0, array![0], array![0]);
+        let mut vars = array![0];
+        let mut plugs = array![svar_0];
+        let _ = instantiate_internal(ref phi0_s_fresh_0, ref vars, ref plugs);
     }
 
     use core::option::Option::{Some, None};
@@ -1279,85 +1270,192 @@ mod tests {
         );
     }
 
+    use super::metavar;
+    #[test]
+    #[should_panic]
+    #[available_gas(1000000000000000)]
+    fn test_instantiation_breaking_constraints1() {
+        let mut pattern = metavar(0, array![0], array![], array![], array![], array![]);
+        let mut vars = array![0];
+        let mut plugs = array![evar(0)];
+        let _ = instantiate_internal(ref pattern, ref vars, ref plugs);
+    }
+
+    #[test]
+    #[should_panic]
+    #[available_gas(1000000000000000)]
+    fn test_instantiation_breaking_constraints2() {
+        let mut pattern = metavar(0, array![], array![0], array![], array![], array![]);
+        let mut vars = array![0];
+        let mut plugs = array![svar(0)];
+        let _ = instantiate_internal(ref pattern, ref vars, ref plugs);
+    }
+
+    use super::not;
+    #[test]
+    #[should_panic]
+    #[available_gas(1000000000000000)]
+    fn test_instantiation_breaking_constraints3() {
+        let mut pattern = metavar(0, array![], array![], array![0], array![], array![]);
+        let mut vars = array![0];
+        let mut plugs = array![not(svar(0))];
+        let _ = instantiate_internal(ref pattern, ref vars, ref plugs);
+    }
+
+    #[test]
+    #[should_panic]
+    #[available_gas(1000000000000000)]
+    fn test_instantiation_breaking_constraints4() {
+        let mut pattern = metavar(0, array![], array![], array![], array![0], array![]);
+        let mut vars = array![0];
+        let mut plugs = array![svar(0)];
+        let _ = instantiate_internal(ref pattern, ref vars, ref plugs);
+    }
+
+    #[test]
+    #[should_panic]
+    #[available_gas(1000000000000000)]
+    fn test_instantiation_breaking_constraints5() {
+        let mut pattern = metavar(0, array![], array![], array![0], array![0], array![]);
+        let mut vars = array![0];
+        let mut plugs = array![svar(0)];
+        let _ = instantiate_internal(ref pattern, ref vars, ref plugs);
+    }
+
     #[test]
     #[available_gas(1000000000000000)]
-    fn test_impreflex_compress_goal() {
-        let gamma_buffer: Array<InstByte> = array![];
-        let claim_buffer: Array<InstByte> = array![137, 0, 137, 0, 5, 28, 30];
-        let proof_buffer: Array<InstByte> = array![
-            137,
-            0,
-            137,
-            0,
-            137,
-            0,
-            5,
-            28,
-            5,
-            28,
-            29,
-            0,
-            137,
-            0,
-            29,
-            0,
-            137,
-            0,
-            5,
-            5,
-            29,
-            2,
-            29,
-            0,
-            5,
-            137,
-            0,
-            29,
-            0,
-            137,
-            0,
-            13,
-            26,
-            3,
-            2,
-            1,
-            0,
-            137,
-            0,
-            29,
-            0,
-            12,
-            26,
-            2,
-            1,
-            0,
-            21,
-            28,
-            27,
-            27,
-            27,
-            29,
-            3,
-            137,
-            0,
-            137,
-            0,
-            12,
-            26,
-            2,
-            1,
-            0,
-            21,
-            28,
-            27,
-            27,
-            27,
-            29,
-            4,
-            30
+    fn test_instantiation_breaking_constraints6() {
+        let mut pattern = metavar(0, array![], array![], array![0], array![0], array![]);
+        let mut vars = array![0];
+        let mut plugs = array![svar(1)];
+        let _ = instantiate_internal(ref pattern, ref vars, ref plugs);
+    }
+
+    #[test]
+    #[should_panic]
+    #[available_gas(1000000000000000)]
+    fn test_illformed_instantiation() {
+        let mut phi0 = metavar_unconstrained(0);
+        let mut vars = array![1, 0];
+        let mut plugs = array![phi0.clone()];
+        let _ = instantiate_internal(ref phi0, ref vars, ref plugs);
+    }
+
+    #[test]
+    #[available_gas(1000000000000000)]
+    fn test_publish() {
+        let proof = array![30]; // Instruction::Publish
+
+        let mut stack = StackTrait::new();
+        stack.push(Term::Pattern(symbol(0)));
+        let mut memory = array![];
+        let mut claims = ClaimTrait::new();
+        execute_instructions(
+            proof.clone(), ref stack, ref memory, ref claims, ExecutionPhase::Gamma,
+        );
+        assert_eq!(stack, StackTrait::new());
+        assert_eq!(claims, ClaimTrait::new());
+        assert_eq!(memory, array![Term::Proved(symbol(0))]);
+
+        let mut stack = StackTrait::new();
+        stack.push(Term::Pattern(symbol(0)));
+        let mut memory = array![];
+        let mut claims = ClaimTrait::new();
+        execute_instructions(
+            proof.clone(), ref stack, ref memory, ref claims, ExecutionPhase::Claim,
+        );
+        let mut expected_claims = ClaimTrait::new();
+        expected_claims.push(symbol(0));
+        assert_eq!(stack, StackTrait::new());
+        assert_eq!(memory, array![]);
+        assert_eq!(claims, expected_claims);
+
+        let mut stack = StackTrait::new();
+        stack.push(Term::Proved(symbol(0)));
+        let mut memory = array![];
+        let mut claims = ClaimTrait::new();
+        claims.push(symbol(0));
+        execute_instructions(proof, ref stack, ref memory, ref claims, ExecutionPhase::Proof,);
+        assert_eq!(stack, StackTrait::new());
+        assert_eq!(memory, array![]);
+        assert_eq!(claims, ClaimTrait::new());
+    }
+
+    #[test]
+    #[available_gas(1000000000000000)]
+    fn test_construct_phi_implies_phi() {
+        #[cairofmt::skip]
+        let proof = array![
+            9, 0, 0, 0, 0, 0, 0, // Instruction::MetaVar, Stack: Phi
+            28,                  // Instruction::Save, @ 0
+            29, 0,               // Instruction::Load, Phi ; Phi
+            5,                   // Instruction::Implies, Phi -> Phi
         ];
 
-        verify(gamma_buffer, claim_buffer, proof_buffer);
+        let mut stack = StackTrait::new();
+        let mut memory = array![];
+        let mut claims = ClaimTrait::new();
+        execute_instructions(proof, ref stack, ref memory, ref claims, ExecutionPhase::Proof,);
+        let phi0 = metavar_unconstrained(0);
+        let mut expected_stack = StackTrait::new();
+        expected_stack.push(Term::Pattern(implies(phi0.clone(), phi0.clone())));
+        assert_eq!(stack, expected_stack);
+    }
+
+    #[test]
+    #[available_gas(1000000000000000)]
+    fn test_phi_implies_phi_impl() {
+        #[cairofmt::skip]
+        let proof = array![
+            9, 0, 0, 0, 0, 0, 0, // Instruction::MetaVar, Stack: $ph0
+            28,                  // Instruction::Save, @0
+            29, 0,               // Instruction::Load, Stack: $ph0; ph0
+            29, 0,               // Instruction::Load, Stack: $ph0; $ph0; ph0
+            5,                   // Instruction::Implies, Stack: $ph0; ph0 -> ph0
+            28,                  // Instruction::Save, @1
+            13,                  // Instruction::Prop2, Stack: $ph0; $ph0 -> ph0; [prop2: (ph0 -> (ph1 -> ph2)) -> ((ph0 -> ph1) -> (ph0 -> ph2))]
+            26, 1, 1,            // Instruction::Instantiate, Stack: $ph0; [p1: (ph0 -> ((ph0 -> ph0) -> ph2)) -> (ph0 -> (ph0 -> ph0)) -> (ph0 -> ph2)]
+            26, 1, 2,            // Instruction::Instantiate, Stack: [p1: (ph0 -> ((ph0 -> ph0) -> ph0)) -> (ph0 -> (ph0 -> ph0)) -> (ph0 -> ph0)]
+            29, 1,               // Instruction::Load, Stack: p1 ; $ph0 -> ph0
+            12,                  // Instruction::Prop1, Stack: p1 ; $ph0 -> ph0; [prop1: ph0 -> (ph1 -> ph0)
+
+            26, 1, 1,            // Instruction::Instantiate, Stack: p1 ; [p2: (ph0 -> (ph0 -> ph0) -> ph0) ]
+
+            21,                  // Instruction::ModusPonens, Stack: [p3: (ph0 -> (ph0 -> ph0)) -> (ph0 -> ph0)]
+            29, 0,               // Instruction::Load, Stack: p3 ; ph0;
+            12,                  // Instruction::Prop1, Stack: p3 ; ph0; prop1
+
+            26, 1, 1,            // Instruction::Instantiate, Stack: p3 ; ph0 -> (ph0 -> ph0)
+
+            21,                  // Instruction::Instantiate, Stack: ph0 -> ph0
+        ];
+
+        let mut stack = StackTrait::new();
+        let mut memory = array![];
+        let mut claims = ClaimTrait::new();
+        execute_instructions(proof, ref stack, ref memory, ref claims, ExecutionPhase::Proof,);
+        let phi0 = metavar_unconstrained(0);
+        let mut expected_stack = StackTrait::new();
+        expected_stack.push(Term::Proved(implies(phi0.clone(), phi0.clone())));
+        assert_eq!(stack, expected_stack);
+    }
+
+    #[test]
+    #[available_gas(1000000000000000)]
+    fn test_universal_quantification() {
+        let proof = array![22, 0]; // Generalization
+        let mut stack = StackTrait::new();
+        stack.push(Term::Proved(implies(symbol(0), symbol(1))));
+        let mut memory = array![];
+        let mut claims = ClaimTrait::new();
+        execute_instructions(proof, ref stack, ref memory, ref claims, ExecutionPhase::Proof,);
+
+        let mut expected_stack = StackTrait::new();
+        expected_stack.push(Term::Proved(implies(exists(0, symbol(0)), symbol(1))));
+        assert_eq!(stack, expected_stack);
+        assert_eq!(memory, array![]);
+        assert_eq!(claims, ClaimTrait::new());
+    // TODO: Test case for when 0 is not fresh in rhs
     }
 
     use super::apply_esubst;
@@ -1423,8 +1521,8 @@ mod tests {
         assert_eq!(result, esubst(ssubst(metavar_unconstrained(0), 0, symbol(1)), 0, symbol(1)));
     }
 
-    #[should_panic]
     #[test]
+    #[should_panic]
     #[available_gas(1000000000000000)]
     fn test_apply_esubst_negative() {
         let _ = apply_esubst(@exists(0, evar(1)), 1, @evar(0));
@@ -1490,5 +1588,28 @@ mod tests {
 
         result = apply_ssubst(@ssubst(metavar_unconstrained(0), 0, symbol(1)), 0, @symbol(1));
         assert_eq!(result, ssubst(ssubst(metavar_unconstrained(0), 0, symbol(1)), 0, symbol(1)));
+    }
+
+    #[test]
+    #[should_panic]
+    #[available_gas(1000000000000000)]
+    fn test_apply_ssubst_negative() {
+        let _ = apply_ssubst(@mu(0, svar(1)), 1, @svar(0));
+    }
+
+    #[test]
+    #[should_panic]
+    #[available_gas(1000000000000000)]
+    fn test_no_remaining_claims() {
+        let gamma = array![];
+        #[cairofmt::skip]
+        let claims = array![
+            4, // Instruction::Symbol as InstByte
+            0,
+            30, // Instruction::Publish as InstByte
+        ];
+        let proof = array![];
+
+        verify(gamma, claims, proof);
     }
 }
