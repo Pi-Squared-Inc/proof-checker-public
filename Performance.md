@@ -71,6 +71,7 @@ Last Update: Dec 22th, 2023
 | [batch-transfer](https://github.com/runtimeverification/proof-checker/blob/main/cairo/tests/direct-implementation/cairo0/batch_transfer.cairo)  |         6.825 |         30.196 |           0.869 |         37.890 |
 | [perceptron](https://github.com/runtimeverification/proof-checker/blob/main/cairo/tests/direct-implementation/cairo0/perceptron.cairo)          |         0.448 |          0.166 |           0.008 |          0.662 |
 | [svm](https://github.com/runtimeverification/proof-checker/blob/main/cairo/tests/direct-implementation/cairo0/svm.cairo)                        |         0.443 |          0.176 |           0.008 |          0.627 |
+
 \* The programs were compiled with Cairo Zero's default compiler and proved and verified using  Lambdaworks Cairo Platinum Prover (v0.3.0)
 
 
@@ -82,6 +83,7 @@ Last Update: Jan 10th, 2024
 | [batch-transfer](https://github.com/runtimeverification/proof-checker/blob/main/cairo/tests/direct-implementation/cairo1/batch_transfer.cairo)  |         0.691 |         65.693 |           1.787 |         68.171 |
 | [perceptron](https://github.com/runtimeverification/proof-checker/blob/main/cairo/tests/direct-implementation/cairo1/perceptron.cairo)          |         0.592 |          0.029 |           0.003 |          0.624 |
 | [svm](https://github.com/runtimeverification/proof-checker/blob/main/cairo/tests/direct-implementation/cairo1/svm.cairo)                        |         0.593 |          0.032 |           0.003 |          0.628 |
+
 \* The programs were compiled with LambdaClass Cairo-VM (v1.0.0-rc0) and proved and verified using Lambdaworks Cairo Platinum Prover (v0.3.0)
 
 
