@@ -1,8 +1,8 @@
 Symbol ksort_SortGeneratedTopCell
 Symbol ksort_SortFoo
-Symbol ksort_SortKItem
-Symbol ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo
+Symbol ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo
 Instantiate 
+Symbol ksort_SortKItem
 Symbol ksym_inj
 MetaVar 0
 App
@@ -10,7 +10,7 @@ MetaVar 1
 App
 MetaVar 2
 App
-Instantiate 0, 1, 2
+Instantiate 0, 2, 1
 Symbol ksym_dotk
 Instantiate 
 Symbol kore_kseq
@@ -42,9 +42,9 @@ MetaVar 1
 App
 Instantiate 0, 1
 Symbol ksort_SortFoo
-Symbol ksort_SortKItem
-Symbol ksym_LblFooB'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo
+Symbol ksym_LblFooA'LParRParUnds'SINGLE-REWRITE-SYNTAX'Unds'Foo
 Instantiate 
+Symbol ksort_SortKItem
 Symbol ksym_inj
 MetaVar 0
 App
@@ -52,7 +52,7 @@ MetaVar 1
 App
 MetaVar 2
 App
-Instantiate 0, 1, 2
+Instantiate 0, 2, 1
 Symbol ksym_dotk
 Instantiate 
 Symbol kore_kseq
@@ -136,5 +136,5 @@ Implies
 Instantiate 0, 1
 Instantiate 0, 1
 Instantiate 0, 1, 2
-Instantiate 0, 1, 2
+Instantiate 0, 2, 1
 Publish
