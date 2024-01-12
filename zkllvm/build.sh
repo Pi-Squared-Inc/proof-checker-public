@@ -20,8 +20,8 @@ fi
 FILE=$(basename "${1}")
 FILEPATH=$(dirname "$(realpath "${1}")")
 FILENAME=${FILE%%.*}
-ROOT_DIR=$(dirname "$(realpath "${0}")")/..
-OUTPUTDIR="${ROOT_DIR}/.build/zkllvm"
+ROOT_DIR=$(dirname "$(realpath "${0}")")/../
+OUTPUTDIR="${ROOT_DIR}/.build/zkllvm/${FILENAME}"
 EXT=${FILE##*.}
 INPUT=$2
 
@@ -44,6 +44,9 @@ OUTPUT_TABLE="${OUTPUTDIR}/assignment_table.tbl"
 # Creating output directory under `.build` if it doesn't exist or clean it if it does
 if [[ ! -d "${ROOT_DIR}/.build" ]]; then
   mkdir "${ROOT_DIR}/.build"
+fi
+if [[ ! -d "${ROOT_DIR}/.build/zkllvm" ]]; then
+  mkdir "${ROOT_DIR}/.build/zkllvm"
 fi
 if [[ ! -d "${OUTPUTDIR}" ]]; then
   mkdir "${OUTPUTDIR}"
@@ -86,6 +89,7 @@ ${CLANG_EXE} -target assigner \
 -I "${ZKLLVM_ROOT}"/libs/circifier/clang/lib/Headers \
 -I "${ZKLLVM_ROOT}"/libs/stdlib/libc/include \
 -I "${FILEPATH}/../../cpp/src" \
+-I "${FILEPATH}/../../cpp" \
 -emit-llvm -O1 -S -std=c++20 "${FILEPATH}/${FILE}" -o "${OUTPUT_CLANG}"
 
 # Link the program with the ZKLLVM libc
@@ -96,7 +100,7 @@ ${LLVM_LINK} -S "${OUTPUT_LLVM_LINK_1}" "${LIB_C}/zkllvm-libc.ll" -o "${OUTPUT_L
 echo "Generate circuit"
 TIME1=$(date +%s%3N);
 
-${ASSIGNER} -b "${OUTPUT_LLVM_LINK_2}" -i "${INPUT}" -c "${OUTPUT_CIRCUIT}" -t "${OUTPUT_TABLE}" -e pallas --print_circuit_output --check > /dev/null
+${ASSIGNER} -b "${OUTPUT_LLVM_LINK_2}" -i "${INPUT}" -c "${OUTPUT_CIRCUIT}" -t "${OUTPUT_TABLE}" -e pallas > /dev/null
 
 TIME2=$(date +%s%3N);
 CIRCUIT_TIME=$(expr $TIME2 - $TIME1)
@@ -106,7 +110,7 @@ echo $FILENAME "circuit generation .." $(expr $CIRCUIT_TIME / 1000).$(expr $CIRC
 echo "Generate proof and verify"
 TIME3=$(date +%s%3N);
 
-${TRANSPILER} -m gen-test-proof -i "${INPUT}" -c "${OUTPUT_CIRCUIT}" -t "${OUTPUT_TABLE}" -o "${OUTPUTDIR}" > /dev/null
+${TRANSPILER} -m gen-test-proof -i "${INPUT}" -c "${OUTPUT_CIRCUIT}" -t "${OUTPUT_TABLE}" -e pallas -o "${OUTPUTDIR}" > /dev/null
 
 TIME4=$(date +%s%3N);
 PROOF_TIME=$(expr $TIME4 - $TIME3)

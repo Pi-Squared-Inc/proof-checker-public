@@ -20,36 +20,37 @@ print_output() {
     echo "-----------------------------------------------------------------------" >> "$output_file"
 }
 
-csl-example() {
-    cd csl-examples
-    echo "Running $1"
-    cp guest/src/"$1".rs guest/src/main.rs
-    output=$(cargo run --release)
-    print_output "$output" "$1"
-    cd ..
+direct-example() {
+    (
+        cd tests/direct-implementation || exit
+        echo "Running $1"
+        cp guest/src/"$1".rs guest/src/main.rs
+        output=$(cargo run --release)
+        print_output "$output" "$1"
+    )
 }
 
-svm5() {
-    csl-example "svm5"
+svm() {
+    direct-example "svm5"
 }
 
 perceptron() {
-    csl-example "perceptron"
+    direct-example "perceptron"
 }
 
 transfer() {
-    csl-example "transfer"
+    direct-example "transfer"
 }
 
-transfer5000() {
-    csl-example "transfer5000"
+batch-transfer-csl() {
+    direct-example "transfer5000"
 }
 
 pi2-example() {
     echo "Running $1"
-    gamma="$proofs_path/$1.ml-gamma"
-    claim="$proofs_path/$1.ml-claim"
-    proof="$proofs_path/$1.ml-proof"
+    gamma="$proofs_path/$1/$1.ml-gamma"
+    claim="$proofs_path/$1/$1.ml-claim"
+    proof="$proofs_path/$1/$1.ml-proof"
     output=$(cargo run --release --bin host "$gamma" "$claim" "$proof")
     print_output "$output" "$1"
 }
@@ -58,53 +59,48 @@ perceptron-goal() {
     pi2-example "perceptron-goal"
 }
 
-svm5-goal() {
+svm-goal() {
     pi2-example "svm5-goal"
 }
 
-transfer-batch-1k-goal() {
+batch-transfer() {
     pi2-example "transfer-batch-1k-goal"
 }
 
-transfer-simple-compressed-goal() {
+transfer-goal() {
     pi2-example "transfer-simple-compressed-goal"
 }
 
-transfer-task-specific() {
-    pi2-example "transfer-task-specific"
-}
-
-impreflex-compressed-goal() {
+impreflex() {
     pi2-example "impreflex-compressed-goal"
 }
 
 clean_up() {
-    if [ -f "csl-examples/guest/src/main.rs" ]; then
-        mv csl-examples/"$output_file" "$output_file"
-        rm csl-examples/guest/src/main.rs
+    if [ -f "tests/direct-implementation/guest/src/main.rs" ]; then
+        mv tests/direct-implementation/"$output_file" "$output_file"
+        rm tests/direct-implementation/guest/src/main.rs
     fi
 }
 
-csl() {
+direct() {
     echo "Running all examples"
-    perceptron
-    svm5
-    transfer5000
     transfer
+    batch-transfer-csl
+    perceptron
+    svm
 }
 
 pi2() {
     echo "Running pi2"
+    impreflex
+    transfer-goal
+    batch-transfer
     perceptron-goal
-    svm5-goal
-    transfer-batch-1k-goal
-    transfer-simple-compressed-goal
-    transfer-task-specific
-    impreflex-compressed-goal
+    svm-goal
 }
 
 all() {
-    csl
+    direct
     clean_up
     pi2
 }

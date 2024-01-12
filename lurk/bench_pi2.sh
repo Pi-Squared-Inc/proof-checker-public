@@ -1,12 +1,22 @@
 #!/bin/bash
-# Usage ./bench_pi2.sh <output_file>
+# Usage ./bench_pi2.sh <output_file> cpu|gpu
 
-declare -a arr=("test_transfer_task_specific.lurk"          \
-                "test_impreflex_compressed_goal.lurk"       \
-                "test_svm5_goal.lurk"                       \
-                "test_transfer_simple_compressed_goal.lurk" \
-                "test_perceptron_goal.lurk"                 \
-                "test_transfer_batch_1k_goal.lurk"          
+if [[ "$#" -lt 2 ]]; then
+  echo "Usage ./bench_pi2.sh <output_file> cpu|gpu"
+  exit 1
+fi
+
+if [[ "$2" == "cpu" ]]; then
+    export CUDA_PATH=
+    export NVCC=off
+    export EC_GPU_FRAMEWORK=none
+fi 
+
+declare -a arr=("test_impreflex.lurk"           \
+                "test_transfer_goal.lurk"       \
+                "test_batch_transfer_goal.lurk" \
+                "test_perceptron_goal.lurk"     \
+                "test_svm_goal.lurk"
                 )
 
 for f in "${arr[@]}";
@@ -29,6 +39,8 @@ do
     {
         echo "Proving $f in" $(("$TOTAL_PROVE_TIME" / 1000)).$(("$TOTAL_PROVE_TIME" % 1000)) "s";
         echo "Verifying $f" "in" $(("$TOTAL_VERIFY_TIME" / 1000)).$(("$TOTAL_VERIFY_TIME" % 1000)) "s";
+        TOTAL=$(("$TOTAL_PROVE_TIME" + "$TOTAL_VERIFY_TIME"))
+        echo "Total time" $(("$TOTAL" / 1000)).$(("$TOTAL" % 1000)) "s";
         echo ""
         echo "$verify_output";
         echo "---------------------------------------------------------------------------------------------------"

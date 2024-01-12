@@ -63,23 +63,23 @@ source ~/.zshrc
 
 Then you can build and execute the Proof-Checker with real input:
 ```bash
-./build.sh src/main.cpp inputs/impreflex-compressed-goal.inp
-```
-
-You can also run it with g++/clang to any textual output or exception that may happen:
-```bash
-g++ -DDEBUG=1 -std=c++20 -g src/main.cpp -o ../.build/zkllvm/a.out && ../.build/zkllvm/a.out 
+./build.sh src/main.cpp tests/proofs-of-proofs/impreflex.inp
 ```
 
 If you want to run the Proof-Checker unit tests, you can use the followinf commands:
 For zkLLVM:
 ```bash
-./build.sh src/tests.cpp inputs/example.inp
+echo "[" > example.inp
+echo "  {\"array\": [{\"int\":0}]}," >> example.inp
+echo "  {\"array\": [{\"int\":0}]}," >> example.inp
+echo "  {\"array\": [{\"int\":0}]}" >> example.inp
+echo "]" >> example.inp
+./build.sh src/tests.cpp example.inp
 ```
 
 For g++/clang:
 ```bash
-g++ -DDEBUG=1 -std=c++20 -g src/tests.cpp -o ../.build/zkllvm/a.out && ../.build/zkllvm/a.out
+g++ -DDEBUG=1 -std=c++20 -Wno-attributes -Wno-terminate src/tests.cpp -I ../cpp -o ../.build/zkllvm/a.out && ../.build/zkllvm/a.out
 ```
 
 ### Translation from binary input to zkllvm input
@@ -96,5 +96,8 @@ python3 translator.py <path-to-assumption> <path-to-claim> <path-to-proof>
 
 For example,
 ```bash
-python3 translator.py ../proofs/translated/impreflex-compressed-goal.ml-gamma ../proofs/translated/impreflex-compressed-goal.ml-claim ../proofs/translated/impreflex-compressed-goal.ml-proof > inputs/impreflex-compressed-goal.inp
+python3 translator.py \
+    ../proofs/translated/impreflex-compressed-goal/impreflex-compressed-goal.ml-gamma \
+    ../proofs/translated/impreflex-compressed-goal/impreflex-compressed-goal.ml-claim \
+    ../proofs/translated/impreflex-compressed-goal/impreflex-compressed-goal.ml-proof > tests/proofs-of-proofs/impreflex.inp
 ```

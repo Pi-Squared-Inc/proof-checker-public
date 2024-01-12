@@ -1,4 +1,4 @@
-#include "../tests/unit_tests.hpp"
+#include "tests/unit_tests.hpp"
 #include <array>
 #include <iostream>
 
@@ -24,3 +24,13 @@ typedef std::array<int, 1> proof_type;
 
   return c[0];
 }
+
+#ifdef DEBUG
+int main() {
+  assumption_type a;
+  claim_type c;
+  proof_type p;
+  foo(a, c, p);
+  return 0;
+}
+#endif

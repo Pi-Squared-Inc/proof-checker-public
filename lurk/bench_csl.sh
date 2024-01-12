@@ -1,13 +1,30 @@
 #!/bin/bash
-# Usage ./bench_csl.sh <output_file>
+# Usage ./bench_csl.sh <output_file> cpu|gpu
 
-cd csl-examples || exit;
+if [[ "$#" -lt 2 ]]; then
+  echo "Usage ./bench_csl.sh <output_file> cpu|gpu"
+  exit 1
+fi
 
-for f in *; do
+if [[ "$2" == "cpu" ]]; then
+    export CUDA_PATH=
+    export NVCC=off
+    export EC_GPU_FRAMEWORK=none
+fi 
+
+cd tests/direct-implementation || exit;
+
+declare -a arr=("transfer.lurk"       \
+                "batch_transfer.lurk" \
+                "perceptron.lurk"     \
+                "svm5.lurk"
+                )
+
+for f in "${arr[@]}"; do
     echo "$f"
 
     START_PROVE_TIME=$(date +%s%3N)
-    if [ "$f" == "transfer5000.lurk" ]; then
+    if [ "$f" == "batch_transfer.lurk" ]; then
         prove_output=$(lurk --rc 400 "${f}")
     else
         prove_output=$(lurk "${f}")
@@ -27,6 +44,8 @@ for f in *; do
     {
         echo "Proving $f in" $(("$TOTAL_PROVE_TIME" / 1000)).$(("$TOTAL_PROVE_TIME" % 1000)) "s";
         echo "Verifying $f" "in" $(("$TOTAL_VERIFY_TIME" / 1000)).$(("$TOTAL_VERIFY_TIME" % 1000)) "s";
+        TOTAL=$(("$TOTAL_PROVE_TIME" + "$TOTAL_VERIFY_TIME"))
+        echo "Total time" $(("$TOTAL" / 1000)).$(("$TOTAL" % 1000)) "s";
         echo ""
         echo "$verify_output";
         echo "---------------------------------------------------------------------------------------------------"

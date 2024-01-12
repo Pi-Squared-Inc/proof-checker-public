@@ -1,0 +1,23 @@
+[package]
+name = "guest"
+version = "0.1.0"
+edition = "2021"
+
+# Always optimize; building and running the guest takes much longer without optimization.
+[profile.dev]
+opt-level = 3
+lto = true
+
+[profile.release]
+opt-level = 3
+lto = true
+
+[[bin]]
+name = "guest-csl"
+path = "src/main.rs"
+
+[dependencies]
+# If you want to try (experimental) std support, add `features = [ "std" ]` to risc0-zkvm
+risc0-zkvm = { version = "0.16.1", default-features = false }
+
+[workspace]
