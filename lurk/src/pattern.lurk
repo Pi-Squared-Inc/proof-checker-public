@@ -1,0 +1,139 @@
+
+!(load "basic_operations.lurk")
+
+;; Definition: evar(evar_id) = Pattern{inst = 2, id = evar_id}
+;; Use: !(def new_evar (evar evar_id))
+!(def evar
+    (lambda (evar_id)
+        (cons :inst (cons 2
+        (cons :id (cons evar_id nil))))
+    )
+)
+
+;; Definition: svar(svar_id) = Pattern{inst = 3, id = svar_id}
+;; Use: !(def new_svar (svar svar_id))
+!(def svar
+    (lambda (svar_id)
+       (cons :inst (cons 3
+       (cons :id (cons svar_id nil))))
+    )
+)
+
+;; Definition: symbol(symbol_id) = Pattern{inst = 4, id = symbol_id}
+;; Use: !(def new_symbol (symbol symbol_id))
+!(def symbol
+    (lambda (symbol_id)
+        (cons :inst (cons 4
+        (cons :id (cons symbol_id nil))))
+    )
+)
+
+;; Definition: implies(p1, p2) = Pattern{inst = 5, left = p1, right = p2}
+;; Use: !(def new_implies (implies p1 p2))
+!(def implies
+    (lambda (p1 p2)
+        (cons :inst (cons 5
+        (cons :left (cons p1
+        (cons :right (cons p2 nil))))))
+    )
+)
+
+;; Definition: app(p1, p2) = Pattern{inst = 6, left = p1, right = p2}
+;; Use: !(def new_app (app p1 p2))
+!(def app
+    (lambda (p1 p2)
+        (cons :inst (cons 6
+        (cons :left (cons p1
+        (cons :right (cons p2 nil))))))
+    )
+)
+
+;; Definition: mu(var, subpattern) = Pattern{inst = 7, id = var, subpattern = subpattern}
+;; Use: !(def new_mu (mu var subpattern))
+!(def mu
+    (lambda (var subpattern)
+        (cons :inst (cons 7
+        (cons :id (cons var
+        (cons :subpattern (cons subpattern nil))))))
+    )
+)
+
+;; Definition: exists(var, subpattern) = Pattern{inst = 8, id = var, subpattern = subpattern}
+;; Use: !(def new_exists (exists var subpattern))
+!(def exists
+    (lambda (var subpattern)
+       (cons :inst (cons 8
+       (cons :id (cons var
+       (cons :subpattern (cons subpattern nil))))))
+    )
+)
+
+;; Definition: metavar_unconstrained(new_id) = Pattern{inst = 9, id = new_id}
+;; Use: !(def new_metavar_unconstrained (metavar_unconstrained new_id))
+!(def metavar_unconstrained
+    (lambda (new_id)
+        (cons :inst (cons 9
+        (cons :id (cons new_id
+        (cons :e_fresh (cons nil
+        (cons :s_fresh (cons nil
+        (cons :positive (cons nil
+        (cons :negative (cons nil
+        (cons :app_ctx_holes (cons nil nil))))))))))))))
+    )
+)
+
+;; Definition: metavar(new_id, e_fresh, s_fresh, positive, negative, app_ctx_holes) = Pattern{inst = 9, id = new_id, e_fresh = e_fresh, s_fresh = s_fresh, positive = positive, negative = negative, app_ctx_holes = app_ctx_holes}
+;; Use: !(def new_metavar (metavar new_id e_fresh s_fresh positive negative app_ctx_holes))
+!(def metavar
+    (lambda (new_id e_fresh s_fresh positive negative app_ctx_holes)
+        (cons :inst (cons 9
+        (cons :id (cons new_id
+        (cons :e_fresh (cons e_fresh
+        (cons :s_fresh (cons s_fresh
+        (cons :positive (cons positive
+        (cons :negative (cons negative
+        (cons :app_ctx_holes (cons app_ctx_holes nil))))))))))))))
+    )
+)
+
+;; Definition: metavar_s_fresh(new_id, s_fresh, positive, negative) = Pattern{inst = 9, id = new_id, s_fresh = (s_fresh nil), positive = positive, negative = negative}
+;; Use: !(def new_metavar_s_fresh (metavar_s_fresh new_id s_fresh positive negative))
+!(def metavar_s_fresh
+    (lambda (new_id s_fresh positive negative)
+        (cons :inst (cons 9
+        (cons :id (cons new_id
+        (cons :e_fresh (cons nil
+        (cons :s_fresh (cons (cons s_fresh nil)
+        (cons :positive (cons positive
+        (cons :negative (cons negative
+        (cons :app_ctx_holes (cons nil nil))))))))))))))
+    )
+)
+
+;; Definition: esubst(evar_id, subpattern, plug) = Pattern{inst = 10, id = evar_id, subpattern = subpattern, plug = plug}
+;; Use: !(def new_esubst (esubst evar_id subpattern plug))
+!(def esubst
+    (lambda (evar_id subpattern plug)
+        (cons :inst (cons 10
+        (cons :id (cons evar_id
+        (cons :subpattern (cons subpattern
+        (cons :plug (cons plug nil))))))))
+    )
+)
+
+;; Definition: ssubst(svar_id, subpattern, plug) = Pattern{inst = 11, id = svar_id, subpattern = subpattern, plug = plug}
+;; Use: !(def new_ssubst (ssubst svar_id subpattern plug))
+!(def ssubst
+    (lambda (svar_id subpattern plug)
+        (cons :inst (cons 11
+        (cons :id (cons svar_id
+        (cons :subpattern (cons subpattern
+        (cons :plug (cons plug nil))))))))
+    )
+)
+
+
+;; Notation
+!(def bot (mu 0 (svar 0)))
+!(def negate (lambda (pattern) (implies pattern bot)))
+!(def forall (lambda (evar_id pattern) (negate (exists evar_id (negate pattern)))))

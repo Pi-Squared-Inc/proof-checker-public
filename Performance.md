@@ -94,7 +94,7 @@ Last Update: Dec 19th, 2023
 | [transfer](https://github.com/runtimeverification/proof-checker/blob/main/lurk/tests/direct-implementation/transfer.lurk)              |         34 |          2.393 |           0.554 |          2.947 |          2.313 |           0.618 |          2.931 |
 | [batch-transfer](https://github.com/runtimeverification/proof-checker/blob/main/lurk/tests/direct-implementation/batch_transfer.lurk)* |     505037 |       3681.819 |           9.845 |       3691.664 |       1193.355 |           6.571 |       1199.926 |
 | [perceptron](https://github.com/runtimeverification/proof-checker/blob/main/lurk/tests/direct-implementation/perceptron.lurk)          |         11 |          3.501 |           0.541 |          4.042 |          0.830 |           0.579 |          1.409 |
-| [svm](https://github.com/runtimeverification/proof-checker/blob/main/lurk/tests/direct-implementation/svm5.lurk)                       |          9 |          1.832 |           0.538 |          2.370 |          0.820 |           0.598 |          1.418 |
+| [svm](https://github.com/runtimeverification/proof-checker/blob/main/lurk/tests/direct-implementation/svm.lurk)                       |          9 |          1.832 |           0.538 |          2.370 |          0.820 |           0.598 |          1.418 |
 
 \* Using `lurk --rc 400 batch_transfer.lurk`, other tests doesn't use `--rc`
 
@@ -124,11 +124,11 @@ Last Update: Jan 8th, 2024
 Last Update: Dec 19th, 2023
 |                                                            Examples                                                      | Cycles | GPU Prove Time | GPU Verify Time | GPU Total Time | GPU Prove Time | GPU Verify Time | GPU Total Time |
 |:------------------------------------------------------------------------------------------------------------------------:|:------:|:--------------:|:---------------:|:--------------:|:--------------:|:---------------:|:--------------:|
-| [impreflex](https://github.com/runtimeverification/proof-checker/blob/main/lurk/test_impreflex.lurk)*                    |   55651|        217.268 |           5.800 |        223.068 |        107.558 |           3.967 |        111.525 |
-| [transfer-goal](https://github.com/runtimeverification/proof-checker/blob/main/lurk/test_transfer_goal.lurk)             | 3202986|             ∞  |              ∞  |             ∞  |              ∞ |               ∞ |              ∞ |
-| [batch-transfer-goal](https://github.com/runtimeverification/proof-checker/blob/main/lurk/test_batch_transfer_goal.lurk) |30122047|             ∞  |              ∞  |             ∞  |              ∞ |               ∞ |              ∞ |
-| [perceptron-goal](https://github.com/runtimeverification/proof-checker/blob/main/lurk/test_perceptron_goal.lurk)         | 6404208|             ∞  |              ∞  |             ∞  |              ∞ |               ∞ |              ∞ |
-| [svm-goal](https://github.com/runtimeverification/proof-checker/blob/main/lurk/test_svm_goal.lurk)                       | 6404208|             ∞  |              ∞  |             ∞  |              ∞ |               ∞ |              ∞ |
+| [impreflex](https://github.com/runtimeverification/proof-checker/blob/main/lurk/tests/proofs-of-proofs/test_impreflex.lurk)*                    |   55651|        217.268 |           5.800 |        223.068 |        107.558 |           3.967 |        111.525 |
+| [transfer-goal](https://github.com/runtimeverification/proof-checker/blob/main/lurk/tests/proofs-of-proofs/test_transfer_goal.lurk)             | 3202986|             ∞  |              ∞  |             ∞  |              ∞ |               ∞ |              ∞ |
+| [batch-transfer-goal](https://github.com/runtimeverification/proof-checker/blob/main/lurk/tests/proofs-of-proofs/test_batch_transfer_goal.lurk) |30122047|             ∞  |              ∞  |             ∞  |              ∞ |               ∞ |              ∞ |
+| [perceptron-goal](https://github.com/runtimeverification/proof-checker/blob/main/lurk/tests/proofs-of-proofs/test_perceptron_goal.lurk)         | 6404208|             ∞  |              ∞  |             ∞  |              ∞ |               ∞ |              ∞ |
+| [svm-goal](https://github.com/runtimeverification/proof-checker/blob/main/lurk/tests/proofs-of-proofs/test_svm_goal.lurk)                       | 6404208|             ∞  |              ∞  |             ∞  |              ∞ |               ∞ |              ∞ |
 
 
 \* Using `lurk --rc 400 ...`

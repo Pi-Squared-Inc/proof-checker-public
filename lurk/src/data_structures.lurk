@@ -1,0 +1,33 @@
+;;; Proof checker
+;;; =============
+
+!(def Stack nil)
+!(def Memory nil)
+!(def Claims nil)
+
+;;; Stack utilities
+;;; ===============
+
+;; Definition: pop_stack_proved(stack) = if (term.type == 1) then (term, stack') else nil
+;; Use: (pop_stack_proved (push (Pattern_ '(1 2 3)) Stack)) => nil
+;; Use: (pop_stack_proved (push (Proved_ '(1 2 3)) Stack)) => ((1 2 3)) nil)
+!(def pop_stack_proved
+   (lambda (stack)
+      (if (= (car (car stack)) 1)
+         (cons (car (cdr (car stack))) (cdr stack))
+         nil
+      )
+   )
+)
+
+;; Definition: pop_stack_pattern(stack) = if (term.type == 0) then (term, stack') else nil
+;; Use: (pop_stack_pattern (push (Pattern_ '(1 2 3)) Stack)) => ((1 2 3)) nil)
+;; Use: (pop_stack_pattern (push (Proved_ '(1 2 3)) Stack)) => nil
+!(def pop_stack_pattern
+   (lambda (stack)
+      (if (= (car (car stack)) 0)
+         (cons (car (cdr (car stack))) (cdr stack)) ; TODO: Simplify it
+         nil
+      )
+   )
+)
