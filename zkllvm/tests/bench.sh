@@ -7,13 +7,12 @@ if [ -z "$1" ]; then
 fi
 
 output_file="../$1"
-build_script="../../build.sh"
-main_file="../../src/main.cpp"
+build_script="../../check_with_zkllvm.sh"
 
 print_output() {
     { 
         echo "Executing $2"
-        echo "$1"
+        echo "$1" | grep -E "$2"
         echo "-----------------------------------------------------------------"
     } >> "$output_file"
 }
@@ -22,7 +21,7 @@ direct-implementation() {
     (
         cd direct-implementation || exit
         echo "Running $1"
-        output=$($build_script "$1/$2" "$1/$3")
+        output=$($build_script --stats --transpiler --translate-input-off "$1/$3" "$1/$2")
         print_output "$output" "$1"
     )
 }
@@ -47,7 +46,7 @@ pi2-example() {
     (
         cd proofs-of-proofs || exit
         echo "Running $1"
-        output=$($build_script $main_file "$1.inp")
+        output=$($build_script --stats --transpiler --translate-input-off "$1.inp")
         print_output "$output" "$1"
     )
 }
