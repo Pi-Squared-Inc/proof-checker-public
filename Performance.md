@@ -113,10 +113,10 @@ Last Update: Dec 22th, 2023
 Last Update: Jan 8th, 2024
 |                                                  Examples                                                         | CPU Circuit Gen Time | CPU Prove+Verify Time |
 |:-----------------------------------------------------------------------------------------------------------------:|:--------------------:|:---------------------:|
-| [transfer](https://github.com/runtimeverification/proof-checker/tree/main/zkllvm/csl-zkllvm/transfer)             |                0.730 |                 0.131 |
-| [batch-transfer](https://github.com/runtimeverification/proof-checker/tree/main/zkllvm/csl-zkllvm/batch_transfer) |                1.367 |               143.183 |
-| [perceptron](https://github.com/runtimeverification/proof-checker/tree/main/zkllvm/csl-zkllvm/perceptron)         |                0.750 |                 0.130 |
-| [svm](https://github.com/runtimeverification/proof-checker/tree/main/zkllvm/csl-zkllvm/svm)                       |                0.730 |                 0.132 |
+| [transfer](https://github.com/runtimeverification/proof-checker/tree/main/zkllvm/tests/direct-implementation/transfer)             |                0.730 |                 0.131 |
+| [batch-transfer](https://github.com/runtimeverification/proof-checker/tree/main/zkllvm/tests/direct-implementation/batch_transfer) |                1.367 |               143.183 |
+| [perceptron](https://github.com/runtimeverification/proof-checker/tree/main/zkllvm/tests/direct-implementation/perceptron)         |                0.750 |                 0.130 |
+| [svm](https://github.com/runtimeverification/proof-checker/tree/main/zkllvm/tests/direct-implementation/svm)                       |                0.730 |                 0.132 |
 
 ### Proofs of Proofs
 
