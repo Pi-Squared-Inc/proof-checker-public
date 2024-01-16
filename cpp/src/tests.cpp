@@ -46,6 +46,14 @@ int main() {
   test_universal_quantification();
   std::cout << std::endl;
 
+  std::cout << "Executing test_apply_esubst()" << std::endl;
+  test_apply_esubst();
+  std::cout << std::endl;
+
+  std::cout << "Executing test_apply_ssubst()" << std::endl;
+  test_apply_ssubst();
+  std::cout << std::endl;
+
   std::cout << "Executing test_no_remaining_claims()" << std::endl;
   test_no_remaining_claims();
   std::cout << std::endl;

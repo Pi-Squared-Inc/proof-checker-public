@@ -1,6 +1,6 @@
 #include "../src/lib.hpp"
 
-int test_efresh(int a, int b) {
+void test_efresh(int a, int b) {
 
   auto evar = Pattern::evar(a);
 
@@ -43,10 +43,9 @@ int test_efresh(int a, int b) {
 
 #endif
 
-  return 0;
 }
 
-int test_sfresh(int a, int b) {
+void test_sfresh(int a, int b) {
 
   auto svar = Pattern::svar(a);
 
@@ -94,10 +93,9 @@ int test_sfresh(int a, int b) {
   std::cout << std::endl;
 #endif
 
-  return 0;
 }
 
-int test_wellformedness_fresh() {
+void test_wellformedness_fresh() {
   auto phi0_s_fresh_0 = Pattern::metavar_s_fresh(0, 0, IdList(0), IdList(0));
   assert(phi0_s_fresh_0->pattern_well_formed());
 
@@ -111,10 +109,9 @@ int test_wellformedness_fresh() {
 
   assert(!phi1->pattern_well_formed());
 
-  return 0;
 }
 
-int test_positivity() {
+void test_positivity() {
 
   auto X0 = Pattern::svar(0);
   auto X1 = Pattern::svar(1);
@@ -324,10 +321,9 @@ int test_positivity() {
 
 #endif
 
-  return 0;
 }
 
-int test_wellformedness_positive() {
+void test_wellformedness_positive() {
 
   auto svar = Pattern::svar(1);
   auto mux_x = Pattern::mu(1, svar.clone());
@@ -391,10 +387,9 @@ int test_wellformedness_positive() {
   std::cout << std::endl;
 #endif
 
-  return 0;
 }
 
-int test_instantiate() {
+void test_instantiate() {
   typedef LinkedList<Rc<Pattern>> Patterns;
   auto x0 = Pattern::evar(0);
   auto X0 = Pattern::svar(0);
@@ -521,7 +516,6 @@ int test_instantiate() {
 
 #endif
 
-  return 0;
 }
 void execute_vector(std::array<int, MAX_SIZE> &instrs, Pattern::Stack &stack,
                     Pattern::Memory &memory, Pattern::Claims &claims,
@@ -592,6 +586,7 @@ void test_publish() {
   assert(stack == expected_stack);
   assert(memory == expected_memory);
   assert(claims == expected_claims);
+
 }
 
 void test_construct_phi_implies_phi() {
@@ -627,9 +622,10 @@ void test_construct_phi_implies_phi() {
   expected_stack.push_back(
       Pattern::Term::Pattern_(Pattern::implies(phi0.clone(), phi0.clone())));
   assert(stack == expected_stack);
+
 }
 
-int test_phi_implies_phi_impl() {
+void test_phi_implies_phi_impl() {
 
   std::array<int, MAX_SIZE> proof;
   proof[0] = 36; // Size
@@ -710,10 +706,9 @@ int test_phi_implies_phi_impl() {
 
   assert(stack == expected_stack);
 
-  return 0;
 }
 
-int test_universal_quantification() {
+void test_universal_quantification() {
 
   std::array<int, MAX_SIZE> proof;
   proof[0] = 2;
@@ -739,10 +734,209 @@ int test_universal_quantification() {
   assert(memory == expected_memory);
   assert(claims == expected_claims);
 
-  return 0;
 }
 
-int test_no_remaining_claims() {
+void test_apply_esubst() {
+  // Atomic cases
+  auto pattern = Pattern::evar(0);
+  auto plug = Pattern::symbol(1);
+  auto result = Pattern::apply_esubst(pattern, 0, plug);
+  assert(result == Pattern::symbol(1));
+
+  pattern = Pattern::evar(0);
+  plug = Pattern::evar(2);
+  result = Pattern::apply_esubst(pattern, 0, plug);
+  assert(result == Pattern::evar(2));
+
+  result = Pattern::apply_esubst(pattern, 1, plug);
+  assert(result == Pattern::evar(0));
+
+  pattern = Pattern::svar(0);
+  plug = Pattern::symbol(0);
+  result = Pattern::apply_esubst(pattern, 0, plug);
+  assert(result == Pattern::svar(0));
+
+  pattern = Pattern::svar(1);
+  plug = Pattern::evar(0);
+  result = Pattern::apply_esubst(pattern, 0, plug);
+  assert(result == Pattern::svar(1));
+
+  pattern = Pattern::symbol(0);
+  plug = Pattern::symbol(1);
+  result = Pattern::apply_esubst(pattern, 0, plug);
+  assert(result == Pattern::symbol(0));
+
+  // Distribute over subpatterns
+  pattern = Pattern::implies(Pattern::evar(7), Pattern::symbol(1));
+  plug = Pattern::symbol(0);
+  result = Pattern::apply_esubst(pattern, 7, plug);
+  assert(result == Pattern::implies(Pattern::symbol(0), Pattern::symbol(1)));
+
+  pattern = Pattern::implies(Pattern::evar(7), Pattern::symbol(1));
+  plug = Pattern::symbol(0);
+  result = Pattern::apply_esubst(pattern, 6, plug);
+  assert(result == Pattern::implies(Pattern::evar(7), Pattern::symbol(1)));
+
+  pattern = Pattern::app(Pattern::evar(7), Pattern::symbol(1));
+  plug = Pattern::symbol(0);
+  result = Pattern::apply_esubst(pattern, 7, plug);
+  assert(result == Pattern::app(Pattern::symbol(0), Pattern::symbol(1)));
+
+  pattern = Pattern::app(Pattern::evar(7), Pattern::symbol(1));
+  plug = Pattern::symbol(0);
+  result = Pattern::apply_esubst(pattern, 6, plug);
+  assert(result == Pattern::app(Pattern::evar(7), Pattern::symbol(1)));
+
+  // Distribute over subpatterns unless evar_id = binder
+  pattern = Pattern::exists(1, Pattern::evar(1));
+  plug = Pattern::symbol(2);
+  result = Pattern::apply_esubst(pattern, 0, plug);
+  assert(result == Pattern::exists(1, Pattern::evar(1)));
+
+  pattern = Pattern::exists(0, Pattern::evar(1));
+  plug = Pattern::symbol(2);
+  result = Pattern::apply_esubst(pattern, 1, plug);
+  assert(result == Pattern::exists(0, Pattern::symbol(2)));
+
+  pattern = Pattern::mu(1, Pattern::evar(1));
+  plug = Pattern::symbol(2);
+  result = Pattern::apply_esubst(pattern, 0, plug);
+  assert(result == Pattern::mu(1, Pattern::evar(1)));
+
+  pattern = Pattern::mu(1, Pattern::evar(1));
+  plug = Pattern::symbol(2);
+  result = Pattern::apply_esubst(pattern, 1, plug);
+  assert(result == Pattern::mu(1, Pattern::symbol(2)));
+
+  // Subst on metavar should wrap in constructor
+  pattern = Pattern::metavar_unconstrained(0);
+  plug = Pattern::symbol(1);
+  result = Pattern::apply_esubst(pattern, 0, plug);
+  assert(result == Pattern::esubst(Pattern::metavar_unconstrained(0), 0, Pattern::symbol(1)));
+
+  // Subst when evar_id is fresh should do nothing
+  //(metavar_(0).with_e_fresh((evar(0), evar(1))), 0, symbol(1), metavar_unconstrained(0).with_e_fresh((evar(0), evar(1)))),
+  // Subst on substs should stack
+  pattern = Pattern::esubst(Pattern::metavar_unconstrained(0), 0, Pattern::symbol(1));
+  plug = Pattern::symbol(1);
+  result = Pattern::apply_esubst(pattern, 0, plug);
+  assert(result == Pattern::esubst(
+                     Pattern::esubst(Pattern::metavar_unconstrained(0), 0, Pattern::symbol(1)),
+                     0,
+                     Pattern::symbol(1)));
+
+  pattern = Pattern::ssubst(Pattern::metavar_unconstrained(0), 0, Pattern::symbol(1));
+  plug = Pattern::symbol(1);
+  result = Pattern::apply_esubst(pattern, 0, plug);
+  assert(result == Pattern::esubst(
+                     Pattern::ssubst(Pattern::metavar_unconstrained(0), 0, Pattern::symbol(1)),
+                     0,
+                     Pattern::symbol(1)));
+
+}
+
+void test_apply_ssubst() {
+  // Atomic cases
+  auto pattern = Pattern::evar(0);
+  auto plug = Pattern::symbol(1);
+  auto result = Pattern::apply_ssubst(pattern, 0, plug);
+  assert(result == Pattern::evar(0));
+
+  pattern = Pattern::evar(0);
+  plug = Pattern::evar(2);
+  result = Pattern::apply_ssubst(pattern, 1, plug);
+  assert(result == Pattern::evar(0));
+
+  pattern = Pattern::svar(0);
+  plug = Pattern::symbol(0);
+  result = Pattern::apply_ssubst(pattern, 0, plug);
+  assert(result == Pattern::symbol(0));
+
+  pattern = Pattern::svar(1);
+  plug = Pattern::evar(0);
+  result = Pattern::apply_ssubst(pattern, 0, plug);
+  assert(result == Pattern::svar(1));
+
+  pattern = Pattern::symbol(0);
+  plug = Pattern::symbol(1);
+  result = Pattern::apply_ssubst(pattern, 0, plug);
+  assert(result == Pattern::symbol(0));
+
+  // Distribute over subpatterns
+  pattern = Pattern::implies(Pattern::svar(7), Pattern::symbol(1));
+  plug = Pattern::symbol(0);
+  result = Pattern::apply_ssubst(pattern, 7, plug);
+  assert(result == Pattern::implies(Pattern::symbol(0), Pattern::symbol(1)));
+
+  pattern = Pattern::implies(Pattern::svar(7), Pattern::symbol(1));
+  plug = Pattern::symbol(0);
+  result = Pattern::apply_ssubst(pattern, 6, plug);
+  assert(result == Pattern::implies(Pattern::svar(7), Pattern::symbol(1)));
+
+  pattern = Pattern::app(Pattern::svar(7), Pattern::symbol(1));
+  plug = Pattern::symbol(0);
+  result = Pattern::apply_ssubst(pattern, 7, plug);
+  assert(result == Pattern::app(Pattern::symbol(0), Pattern::symbol(1)));
+
+  pattern = Pattern::app(Pattern::svar(7), Pattern::symbol(1));
+  plug = Pattern::symbol(0);
+  result = Pattern::apply_ssubst(pattern, 6, plug);
+  assert(result == Pattern::app(Pattern::svar(7), Pattern::symbol(1)));
+
+  // Distribute over subpatterns unless evar_id = binder
+  pattern = Pattern::exists(1, Pattern::svar(0));
+  plug = Pattern::symbol(2);
+  result = Pattern::apply_ssubst(pattern, 0, plug);
+  assert(result == Pattern::exists(1, Pattern::symbol(2)));
+
+  pattern = Pattern::exists(1, Pattern::symbol(1));
+  plug = Pattern::symbol(2);
+  result = Pattern::apply_ssubst(pattern, 1, plug);
+  assert(result == Pattern::exists(1, Pattern::symbol(1)));
+
+  pattern = Pattern::mu(1, Pattern::svar(1));
+  plug = Pattern::symbol(2);
+  result = Pattern::apply_ssubst(pattern, 0, plug);
+  assert(result == Pattern::mu(1, Pattern::svar(1)));
+
+  pattern = Pattern::mu(1, Pattern::svar(1));
+  plug = Pattern::symbol(2);
+  result = Pattern::apply_ssubst(pattern, 1, plug);
+  assert(result == Pattern::mu(1, Pattern::svar(1)));
+
+  pattern = Pattern::mu(1, Pattern::svar(2));
+  plug = Pattern::symbol(2);
+  result = Pattern::apply_ssubst(pattern, 2, plug);
+  assert(result == Pattern::mu(1, Pattern::symbol(2)));
+
+  // Subst on metavar should wrap in constructor
+  pattern = Pattern::metavar_unconstrained(0);
+  plug = Pattern::symbol(1);
+  result = Pattern::apply_ssubst(pattern, 0, plug);
+  assert(result == Pattern::ssubst(Pattern::metavar_unconstrained(0), 0, Pattern::symbol(1)));
+
+  // Subst when evar_id is fresh should do nothing
+  //(metavar_(0).with_e_fresh((evar(0), evar(1))), 0, symbol(1), metavar_unconstrained(0).with_e_fresh((evar(0), evar(1)))),
+  // Subst on substs should stack
+  pattern = Pattern::esubst(Pattern::metavar_unconstrained(0), 0, Pattern::symbol(1));
+  plug = Pattern::symbol(1);
+  result = Pattern::apply_ssubst(pattern, 0, plug);
+  assert(result == Pattern::ssubst(
+                     Pattern::esubst(Pattern::metavar_unconstrained(0), 0, Pattern::symbol(1)),
+                     0,
+                     Pattern::symbol(1)));
+
+  pattern = Pattern::ssubst(Pattern::metavar_unconstrained(0), 0, Pattern::symbol(1));
+  plug = Pattern::symbol(1);
+  result = Pattern::apply_ssubst(pattern, 0, plug);
+  assert(result == Pattern::ssubst(
+                     Pattern::ssubst(Pattern::metavar_unconstrained(0), 0, Pattern::symbol(1)),
+                     0,
+                     Pattern::symbol(1)));
+
+}
+
+void test_no_remaining_claims() {
 
   std::array<int, MAX_SIZE> gamma;
   gamma[0] = 0;        // Size
@@ -761,5 +955,4 @@ int test_no_remaining_claims() {
 
   Pattern::verify(gamma, claims, proof);
 
-  return 0;
 }

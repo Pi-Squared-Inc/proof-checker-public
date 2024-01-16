@@ -614,6 +614,106 @@ struct Pattern {
     bool has_value() noexcept { return hasValue; }
   };
 
+  static Rc<Pattern> apply_esubst(Rc<Pattern> &pattern, Id evar_id, Rc<Pattern> &plug) {
+    // Wraps pattern in appropriate ESubst
+    auto wrap_subst = esubst(pattern.clone(), evar_id, plug.clone());
+
+    auto inst = pattern->inst;
+    switch(inst) {
+    case Instruction::EVar: {
+      if (pattern->id == evar_id) {
+        return plug.clone();
+      } else {
+        return pattern.clone();
+      }
+    }
+    case Instruction::Implication:
+      return implies(
+          apply_esubst(pattern->left, evar_id, plug),
+          apply_esubst(pattern->right, evar_id, plug)
+      );
+    case Instruction::Application:
+      return app(
+          apply_esubst(pattern->left, evar_id, plug),
+          apply_esubst(pattern->right, evar_id, plug)
+      );
+    case Instruction::Exists: {
+      auto var = pattern->id;
+      if (var == evar_id) {
+        return pattern.clone();
+      }
+
+      if (!plug->pattern_e_fresh(var)) {
+#ifdef DEBUG
+        throw std::runtime_error("EVar substitution would capture free variable " +
+                                 std::to_string(var));
+#endif
+        exit(1);
+      }
+
+      return exists(var, apply_esubst(pattern->subpattern, evar_id, plug));
+    }
+    case Instruction::Mu:
+      return mu(pattern->id, apply_esubst(pattern->subpattern, evar_id, plug));
+    case Instruction::ESubst:
+    case Instruction::SSubst:
+    case Instruction::MetaVar:
+      return wrap_subst;
+    default:
+      return pattern.clone();
+    }
+  }
+
+  static Rc<Pattern> apply_ssubst(Rc<Pattern> &pattern, Id svar_id, Rc<Pattern> &plug) {
+    // Wraps pattern in appropriate SSubst
+    auto wrap_subst = ssubst(pattern.clone(), svar_id, plug.clone());
+
+    auto inst = pattern->inst;
+    switch(inst) {
+    case Instruction::SVar: {
+      if (pattern->id == svar_id) {
+        return plug.clone();
+      } else {
+        return pattern.clone();
+      }
+    }
+    case Instruction::Implication:
+      return implies(
+          apply_ssubst(pattern->left, svar_id, plug),
+          apply_ssubst(pattern->right, svar_id, plug)
+      );
+    case Instruction::Application:
+      return app(
+          apply_ssubst(pattern->left, svar_id, plug),
+          apply_ssubst(pattern->right, svar_id, plug)
+      );
+    case Instruction::Exists:
+      return exists(pattern->id, apply_ssubst(pattern->subpattern, svar_id, plug));
+    case Instruction::Mu: {
+      auto var = pattern->id;
+      if (var == svar_id) {
+        return pattern.clone();
+      }
+
+      if (!plug->pattern_s_fresh(var)) {
+#ifdef DEBUG
+        throw std::runtime_error("SVar substitution would capture free variable " +
+                                 std::to_string(var));
+#endif
+        exit(1);
+      }
+
+      return mu(var, apply_ssubst(pattern->subpattern, svar_id, plug));
+    }
+    case Instruction::ESubst:
+    case Instruction::SSubst:
+    case Instruction::MetaVar:
+      return wrap_subst;
+    default:
+      return pattern.clone();
+    }
+  }
+
   static Optional<Rc<Pattern>>
   instantiate_internal(Rc<Pattern> &p, IdList &vars,
                        LinkedList<Rc<Pattern>> &plugs) noexcept {
@@ -768,8 +868,11 @@ struct Pattern {
         if (!inst_plug.has_value()) {
           inst_plug = Optional<Rc<Pattern>>(plug.clone());
         }
+
+        auto inst_pattern_unwrap = inst_pattern.unwrap();
+        auto inst_plug_unwrap = inst_plug.unwrap();
         return Optional<Rc<Pattern>>(
-            esubst(inst_pattern.unwrap(), p->id, inst_plug.unwrap()));
+            apply_esubst(inst_pattern_unwrap, p->id, inst_plug_unwrap));
       }
     }
     case Instruction::SSubst: {
@@ -788,8 +891,11 @@ struct Pattern {
         if (!inst_plug.has_value()) {
           inst_plug = Optional<Rc<Pattern>>(plug.clone());
         }
+
+        auto inst_pattern_unwrap = inst_pattern.unwrap();
+        auto inst_plug_unwrap = inst_plug.unwrap();
         return Optional<Rc<Pattern>>(
-            ssubst(inst_pattern.unwrap(), p->id, inst_plug.unwrap()));
+            apply_ssubst(inst_pattern_unwrap, p->id, inst_plug_unwrap));
       }
     }
     default:
