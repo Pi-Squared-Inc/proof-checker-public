@@ -1,6 +1,6 @@
 use zk_host::methods::{GUEST_ELF, GUEST_ID};
 
-use risc0_zkvm::{default_executor_from_elf, serde::from_slice, ExecutorEnv};
+use risc0_zkvm::{default_prover, serde::from_slice, ExecutorEnv};
 
 use std::fs::File;
 use std::io::BufReader;
@@ -35,24 +35,15 @@ fn main() {
         .build()
         .unwrap();
 
-    // Next, we make an executor, loading the (renamed) ELF binary.
-    let mut exec = default_executor_from_elf(env, GUEST_ELF).unwrap();
+    // Next, we make a prover.
+    let prover = default_prover();
 
-    println!("Checking the proof...");
+    println!("Checking the proof and generating the receipt...");
 
-    // Run the executor to produce a session.
-    let session = exec.run().unwrap();
+    // Run the prover on the ELF binary to produce a receipt.
+    let receipt = prover.prove_elf(env, GUEST_ELF).unwrap();
 
-    let runtime = now.elapsed().as_millis();
-
-    println!("Ran in {} ms", runtime);
-
-    println!("Generating the certificate...");
-
-    // Prove the session to produce a receipt.
-    let receipt = session.prove().unwrap();
-
-    let provetime = now.elapsed().as_millis() - runtime;
+    let provetime = now.elapsed().as_millis();
 
     println!("Proved in {} ms", provetime);
 
@@ -64,15 +55,12 @@ fn main() {
 
     receipt.verify(GUEST_ID).unwrap();
 
-    println!(
-        "Verified in {} ms",
-        now.elapsed().as_millis() - provetime - runtime
-    );
+    println!("Verified in {} ms", now.elapsed().as_millis() - provetime);
 
     // Small fetcher that returns the next chunk of given size from journal
     let mut current_index: usize = 0;
     let mut next_journal_chunk = |size: usize| -> &[u8] {
-        let ret = &receipt.journal[current_index..current_index + size];
+        let ret = &receipt.journal.bytes[current_index..current_index + size];
         current_index += size;
         return ret;
     };
@@ -89,6 +77,6 @@ fn main() {
 
     let gamma_length: usize = from_slice(next_journal_chunk(size_of_usize)).unwrap();
     let gamma = next_journal_chunk(gamma_length);
-    let claims = &receipt.journal[current_index..];
+    let claims = &receipt.journal.bytes[current_index..];
     println!("There exists a proof of {:?} |- {:?}.", gamma, claims);
 }

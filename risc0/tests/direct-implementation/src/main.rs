@@ -2,7 +2,7 @@
 // The ELF is used for proving and the ID is used for verification.
 use direct_implementation::methods::{GUEST_CSL_ELF, GUEST_CSL_ID};
 
-use risc0_zkvm::{default_executor_from_elf, serde::from_slice, ExecutorEnv};
+use risc0_zkvm::{default_prover, serde::from_slice, ExecutorEnv};
 use std::time::Instant;
 
 fn main() {
@@ -15,41 +15,29 @@ fn main() {
 
     let env = ExecutorEnv::builder().build().unwrap();
 
-    // Next, we make an executor, loading the (renamed) ELF binary.
-    let mut exec = default_executor_from_elf(env, GUEST_CSL_ELF).unwrap();
+    // Next, we make a prover.
+    let prover = default_prover();
 
-    println!("Checking the proof...");
+    println!("Checking the proof and generating the receipt...");
 
-    // Run the executor to produce a session.
-    let session = exec.run().unwrap();
+    // Run the prover on the ELF binary to produce a receipt.
+    let receipt = prover.prove_elf(env, GUEST_CSL_ELF).unwrap();
 
-    let runtime = now.elapsed().as_millis();
-
-    println!("Ran in {} ms", runtime);
-
-    println!("Generating the certificate...");
-
-    // Prove the session to produce a receipt.
-    let receipt = session.prove().unwrap();
-
-    let provetime = now.elapsed().as_millis() - runtime;
+    let provetime = now.elapsed().as_millis();
 
     println!("Proved in {} ms", provetime);
 
     receipt.verify(GUEST_CSL_ID).unwrap();
 
-    println!(
-        "Verified in {} ms",
-        now.elapsed().as_millis() - provetime - runtime
-    );
+    println!("Verified in {} ms", now.elapsed().as_millis() - provetime);
 
     // Get the host's size of a usize pointer
     let size_of_usize = std::mem::size_of::<usize>();
 
     // Small fetcher that returns the next chunk of given size from journal
-    let current_index: usize = receipt.journal.len() - size_of_usize;
+    let current_index: usize = receipt.journal.bytes.len() - size_of_usize;
     let next_journal_chunk = |size: usize| -> &[u8] {
-        let ret = &receipt.journal[current_index..current_index + size];
+        let ret = &receipt.journal.bytes[current_index..current_index + size];
         return ret;
     };
 
