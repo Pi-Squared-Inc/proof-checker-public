@@ -11,6 +11,8 @@ Prop1
 Instantiate 1
 ModusPonens
 Publish
+	Stack:
+	0: ⊢ (phi0 -> phi0)
 Load (μ X0 . X0)[]=0
 Load (μ X0 . X0)[]=0
 Load (μ X0 . X0)[]=0
@@ -30,6 +32,9 @@ Prop1
 Instantiate 0, 1
 ModusPonens
 Publish
+	Stack:
+	0: ⊢ (phi0 -> phi0)
+	1: ⊢ (⊥ -> ⊥)
 Load (μ X0 . X0)[]=0
 Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]=3
 MetaVar 0
@@ -48,8 +53,17 @@ Prop1
 Instantiate 0, 1
 ModusPonens
 Publish
+	Stack:
+	0: ⊢ (phi0 -> phi0)
+	1: ⊢ (⊥ -> ⊥)
+	2: ⊢ (⊥ -> phi0)
 Prop3
 Publish
+	Stack:
+	0: ⊢ (phi0 -> phi0)
+	1: ⊢ (⊥ -> ⊥)
+	2: ⊢ (⊥ -> phi0)
+	3: ⊢ (((phi0 -> ⊥) -> ⊥) -> phi0)
 Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 MetaVar 0
 Implies
@@ -96,6 +110,12 @@ Prop1
 Instantiate 1
 ModusPonens
 Publish
+	Stack:
+	0: ⊢ (phi0 -> phi0)
+	1: ⊢ (⊥ -> ⊥)
+	2: ⊢ (⊥ -> phi0)
+	3: ⊢ (((phi0 -> ⊥) -> ⊥) -> phi0)
+	4: ⊢ (phi0 -> (¬phi0 -> ⊥))
 Load (μ X0 . X0)[]=0
 MetaVar 1
 Prop2
@@ -138,6 +158,13 @@ ModusPonens
 ModusPonens
 ModusPonens
 Publish
+	Stack:
+	0: ⊢ (phi0 -> phi0)
+	1: ⊢ (⊥ -> ⊥)
+	2: ⊢ (⊥ -> phi0)
+	3: ⊢ (((phi0 -> ⊥) -> ⊥) -> phi0)
+	4: ⊢ (phi0 -> (¬phi0 -> ⊥))
+	5: ⊢ ((phi0 -> ⊥) -> (phi0 -> phi1))
 Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 MetaVar 0
 Implies
@@ -177,6 +204,14 @@ ModusPonens
 ModusPonens
 ModusPonens
 Publish
+	Stack:
+	0: ⊢ (phi0 -> phi0)
+	1: ⊢ (⊥ -> ⊥)
+	2: ⊢ (⊥ -> phi0)
+	3: ⊢ (((phi0 -> ⊥) -> ⊥) -> phi0)
+	4: ⊢ (phi0 -> (¬phi0 -> ⊥))
+	5: ⊢ ((phi0 -> ⊥) -> (phi0 -> phi1))
+	6: ⊢ ((¬phi0 -> phi0) -> phi0)
 MetaVar 0
 MetaVar 1
 Implies
@@ -287,3 +322,12 @@ Prop1
 Instantiate 0, 1
 ModusPonens
 Publish
+	Stack:
+	0: ⊢ (phi0 -> phi0)
+	1: ⊢ (⊥ -> ⊥)
+	2: ⊢ (⊥ -> phi0)
+	3: ⊢ (((phi0 -> ⊥) -> ⊥) -> phi0)
+	4: ⊢ (phi0 -> (¬phi0 -> ⊥))
+	5: ⊢ ((phi0 -> ⊥) -> (phi0 -> phi1))
+	6: ⊢ ((¬phi0 -> phi0) -> phi0)
+	7: ⊢ ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
