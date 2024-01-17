@@ -321,7 +321,7 @@ struct Pattern {
     case Instruction::Application:
       return left->pattern_negative(svar) && right->pattern_negative(svar);
     case Instruction::Exists:
-      return subpattern->pattern_s_fresh(svar);
+      return subpattern->pattern_negative(svar);
     case Instruction::Mu:
       return svar == id || subpattern->pattern_negative(svar);
     case Instruction::ESubst:
@@ -346,6 +346,7 @@ struct Pattern {
 
   // Checks whether pattern is well-formed ASSUMING
   // that the sub-patterns are well-formed
+  // TODO: Audit this function to see if we need to add any more cases
   bool pattern_well_formed() noexcept {
     switch (inst) {
     case Instruction::MetaVar:
@@ -353,9 +354,26 @@ struct Pattern {
     case Instruction::Mu:
       return subpattern->pattern_positive(id);
     case Instruction::ESubst:
-      return !subpattern->pattern_e_fresh(id);
+    case Instruction::SSubst: {
+      auto subpattern_inst = subpattern->inst;
+      auto matches =
+          (subpattern_inst == Instruction::MetaVar) ||
+          (subpattern_inst == Instruction::ESubst) ||
+          (subpattern_inst == Instruction::SSubst);
+
+      return !pattern_is_redundant_subst() && matches;
+    }
+    default:
+      return false;
+    }
+  }
+
+  bool pattern_is_redundant_subst() noexcept {
+    switch (inst) {
+    case Instruction::ESubst:
+      return evar(id) == plug || subpattern->pattern_e_fresh(id);
     case Instruction::SSubst:
-      return !subpattern->pattern_s_fresh(id);
+      return svar(id) == plug || subpattern->pattern_s_fresh(id);
     default:
       return false;
     }
@@ -381,6 +399,17 @@ struct Pattern {
     pattern->s_fresh = IdList();
     pattern->positive = IdList();
     pattern->negative = IdList();
+    pattern->app_ctx_holes = IdList();
+    return pattern;
+  }
+
+  static Rc<Pattern> metavar_e_fresh(Id id, Id e_fresh, IdList positive,
+                                     IdList negative) noexcept {
+    auto pattern = newPattern(Instruction::MetaVar, id);
+    pattern->e_fresh = IdList(e_fresh);
+    pattern->s_fresh = IdList();
+    pattern->positive = std::move(positive);
+    pattern->negative = std::move(negative);
     pattern->app_ctx_holes = IdList();
     return pattern;
   }
@@ -420,7 +449,7 @@ struct Pattern {
     return pattern;
   }
 
-  static Rc<Pattern> esubst(Rc<Pattern> pattern, int evar_id,
+  static Rc<Pattern> esubst(Rc<Pattern> pattern, Id evar_id,
                             Rc<Pattern> plug) noexcept {
     auto evarPattern = newPattern(Instruction::ESubst, evar_id);
     evarPattern->subpattern = pattern;
@@ -428,7 +457,7 @@ struct Pattern {
     return evarPattern;
   }
 
-  static Rc<Pattern> ssubst(Rc<Pattern> pattern, int svar_id,
+  static Rc<Pattern> ssubst(Rc<Pattern> pattern, Id svar_id,
                             Rc<Pattern> plug) noexcept {
     auto svarPattern = newPattern(Instruction::SSubst, svar_id);
     svarPattern->subpattern = pattern;
@@ -832,9 +861,6 @@ struct Pattern {
       if (!inst_sub.has_value()) {
         return Optional<Rc<Pattern>>();
       } else {
-        if (!inst_sub.has_value()) {
-          inst_sub = Optional<Rc<Pattern>>(subpattern.clone());
-        }
         return Optional<Rc<Pattern>>(exists(p->id, inst_sub.unwrap()));
       }
     }
@@ -846,9 +872,6 @@ struct Pattern {
       if (!inst_sub.has_value()) {
         return Optional<Rc<Pattern>>();
       } else {
-        if (!inst_sub.has_value()) {
-          inst_sub = Optional<Rc<Pattern>>(subpattern.clone());
-        }
         return Optional<Rc<Pattern>>(mu(p->id, (inst_sub.unwrap())));
       }
     }
@@ -1107,7 +1130,6 @@ struct Pattern {
         stack.push(Term::Pattern_(exists(static_cast<Id>(*id), subpattern)));
         break;
       }
-
       case Instruction::Mu: {
         auto id = iterator;
         iterator++;
@@ -1130,7 +1152,6 @@ struct Pattern {
         stack.push(Term::Pattern_(mu_pat));
         break;
       }
-
       case Instruction::ESubst: {
         auto evar_id = iterator;
         iterator++;
@@ -1144,27 +1165,18 @@ struct Pattern {
 
         auto pattern = pop_stack_pattern(stack);
         auto plug = pop_stack_pattern(stack);
-        Instruction pattern_inst = pattern->inst;
-        if (!(pattern_inst == Instruction::MetaVar ||
-              pattern_inst == Instruction::ESubst ||
-              pattern_inst == Instruction::SSubst)) {
-#if DEBUG
-          throw std::runtime_error("Cannot apply ESubst on concrete term!");
-#endif
-          exit(1);
-        }
 
         auto esubst_pat =
             esubst(pattern.clone(), static_cast<Id>(*evar_id), plug);
-        if (esubst_pat->pattern_well_formed()) {
-          // The substitution is redundant, we don't apply it.
-          stack.push(Term::Pattern_(pattern));
-        } else {
-          stack.push(Term::Pattern_(esubst_pat));
+        if (!esubst_pat->pattern_well_formed()) {
+#if DEBUG
+          throw std::runtime_error("Creating an ill-formed esbust.");
+#endif
+          exit(1);
         }
+        stack.push(Term::Pattern_(esubst_pat));
         break;
       }
-
       case Instruction::SSubst: {
         auto svar_id = iterator;
         iterator++;
@@ -1178,24 +1190,16 @@ struct Pattern {
 
         auto pattern = pop_stack_pattern(stack);
         auto plug = pop_stack_pattern(stack);
-        Instruction pattern_inst = pattern->inst;
-        if (!(pattern_inst == Instruction::MetaVar ||
-              pattern_inst == Instruction::ESubst ||
-              pattern_inst == Instruction::SSubst)) {
-#if DEBUG
-          throw std::runtime_error("Cannot apply SSubst on concrete term!");
-#endif
-          exit(1);
-        }
 
         auto ssubst_pat =
             ssubst(pattern.clone(), static_cast<Id>(*svar_id), plug);
         if (!ssubst_pat->pattern_well_formed()) {
-          // The substitution is redundant, we don't apply it.
-          stack.push(Term::Pattern_(pattern));
-        } else {
-          stack.push(Term::Pattern_(ssubst_pat));
+#if DEBUG
+          throw std::runtime_error("Creating an ill-formed ssbust.");
+#endif
+          exit(1);
         }
+        stack.push(Term::Pattern_(ssubst_pat));
         break;
       }
       case Instruction::Prop1: {
@@ -1236,11 +1240,9 @@ struct Pattern {
         stack.push(Term::Proved_(premise1->right.clone()));
         break;
       }
-
       case Instruction::Quantifier:
         stack.push(Term::Proved_(quantifier.clone()));
         break;
-
       case Instruction::Generalization: {
         auto proved_pat = pop_stack_proved(stack);
 
@@ -1275,11 +1277,9 @@ struct Pattern {
         }
         break;
       }
-
       case Instruction::Existence:
         stack.push(Term::Proved_(existence.clone()));
         break;
-
       case Instruction::Substitution: {
         auto svar_id = iterator;
         iterator++;
@@ -1291,29 +1291,13 @@ struct Pattern {
           exit(1);
         }
 
-        auto plug = pop_stack_pattern(stack);
         auto pattern = pop_stack_proved(stack);
-        Instruction pattern_inst = pattern->inst;
-        if (!(pattern_inst == Instruction::MetaVar ||
-              pattern_inst == Instruction::ESubst ||
-              pattern_inst == Instruction::SSubst)) {
-#if DEBUG
-          throw std::runtime_error("Cannot apply SSubst on concrete term!");
-#endif
-          exit(1);
-        }
+        auto plug = pop_stack_pattern(stack);
 
-        auto ssubst_pat =
-            ssubst(pattern.clone(), static_cast<Id>(*svar_id), plug);
-        if (!ssubst_pat->pattern_well_formed()) {
-          // The substitution is redundant, we don't apply it.
-          stack.push(Term::Proved_(pattern));
-        } else {
-          stack.push(Term::Proved_(ssubst_pat));
-        }
+        stack.push(Term::Proved_(
+            apply_ssubst(pattern, static_cast<Id>(*svar_id), plug)));
         break;
       }
-
       case Instruction::Instantiate: {
         auto n = iterator;
         iterator++;

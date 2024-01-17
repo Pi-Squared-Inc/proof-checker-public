@@ -6,6 +6,10 @@ int main() {
   int x = 1;
   int y = 2;
 
+  std::cout << "Executing test_pattern_construction()" << std::endl;
+  test_pattern_construction();
+  std::cout << std::endl;
+
   std::cout << "Executing test_efresh(" << x << ", " << y << ")" << std::endl;
   test_efresh(x, y);
   std::cout << std::endl;
@@ -16,6 +20,10 @@ int main() {
 
   std::cout << "Executing test_wellformedness_fresh()" << std::endl;
   test_wellformedness_fresh();
+  std::cout << std::endl;
+
+  std::cout << "Executing test_wellformedness_esubst_ssubst()" << std::endl;
+  test_wellformedness_esubst_ssubst();
   std::cout << std::endl;
 
   std::cout << "Executing test_positivity()" << std::endl;

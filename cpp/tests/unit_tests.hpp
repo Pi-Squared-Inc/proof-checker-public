@@ -1,5 +1,28 @@
 #include "../src/lib.hpp"
 
+void test_pattern_construction() {
+  std::array<int, MAX_SIZE> proof;
+  proof[0] = 6; // Size
+  proof[1] = (int)Instruction::SVar;
+  proof[2] = 0;
+  proof[3] = 137; // Instruction::CleanMetaVar;
+  proof[4] = 0;
+  proof[5] = (int)Instruction::ESubst;
+  proof[6] = 0;
+  proof[7] = 138; // Instruction::NO_OP;
+
+  auto stack = Pattern::Stack();
+  auto memory = Pattern::Memory();
+  auto claims = Pattern::Claims();
+
+  Pattern::execute_instructions(proof, stack, memory, claims, Pattern::ExecutionPhase::Gamma);
+
+  assert(stack.size() == 1);
+  auto expected_pattern = Pattern::Term::Pattern_(
+      Pattern::esubst(Pattern::metavar_unconstrained(0), 0, Pattern::svar(0)));
+  assert(stack[0] == expected_pattern);
+}
+
 void test_efresh(int a, int b) {
 
   auto evar = Pattern::evar(a);
@@ -109,6 +132,40 @@ void test_wellformedness_fresh() {
 
   assert(!phi1->pattern_well_formed());
 
+}
+
+void test_wellformedness_esubst_ssubst() {
+  auto phi0_x1_s1 = Pattern::esubst(
+      Pattern::metavar_unconstrained(0), 1, Pattern::symbol(1));
+  assert(phi0_x1_s1->pattern_well_formed());
+
+  auto s0_x1_s1 = Pattern::esubst(
+      Pattern::symbol(0), 1, Pattern::symbol(1));
+  assert(!s0_x1_s1->pattern_well_formed());
+
+  auto phi0_x1_x1 = Pattern::esubst(
+      Pattern::metavar_unconstrained(0), 1, Pattern::evar(1));
+  assert(!phi0_x1_x1->pattern_well_formed());
+
+  auto phi0_fresh_x1_s1 = Pattern::esubst(
+      Pattern::metavar_e_fresh(0, 1, IdList(), IdList()), 1, Pattern::symbol(1));
+  assert(!phi0_fresh_x1_s1->pattern_well_formed());
+
+  auto phi0_X1_s1 = Pattern::ssubst(
+      Pattern::metavar_unconstrained(0), 1, Pattern::symbol(1));
+  assert(phi0_X1_s1->pattern_well_formed());
+
+  auto phi0_X1_x1 = Pattern::ssubst(
+      Pattern::metavar_unconstrained(0), 1, Pattern::svar(1));
+  assert(!phi0_X1_x1->pattern_well_formed());
+
+  auto s0_X1_s1 = Pattern::ssubst(
+      Pattern::symbol(0), 1, Pattern::symbol(1));
+  assert(!s0_X1_s1->pattern_well_formed());
+
+  auto phi0_fresh_X1_s1 = Pattern::ssubst(
+      Pattern::metavar_s_fresh(0, 1, IdList(), IdList()), 1, Pattern::symbol(1));
+  assert(!phi0_fresh_X1_s1->pattern_well_formed());
 }
 
 void test_positivity() {
@@ -454,6 +511,9 @@ void test_instantiate() {
   auto vars12 = IdList();
   vars12.push_back(1);
   vars12.push_back(2);
+  auto vars21 = IdList();
+  vars21.push_back(2);
+  vars21.push_back(1);
   auto plugsx0X0 = Patterns();
   plugsx0X0.push_back(x0.clone());
   plugsx0X0.push_back(X0.clone());
@@ -463,18 +523,157 @@ void test_instantiate() {
 
   // Empty substs have no effect
   assert(!Pattern::instantiate_internal(existsx0phi0, vars12, plugsx0X0));
+  assert(!Pattern::instantiate_internal(existsx0phi0, vars21, plugsx0X0));
   assert(!Pattern::instantiate_internal(muX0phi0, vars12, plugsx0X0));
+  assert(!Pattern::instantiate_internal(muX0phi0, vars21, plugsx0X0));
 
   // Order matters if corresponding value is not moved
   auto vars10 = IdList();
   vars10.push_back(1);
   vars10.push_back(0);
+  auto vars01 = IdList();
+  vars01.push_back(0);
+  vars01.push_back(1);
   auto internal8 =
       Pattern::instantiate_internal(existsx0phi0, vars10, plugsx0X0);
-  auto internal9 = Pattern::instantiate_internal(muX0phi0, vars10, plugsx0X0);
+  auto internal9 =
+      Pattern::instantiate_internal(existsx0phi0, vars01, plugsx0X0);
+  auto internal10 = Pattern::instantiate_internal(muX0phi0, vars10, plugsx0X0);
+  auto internal11 = Pattern::instantiate_internal(muX0phi0, vars01, plugsx0X0);
 
   assert(internal8.unwrap().operator==(existsx0X0));
-  assert(internal9.unwrap().operator==(muX0X0));
+  assert(internal9.unwrap().operator==(existsx0x0));
+  assert(internal10.unwrap().operator==(muX0X0));
+  assert(internal11.unwrap().operator==(muX0x0));
+
+  // Order does not matter if corresponding value is moved
+  auto plugsX0x0 = Patterns();
+  plugsX0x0.push_back(X0.clone());
+  plugsX0x0.push_back(x0.clone());
+  auto muX0phi0_implies_ph1 = Pattern::implies(muX0phi0.clone(), phi1.clone());
+  auto muX0x0_implies_X0 = Pattern::implies(muX0x0.clone(), X0.clone());
+  auto internal12 = Pattern::instantiate_internal(muX0phi0_implies_ph1, vars01, plugsx0X0);
+  auto internal13 = Pattern::instantiate_internal(muX0phi0_implies_ph1, vars10, plugsX0x0);
+
+  assert(internal12.unwrap().operator==(muX0x0_implies_X0));
+  assert(internal13.unwrap().operator==(muX0x0_implies_X0));
+
+  auto muX0phi0_app_ph1 = Pattern::app(muX0phi0.clone(), phi1.clone());
+  auto muX0x0_app_X0 = Pattern::app(muX0x0.clone(), X0.clone());
+  auto internal14 = Pattern::instantiate_internal(muX0phi0_app_ph1, vars01, plugsx0X0);
+  auto internal15 = Pattern::instantiate_internal(muX0phi0_app_ph1, vars10, plugsX0x0);
+
+  assert(internal14.unwrap().operator==(muX0x0_app_X0));
+  assert(internal15.unwrap().operator==(muX0x0_app_X0));
+
+  // No side-effects
+  auto plugsphi1X0 = Patterns();
+  plugsphi1X0.push_back(phi1.clone());
+  plugsphi1X0.push_back(X0.clone());
+  auto plugsX0phi1 = Patterns();
+  plugsX0phi1.push_back(X0.clone());
+  plugsX0phi1.push_back(phi1.clone());
+  auto muX0ph1_implies_X0 = Pattern::implies(muX0phi1.clone(), X0.clone());
+  auto internal16 = Pattern::instantiate_internal(muX0phi0_implies_ph1, vars01, plugsphi1X0);
+  auto internal17 = Pattern::instantiate_internal(muX0phi0_implies_ph1, vars10, plugsX0phi1);
+
+  assert(internal16.unwrap().operator==(muX0ph1_implies_X0));
+  assert(internal17.unwrap().operator==(muX0ph1_implies_X0));
+
+  auto muX0ph1_app_X0 = Pattern::app(muX0phi1.clone(), X0.clone());
+  auto internal18 = Pattern::instantiate_internal(muX0phi0_app_ph1, vars01, plugsphi1X0);
+  auto internal19 = Pattern::instantiate_internal(muX0phi0_app_ph1, vars10, plugsX0phi1);
+
+  assert(internal18.unwrap().operator==(muX0ph1_app_X0));
+  assert(internal19.unwrap().operator==(muX0ph1_app_X0));
+
+  // First comes first
+  auto vars011 = IdList();
+  vars011.push_back(0);
+  vars011.push_back(1);
+  vars011.push_back(1);
+  auto vars100 = IdList();
+  vars100.push_back(1);
+  vars100.push_back(0);
+  vars100.push_back(0);
+  auto plugsphi1X0x0 = Patterns();
+  plugsphi1X0x0.push_back(phi1.clone());
+  plugsphi1X0x0.push_back(X0.clone());
+  plugsphi1X0x0.push_back(x0.clone());
+  auto plugsX0phi1x0 = Patterns();
+  plugsX0phi1x0.push_back(X0.clone());
+  plugsX0phi1x0.push_back(phi1.clone());
+  plugsX0phi1x0.push_back(x0.clone());
+  auto internal20 = Pattern::instantiate_internal(muX0phi0_app_ph1, vars011, plugsphi1X0x0);
+  auto internal21 = Pattern::instantiate_internal(muX0phi0_app_ph1, vars100, plugsX0phi1x0);
+
+  assert(internal20.unwrap().operator==(muX0ph1_app_X0));
+  assert(internal21.unwrap().operator==(muX0ph1_app_X0));
+
+  // Extra values are ignored
+  auto vars012 = IdList();
+  vars012.push_back(0);
+  vars012.push_back(1);
+  vars012.push_back(2);
+  auto extraplugs = Patterns();
+  extraplugs.push_back(phi1.clone());
+  extraplugs.push_back(X0.clone());
+  extraplugs.push_back(x0.clone());
+  extraplugs.push_back(x0.clone());
+  extraplugs.push_back(x0.clone());
+  extraplugs.push_back(x0.clone());
+  extraplugs.push_back(x0.clone());
+  extraplugs.push_back(x0.clone());
+  auto internal22 = Pattern::instantiate_internal(muX0phi0_app_ph1, vars011, extraplugs);
+  auto internal23 = Pattern::instantiate_internal(muX0phi0_app_ph1, vars012, plugsphi1X0);
+
+  assert(internal22.unwrap().operator==(muX0ph1_app_X0));
+  assert(internal23.unwrap().operator==(muX0ph1_app_X0));
+
+  // Instantiate with concrete patterns applies pending substitutions
+  auto val = Pattern::esubst(phi0.clone(), 0, c0.clone());
+  auto internal24 = Pattern::instantiate_internal(val, vars0, plugsx0);
+
+  assert(internal24.unwrap().operator==(c0));
+
+  val = Pattern::ssubst(phi0.clone(), 0, c0.clone());
+  auto internal25 = Pattern::instantiate_internal(val, vars0, plugsX0);
+
+  assert(internal25.unwrap().operator==(c0));
+
+  val = Pattern::ssubst(
+      Pattern::esubst(phi0.clone(), 0, X0.clone()), 0, c0.clone());
+  auto internal26 = Pattern::instantiate_internal(val, vars0, plugsX0);
+
+  assert(internal26.unwrap().operator==(c0));
+
+  // Instantiate with metavar keeps pending substitutions
+  auto plugsphi1 = Patterns();
+  plugsphi1.push_back(phi1.clone());
+  val = Pattern::esubst(phi0.clone(), 0, c0.clone());
+  auto internal27 = Pattern::instantiate_internal(val, vars0, plugsphi1);
+
+  assert(internal27.unwrap().operator==(Pattern::esubst(phi1.clone(), 0, c0.clone())));
+
+  val = Pattern::ssubst(phi0.clone(), 0, c0.clone());
+  auto internal28 = Pattern::instantiate_internal(val, vars0, plugsphi1);
+
+  assert(internal28.unwrap().operator==(Pattern::ssubst(phi1.clone(), 0, c0.clone())));
+
+  // The plug in a subst. needs to be instantiated as well
+  val = Pattern::ssubst(phi0.clone(), 0, phi0.clone());
+  auto internal29 = Pattern::instantiate_internal(val, vars0, plugsX0);
+
+  assert(internal29.unwrap().operator==(X0));
+
+  auto plugsX0c0 = Patterns();
+  plugsX0c0.push_back(X0.clone());
+  plugsX0c0.push_back(c0.clone());
+  val = Pattern::ssubst(phi0.clone(), 0, phi1.clone());
+  auto internal30 = Pattern::instantiate_internal(val, vars01, plugsX0c0);
+
+  assert(internal30.unwrap().operator==(c0));
+
 
 #if DEBUG
   x0->print();
@@ -517,6 +716,7 @@ void test_instantiate() {
 #endif
 
 }
+
 void execute_vector(std::array<int, MAX_SIZE> &instrs, Pattern::Stack &stack,
                     Pattern::Memory &memory, Pattern::Claims &claims,
                     Pattern::ExecutionPhase phase) {
