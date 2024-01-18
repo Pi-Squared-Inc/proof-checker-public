@@ -280,6 +280,39 @@ impl Pattern {
         }
     }
 
+    fn app_ctx_hole(&self, evar: Id) -> bool {
+        match self {
+            Pattern::EVar(name) => *name == evar,
+            Pattern::SVar(_) => false,
+            Pattern::Symbol(_) => false,
+            Pattern::MetaVar { app_ctx_holes, .. } => app_ctx_holes.contains(&evar),
+            Pattern::Implies { .. } => false,
+            Pattern::App { left, right } => {
+                (left.app_ctx_hole(evar) && right.e_fresh(evar))
+                    || (left.e_fresh(evar) && right.app_ctx_hole(evar))
+            }
+            Pattern::Exists { .. } => false,
+            Pattern::Mu { .. } => false,
+            Pattern::ESubst {
+                pattern,
+                evar_id,
+                plug,
+            } => {
+                if *evar_id == evar {
+                    pattern.app_ctx_hole(evar) && plug.app_ctx_hole(evar)
+                } else {
+                    (pattern.app_ctx_hole(evar) && plug.e_fresh(evar))
+                        || (pattern.app_ctx_hole(*evar_id)
+                            && plug.app_ctx_hole(evar)
+                            && pattern.e_fresh(evar))
+                }
+            }
+            Pattern::SSubst { .. } => {
+                unimplemented!("application context hole checking not supported for SSubst's");
+            }
+        }
+    }
+
     // Checks whether pattern is well-formed ASSUMING
     // that the sub-patterns are well-formed
     // TODO: Audit this function to see if we need to add any more cases
@@ -541,7 +574,7 @@ fn instantiate_internal(
             s_fresh,
             positive,
             negative,
-            ..
+            app_ctx_holes,
         } => {
             if let Some(pos) = vars.iter().position(|&x| x == *id) {
                 if let Some(evar) = e_fresh.into_iter().find(|&evar| !plugs[pos].e_fresh(*evar)) {
@@ -572,6 +605,15 @@ fn instantiate_internal(
                     panic!(
                         "Instantiation of MetaVar {} breaks a negativity constraint: SVar {}",
                         id, svar
+                    );
+                }
+                if let Some(evar) = app_ctx_holes
+                    .into_iter()
+                    .find(|&evar| !plugs[pos].app_ctx_hole(*evar))
+                {
+                    panic!(
+                        "Instantiation of MetaVar {} breaks an application context hole constraint: EVar {}",
+                        id, evar
                     );
                 }
 
@@ -1364,6 +1406,36 @@ mod tests {
         let negX1_implies_X1 = implies(Rc::clone(&neg_X1), Rc::clone(&X1));
         assert!(negX1_implies_X1.positive(1));
         assert!(!negX1_implies_X1.negative(1));
+    }
+
+    #[test]
+    #[allow(non_snake_case)]
+    fn test_app_ctx_hole() {
+        assert!(!metavar_unconstrained(0).app_ctx_hole(0));
+        assert!((Pattern::MetaVar {
+            id: 0,
+            e_fresh: vec![],
+            s_fresh: vec![],
+            positive: vec![],
+            negative: vec![],
+            app_ctx_holes: vec![0],
+        })
+        .app_ctx_hole(0));
+        assert!(evar(0).app_ctx_hole(0));
+        assert!(!evar(1).app_ctx_hole(0));
+        assert!(!svar(0).app_ctx_hole(0));
+        assert!(!symbol(0).app_ctx_hole(0));
+        assert!(!implies(evar(0), evar(1)).app_ctx_hole(0));
+        assert!(app(evar(0), evar(1)).app_ctx_hole(0));
+        assert!(app(evar(1), evar(0)).app_ctx_hole(0));
+        assert!(!app(evar(0), evar(0)).app_ctx_hole(0));
+        assert!(!app(evar(1), evar(1)).app_ctx_hole(0));
+        assert!(!exists(0, evar(0)).app_ctx_hole(0));
+        assert!(!exists(0, evar(1)).app_ctx_hole(0));
+        assert!(!exists(1, evar(0)).app_ctx_hole(0));
+        assert!(!exists(1, evar(1)).app_ctx_hole(0));
+        assert!(!mu(0, evar(0)).app_ctx_hole(0));
+        assert!(!mu(0, svar(0)).app_ctx_hole(0));
     }
 
     #[test]
