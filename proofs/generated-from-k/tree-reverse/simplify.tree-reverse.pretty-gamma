@@ -3366,30 +3366,9 @@ Implies
 Implies
 Publish
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lbl'Hash'Init'Unds'TREE-REVERSE-SYNTAX'Unds'KItem
+Symbol #Init_TREE-REVERSE-SYNTAX_KItem
 Instantiate 
-Symbol ksym_dotk
-Instantiate 
-Symbol kore_kseq
-MetaVar 0
-App
-MetaVar 1
-App
-Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'k'-GT-'
-MetaVar 0
-App
-Instantiate 0
-EVar 0
-Symbol ksym_Lbl'-LT-'generatedTop'-GT-'
-MetaVar 0
-App
-MetaVar 1
-App
-Instantiate 0, 1
-Symbol ksym_Lbl'Hash'next'Unds'TREE-REVERSE-SYNTAX'Unds'KItem
-Instantiate 
-Symbol ksym_dotk
+Symbol dotk
 Instantiate 
 Symbol kore_kseq
 MetaVar 0
@@ -3397,12 +3376,33 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'k'-GT-'
+Symbol <k>
 MetaVar 0
 App
 Instantiate 0
 EVar 0
-Symbol ksym_Lbl'-LT-'generatedTop'-GT-'
+Symbol <generatedTop>
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol #next_TREE-REVERSE-SYNTAX_KItem
+Instantiate 
+Symbol dotk
+Instantiate 
+Symbol kore_kseq
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol <k>
+MetaVar 0
+App
+Instantiate 0
+EVar 0
+Symbol <generatedTop>
 MetaVar 0
 App
 MetaVar 1
@@ -3471,7 +3471,7 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'generatedCounter'-GT-'
+Symbol <generatedCounter>
 MetaVar 0
 App
 Instantiate 0
@@ -3526,9 +3526,9 @@ Exists 0
 Instantiate 0
 Publish
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lbl'Hash'next'Unds'TREE-REVERSE-SYNTAX'Unds'KItem
+Symbol #next_TREE-REVERSE-SYNTAX_KItem
 Instantiate 
-Symbol ksym_dotk
+Symbol dotk
 Instantiate 
 Symbol kore_kseq
 MetaVar 0
@@ -3536,12 +3536,12 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'k'-GT-'
+Symbol <k>
 MetaVar 0
 App
 Instantiate 0
 EVar 0
-Symbol ksym_Lbl'-LT-'generatedTop'-GT-'
+Symbol <generatedTop>
 MetaVar 0
 App
 MetaVar 1
@@ -3549,21 +3549,21 @@ App
 Instantiate 0, 1
 Symbol ksort_SortTree
 Symbol ksort_SortKItem
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_inj
+Symbol inj
 MetaVar 0
 App
 MetaVar 1
@@ -3571,7 +3571,7 @@ App
 MetaVar 2
 App
 Instantiate 0, 1, 2
-Symbol ksym_dotk
+Symbol dotk
 Instantiate 
 Symbol kore_kseq
 MetaVar 0
@@ -3579,12 +3579,12 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'k'-GT-'
+Symbol <k>
 MetaVar 0
 App
 Instantiate 0
 EVar 0
-Symbol ksym_Lbl'-LT-'generatedTop'-GT-'
+Symbol <generatedTop>
 MetaVar 0
 App
 MetaVar 1
@@ -3656,7 +3656,7 @@ Symbol ksort_SortGeneratedTopCell
 EVar 0
 EVar 1
 EVar 2
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -3851,21 +3851,21 @@ Instantiate 0, 1
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
 EVar 0
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
 EVar 2
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
 EVar 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -4159,7 +4159,7 @@ Instantiate 0, 1, 2
 Publish
 EVar 1
 EVar 2
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -4215,7 +4215,7 @@ Instantiate 0, 1
 Exists 0
 Instantiate 0
 Publish
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 MetaVar 0eFresh, len=1 x0 
 
@@ -4267,7 +4267,7 @@ Instantiate 0, 1
 Exists 0
 Instantiate 0
 Publish
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 MetaVar 0eFresh, len=1 x0 
 
@@ -4328,7 +4328,7 @@ Instantiate 0
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
 EVar 0
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 EVar 1
 MetaVar 0
@@ -4539,7 +4539,7 @@ Instantiate 0, 1
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
 EVar 0
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -4839,7 +4839,7 @@ Instantiate 0
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
 EVar 0
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 EVar 1
 MetaVar 0
@@ -5050,7 +5050,7 @@ Instantiate 0, 1
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
 EVar 0
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0

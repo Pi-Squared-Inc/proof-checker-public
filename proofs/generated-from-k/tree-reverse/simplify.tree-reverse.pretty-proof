@@ -1,28 +1,7 @@
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lbl'Hash'Init'Unds'TREE-REVERSE-SYNTAX'Unds'KItem
+Symbol #Init_TREE-REVERSE-SYNTAX_KItem
 Instantiate 
-Symbol ksym_dotk
-Instantiate 
-Symbol kore_kseq
-MetaVar 0
-App
-MetaVar 1
-App
-Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'k'-GT-'
-MetaVar 0
-App
-Instantiate 0
-EVar 0
-Symbol ksym_Lbl'-LT-'generatedTop'-GT-'
-MetaVar 0
-App
-MetaVar 1
-App
-Instantiate 0, 1
-Symbol ksym_Lbl'Hash'next'Unds'TREE-REVERSE-SYNTAX'Unds'KItem
-Instantiate 
-Symbol ksym_dotk
+Symbol dotk
 Instantiate 
 Symbol kore_kseq
 MetaVar 0
@@ -30,12 +9,33 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'k'-GT-'
+Symbol <k>
 MetaVar 0
 App
 Instantiate 0
 EVar 0
-Symbol ksym_Lbl'-LT-'generatedTop'-GT-'
+Symbol <generatedTop>
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol #next_TREE-REVERSE-SYNTAX_KItem
+Instantiate 
+Symbol dotk
+Instantiate 
+Symbol kore_kseq
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol <k>
+MetaVar 0
+App
+Instantiate 0
+EVar 0
+Symbol <generatedTop>
 MetaVar 0
 App
 MetaVar 1
@@ -103,40 +103,19 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'generatedCounter'-GT-'
+Symbol <generatedCounter>
 MetaVar 0
 App
 Instantiate 0
 Load Axiom ((∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0]) -> ((phi0 -> (μ X0 . X0)[])[0: (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: phi0])][0: phi1] -> phi1[phi0/x0]))=0
 Instantiate 0
-Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: (ksym_Lbl'-LT-'generatedCounter'-GT-' · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]=14
+Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]=14
 ModusPonens
 Instantiate 1
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lbl'Hash'Init'Unds'TREE-REVERSE-SYNTAX'Unds'KItem
+Symbol #Init_TREE-REVERSE-SYNTAX_KItem
 Instantiate 
-Symbol ksym_dotk
-Instantiate 
-Symbol kore_kseq
-MetaVar 0
-App
-MetaVar 1
-App
-Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'k'-GT-'
-MetaVar 0
-App
-Instantiate 0
-EVar 0
-Symbol ksym_Lbl'-LT-'generatedTop'-GT-'
-MetaVar 0
-App
-MetaVar 1
-App
-Instantiate 0, 1
-Symbol ksym_Lbl'Hash'next'Unds'TREE-REVERSE-SYNTAX'Unds'KItem
-Instantiate 
-Symbol ksym_dotk
+Symbol dotk
 Instantiate 
 Symbol kore_kseq
 MetaVar 0
@@ -144,12 +123,33 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'k'-GT-'
+Symbol <k>
 MetaVar 0
 App
 Instantiate 0
 EVar 0
-Symbol ksym_Lbl'-LT-'generatedTop'-GT-'
+Symbol <generatedTop>
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol #next_TREE-REVERSE-SYNTAX_KItem
+Instantiate 
+Symbol dotk
+Instantiate 
+Symbol kore_kseq
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol <k>
+MetaVar 0
+App
+Instantiate 0
+EVar 0
+Symbol <generatedTop>
 MetaVar 0
 App
 MetaVar 1
@@ -355,32 +355,32 @@ Prop1
 Instantiate 1
 ModusPonens
 Instantiate 0
-Load Axiom ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]][0: ksort_SortGeneratedTopCell, 1: ((ksym_Lbl'-LT-'generatedTop'-GT-' · phi0) · phi1)[0: (ksym_Lbl'-LT-'k'-GT-' · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ksym_Lbl'Hash'Init'Unds'TREE-REVERSE-SYNTAX'Unds'KItem[], 1: ksym_dotk[]]], 1: x0], 2: ((ksym_Lbl'-LT-'generatedTop'-GT-' · phi0) · phi1)[0: (ksym_Lbl'-LT-'k'-GT-' · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ksym_Lbl'Hash'next'Unds'TREE-REVERSE-SYNTAX'Unds'KItem[], 1: ksym_dotk[]]], 1: x0]]=13
+Load Axiom ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]][0: ksort_SortGeneratedTopCell, 1: ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: #Init_TREE-REVERSE-SYNTAX_KItem[], 1: dotk[]]], 1: x0], 2: ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: #next_TREE-REVERSE-SYNTAX_KItem[], 1: dotk[]]], 1: x0]]=13
 ModusPonens
 Generalization 0
 ModusPonens
 Publish
 	Stack:
-	0: ⊢ (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_Lbl'Hash'Init'Unds'TREE-REVERSE-SYNTAX'Unds'KItem() ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_Lbl'Hash'next'Unds'TREE-REVERSE-SYNTAX'Unds'KItem() ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	0: ⊢ (<generatedTop> <k> (#Init_TREE-REVERSE-SYNTAX_KItem() ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop> k=> <generatedTop> <k> (#next_TREE-REVERSE-SYNTAX_KItem() ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop>):ksort_SortGeneratedTopCell
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
 Symbol ksort_SortTree
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
 Symbol ksort_SortKItem
-Symbol ksym_inj
+Symbol inj
 MetaVar 0
 App
 MetaVar 1
@@ -388,7 +388,7 @@ App
 MetaVar 2
 App
 Instantiate 0, 2, 1
-Symbol ksym_dotk
+Symbol dotk
 Instantiate 
 Symbol kore_kseq
 MetaVar 0
@@ -396,7 +396,7 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'k'-GT-'
+Symbol <k>
 MetaVar 0
 App
 Instantiate 0
@@ -408,11 +408,11 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'generatedCounter'-GT-'
+Symbol <generatedCounter>
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lbl'-LT-'generatedTop'-GT-'
+Symbol <generatedTop>
 MetaVar 0
 App
 MetaVar 1
@@ -423,18 +423,18 @@ MetaVar 0
 App
 Instantiate 0
 Symbol ksort_SortTree
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
 Symbol ksort_SortKItem
-Symbol ksym_inj
+Symbol inj
 MetaVar 0
 App
 MetaVar 1
@@ -442,7 +442,7 @@ App
 MetaVar 2
 App
 Instantiate 0, 2, 1
-Symbol ksym_dotk
+Symbol dotk
 Instantiate 
 Symbol kore_kseq
 MetaVar 0
@@ -450,7 +450,7 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'k'-GT-'
+Symbol <k>
 MetaVar 0
 App
 Instantiate 0
@@ -462,11 +462,11 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'generatedCounter'-GT-'
+Symbol <generatedCounter>
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lbl'-LT-'generatedTop'-GT-'
+Symbol <generatedTop>
 MetaVar 0
 App
 MetaVar 1
@@ -476,9 +476,9 @@ Symbol kore_next
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lbl'Hash'next'Unds'TREE-REVERSE-SYNTAX'Unds'KItem
+Symbol #next_TREE-REVERSE-SYNTAX_KItem
 Instantiate 
-Symbol ksym_dotk
+Symbol dotk
 Instantiate 
 Symbol kore_kseq
 MetaVar 0
@@ -486,7 +486,7 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'k'-GT-'
+Symbol <k>
 MetaVar 0
 App
 Instantiate 0
@@ -498,11 +498,11 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'generatedCounter'-GT-'
+Symbol <generatedCounter>
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lbl'-LT-'generatedTop'-GT-'
+Symbol <generatedTop>
 MetaVar 0
 App
 MetaVar 1
@@ -512,25 +512,25 @@ Load Axiom ((phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi
 Instantiate 0, 1, 2, 3, 4
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -539,7 +539,7 @@ Instantiate 0, 1
 Symbol ksort_SortTree
 Symbol ksort_SortKItem
 EVar 0
-Symbol ksym_inj
+Symbol inj
 MetaVar 0
 App
 MetaVar 1
@@ -547,7 +547,7 @@ App
 MetaVar 2
 App
 Instantiate 0, 1, 2
-Symbol ksym_dotk
+Symbol dotk
 Instantiate 
 Symbol kore_kseq
 MetaVar 0
@@ -555,7 +555,7 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'k'-GT-'
+Symbol <k>
 MetaVar 0
 App
 Instantiate 0
@@ -567,11 +567,11 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'generatedCounter'-GT-'
+Symbol <generatedCounter>
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lbl'-LT-'generatedTop'-GT-'
+Symbol <generatedTop>
 MetaVar 0
 App
 MetaVar 1
@@ -581,89 +581,39 @@ Load Axiom ((phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi
 Instantiate 0, 1, 2, 3, 4
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
-MetaVar 0
-App
-MetaVar 1
-App
-Instantiate 0, 1
-Load Axiom ((phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi3] -> ((phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi3, 3: phi4] -> (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi4]))=12
-Instantiate 0, 1, 2, 3, 4
-Symbol ksort_SortTree
-Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
-Instantiate 
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
-Instantiate 
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
-MetaVar 0
-App
-MetaVar 1
-App
-Instantiate 0, 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
-MetaVar 0
-App
-Instantiate 0
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
-Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
-MetaVar 0
-App
-Instantiate 0
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
-Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
-MetaVar 0
-App
-Instantiate 0
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
-MetaVar 0
-App
-MetaVar 1
-App
-Instantiate 0, 1
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
-Instantiate 
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
-Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
-MetaVar 0
-App
-Instantiate 0
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -673,47 +623,47 @@ Load Axiom ((phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi
 Instantiate 0, 1, 2, 3, 4
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
+MetaVar 0
+App
+Instantiate 0
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
+MetaVar 0
+App
+Instantiate 0
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
-MetaVar 0
-App
-Instantiate 0
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
-MetaVar 0
-App
-Instantiate 0
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -723,17 +673,67 @@ Load Axiom ((phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi
 Instantiate 0, 1, 2, 3, 4
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
+MetaVar 0
+App
+Instantiate 0
+Symbol a_TREE-REVERSE-SYNTAX_Tree
+Instantiate 
+Symbol b_TREE-REVERSE-SYNTAX_Tree
+Instantiate 
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
+MetaVar 0
+App
+Instantiate 0
+Symbol b_TREE-REVERSE-SYNTAX_Tree
+Instantiate 
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
+MetaVar 0
+App
+Instantiate 0
+Symbol a_TREE-REVERSE-SYNTAX_Tree
+Instantiate 
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
+MetaVar 0
+App
+Instantiate 0
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Load Axiom ((phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi3] -> ((phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi3, 3: phi4] -> (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi4]))=12
+Instantiate 0, 1, 2, 3, 4
+Symbol ksort_SortTree
+Symbol ksort_SortGeneratedTopCell
+Symbol a_TREE-REVERSE-SYNTAX_Tree
+Instantiate 
+Symbol b_TREE-REVERSE-SYNTAX_Tree
+Instantiate 
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -741,33 +741,33 @@ Load Axiom (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1
 Instantiate 0, 1, 2
 ModusPonens
 EVar 2
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
 Symbol ksort_SortTree
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 EVar 2
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -987,41 +987,41 @@ Instantiate 0, 1
 Instantiate 0, 1
 Instantiate 0, 1, 2
 Instantiate 3, 0, 2, 1
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Load Axiom ((∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0]) -> ((phi0 -> (μ X0 . X0)[])[0: (∃ x2 . (phi0 -> (μ X0 . X0)[])[0: phi0])][0: phi1] -> phi1[phi0/x2]))=24
 Instantiate 0
-Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree[]]=19
+Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: b_TREE-REVERSE-SYNTAX_Tree[]]=19
 ModusPonens
 Instantiate 1
 EVar 2
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
 Symbol ksort_SortTree
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 EVar 2
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -1391,27 +1391,27 @@ Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
 EVar 1
 EVar 2
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
 EVar 2
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
 EVar 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -1632,38 +1632,38 @@ Instantiate 0, 1
 Instantiate 0, 1
 Instantiate 0, 1, 2
 Instantiate 0, 1, 2, 3
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Load Axiom ((∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0]) -> ((phi0 -> (μ X0 . X0)[])[0: (∃ x1 . (phi0 -> (μ X0 . X0)[])[0: phi0])][0: phi1] -> phi1[phi0/x1]))=23
 Instantiate 0
-Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree[]]=18
+Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: a_TREE-REVERSE-SYNTAX_Tree[]]=18
 ModusPonens
 Instantiate 1
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
 EVar 1
 EVar 2
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
 EVar 2
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
 EVar 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -2034,27 +2034,27 @@ Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
 EVar 1
 EVar 2
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
 EVar 2
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
 EVar 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -2066,23 +2066,23 @@ Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
 EVar 1
 EVar 2
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
 EVar 2
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
 EVar 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -2115,13 +2115,13 @@ Instantiate 0, 1
 Symbol ksort_SortTree
 EVar 1
 EVar 2
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -2346,7 +2346,7 @@ Instantiate 0, 1, 2, 3
 Symbol ksort_SortGeneratedTopCell
 EVar 1
 EVar 2
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -2355,7 +2355,7 @@ Instantiate 0, 1
 Symbol ksort_SortTree
 EVar 1
 EVar 2
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -2506,16 +2506,16 @@ Instantiate 0, 1
 Instantiate 0, 1, 2
 Instantiate 3, 0, 2, 1
 EVar 2
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
 EVar 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -2548,13 +2548,13 @@ Instantiate 0, 1
 Symbol ksort_SortTree
 EVar 1
 EVar 2
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -2779,7 +2779,7 @@ Instantiate 0, 1, 2
 Symbol ksort_SortGeneratedTopCell
 EVar 1
 EVar 2
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -2788,7 +2788,7 @@ Instantiate 0, 1
 Symbol ksort_SortTree
 EVar 1
 EVar 2
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -2963,16 +2963,16 @@ Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
 EVar 2
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
 EVar 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -3005,13 +3005,13 @@ Instantiate 0, 1
 Symbol ksort_SortTree
 EVar 1
 EVar 2
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -3244,7 +3244,7 @@ Symbol ksort_SortGeneratedTopCell
 EVar 0
 EVar 1
 EVar 2
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -3439,21 +3439,21 @@ Instantiate 0, 1
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
 EVar 0
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
 EVar 2
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
 EVar 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -3746,7 +3746,7 @@ Instantiate 0, 1
 Instantiate 0, 1, 2
 EVar 1
 EVar 2
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -3754,7 +3754,7 @@ App
 Instantiate 0, 1
 Load Axiom ((∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0]) -> ((phi0 -> (μ X0 . X0)[])[0: (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: phi0])][0: phi1] -> phi1[phi0/x0]))=0
 Instantiate 0
-Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: ((ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree · phi0) · phi1)[0: x1, 1: x2]]=17
+Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: ((node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree · phi0) · phi1)[0: x1, 1: x2]]=17
 ModusPonens
 Instantiate 1
 Symbol ksort_SortGeneratedTopCell
@@ -3768,7 +3768,7 @@ Symbol ksort_SortGeneratedTopCell
 EVar 0
 EVar 1
 EVar 2
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -3963,21 +3963,21 @@ Instantiate 0, 1
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
 EVar 0
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
 EVar 2
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
 EVar 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -4414,7 +4414,7 @@ Prop1
 Instantiate 1
 ModusPonens
 Instantiate 0
-Load Axiom ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: ksort_SortGeneratedTopCell, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: (inhabitant · phi0)[0: ksort_SortGeneratedTopCell], 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi3]][0: ksort_SortTree, 1: ksort_SortGeneratedTopCell, 2: x0, 3: ((ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree · phi0) · phi1)[0: x1, 1: x2]], 1: (inhabitant · phi0)[0: ksort_SortGeneratedTopCell]]], 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: ksort_SortTree, 1: ksort_SortGeneratedTopCell, 2: (ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree · phi0)[0: x0], 3: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree · phi0) · phi1)[0: (ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree · phi0)[0: x2], 1: (ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree · phi0)[0: x1]], 1: (inhabitant · phi0)[0: ksort_SortTree]]]]=16
+Load Axiom ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: ksort_SortGeneratedTopCell, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: (inhabitant · phi0)[0: ksort_SortGeneratedTopCell], 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi3]][0: ksort_SortTree, 1: ksort_SortGeneratedTopCell, 2: x0, 3: ((node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree · phi0) · phi1)[0: x1, 1: x2]], 1: (inhabitant · phi0)[0: ksort_SortGeneratedTopCell]]], 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: ksort_SortTree, 1: ksort_SortGeneratedTopCell, 2: (reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree · phi0)[0: x0], 3: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree · phi0) · phi1)[0: (reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree · phi0)[0: x2], 1: (reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree · phi0)[0: x1]], 1: (inhabitant · phi0)[0: ksort_SortTree]]]]=16
 ModusPonens
 Generalization 0
 ModusPonens
@@ -4432,22 +4432,22 @@ ModusPonens
 ModusPonens
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 EVar 0
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -4457,27 +4457,27 @@ Load Axiom ((phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi
 Instantiate 0, 1, 2, 3, 4
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Load Axiom ((phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi3] -> ((phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi3, 3: phi4] -> (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi4]))=12
 Instantiate 0, 1, 2, 3, 4
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -4486,13 +4486,13 @@ Instantiate 0, 1, 2
 ModusPonens
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 MetaVar 0
 MetaVar 1
@@ -4709,22 +4709,22 @@ Instantiate 0, 1
 Instantiate 0, 1
 Instantiate 0, 1, 2
 Instantiate 0, 1, 2, 3
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Load Axiom ((∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0]) -> ((phi0 -> (μ X0 . X0)[])[0: (∃ x1 . (phi0 -> (μ X0 . X0)[])[0: phi0])][0: phi1] -> phi1[phi0/x1]))=23
 Instantiate 0
-Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree[]]=19
+Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: b_TREE-REVERSE-SYNTAX_Tree[]]=19
 ModusPonens
 Instantiate 1
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 MetaVar 0
 MetaVar 1
@@ -5089,21 +5089,21 @@ ModusPonens
 Instantiate 0
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Load Axiom ((phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: phi3, 1: (inhabitant · phi0)[0: phi0]]] -> (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi3])=3
 Instantiate 0, 1, 2, 3
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Symbol ksort_SortTree
 Symbol inhabitant
@@ -5130,9 +5130,9 @@ Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
 Symbol ksort_SortTree
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -5355,9 +5355,9 @@ Instantiate 3, 0, 2, 1
 Load Axiom (((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: phi3, 1: phi4]][0: phi0, 1: phi1, 2: phi2, 3: phi2, 4: phi2], 2: phi3] -> phi3)=4
 Instantiate 0, 1, 2, 3
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 MetaVar 0
 MetaVar 1
@@ -5379,7 +5379,7 @@ Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
 Symbol ksort_SortTree
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Symbol ksort_SortGeneratedTopCell
 MetaVar 0
@@ -5525,7 +5525,7 @@ Instantiate 0, 1
 Instantiate 0, 1
 Instantiate 0, 1, 2
 Instantiate 3, 0, 2, 1
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Symbol ksort_SortTree
 Symbol inhabitant
@@ -5552,9 +5552,9 @@ Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
 Symbol ksort_SortTree
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -5777,9 +5777,9 @@ Instantiate 3, 0, 2, 1
 Load Axiom (((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: phi1, 1: (inhabitant · phi0)[0: phi0]], 2: phi2] -> ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2])=7
 Instantiate 0, 1, 2
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 MetaVar 0
 MetaVar 1
@@ -5801,7 +5801,7 @@ Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
 Symbol ksort_SortTree
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Symbol ksort_SortGeneratedTopCell
 MetaVar 0
@@ -5971,7 +5971,7 @@ Implies
 Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Symbol ksort_SortTree
 Symbol inhabitant
@@ -5998,9 +5998,9 @@ Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
 Symbol ksort_SortTree
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -6249,9 +6249,9 @@ Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
 Symbol ksort_SortTree
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -6476,7 +6476,7 @@ Symbol inhabitant
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 EVar 1
 MetaVar 0
@@ -6499,7 +6499,7 @@ Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
 Symbol ksort_SortTree
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Symbol ksort_SortGeneratedTopCell
 MetaVar 0
@@ -6734,11 +6734,11 @@ Implies
 Instantiate 0, 1
 Instantiate 0, 1
 Instantiate 0, 2, 1
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Load Axiom ((∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0]) -> ((phi0 -> (μ X0 . X0)[])[0: (∃ x1 . (phi0 -> (μ X0 . X0)[])[0: phi0])][0: phi1] -> phi1[phi0/x1]))=23
 Instantiate 0
-Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree[]]=19
+Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: b_TREE-REVERSE-SYNTAX_Tree[]]=19
 ModusPonens
 Instantiate 1
 Symbol ksort_SortGeneratedTopCell
@@ -6768,9 +6768,9 @@ Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
 Symbol ksort_SortTree
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -6995,7 +6995,7 @@ Symbol inhabitant
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 EVar 1
 MetaVar 0
@@ -7018,7 +7018,7 @@ Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
 Symbol ksort_SortTree
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Symbol ksort_SortGeneratedTopCell
 MetaVar 0
@@ -7408,7 +7408,7 @@ Instantiate 0
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
 EVar 0
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 EVar 1
 MetaVar 0
@@ -7619,7 +7619,7 @@ Instantiate 0, 1
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
 EVar 0
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -7909,11 +7909,11 @@ Implies
 Instantiate 0, 1
 Instantiate 0, 1
 Instantiate 0, 1, 2
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Load Axiom ((∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0]) -> ((phi0 -> (μ X0 . X0)[])[0: (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: phi0])][0: phi1] -> phi1[phi0/x0]))=0
 Instantiate 0
-Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree[]]=19
+Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: b_TREE-REVERSE-SYNTAX_Tree[]]=19
 ModusPonens
 Instantiate 1
 Symbol ksort_SortGeneratedTopCell
@@ -7925,7 +7925,7 @@ Instantiate 0
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
 EVar 0
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 EVar 1
 MetaVar 0
@@ -8136,7 +8136,7 @@ Instantiate 0, 1
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
 EVar 0
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -8572,7 +8572,7 @@ Prop1
 Instantiate 1
 ModusPonens
 Instantiate 0
-Load Axiom ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: ksort_SortGeneratedTopCell, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: (inhabitant · phi0)[0: ksort_SortGeneratedTopCell], 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi3]][0: ksort_SortTree, 1: ksort_SortGeneratedTopCell, 2: x0, 3: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree[], 1: x1]], 1: (inhabitant · phi0)[0: ksort_SortGeneratedTopCell]]], 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: ksort_SortTree, 1: ksort_SortGeneratedTopCell, 2: (ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree · phi0)[0: x0], 3: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: x1, 1: (inhabitant · phi0)[0: ksort_SortTree]]]]=20
+Load Axiom ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: ksort_SortGeneratedTopCell, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: (inhabitant · phi0)[0: ksort_SortGeneratedTopCell], 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi3]][0: ksort_SortTree, 1: ksort_SortGeneratedTopCell, 2: x0, 3: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: b_TREE-REVERSE-SYNTAX_Tree[], 1: x1]], 1: (inhabitant · phi0)[0: ksort_SortGeneratedTopCell]]], 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: ksort_SortTree, 1: ksort_SortGeneratedTopCell, 2: (reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree · phi0)[0: x0], 3: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: x1, 1: (inhabitant · phi0)[0: ksort_SortTree]]]]=20
 ModusPonens
 Generalization 0
 ModusPonens
@@ -8592,18 +8592,18 @@ ModusPonens
 ModusPonens
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 EVar 0
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
@@ -8613,27 +8613,27 @@ Load Axiom ((phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi
 Instantiate 0, 1, 2, 3, 4
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Load Axiom ((phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi3] -> ((phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi3, 3: phi4] -> (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi4]))=12
 Instantiate 0, 1, 2, 3, 4
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -8642,13 +8642,13 @@ Instantiate 0, 1, 2
 ModusPonens
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 MetaVar 0
 MetaVar 1
@@ -8865,22 +8865,22 @@ Instantiate 0, 1
 Instantiate 0, 1
 Instantiate 0, 1, 2
 Instantiate 0, 1, 2, 3
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Load Axiom ((∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0]) -> ((phi0 -> (μ X0 . X0)[])[0: (∃ x1 . (phi0 -> (μ X0 . X0)[])[0: phi0])][0: phi1] -> phi1[phi0/x1]))=23
 Instantiate 0
-Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree[]]=18
+Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: a_TREE-REVERSE-SYNTAX_Tree[]]=18
 ModusPonens
 Instantiate 1
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 MetaVar 0
 MetaVar 1
@@ -9245,21 +9245,21 @@ ModusPonens
 Instantiate 0
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Load Axiom ((phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: phi3, 1: (inhabitant · phi0)[0: phi0]]] -> (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi3])=3
 Instantiate 0, 1, 2, 3
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Symbol ksort_SortTree
 Symbol inhabitant
@@ -9286,9 +9286,9 @@ Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
 Symbol ksort_SortTree
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -9511,9 +9511,9 @@ Instantiate 3, 0, 2, 1
 Load Axiom (((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: phi3, 1: phi4]][0: phi0, 1: phi1, 2: phi2, 3: phi2, 4: phi2], 2: phi3] -> phi3)=4
 Instantiate 0, 1, 2, 3
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 MetaVar 0
 MetaVar 1
@@ -9535,7 +9535,7 @@ Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
 Symbol ksort_SortTree
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Symbol ksort_SortGeneratedTopCell
 MetaVar 0
@@ -9681,7 +9681,7 @@ Instantiate 0, 1
 Instantiate 0, 1
 Instantiate 0, 1, 2
 Instantiate 3, 0, 2, 1
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Symbol ksort_SortTree
 Symbol inhabitant
@@ -9708,9 +9708,9 @@ Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
 Symbol ksort_SortTree
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -9933,9 +9933,9 @@ Instantiate 3, 0, 2, 1
 Load Axiom (((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: phi1, 1: (inhabitant · phi0)[0: phi0]], 2: phi2] -> ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2])=7
 Instantiate 0, 1, 2
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 MetaVar 0
 MetaVar 1
@@ -9957,7 +9957,7 @@ Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
 Symbol ksort_SortTree
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Symbol ksort_SortGeneratedTopCell
 MetaVar 0
@@ -10127,7 +10127,7 @@ Implies
 Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Symbol ksort_SortTree
 Symbol inhabitant
@@ -10154,9 +10154,9 @@ Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
 Symbol ksort_SortTree
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -10405,9 +10405,9 @@ Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
 Symbol ksort_SortTree
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -10632,7 +10632,7 @@ Symbol inhabitant
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 EVar 1
 MetaVar 0
@@ -10655,7 +10655,7 @@ Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
 Symbol ksort_SortTree
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Symbol ksort_SortGeneratedTopCell
 MetaVar 0
@@ -10890,11 +10890,11 @@ Implies
 Instantiate 0, 1
 Instantiate 0, 1
 Instantiate 0, 2, 1
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Load Axiom ((∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0]) -> ((phi0 -> (μ X0 . X0)[])[0: (∃ x1 . (phi0 -> (μ X0 . X0)[])[0: phi0])][0: phi1] -> phi1[phi0/x1]))=23
 Instantiate 0
-Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree[]]=18
+Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: a_TREE-REVERSE-SYNTAX_Tree[]]=18
 ModusPonens
 Instantiate 1
 Symbol ksort_SortGeneratedTopCell
@@ -10924,9 +10924,9 @@ Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
 Symbol ksort_SortTree
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -11151,7 +11151,7 @@ Symbol inhabitant
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 EVar 1
 MetaVar 0
@@ -11174,7 +11174,7 @@ Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
 Symbol ksort_SortTree
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Symbol ksort_SortGeneratedTopCell
 MetaVar 0
@@ -11564,7 +11564,7 @@ Instantiate 0
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
 EVar 0
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 EVar 1
 MetaVar 0
@@ -11775,7 +11775,7 @@ Instantiate 0, 1
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
 EVar 0
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -12065,11 +12065,11 @@ Implies
 Instantiate 0, 1
 Instantiate 0, 1
 Instantiate 0, 1, 2
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 Load Axiom ((∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0]) -> ((phi0 -> (μ X0 . X0)[])[0: (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: phi0])][0: phi1] -> phi1[phi0/x0]))=0
 Instantiate 0
-Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree[]]=18
+Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: a_TREE-REVERSE-SYNTAX_Tree[]]=18
 ModusPonens
 Instantiate 1
 Symbol ksort_SortGeneratedTopCell
@@ -12081,7 +12081,7 @@ Instantiate 0
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
 EVar 0
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
 EVar 1
 MetaVar 0
@@ -12292,7 +12292,7 @@ Instantiate 0, 1
 Symbol ksort_SortTree
 Symbol ksort_SortGeneratedTopCell
 EVar 0
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
@@ -12728,7 +12728,7 @@ Prop1
 Instantiate 1
 ModusPonens
 Instantiate 0
-Load Axiom ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: ksort_SortGeneratedTopCell, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: (inhabitant · phi0)[0: ksort_SortGeneratedTopCell], 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi3]][0: ksort_SortTree, 1: ksort_SortGeneratedTopCell, 2: x0, 3: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree[], 1: x1]], 1: (inhabitant · phi0)[0: ksort_SortGeneratedTopCell]]], 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: ksort_SortTree, 1: ksort_SortGeneratedTopCell, 2: (ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree · phi0)[0: x0], 3: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: x1, 1: (inhabitant · phi0)[0: ksort_SortTree]]]]=21
+Load Axiom ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: ksort_SortGeneratedTopCell, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: (inhabitant · phi0)[0: ksort_SortGeneratedTopCell], 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi3]][0: ksort_SortTree, 1: ksort_SortGeneratedTopCell, 2: x0, 3: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: a_TREE-REVERSE-SYNTAX_Tree[], 1: x1]], 1: (inhabitant · phi0)[0: ksort_SortGeneratedTopCell]]], 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: ksort_SortTree, 1: ksort_SortGeneratedTopCell, 2: (reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree · phi0)[0: x0], 3: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: x1, 1: (inhabitant · phi0)[0: ksort_SortTree]]]]=21
 ModusPonens
 Generalization 0
 ModusPonens
@@ -12748,9 +12748,9 @@ ModusPonens
 ModusPonens
 ModusPonens
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lbl'Hash'next'Unds'TREE-REVERSE-SYNTAX'Unds'KItem
+Symbol #next_TREE-REVERSE-SYNTAX_KItem
 Instantiate 
-Symbol ksym_dotk
+Symbol dotk
 Instantiate 
 Symbol kore_kseq
 MetaVar 0
@@ -12758,12 +12758,12 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'k'-GT-'
+Symbol <k>
 MetaVar 0
 App
 Instantiate 0
 EVar 0
-Symbol ksym_Lbl'-LT-'generatedTop'-GT-'
+Symbol <generatedTop>
 MetaVar 0
 App
 MetaVar 1
@@ -12771,21 +12771,21 @@ App
 Instantiate 0, 1
 Symbol ksort_SortTree
 Symbol ksort_SortKItem
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_inj
+Symbol inj
 MetaVar 0
 App
 MetaVar 1
@@ -12793,7 +12793,7 @@ App
 MetaVar 2
 App
 Instantiate 0, 1, 2
-Symbol ksym_dotk
+Symbol dotk
 Instantiate 
 Symbol kore_kseq
 MetaVar 0
@@ -12801,12 +12801,12 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'k'-GT-'
+Symbol <k>
 MetaVar 0
 App
 Instantiate 0
 EVar 0
-Symbol ksym_Lbl'-LT-'generatedTop'-GT-'
+Symbol <generatedTop>
 MetaVar 0
 App
 MetaVar 1
@@ -12874,19 +12874,19 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'generatedCounter'-GT-'
+Symbol <generatedCounter>
 MetaVar 0
 App
 Instantiate 0
 Load Axiom ((∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0]) -> ((phi0 -> (μ X0 . X0)[])[0: (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: phi0])][0: phi1] -> phi1[phi0/x0]))=0
 Instantiate 0
-Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: (ksym_Lbl'-LT-'generatedCounter'-GT-' · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]=14
+Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]=14
 ModusPonens
 Instantiate 1
 Symbol ksort_SortGeneratedTopCell
-Symbol ksym_Lbl'Hash'next'Unds'TREE-REVERSE-SYNTAX'Unds'KItem
+Symbol #next_TREE-REVERSE-SYNTAX_KItem
 Instantiate 
-Symbol ksym_dotk
+Symbol dotk
 Instantiate 
 Symbol kore_kseq
 MetaVar 0
@@ -12894,12 +12894,12 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'k'-GT-'
+Symbol <k>
 MetaVar 0
 App
 Instantiate 0
 EVar 0
-Symbol ksym_Lbl'-LT-'generatedTop'-GT-'
+Symbol <generatedTop>
 MetaVar 0
 App
 MetaVar 1
@@ -12907,21 +12907,21 @@ App
 Instantiate 0, 1
 Symbol ksort_SortTree
 Symbol ksort_SortKItem
-Symbol ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol a_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree
+Symbol b_TREE-REVERSE-SYNTAX_Tree
 Instantiate 
-Symbol ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree
+Symbol node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree
+Symbol reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree
 MetaVar 0
 App
 Instantiate 0
-Symbol ksym_inj
+Symbol inj
 MetaVar 0
 App
 MetaVar 1
@@ -12929,7 +12929,7 @@ App
 MetaVar 2
 App
 Instantiate 0, 1, 2
-Symbol ksym_dotk
+Symbol dotk
 Instantiate 
 Symbol kore_kseq
 MetaVar 0
@@ -12937,12 +12937,12 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksym_Lbl'-LT-'k'-GT-'
+Symbol <k>
 MetaVar 0
 App
 Instantiate 0
 EVar 0
-Symbol ksym_Lbl'-LT-'generatedTop'-GT-'
+Symbol <generatedTop>
 MetaVar 0
 App
 MetaVar 1
@@ -13148,12 +13148,12 @@ Prop1
 Instantiate 1
 ModusPonens
 Instantiate 0
-Load Axiom ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]][0: ksort_SortGeneratedTopCell, 1: ((ksym_Lbl'-LT-'generatedTop'-GT-' · phi0) · phi1)[0: (ksym_Lbl'-LT-'k'-GT-' · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ksym_Lbl'Hash'next'Unds'TREE-REVERSE-SYNTAX'Unds'KItem[], 1: ksym_dotk[]]], 1: x0], 2: ((ksym_Lbl'-LT-'generatedTop'-GT-' · phi0) · phi1)[0: (ksym_Lbl'-LT-'k'-GT-' · phi0)[0: ((kore_kseq · phi0) · phi1)[0: (((ksym_inj · phi0) · phi1) · phi2)[0: ksort_SortTree, 1: ksort_SortKItem, 2: (ksym_Lblreverse'LParUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree · phi0)[0: ((ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree · phi0) · phi1)[0: ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree[], 1: ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree[]]]], 1: ksym_dotk[]]], 1: x0]]=15
+Load Axiom ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]][0: ksort_SortGeneratedTopCell, 1: ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: #next_TREE-REVERSE-SYNTAX_KItem[], 1: dotk[]]], 1: x0], 2: ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: (((inj · phi0) · phi1) · phi2)[0: ksort_SortTree, 1: ksort_SortKItem, 2: (reverse(_)_TREE-REVERSE-SYNTAX_Tree_Tree · phi0)[0: ((node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree · phi0) · phi1)[0: a_TREE-REVERSE-SYNTAX_Tree[], 1: b_TREE-REVERSE-SYNTAX_Tree[]]]], 1: dotk[]]], 1: x0]]=15
 ModusPonens
 Generalization 0
 ModusPonens
 ModusPonens
 Publish
 	Stack:
-	0: ⊢ (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_Lbl'Hash'Init'Unds'TREE-REVERSE-SYNTAX'Unds'KItem() ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'> k=> <ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_Lbl'Hash'next'Unds'TREE-REVERSE-SYNTAX'Unds'KItem() ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
-	1: ⊢ (<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_Lbl'Hash'next'Unds'TREE-REVERSE-SYNTAX'Unds'KItem() ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'> k-> ♦<ksym_Lbl'-LT-'generatedTop'-GT-'> <ksym_Lbl'-LT-'k'-GT-'> (ksym_inj(ksort_SortTree, ksort_SortKItem, ksym_Lblnode'LParUndsCommUndsRParUnds'TREE-REVERSE-SYNTAX'Unds'Tree'Unds'Tree'Unds'Tree(ksym_Lblb'Unds'TREE-REVERSE-SYNTAX'Unds'Tree(), ksym_Lbla'Unds'TREE-REVERSE-SYNTAX'Unds'Tree())) ~> ksym_dotk()) </ksym_Lbl'-LT-'k'-GT-'> <ksym_Lbl'-LT-'generatedCounter'-GT-'> dv(0):ksort_SortInt </ksym_Lbl'-LT-'generatedCounter'-GT-'> </ksym_Lbl'-LT-'generatedTop'-GT-'>):ksort_SortGeneratedTopCell
+	0: ⊢ (<generatedTop> <k> (#Init_TREE-REVERSE-SYNTAX_KItem() ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop> k=> <generatedTop> <k> (#next_TREE-REVERSE-SYNTAX_KItem() ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop>):ksort_SortGeneratedTopCell
+	1: ⊢ (<generatedTop> <k> (#next_TREE-REVERSE-SYNTAX_KItem() ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop> k-> ♦<generatedTop> <k> (inj(ksort_SortTree, ksort_SortKItem, node(_,_)_TREE-REVERSE-SYNTAX_Tree_Tree_Tree(b_TREE-REVERSE-SYNTAX_Tree(), a_TREE-REVERSE-SYNTAX_Tree())) ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop>):ksort_SortGeneratedTopCell
