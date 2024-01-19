@@ -204,6 +204,10 @@ fi
 # Translate the binary files into the unique input JSON file accepted by zkLLVM
 # Check if the input directory contains the input files necessaries for the translator
 input_filename=$(basename "$input")
+alen=27001
+clen=27001
+plen=27001
+maxlen=27001
 if [ "$translate_input" == true ]; then
     # Check if the input directory exists
     if [ ! -d "$input" ]; then
@@ -226,15 +230,16 @@ if [ "$translate_input" == true ]; then
         exit 1
     fi
 
-    # Setting the inputs variable
-    gamma="$input/$input_filename.ml-gamma"
-    claim="$input/$input_filename.ml-claim"
-    proof="$input/$input_filename.ml-proof"
-
     # Execute the translator with the input files and save the output to a temporary file
     tmp_input_file=$(mktemp)
 
-    ./translator.py "$gamma" "$claim" "$proof" > "$tmp_input_file"
+    result=$(python3 $bash_source_dir/translator.py "$input" -o "$tmp_input_file")
+
+    IFS=', ' read -r -a arr <<< "$result"
+    alen=${arr[0]}
+    clen=${arr[1]}
+    plen=${arr[2]}
+    maxlen=${arr[3]}
 else
     if [ ! -f "$input" ]; then
         echo "Input directory does not exist"
@@ -290,7 +295,7 @@ OUTPUT_TABLE="$output_dir/assignment_table.tbl"
 
 
 # Compile the program to LLVM IR
-$clang -target assigner \
+$clang -DALEN=${alen} -DCLEN=${clen} -DPLEN=${plen} -DMAXLEN=${maxlen} -target assigner \
     -Xclang -fpreserve-vec3-type -Werror=unknown-attributes \
     -D_LIBCPP_ENABLE_CXX17_REMOVED_UNARY_BINARY_FUNCTION -D__ZKLLVM__ \
     -I "${crypto3_lib_dir}"/libs/algebra/include \
@@ -325,7 +330,6 @@ $clang -target assigner \
     -I "${main_file_path}/../../cpp/src" \
     -I "${main_file_path}/../../cpp" \
     -emit-llvm -O1 -S -std=c++20 "$main_source" -o "$OUTPUT_CLANG"
-
 
 # Link the program with the ZKLLVM libc
 ${llvm_link} -S "$OUTPUT_CLANG" -o "$OUTPUT_LLVM_LINK_1"

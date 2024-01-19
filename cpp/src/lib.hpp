@@ -4,7 +4,21 @@
 #include <iostream>
 #include <memory>
 
-#define MAX_SIZE 27001 // For Simple transfer 1785 is enough
+#ifndef ALEN
+#define ALEN 27001
+#endif
+
+#ifndef CLEN
+#define CLEN 27001
+#endif
+
+#ifndef PLEN
+#define PLEN 27001
+#endif
+
+#ifndef MAXLEN
+#define MAXLEN 27001
+#endif
 
 enum class Instruction : int {
   // Patterns
@@ -977,7 +991,7 @@ struct Pattern {
   enum class ExecutionPhase { Gamma, Claim, Proof };
 
   static void
-  read_u8_vec(std::array<int, MAX_SIZE>::iterator &iterator, IdList *vec) noexcept {
+  read_u8_vec(std::array<int, MAXLEN>::iterator &iterator, IdList *vec) noexcept {
     auto size = *iterator;
     iterator++;
     for (int i = 0; i < size; i++) {
@@ -986,7 +1000,7 @@ struct Pattern {
     }
   }
 
-  static void execute_instructions(std::array<int, MAX_SIZE> &buffer,
+  static void execute_instructions(std::array<int, MAXLEN> &buffer,
                                    Stack &stack, Memory &memory, Claims &claims,
                                    ExecutionPhase phase) noexcept {
 
@@ -1436,9 +1450,9 @@ struct Pattern {
     }
   }
 
-  static int verify(std::array<int, MAX_SIZE> &gamma_buffer,
-                    std::array<int, MAX_SIZE> &claims_buffer,
-                    std::array<int, MAX_SIZE> &proof_buffer) noexcept {
+  static int verify(std::array<int, MAXLEN> &gamma_buffer,
+                    std::array<int, MAXLEN> &claims_buffer,
+                    std::array<int, MAXLEN> &proof_buffer) noexcept {
     auto claims = Claims();
     auto memory = Memory();
     auto stack = Stack();
