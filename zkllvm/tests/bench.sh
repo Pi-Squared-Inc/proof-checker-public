@@ -6,8 +6,10 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
-output_file="../$1"
-build_script="../../check_with_zkllvm.sh"
+bash_source_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+output_file="$bash_source_dir/$1"
+build_script="$bash_source_dir/../check_with_zkllvm.sh"
+pi2_proofs_dir="$bash_source_dir/../../proofs/translated"
 
 print_output() {
     { 
@@ -44,23 +46,22 @@ svm() {
 
 pi2-example() {
     (
-        cd proofs-of-proofs || exit
         echo "Running $1"
-        output=$($build_script --stats --transpiler --translate-input-off "$1.inp")
+        output=$($build_script --stats --transpiler "$pi2_proofs_dir/$1")
         print_output "$output" "$1"
     )
 }
 
 impreflex() {
-    pi2-example "impreflex"
+    pi2-example "impreflex-compressed-goal"
 }
 
 transfer-goal() {
-    pi2-example "transfer-goal"
+    pi2-example "transfer-simple-compressed-goal"
 }
 
 batch-transfer() {
-    pi2-example "batch-transfer-goal"
+    pi2-example "transfer-batch-1k-goal"
 }
 
 perceptron-goal() {
@@ -68,7 +69,7 @@ perceptron-goal() {
 }
 
 svm-goal() {
-    pi2-example "svm-goal"
+    pi2-example "svm5-goal"
 }
 
 direct() {

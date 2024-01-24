@@ -63,7 +63,7 @@ source ~/.zshrc
 
 Then you can build and execute the Proof-Checker with real input:
 ```bash
-./build.sh src/main.cpp tests/proofs-of-proofs/impreflex.inp
+./check_with_zkllvm.sh --transpiler --stats ../proofs/translated/impreflex-compressed-goal/
 ```
 
 If you want to run the Proof-Checker unit tests, you can use the followinf commands:
@@ -91,13 +91,10 @@ The rest of the vector is padded by NO-OP instruction till the fixed size is rea
 
 We have a python script translating the binary input:
 ```bash
-python3 translator.py <path-to-assumption> <path-to-claim> <path-to-proof>
+python3 translator.py <path-to-binary-input-dir> -o <output-file>
 ```
 
 For example,
 ```bash
-python3 translator.py \
-    ../proofs/translated/impreflex-compressed-goal/impreflex-compressed-goal.ml-gamma \
-    ../proofs/translated/impreflex-compressed-goal/impreflex-compressed-goal.ml-claim \
-    ../proofs/translated/impreflex-compressed-goal/impreflex-compressed-goal.ml-proof > tests/proofs-of-proofs/impreflex.inp
+python3 translator.py ../proofs/translated/impreflex-compressed-goal -o impreflex-compressed-goal.inp
 ```

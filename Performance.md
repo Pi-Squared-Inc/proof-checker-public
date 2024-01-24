@@ -152,19 +152,19 @@ binary input format, and therefore, all implementations will share these same
 inputs and have only one main implementation.
 
 #### zkLLVM (v0.1.11-48)
-Last Update: Jan 8th, 2024
+Last Update: Jan 22th, 2024
 |       Examples      |CPU Circuit Gen Time | CPU Prove+Verify Time |
 |:-------------------:|:-------------------:|:---------------------:|
-| impreflex           |               9.137 |              1373.576 |
-| transfer-goal       |             147.247 |                     ∞ |
-| batch-transfer-goal |            1407.846 |                     ∞ |
-| perceptron-goal     |             575.171 |                     ∞ |
-| svm-goal            |             585.308 |                     ∞ |
+| impreflex           |               0.585 |               298.686 |
+| transfer-goal       |              31.585 |             24905.477 |
+| batch-transfer-goal |             236.820 |                     ∞ |
+| perceptron-goal     |              94.530 |                     ∞ |
+| svm-goal            |              93.431 |                     ∞ |
 
 \* For the zkLLVM $PI^2$ implementation, we have the main implementation defined
-[here](https://github.com/runtimeverification/proof-checker/tree/main/zkllvm/src)
-and the inputs defined [here](https://github.com/runtimeverification/proof-checker/tree/main/zkllvm/tests/proofs-of-proofs).
-The inputs are split and encoded into three arrays on a file for each file to
+[here](https://github.com/runtimeverification/proof-checker/tree/main/zkllvm/src).
+We translate the inputs defined [here](https://github.com/runtimeverification/proof-checker/tree/main/proofs/translated).
+The binary inputs are split and encoded into three arrays on a file for each file to
 match the input requirements of the zkLLVM implementation.
 
 ## Implementation Details

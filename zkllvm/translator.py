@@ -9,7 +9,7 @@ def generate_zkllvm_input_from_file(file_path: str, suffix: str, fixed_size: int
     int_list = []
 
     filename = Path(file_path).stem + '.' + suffix
-    input_file = file_path + filename
+    input_file = Path(file_path).joinpath(filename)
     with open(input_file, 'rb') as f:
         while (byte := f.read(1)):
             int_list.append(int.from_bytes(byte, 'big'))
