@@ -1,5 +1,4 @@
 use debug::PrintTrait;
-
 #[cairofmt::skip]
 fn batch_transfer_goal() -> (Array<u8>, Array<u8>, Array<u8>) {
     'Batch Transfer goal ... '.print();

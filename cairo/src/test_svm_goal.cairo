@@ -1,5 +1,5 @@
 use debug::PrintTrait;
-
+#[cairofmt::skip]
 fn svm_goal() -> (Array<u8>, Array<u8>, Array<u8>) {
     'SVM goal ... '.print();
     'Reading proofs ... '.print();

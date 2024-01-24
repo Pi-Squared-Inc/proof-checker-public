@@ -1,5 +1,5 @@
 use debug::PrintTrait;
-
+#[cairofmt::skip]
 fn perceptron_goal() -> (Array<u8>, Array<u8>, Array<u8>) {
     'Perpecptron goal ... '.print();
     'Reading proofs ... '.print();

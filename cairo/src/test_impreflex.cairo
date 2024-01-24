@@ -1,5 +1,5 @@
 use debug::PrintTrait;
-
+#[cairofmt::skip]
 fn impreflex_goal() -> (Array<u8>, Array<u8>, Array<u8>) {
     'Impreflex goal ... '.print();
     'Reading proofs ... '.print();

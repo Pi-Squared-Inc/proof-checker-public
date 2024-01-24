@@ -68,6 +68,7 @@ trait PatternTrait {
     fn s_fresh(self: @Pattern, svar: Id) -> core::bool;
     fn positive(self: @Pattern, svar: Id) -> core::bool;
     fn negative(self: @Pattern, svar: Id) -> core::bool;
+    fn app_ctx_hole(self: @Pattern, evar: Id) -> core::bool;
     fn well_formed(self: @Pattern) -> core::bool;
     fn is_redundant_subst(self: @Pattern) -> core::bool;
 }
@@ -330,6 +331,43 @@ impl PatternTraitImpl of PatternTrait {
 
                 return pattern.negative(svar) && plug_negative_svar;
             },
+        }
+    }
+
+    fn app_ctx_hole(self: @Pattern, evar: Id) -> core::bool {
+        match self {
+            Pattern::EVar(name) => *name == evar,
+            Pattern::SVar(_) => false,
+            Pattern::Symbol(_) => false,
+            Pattern::Implies(_) => false,
+            Pattern::App(AppType{left,
+            right }) => {
+                let left = left.clone().unwrap().unbox();
+                let right = right.clone().unwrap().unbox();
+                (left.app_ctx_hole(evar) && right.e_fresh(evar))
+                    || (left.e_fresh(evar) && right.app_ctx_hole(evar))
+            },
+            Pattern::Exists(_) => false,
+            Pattern::Mu(_) => false,
+            Pattern::MetaVar(MetaVarType{app_ctx_holes, .. }) => { contains(app_ctx_holes, evar) },
+            Pattern::ESubst(ESubstType{pattern,
+            evar_id,
+            plug }) => {
+                let pattern = pattern.clone().unwrap().unbox();
+                let plug = plug.clone().unwrap().unbox();
+                if *evar_id == evar {
+                    pattern.app_ctx_hole(evar) && plug.app_ctx_hole(evar)
+                } else {
+                    (pattern.app_ctx_hole(evar) && plug.e_fresh(evar))
+                        || (pattern.app_ctx_hole(*evar_id)
+                            && plug.app_ctx_hole(evar)
+                            && pattern.e_fresh(evar))
+                }
+            },
+            Pattern::SSubst(_) => {
+                panic!("application context hole checking not supported for SSubst's");
+                true
+            }
         }
     }
 
@@ -843,6 +881,27 @@ mod tests {
         let negx1_implies_x1 = implies(neg_x1.clone(), x1.clone());
         assert!(negx1_implies_x1.positive(1));
         assert!(!negx1_implies_x1.negative(1));
+    }
+
+    #[test]
+    fn test_app_ctx_hole() {
+        assert!(!metavar_unconstrained(0).app_ctx_hole(0));
+        assert!(metavar(0, array![], array![], array![], array![], array![0]).app_ctx_hole(0));
+        assert!(evar(0).app_ctx_hole(0));
+        assert!(!evar(1).app_ctx_hole(0));
+        assert!(!svar(0).app_ctx_hole(0));
+        assert!(!symbol(0).app_ctx_hole(0));
+        assert!(!implies(evar(0), evar(1)).app_ctx_hole(0));
+        assert!(app(evar(0), evar(1)).app_ctx_hole(0));
+        assert!(app(evar(1), evar(0)).app_ctx_hole(0));
+        assert!(!app(evar(0), evar(0)).app_ctx_hole(0));
+        assert!(!app(evar(1), evar(1)).app_ctx_hole(0));
+        assert!(!exists(0, evar(0)).app_ctx_hole(0));
+        assert!(!exists(0, evar(1)).app_ctx_hole(0));
+        assert!(!exists(1, evar(0)).app_ctx_hole(0));
+        assert!(!exists(1, evar(1)).app_ctx_hole(0));
+        assert!(!mu(0, evar(0)).app_ctx_hole(0));
+        assert!(!mu(0, svar(0)).app_ctx_hole(0));
     }
 
     #[test]

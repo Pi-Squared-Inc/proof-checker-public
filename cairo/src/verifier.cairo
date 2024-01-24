@@ -379,12 +379,13 @@ fn instantiate_internal(
         s_fresh,
         positive,
         negative,
-        .. }) => {
+        app_ctx_holes, }) => {
             let mut pos: u32 = 0;
             let mut e_fresh = e_fresh.clone();
             let mut s_fresh = s_fresh.clone();
             let mut negative = negative.clone();
             let mut positive = positive.clone();
+            let mut app_ctx_holes = app_ctx_holes.clone();
             let mut ret: Option<Pattern> = Option::None;
             let plugs_as_ref: @Array<Pattern> = @plugs;
             let mut vars_clone = vars.clone();
@@ -449,6 +450,22 @@ fn instantiate_internal(
                                                 "Instantiation of MetaVar {} breaks a negativity constraint: SVar {:?}",
                                                 id,
                                                 svar
+                                            );
+                                        }
+                                    },
+                                    Option::None => { break; }
+                                }
+                            };
+
+                            loop {
+                                match app_ctx_holes.pop_front() {
+                                    Option::Some(evar) => {
+                                        let plug: @Pattern = plugs_as_ref.at(pos);
+                                        if !plug.app_ctx_hole(evar) {
+                                            panic!(
+                                                "Instantiation of MetaVar {} breaks an application context hole constraint: EVar {}",
+                                                id,
+                                                evar
                                             );
                                         }
                                     },

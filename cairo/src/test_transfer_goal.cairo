@@ -1,5 +1,5 @@
 use debug::PrintTrait;
-
+#[cairofmt::skip]
 fn transfer_goal() -> (Array<u8>, Array<u8>, Array<u8>) {
     'Transfer goal ... '.print();
     'Reading proofs ... '.print();
