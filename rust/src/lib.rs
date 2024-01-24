@@ -3,9 +3,11 @@
 
 extern crate alloc;
 
-use alloc::rc::Rc;
+use alloc::boxed::Box;
+use alloc::fmt;
 use alloc::vec;
 use alloc::vec::Vec;
+use core::ops::Deref;
 
 /// Instructions
 /// ============
@@ -91,26 +93,76 @@ impl Instruction {
 type Id = u8;
 type IdList = Vec<Id>;
 
+pub struct Ptr<T> {
+    ptr: *const T,
+}
+
+impl<T> Ptr<T> {
+    fn new(x: T) -> Self {
+        Ptr {
+            ptr: Box::leak(Box::new(x)),
+        }
+    }
+
+    fn is(&self, other: &Self) -> bool {
+        (*self).ptr == (*other).ptr
+    }
+}
+
+impl<T> Copy for Ptr<T> {}
+impl<T> Clone for Ptr<T> {
+    fn clone(&self) -> Self {
+        Ptr { ptr: self.ptr }
+    }
+}
+
+impl<T: fmt::Debug> fmt::Debug for Ptr<T> {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        fmt::Debug::fmt(&**self, f)
+    }
+}
+
+impl<T: PartialEq> PartialEq for Ptr<T> {
+    #[inline]
+    fn eq(&self, other: &Self) -> bool {
+        PartialEq::eq(&**self, &**other)
+    }
+    #[inline]
+    fn ne(&self, other: &Self) -> bool {
+        PartialEq::ne(&**self, &**other)
+    }
+}
+
+impl<T: Eq> Eq for Ptr<T> {}
+
+impl<T> Deref for Ptr<T> {
+    type Target = T;
+
+    fn deref(&self) -> &T {
+        unsafe { &*self.ptr }
+    }
+}
+
 #[derive(Debug, Eq, PartialEq, Clone)]
 pub enum Pattern {
     EVar(Id),
     SVar(Id),
     Symbol(Id),
     Implies {
-        left: Rc<Pattern>,
-        right: Rc<Pattern>,
+        left: Ptr<Pattern>,
+        right: Ptr<Pattern>,
     },
     App {
-        left: Rc<Pattern>,
-        right: Rc<Pattern>,
+        left: Ptr<Pattern>,
+        right: Ptr<Pattern>,
     },
     Exists {
         var: Id,
-        subpattern: Rc<Pattern>,
+        subpattern: Ptr<Pattern>,
     },
     Mu {
         var: Id,
-        subpattern: Rc<Pattern>,
+        subpattern: Ptr<Pattern>,
     },
     MetaVar {
         id: Id,
@@ -121,14 +173,14 @@ pub enum Pattern {
         app_ctx_holes: IdList,
     },
     ESubst {
-        pattern: Rc<Pattern>,
+        pattern: Ptr<Pattern>,
         evar_id: Id,
-        plug: Rc<Pattern>,
+        plug: Ptr<Pattern>,
     },
     SSubst {
-        pattern: Rc<Pattern>,
+        pattern: Ptr<Pattern>,
         svar_id: Id,
-        plug: Rc<Pattern>,
+        plug: Ptr<Pattern>,
     },
 }
 
@@ -327,14 +379,14 @@ impl Pattern {
             Pattern::ESubst { pattern, .. } => {
                 !self.is_redundant_subst()
                     && matches!(
-                        pattern.as_ref(),
+                        **pattern,
                         Pattern::MetaVar { .. } | Pattern::ESubst { .. } | Pattern::SSubst { .. }
                     )
             }
             Pattern::SSubst { pattern, .. } => {
                 !self.is_redundant_subst()
                     && matches!(
-                        pattern.as_ref(),
+                        **pattern,
                         Pattern::MetaVar { .. } | Pattern::ESubst { .. } | Pattern::SSubst { .. }
                     )
             }
@@ -366,32 +418,32 @@ impl Pattern {
 
 #[derive(Debug, Eq, PartialEq, Clone)]
 pub enum Term {
-    Pattern(Rc<Pattern>),
-    Proved(Rc<Pattern>),
+    Pattern(Ptr<Pattern>),
+    Proved(Ptr<Pattern>),
 }
 #[derive(Debug, Eq, PartialEq)]
 pub enum Entry {
-    Pattern(Rc<Pattern>),
-    Proved(Rc<Pattern>),
+    Pattern(Ptr<Pattern>),
+    Proved(Ptr<Pattern>),
 }
 
 /// Pattern construction utilities
 /// ------------------------------
 
-fn evar(id: Id) -> Rc<Pattern> {
-    return Rc::new(Pattern::EVar(id));
+fn evar(id: Id) -> Ptr<Pattern> {
+    return Ptr::new(Pattern::EVar(id));
 }
 
-fn svar(id: Id) -> Rc<Pattern> {
-    return Rc::new(Pattern::SVar(id));
+fn svar(id: Id) -> Ptr<Pattern> {
+    return Ptr::new(Pattern::SVar(id));
 }
 
-fn symbol(id: Id) -> Rc<Pattern> {
-    return Rc::new(Pattern::Symbol(id));
+fn symbol(id: Id) -> Ptr<Pattern> {
+    return Ptr::new(Pattern::Symbol(id));
 }
 
-fn metavar_unconstrained(var_id: Id) -> Rc<Pattern> {
-    return Rc::new(Pattern::MetaVar {
+fn metavar_unconstrained(var_id: Id) -> Ptr<Pattern> {
+    return Ptr::new(Pattern::MetaVar {
         id: var_id,
         e_fresh: vec![],
         s_fresh: vec![],
@@ -402,8 +454,8 @@ fn metavar_unconstrained(var_id: Id) -> Rc<Pattern> {
 }
 
 #[cfg(test)]
-fn metavar_e_fresh(var_id: Id, fresh: Id, positive: IdList, negative: IdList) -> Rc<Pattern> {
-    return Rc::new(Pattern::MetaVar {
+fn metavar_e_fresh(var_id: Id, fresh: Id, positive: IdList, negative: IdList) -> Ptr<Pattern> {
+    return Ptr::new(Pattern::MetaVar {
         id: var_id,
         e_fresh: vec![fresh],
         s_fresh: vec![],
@@ -414,8 +466,8 @@ fn metavar_e_fresh(var_id: Id, fresh: Id, positive: IdList, negative: IdList) ->
 }
 
 #[cfg(test)]
-fn metavar_s_fresh(var_id: Id, fresh: Id, positive: IdList, negative: IdList) -> Rc<Pattern> {
-    return Rc::new(Pattern::MetaVar {
+fn metavar_s_fresh(var_id: Id, fresh: Id, positive: IdList, negative: IdList) -> Ptr<Pattern> {
+    return Ptr::new(Pattern::MetaVar {
         id: var_id,
         e_fresh: vec![],
         s_fresh: vec![fresh],
@@ -426,19 +478,19 @@ fn metavar_s_fresh(var_id: Id, fresh: Id, positive: IdList, negative: IdList) ->
 }
 
 #[inline(always)]
-fn exists(var: Id, subpattern: Rc<Pattern>) -> Rc<Pattern> {
-    return Rc::new(Pattern::Exists { var, subpattern });
+fn exists(var: Id, subpattern: Ptr<Pattern>) -> Ptr<Pattern> {
+    return Ptr::new(Pattern::Exists { var, subpattern });
 }
 
 // Does not do any well-formedness checks!!!!!
 #[inline(always)]
-fn mu(var: Id, subpattern: Rc<Pattern>) -> Rc<Pattern> {
-    return Rc::new(Pattern::Mu { var, subpattern });
+fn mu(var: Id, subpattern: Ptr<Pattern>) -> Ptr<Pattern> {
+    return Ptr::new(Pattern::Mu { var, subpattern });
 }
 
 #[inline(always)]
-fn esubst(pattern: Rc<Pattern>, evar_id: Id, plug: Rc<Pattern>) -> Rc<Pattern> {
-    return Rc::new(Pattern::ESubst {
+fn esubst(pattern: Ptr<Pattern>, evar_id: Id, plug: Ptr<Pattern>) -> Ptr<Pattern> {
+    return Ptr::new(Pattern::ESubst {
         pattern,
         evar_id,
         plug,
@@ -446,8 +498,8 @@ fn esubst(pattern: Rc<Pattern>, evar_id: Id, plug: Rc<Pattern>) -> Rc<Pattern> {
 }
 
 #[inline(always)]
-fn ssubst(pattern: Rc<Pattern>, svar_id: Id, plug: Rc<Pattern>) -> Rc<Pattern> {
-    return Rc::new(Pattern::SSubst {
+fn ssubst(pattern: Ptr<Pattern>, svar_id: Id, plug: Ptr<Pattern>) -> Ptr<Pattern> {
+    return Ptr::new(Pattern::SSubst {
         pattern,
         svar_id,
         plug,
@@ -455,44 +507,41 @@ fn ssubst(pattern: Rc<Pattern>, svar_id: Id, plug: Rc<Pattern>) -> Rc<Pattern> {
 }
 
 #[inline(always)]
-fn implies(left: Rc<Pattern>, right: Rc<Pattern>) -> Rc<Pattern> {
-    return Rc::new(Pattern::Implies { left, right });
+fn implies(left: Ptr<Pattern>, right: Ptr<Pattern>) -> Ptr<Pattern> {
+    return Ptr::new(Pattern::Implies { left, right });
 }
 
 #[inline(always)]
-fn app(left: Rc<Pattern>, right: Rc<Pattern>) -> Rc<Pattern> {
-    return Rc::new(Pattern::App { left, right });
+fn app(left: Ptr<Pattern>, right: Ptr<Pattern>) -> Ptr<Pattern> {
+    return Ptr::new(Pattern::App { left, right });
 }
 
 // Notation
 #[inline(always)]
-fn bot() -> Rc<Pattern> {
+fn bot() -> Ptr<Pattern> {
     mu(0, svar(0))
 }
 
 #[inline(always)]
-fn not(pat: Rc<Pattern>) -> Rc<Pattern> {
+fn not(pat: Ptr<Pattern>) -> Ptr<Pattern> {
     implies(pat, bot())
 }
 
 #[allow(dead_code)]
-fn forall(evar: Id, pat: Rc<Pattern>) -> Rc<Pattern> {
+fn forall(evar: Id, pat: Ptr<Pattern>) -> Ptr<Pattern> {
     not(exists(evar, not(pat)))
 }
 
 /// Substitution utilities
 /// ----------------------
 
-fn apply_esubst(pattern: &Rc<Pattern>, evar_id: Id, plug: &Rc<Pattern>) -> Rc<Pattern> {
-    // Wraps pattern in appropriate ESubst
-    let wrap_subst = || esubst(Rc::clone(pattern), evar_id, Rc::clone(plug));
-
-    match pattern.as_ref() {
+fn apply_esubst(pattern: Ptr<Pattern>, evar_id: Id, plug: Ptr<Pattern>) -> Ptr<Pattern> {
+    match *pattern {
         Pattern::EVar(e) => {
-            if *e == evar_id {
-                Rc::clone(plug)
+            if e == evar_id {
+                plug
             } else {
-                Rc::clone(pattern)
+                pattern
             }
         }
         Pattern::Implies { left, right } => implies(
@@ -503,33 +552,30 @@ fn apply_esubst(pattern: &Rc<Pattern>, evar_id: Id, plug: &Rc<Pattern>) -> Rc<Pa
             apply_esubst(left, evar_id, plug),
             apply_esubst(right, evar_id, plug),
         ),
-        Pattern::Exists { var, .. } if *var == evar_id => Rc::clone(pattern),
+        Pattern::Exists { var, .. } if var == evar_id => pattern,
         Pattern::Exists { var, subpattern } => {
             assert!(
-                plug.e_fresh(*var),
+                plug.e_fresh(var),
                 "EVar substitution would capture free variable {}!",
                 var
             );
-            exists(*var, apply_esubst(subpattern, evar_id, plug))
+            exists(var, apply_esubst(subpattern, evar_id, plug))
         }
-        Pattern::Mu { var, subpattern } => mu(*var, apply_esubst(subpattern, evar_id, plug)),
-        Pattern::ESubst { .. } => wrap_subst(),
-        Pattern::SSubst { .. } => wrap_subst(),
-        Pattern::MetaVar { .. } => wrap_subst(),
-        _ => Rc::clone(pattern),
+        Pattern::Mu { var, subpattern } => mu(var, apply_esubst(subpattern, evar_id, plug)),
+        Pattern::ESubst { .. } => esubst(pattern, evar_id, plug),
+        Pattern::SSubst { .. } => esubst(pattern, evar_id, plug),
+        Pattern::MetaVar { .. } => esubst(pattern, evar_id, plug),
+        _ => pattern,
     }
 }
 
-fn apply_ssubst(pattern: &Rc<Pattern>, svar_id: Id, plug: &Rc<Pattern>) -> Rc<Pattern> {
-    // Wraps pattern in appropriate ESubst
-    let wrap_subst = || ssubst(Rc::clone(pattern), svar_id, Rc::clone(plug));
-
-    match pattern.as_ref() {
+fn apply_ssubst(pattern: Ptr<Pattern>, svar_id: Id, plug: Ptr<Pattern>) -> Ptr<Pattern> {
+    match *pattern {
         Pattern::SVar(s) => {
-            if *s == svar_id {
-                Rc::clone(plug)
+            if s == svar_id {
+                plug
             } else {
-                Rc::clone(pattern)
+                pattern
             }
         }
         Pattern::Implies { left, right } => implies(
@@ -540,34 +586,28 @@ fn apply_ssubst(pattern: &Rc<Pattern>, svar_id: Id, plug: &Rc<Pattern>) -> Rc<Pa
             apply_ssubst(left, svar_id, plug),
             apply_ssubst(right, svar_id, plug),
         ),
-        Pattern::Exists { var, subpattern } => {
-            exists(*var, apply_ssubst(subpattern, svar_id, plug))
-        }
-        Pattern::Mu { var, .. } if *var == svar_id => Rc::clone(pattern),
+        Pattern::Exists { var, subpattern } => exists(var, apply_ssubst(subpattern, svar_id, plug)),
+        Pattern::Mu { var, .. } if var == svar_id => pattern,
         Pattern::Mu { var, subpattern } => {
             assert!(
-                plug.s_fresh(*var),
+                plug.s_fresh(var),
                 "SVar substitution would capture free variable {}!",
                 var
             );
-            mu(*var, apply_ssubst(subpattern, svar_id, plug))
+            mu(var, apply_ssubst(subpattern, svar_id, plug))
         }
-        Pattern::ESubst { .. } => wrap_subst(),
-        Pattern::SSubst { .. } => wrap_subst(),
-        Pattern::MetaVar { .. } => wrap_subst(),
-        _ => Rc::clone(pattern),
+        Pattern::ESubst { .. } => ssubst(pattern, svar_id, plug),
+        Pattern::SSubst { .. } => ssubst(pattern, svar_id, plug),
+        Pattern::MetaVar { .. } => ssubst(pattern, svar_id, plug),
+        _ => pattern,
     }
 }
 
-fn instantiate_internal(
-    p: &Rc<Pattern>,
-    vars: &[Id],
-    plugs: &[Rc<Pattern>],
-) -> Option<Rc<Pattern>> {
-    match p.as_ref() {
-        Pattern::EVar(_) => None,
-        Pattern::SVar(_) => None,
-        Pattern::Symbol(_) => None,
+fn instantiate(p: Ptr<Pattern>, vars: &[Id], plugs: &[Ptr<Pattern>]) -> Ptr<Pattern> {
+    match &*p {
+        Pattern::EVar(_) => p,
+        Pattern::SVar(_) => p,
+        Pattern::Symbol(_) => p,
         Pattern::MetaVar {
             id,
             e_fresh,
@@ -577,13 +617,19 @@ fn instantiate_internal(
             app_ctx_holes,
         } => {
             if let Some(pos) = vars.iter().position(|&x| x == *id) {
-                if let Some(evar) = e_fresh.into_iter().find(|&evar| !plugs[pos].e_fresh(*evar)) {
+                if let Some(evar) = e_fresh
+                    .into_iter()
+                    .find(|&evar| !(*plugs[pos]).e_fresh(*evar))
+                {
                     panic!(
                         "Instantiation of MetaVar {} breaks a freshness constraint: EVar {}",
                         id, evar
                     );
                 }
-                if let Some(svar) = s_fresh.into_iter().find(|&svar| !plugs[pos].s_fresh(*svar)) {
+                if let Some(svar) = s_fresh
+                    .into_iter()
+                    .find(|&svar| !(*plugs[pos]).s_fresh(*svar))
+                {
                     panic!(
                         "Instantiation of MetaVar {} breaks a freshness constraint: SVar {}",
                         id, svar
@@ -591,7 +637,7 @@ fn instantiate_internal(
                 }
                 if let Some(svar) = positive
                     .into_iter()
-                    .find(|&svar| !plugs[pos].positive(*svar))
+                    .find(|&svar| !(*plugs[pos]).positive(*svar))
                 {
                     panic!(
                         "Instantiation of MetaVar {} breaks a positivity constraint: SVar {}",
@@ -600,7 +646,7 @@ fn instantiate_internal(
                 }
                 if let Some(svar) = negative
                     .into_iter()
-                    .find(|&svar| !plugs[pos].negative(*svar))
+                    .find(|&svar| !(*plugs[pos]).negative(*svar))
                 {
                     panic!(
                         "Instantiation of MetaVar {} breaks a negativity constraint: SVar {}",
@@ -620,69 +666,55 @@ fn instantiate_internal(
                 if pos >= plugs.len() {
                     panic!("Substitution does not contain a corresponding value.")
                 }
-                return Some(Rc::clone(&plugs[pos]));
+                return plugs[pos];
             }
-            None
+            p
         }
         Pattern::Implies { left, right } => {
-            let mut inst_left = instantiate_internal(&left, vars, plugs);
-            let mut inst_right = instantiate_internal(&right, vars, plugs);
-            if inst_left.is_none() && inst_right.is_none() {
-                None
+            let inst_left = instantiate(*left, vars, plugs);
+            let inst_right = instantiate(*right, vars, plugs);
+            if inst_left.is(left) && inst_right.is(right) {
+                p
             } else {
-                if inst_left.is_none() {
-                    inst_left = Some(Rc::clone(left));
-                }
-                if inst_right.is_none() {
-                    inst_right = Some(Rc::clone(right));
-                }
-                Some(implies(inst_left.unwrap(), inst_right.unwrap()))
+                implies(inst_left, inst_right)
             }
         }
         Pattern::App { left, right } => {
-            let mut inst_left = instantiate_internal(&left, vars, plugs);
-            let mut inst_right = instantiate_internal(&right, vars, plugs);
-            if inst_left.is_none() && inst_right.is_none() {
-                None
+            let inst_left = instantiate(*left, vars, plugs);
+            let inst_right = instantiate(*right, vars, plugs);
+            if inst_left.is(left) && inst_right.is(right) {
+                p
             } else {
-                if inst_left.is_none() {
-                    inst_left = Some(Rc::clone(left));
-                }
-                if inst_right.is_none() {
-                    inst_right = Some(Rc::clone(right));
-                }
-                Some(app(inst_left.unwrap(), inst_right.unwrap()))
+                app(inst_left, inst_right)
             }
         }
         Pattern::Exists { var, subpattern } => {
-            let new_sub = instantiate_internal(&subpattern, vars, plugs);
-            Some(exists(*var, new_sub?))
+            let new_sub = instantiate(*subpattern, vars, plugs);
+            if new_sub.is(subpattern) {
+                p
+            } else {
+                exists(*var, new_sub)
+            }
         }
         Pattern::Mu { var, subpattern } => {
-            let new_sub = instantiate_internal(&subpattern, vars, plugs);
-            Some(mu(*var, new_sub?))
+            let new_sub = instantiate(*subpattern, vars, plugs);
+            if new_sub.is(subpattern) {
+                p
+            } else {
+                mu(*var, new_sub)
+            }
         }
         Pattern::ESubst {
             pattern,
             evar_id,
             plug,
         } => {
-            let mut inst_pattern = instantiate_internal(pattern, vars, plugs);
-            let mut inst_plug = instantiate_internal(plug, vars, plugs);
-            if inst_pattern.is_none() && inst_plug.is_none() {
-                None
+            let inst_pattern = instantiate(*pattern, vars, plugs);
+            let inst_plug = instantiate(*plug, vars, plugs);
+            if inst_pattern.is(pattern) && inst_plug.is(plug) {
+                p
             } else {
-                if inst_pattern.is_none() {
-                    inst_pattern = Some(Rc::clone(pattern));
-                }
-                if inst_plug.is_none() {
-                    inst_plug = Some(Rc::clone(plug));
-                }
-                Some(apply_esubst(
-                    &inst_pattern.unwrap(),
-                    *evar_id,
-                    &inst_plug.unwrap(),
-                ))
+                apply_esubst(inst_pattern, *evar_id, inst_plug)
             }
         }
         Pattern::SSubst {
@@ -690,30 +722,14 @@ fn instantiate_internal(
             svar_id,
             plug,
         } => {
-            let mut inst_pattern = instantiate_internal(pattern, vars, plugs);
-            let mut inst_plug = instantiate_internal(plug, vars, plugs);
-            if inst_pattern.is_none() && inst_plug.is_none() {
-                None
+            let inst_pattern = instantiate(*pattern, vars, plugs);
+            let inst_plug = instantiate(*plug, vars, plugs);
+            if inst_pattern.is(pattern) && inst_plug.is(plug) {
+                p
             } else {
-                if inst_pattern.is_none() {
-                    inst_pattern = Some(Rc::clone(pattern));
-                }
-                if inst_plug.is_none() {
-                    inst_plug = Some(Rc::clone(plug));
-                }
-                Some(apply_ssubst(
-                    &inst_pattern.unwrap(),
-                    *svar_id,
-                    &inst_plug.unwrap(),
-                ))
+                apply_ssubst(inst_pattern, *svar_id, inst_plug)
             }
         }
-    }
-}
-
-fn instantiate_in_place(p: &mut Rc<Pattern>, vars: &[Id], plugs: &[Rc<Pattern>]) {
-    if let Some(ret) = instantiate_internal(p, vars, plugs) {
-        *p = ret
     }
 }
 
@@ -721,7 +737,7 @@ fn instantiate_in_place(p: &mut Rc<Pattern>, vars: &[Id], plugs: &[Rc<Pattern>])
 /// =============
 
 type Stack = Vec<Term>;
-type Claims = Vec<Rc<Pattern>>;
+type Claims = Vec<Ptr<Pattern>>;
 type Memory = Vec<Entry>;
 
 /// Stack utilities
@@ -731,14 +747,14 @@ fn pop_stack(stack: &mut Stack) -> Term {
     return stack.pop().expect("Insufficient stack items.");
 }
 
-fn pop_stack_pattern(stack: &mut Stack) -> Rc<Pattern> {
+fn pop_stack_pattern(stack: &mut Stack) -> Ptr<Pattern> {
     match pop_stack(stack) {
         Term::Pattern(p) => return p,
         _ => panic!("Expected pattern on stack."),
     }
 }
 
-fn pop_stack_proved(stack: &mut Stack) -> Rc<Pattern> {
+fn pop_stack_proved(stack: &mut Stack) -> Ptr<Pattern> {
     match pop_stack(stack) {
         Term::Proved(p) => return p,
         _ => panic!("Expected proved on stack."),
@@ -784,22 +800,13 @@ fn execute_instructions<'a>(
     let phi2 = metavar_unconstrained(2);
 
     // Axioms
-    let prop1 = implies(
-        Rc::clone(&phi0),
-        implies(Rc::clone(&phi1), Rc::clone(&phi0)),
-    );
+    let prop1 = implies(phi0, implies(phi1, phi0));
     let prop2 = implies(
-        implies(
-            Rc::clone(&phi0),
-            implies(Rc::clone(&phi1), Rc::clone(&phi2)),
-        ),
-        implies(
-            implies(Rc::clone(&phi0), phi1),
-            implies(Rc::clone(&phi0), phi2),
-        ),
+        implies(phi0, implies(phi1, phi2)),
+        implies(implies(phi0, phi1), implies(phi0, phi2)),
     );
-    let prop3 = implies(not(not(Rc::clone(&phi0))), Rc::clone(&phi0));
-    let quantifier = implies(esubst(Rc::clone(&phi0), 0, evar(1)), exists(0, phi0));
+    let prop3 = implies(not(not(phi0)), phi0);
+    let quantifier = implies(esubst(phi0, 0, evar(1)), exists(0, phi0));
 
     let existence = exists(0, evar(0));
 
@@ -840,7 +847,7 @@ fn execute_instructions<'a>(
                 let negative = read_u8_vec(iterator);
                 let app_ctx_holes = read_u8_vec(iterator);
 
-                let metavar_pat = Rc::new(Pattern::MetaVar {
+                let metavar_pat = Ptr::new(Pattern::MetaVar {
                     id,
                     e_fresh,
                     s_fresh,
@@ -860,7 +867,7 @@ fn execute_instructions<'a>(
                     .next()
                     .expect("Expected id for MetaVar instruction") as Id;
 
-                let metavar_pat = Rc::new(Pattern::MetaVar {
+                let metavar_pat = Ptr::new(Pattern::MetaVar {
                     id,
                     e_fresh: vec![],
                     s_fresh: vec![],
@@ -910,7 +917,7 @@ fn execute_instructions<'a>(
                 let pattern = pop_stack_pattern(stack);
                 let plug = pop_stack_pattern(stack);
 
-                let esubst_pat = esubst(Rc::clone(&pattern), evar_id, plug);
+                let esubst_pat = esubst(pattern, evar_id, plug);
                 assert!(
                     esubst_pat.well_formed(),
                     "Creating an ill-formed esubst {:?}",
@@ -928,7 +935,7 @@ fn execute_instructions<'a>(
                 let pattern = pop_stack_pattern(stack);
                 let plug = pop_stack_pattern(stack);
 
-                let ssubst_pat = ssubst(Rc::clone(&pattern), svar_id, plug);
+                let ssubst_pat = ssubst(pattern, svar_id, plug);
                 assert!(
                     ssubst_pat.well_formed(),
                     "Creating an ill-formed ssubst {:?}",
@@ -939,23 +946,23 @@ fn execute_instructions<'a>(
             }
 
             Instruction::Prop1 => {
-                stack.push(Term::Proved(Rc::clone(&prop1)));
+                stack.push(Term::Proved(prop1));
             }
             Instruction::Prop2 => {
-                stack.push(Term::Proved(Rc::clone(&prop2)));
+                stack.push(Term::Proved(prop2));
             }
             Instruction::Prop3 => {
-                stack.push(Term::Proved(Rc::clone(&prop3)));
+                stack.push(Term::Proved(prop3));
             }
             Instruction::ModusPonens => {
                 let premise2 = pop_stack_proved(stack);
                 let premise1 = pop_stack_proved(stack);
-                match premise1.as_ref() {
+                match *premise1 {
                     Pattern::Implies { left, right } => {
-                        if *left.as_ref() != *premise2.as_ref() {
-                            panic!("Antecedents do not match for modus ponens.\nleft.psi:\n{:?}\n\n right:\n{:?}\n", left.as_ref(), premise2.as_ref())
+                        if *left != *premise2 {
+                            panic!("Antecedents do not match for modus ponens.\nleft.psi:\n{:?}\n\n right:\n{:?}\n", left, premise2)
                         }
-                        stack.push(Term::Proved(Rc::clone(&right)))
+                        stack.push(Term::Proved(right))
                     }
                     _ => {
                         panic!("Expected an implication as a first parameter.")
@@ -963,9 +970,9 @@ fn execute_instructions<'a>(
                 }
             }
             Instruction::Quantifier => {
-                stack.push(Term::Proved(Rc::clone(&quantifier)));
+                stack.push(Term::Proved(quantifier));
             }
-            Instruction::Generalization => match pop_stack_proved(stack).as_ref() {
+            Instruction::Generalization => match *pop_stack_proved(stack) {
                 Pattern::Implies { left, right } => {
                     let evar_id = *iterator
                         .next()
@@ -976,17 +983,14 @@ fn execute_instructions<'a>(
                         panic!("The binding variable has to be fresh in the conclusion.");
                     }
 
-                    stack.push(Term::Proved(implies(
-                        exists(evar_id, Rc::clone(left)),
-                        Rc::clone(right),
-                    )));
+                    stack.push(Term::Proved(implies(exists(evar_id, left), right)));
                 }
                 _ => {
                     panic!("Expected an implication as a first parameter.")
                 }
             },
             Instruction::Existence => {
-                stack.push(Term::Proved(Rc::clone(&existence)));
+                stack.push(Term::Proved(existence));
             }
             Instruction::Substitution => {
                 let svar_id = *iterator
@@ -995,7 +999,7 @@ fn execute_instructions<'a>(
                 let pattern = pop_stack_proved(stack);
                 let plug = pop_stack_pattern(stack);
 
-                stack.push(Term::Proved(apply_ssubst(&pattern, svar_id, &plug)));
+                stack.push(Term::Proved(apply_ssubst(pattern, svar_id, plug)));
             }
             Instruction::Instantiate => {
                 let n = *iterator
@@ -1003,7 +1007,7 @@ fn execute_instructions<'a>(
                     .expect("Insufficient parameters for Instantiate instruction")
                     as usize;
                 let mut ids: IdList = Vec::with_capacity(n);
-                let mut plugs: Vec<Rc<Pattern>> = Vec::with_capacity(n);
+                let mut plugs: Vec<Ptr<Pattern>> = Vec::with_capacity(n);
 
                 let metaterm = pop_stack(stack);
 
@@ -1013,13 +1017,11 @@ fn execute_instructions<'a>(
                 });
 
                 match metaterm {
-                    Term::Pattern(mut p) => {
-                        instantiate_in_place(&mut p, &ids, &plugs);
-                        stack.push(Term::Pattern(p));
+                    Term::Pattern(p) => {
+                        stack.push(Term::Pattern(instantiate(p, &ids, &plugs)));
                     }
-                    Term::Proved(mut p) => {
-                        instantiate_in_place(&mut p, &ids, &plugs);
-                        stack.push(Term::Proved(p));
+                    Term::Proved(p) => {
+                        stack.push(Term::Proved(instantiate(p, &ids, &plugs)));
                     }
                 }
             }
@@ -1122,7 +1124,7 @@ mod tests {
         ], esubst(metavar_unconstrained(0), 0, svar(0)))]
     fn test_pattern_construction(
         #[case] instructions: &mut Vec<InstByte>,
-        #[case] expected_pattern: Rc<Pattern>,
+        #[case] expected_pattern: Ptr<Pattern>,
     ) {
         let stack = &mut Vec::with_capacity(256);
         execute_instructions(
@@ -1151,70 +1153,70 @@ mod tests {
     #[test]
     fn test_efresh() {
         let evar = evar(1);
-        let left = Rc::new(Pattern::Exists {
+        let left = Ptr::new(Pattern::Exists {
             var: 1,
             subpattern: evar.clone(),
         });
         assert!(left.e_fresh(1));
 
-        let right = Rc::new(Pattern::Exists {
+        let right = Ptr::new(Pattern::Exists {
             var: 2,
             subpattern: evar,
         });
         assert!(!right.e_fresh(1));
 
-        let implication = implies(Rc::clone(&left), Rc::clone(&right));
+        let implication = implies(left, right);
         assert!(!implication.e_fresh(1));
 
         let mvar = metavar_s_fresh(1, 2, vec![2], vec![2]);
         let metaapp = Pattern::App {
-            left: Rc::clone(&left),
+            left: left,
             right: mvar,
         };
         assert!(!metaapp.e_fresh(2));
 
-        let esubst_ = esubst(Rc::clone(&right), 1, Rc::clone(&left));
+        let esubst_ = esubst(right, 1, left);
         assert!(esubst_.e_fresh(1));
 
-        let ssubst_ = ssubst(Rc::clone(&right), 1, left);
+        let ssubst_ = ssubst(right, 1, left);
         assert!(!ssubst_.e_fresh(1));
     }
 
     #[test]
     fn test_sfresh() {
         let svar = svar(1);
-        let left = Rc::new(Pattern::Mu {
+        let left = Ptr::new(Pattern::Mu {
             var: 1,
             subpattern: svar.clone(),
         });
         assert!(left.s_fresh(1));
 
-        let right = Rc::new(Pattern::Mu {
+        let right = Ptr::new(Pattern::Mu {
             var: 2,
             subpattern: svar,
         });
         assert!(!right.s_fresh(1));
 
-        let implication = implies(Rc::clone(&left), Rc::clone(&right));
+        let implication = implies(left, right);
         assert!(!implication.s_fresh(1));
 
         let mvar = metavar_s_fresh(1, 2, vec![2], vec![2]);
         let metaapp = Pattern::App {
-            left: Rc::clone(&left),
-            right: Rc::clone(&mvar),
+            left: left,
+            right: mvar,
         };
         assert!(!metaapp.s_fresh(1));
 
         let metaapp2 = Pattern::App {
-            left: Rc::clone(&left),
+            left: left,
             right: mvar,
         };
         assert!(metaapp2.s_fresh(2));
 
-        let esubst_ = esubst(Rc::clone(&right), 1, Rc::clone(&left));
+        let esubst_ = esubst(right, 1, left);
         assert!(!esubst_.s_fresh(1));
 
-        let ssubst_ = ssubst(Rc::clone(&right), 1, left);
+        let ssubst_ = ssubst(right, 1, left);
         assert!(ssubst_.s_fresh(1));
     }
 
@@ -1223,7 +1225,7 @@ mod tests {
     fn test_instantiate_fresh() {
         let svar_0 = svar(0);
         let phi0_s_fresh_0 = metavar_s_fresh(0, 0, vec![0], vec![0]);
-        instantiate_internal(&phi0_s_fresh_0, &[0], &[svar_0]);
+        instantiate(phi0_s_fresh_0, &[0], &[svar_0]);
     }
 
     #[test]
@@ -1231,7 +1233,7 @@ mod tests {
         let phi0_s_fresh_0 = metavar_s_fresh(0, 0, vec![0], vec![0]);
         assert!(phi0_s_fresh_0.well_formed());
 
-        let phi1 = Rc::new(Pattern::MetaVar {
+        let phi1 = Ptr::new(Pattern::MetaVar {
             id: 1,
             e_fresh: vec![1, 2, 0],
             s_fresh: vec![],
@@ -1242,7 +1244,7 @@ mod tests {
         assert!(!phi1.well_formed());
 
         // TODO: Reason why this is not needed
-        // let phi1_imp_phi1 = implies(Rc::clone(&phi1), Rc::clone(&phi1));
+        // let phi1_imp_phi1 = implies(phi1, phi1);
         // assert!(!phi1_imp_phi1.well_formed());
     }
 
@@ -1281,7 +1283,7 @@ mod tests {
         let X1 = svar(1);
         let X2 = svar(2);
         let c1 = symbol(1);
-        let neg_X1 = not(Rc::clone(&X1));
+        let neg_X1 = not(X1);
 
         // EVar
         let evar1 = evar(1);
@@ -1303,7 +1305,7 @@ mod tests {
         assert!(c1.negative(2));
 
         // App
-        let appX1X2 = app(Rc::clone(&X1), Rc::clone(&X2));
+        let appX1X2 = app(X1, X2);
         assert!(appX1X2.positive(1));
         assert!(appX1X2.positive(2));
         assert!(appX1X2.positive(3));
@@ -1312,7 +1314,7 @@ mod tests {
         assert!(appX1X2.negative(3));
 
         // Implies
-        let impliesX1X2 = implies(Rc::clone(&X1), Rc::clone(&X2));
+        let impliesX1X2 = implies(X1, X2);
         assert!(!impliesX1X2.positive(1));
         assert!(impliesX1X2.positive(2));
         assert!(impliesX1X2.positive(3));
@@ -1320,12 +1322,12 @@ mod tests {
         assert!(!impliesX1X2.negative(2));
         assert!(impliesX1X2.negative(3));
 
-        let impliesX1X1 = implies(Rc::clone(&X1), Rc::clone(&X1));
+        let impliesX1X1 = implies(X1, X1);
         assert!(!impliesX1X1.positive(1));
         assert!(!impliesX1X1.negative(1));
 
         // Exists
-        let existsX1X2 = exists(1, Rc::clone(&X2));
+        let existsX1X2 = exists(1, X2);
         assert!(existsX1X2.positive(1));
         assert!(existsX1X2.positive(2));
         assert!(existsX1X2.positive(3));
@@ -1333,27 +1335,27 @@ mod tests {
         assert!(!existsX1X2.negative(2));
         assert!(existsX1X2.negative(3));
 
-        let existsX1nX2 = exists(1, not(Rc::clone(&X2)));
+        let existsX1nX2 = exists(1, not(X2));
         assert!(existsX1nX2.negative(2));
 
         // Mu
-        let muX1x1 = mu(1, Rc::clone(&evar1));
+        let muX1x1 = mu(1, evar1);
         assert!(muX1x1.positive(1));
         assert!(muX1x1.positive(2));
         assert!(muX1x1.negative(1));
         assert!(muX1x1.negative(2));
 
-        let muX1X1 = mu(1, Rc::clone(&X1));
+        let muX1X1 = mu(1, X1);
         assert!(muX1X1.positive(1));
         assert!(muX1X1.negative(1));
 
-        let muX1X2 = mu(1, Rc::clone(&X2));
+        let muX1X2 = mu(1, X2);
         assert!(muX1X2.positive(1));
         assert!(muX1X2.positive(2));
         assert!(muX1X2.positive(3));
         assert!(muX1X2.negative(1));
         assert!(!muX1X2.negative(2));
-        assert!(mu(1, implies(Rc::clone(&X2), Rc::clone(&X1))).negative(2));
+        assert!(mu(1, implies(X2, X1)).negative(2));
         assert!(muX1X2.negative(3));
 
         // MetaVar
@@ -1374,22 +1376,22 @@ mod tests {
         assert!(!metavar_s_fresh(1, 1, vec![], vec![]).negative(2));
 
         // ESubst
-        assert!(!esubst(metavar_unconstrained(0), 0, Rc::clone(&X0)).positive(0));
-        assert!(!esubst(metavar_unconstrained(0), 0, Rc::clone(&X1)).positive(0));
-        assert!(!esubst(metavar_s_fresh(0, 1, vec![1], vec![]), 0, Rc::clone(&X1)).positive(0));
+        assert!(!esubst(metavar_unconstrained(0), 0, X0).positive(0));
+        assert!(!esubst(metavar_unconstrained(0), 0, X1).positive(0));
+        assert!(!esubst(metavar_s_fresh(0, 1, vec![1], vec![]), 0, X1).positive(0));
 
-        assert!(!esubst(metavar_unconstrained(0), 0, Rc::clone(&X0)).negative(0));
-        assert!(!esubst(metavar_unconstrained(0), 0, Rc::clone(&X1)).negative(0));
-        assert!(!esubst(metavar_s_fresh(0, 1, vec![1], vec![]), 0, Rc::clone(&X1)).negative(0));
+        assert!(!esubst(metavar_unconstrained(0), 0, X0).negative(0));
+        assert!(!esubst(metavar_unconstrained(0), 0, X1).negative(0));
+        assert!(!esubst(metavar_s_fresh(0, 1, vec![1], vec![]), 0, X1).negative(0));
 
         // SSubst
-        assert!(!ssubst(metavar_unconstrained(0), 0, Rc::clone(&X0)).positive(0));
-        assert!(ssubst(metavar_unconstrained(0), 0, Rc::clone(&X1)).positive(0));
-        assert!(ssubst(metavar_s_fresh(0, 1, vec![1], vec![]), 0, Rc::clone(&X1)).positive(0));
+        assert!(!ssubst(metavar_unconstrained(0), 0, X0).positive(0));
+        assert!(ssubst(metavar_unconstrained(0), 0, X1).positive(0));
+        assert!(ssubst(metavar_s_fresh(0, 1, vec![1], vec![]), 0, X1).positive(0));
 
-        assert!(!ssubst(metavar_unconstrained(0), 0, Rc::clone(&X0)).negative(0));
-        assert!(ssubst(metavar_unconstrained(0), 0, Rc::clone(&X1)).negative(0));
-        assert!(ssubst(metavar_s_fresh(0, 1, vec![1], vec![]), 0, Rc::clone(&X1)).negative(0));
+        assert!(!ssubst(metavar_unconstrained(0), 0, X0).negative(0));
+        assert!(ssubst(metavar_unconstrained(0), 0, X1).negative(0));
+        assert!(ssubst(metavar_s_fresh(0, 1, vec![1], vec![]), 0, X1).negative(0));
 
         // Combinations
         assert!(!neg_X1.positive(1));
@@ -1397,13 +1399,13 @@ mod tests {
         assert!(neg_X1.negative(1));
         assert!(neg_X1.negative(2));
 
-        let negX1_implies_negX1 = implies(Rc::clone(&neg_X1), Rc::clone(&neg_X1));
+        let negX1_implies_negX1 = implies(neg_X1, neg_X1);
         assert!(!negX1_implies_negX1.positive(1));
         assert!(negX1_implies_negX1.positive(2));
         assert!(!negX1_implies_negX1.negative(1));
         assert!(negX1_implies_negX1.negative(2));
 
-        let negX1_implies_X1 = implies(Rc::clone(&neg_X1), Rc::clone(&X1));
+        let negX1_implies_X1 = implies(neg_X1, X1);
         assert!(negX1_implies_X1.positive(1));
         assert!(!negX1_implies_X1.negative(1));
     }
@@ -1441,16 +1443,16 @@ mod tests {
     #[test]
     fn test_wellformedness_positive() {
         let svar = svar(1);
-        let mux_x = mu(1, Rc::clone(&svar));
+        let mux_x = mu(1, svar);
         assert!(mux_x.well_formed());
 
-        let mux_x2 = mu(2, not(Rc::clone(&svar)));
+        let mux_x2 = mu(2, not(svar));
         assert!(mux_x2.well_formed());
 
         let mux_x3 = mu(2, not(symbol(1)));
         assert!(mux_x3.well_formed());
 
-        let mux_x = mu(1, not(Rc::clone(&svar)));
+        let mux_x = mu(1, not(svar));
         assert!(!mux_x.well_formed());
 
         let phi = metavar_s_fresh(97, 2, vec![], vec![]);
@@ -1480,250 +1482,109 @@ mod tests {
         let x0 = evar(0);
         let X0 = svar(0);
         let c0 = symbol(0);
-        let x0_implies_x0 = implies(Rc::clone(&x0), Rc::clone(&x0));
-        let appx0x0 = app(Rc::clone(&x0), Rc::clone(&x0));
-        let existsx0x0 = exists(0, Rc::clone(&x0));
-        let muX0x0 = mu(0, Rc::clone(&x0));
+        let x0_implies_x0 = implies(x0, x0);
+        let appx0x0 = app(x0, x0);
+        let existsx0x0 = exists(0, x0);
+        let muX0x0 = mu(0, x0);
 
         // Concrete patterns are unaffected by instantiate
-        assert!(instantiate_internal(&x0, &[0], &[Rc::clone(&X0)]) == None);
-        assert!(instantiate_internal(&x0, &[1], &[Rc::clone(&X0)]) == None);
-        assert!(instantiate_internal(&X0, &[0], &[Rc::clone(&x0)]) == None);
-        assert!(instantiate_internal(&X0, &[1], &[Rc::clone(&x0)]) == None);
-        assert!(instantiate_internal(&c0, &[0], &[Rc::clone(&x0)]) == None);
-        assert!(instantiate_internal(&c0, &[1], &[Rc::clone(&x0)]) == None);
-        assert!(instantiate_internal(&x0_implies_x0, &[0], &[Rc::clone(&x0)]) == None);
-        assert!(instantiate_internal(&x0_implies_x0, &[1], &[Rc::clone(&x0)]) == None);
-        assert!(instantiate_internal(&appx0x0, &[0], &[Rc::clone(&x0)]) == None);
-        assert!(instantiate_internal(&appx0x0, &[1], &[Rc::clone(&x0)]) == None);
-        assert!(instantiate_internal(&existsx0x0, &[0], &[Rc::clone(&X0)]) == None);
-        assert!(instantiate_internal(&existsx0x0, &[1], &[Rc::clone(&X0)]) == None);
-        assert!(instantiate_internal(&muX0x0, &[0], &[Rc::clone(&x0)]) == None);
-        assert!(instantiate_internal(&muX0x0, &[1], &[Rc::clone(&x0)]) == None);
+        assert!(instantiate(x0, &[0], &[X0]) == x0);
+        assert!(instantiate(x0, &[1], &[X0]) == x0);
+        assert!(instantiate(X0, &[0], &[x0]) == X0);
+        assert!(instantiate(X0, &[1], &[x0]) == X0);
+        assert!(instantiate(c0, &[0], &[x0]) == c0);
+        assert!(instantiate(c0, &[1], &[x0]) == c0);
+        assert!(instantiate(x0_implies_x0, &[0], &[x0]) == x0_implies_x0);
+        assert!(instantiate(x0_implies_x0, &[1], &[x0]) == x0_implies_x0);
+        assert!(instantiate(appx0x0, &[0], &[x0]) == appx0x0);
+        assert!(instantiate(appx0x0, &[1], &[x0]) == appx0x0);
+        assert!(instantiate(existsx0x0, &[0], &[X0]) == existsx0x0);
+        assert!(instantiate(existsx0x0, &[1], &[X0]) == existsx0x0);
+        assert!(instantiate(muX0x0, &[0], &[x0]) == muX0x0);
+        assert!(instantiate(muX0x0, &[1], &[x0]) == muX0x0);
 
         let phi0 = metavar_unconstrained(0);
-        let phi0_implies_phi0 = implies(Rc::clone(&phi0), Rc::clone(&phi0));
-        let appphi0phi0 = app(Rc::clone(&phi0), Rc::clone(&phi0));
-        let existsx0phi0 = exists(0, Rc::clone(&phi0));
-        let muX0phi0 = mu(0, Rc::clone(&phi0));
-        let existsx0X0 = exists(0, Rc::clone(&X0));
-        assert!(
-            instantiate_internal(&phi0_implies_phi0, &[0], &[Rc::clone(&x0)])
-                == Some(Rc::clone(&x0_implies_x0))
-        );
-        assert!(instantiate_internal(&phi0_implies_phi0, &[1], &[Rc::clone(&x0)]) == None);
-        assert_eq!(
-            instantiate_internal(&appphi0phi0, &[0], &[Rc::clone(&x0)]),
-            Some(Rc::clone(&appx0x0))
-        );
-        assert_eq!(
-            instantiate_internal(&appphi0phi0, &[1], &[Rc::clone(&x0)]),
-            None
-        );
-        assert_eq!(
-            instantiate_internal(&existsx0phi0, &[0], &[Rc::clone(&x0)]),
-            Some(Rc::clone(&existsx0x0))
-        );
-        assert_eq!(
-            instantiate_internal(&existsx0phi0, &[1], &[Rc::clone(&x0)]),
-            None
-        );
-        assert_eq!(
-            instantiate_internal(&muX0phi0, &[0], &[Rc::clone(&x0)]),
-            Some(Rc::clone(&muX0x0))
-        );
-        assert_eq!(
-            instantiate_internal(&muX0phi0, &[1], &[Rc::clone(&x0)]),
-            None
-        );
+        let phi0_implies_phi0 = implies(phi0, phi0);
+        let appphi0phi0 = app(phi0, phi0);
+        let existsx0phi0 = exists(0, phi0);
+        let muX0phi0 = mu(0, phi0);
+        let existsx0X0 = exists(0, X0);
+        assert!(instantiate(phi0_implies_phi0, &[0], &[x0]) == x0_implies_x0);
+        assert!(instantiate(phi0_implies_phi0, &[1], &[x0]) == phi0_implies_phi0);
+        assert_eq!(instantiate(appphi0phi0, &[0], &[x0]), appx0x0);
+        assert_eq!(instantiate(appphi0phi0, &[1], &[x0]), appphi0phi0);
+        assert_eq!(instantiate(existsx0phi0, &[0], &[x0]), existsx0x0);
+        assert_eq!(instantiate(existsx0phi0, &[1], &[x0]), existsx0phi0);
+        assert_eq!(instantiate(muX0phi0, &[0], &[x0]), muX0x0);
+        assert_eq!(instantiate(muX0phi0, &[1], &[x0]), muX0phi0);
 
         // Simultaneous instantiations
         let phi1 = metavar_unconstrained(1);
-        let muX0phi1 = mu(0, Rc::clone(&phi1));
-        let muX0X0 = mu(0, Rc::clone(&X0));
+        let muX0phi1 = mu(0, phi1);
+        let muX0X0 = mu(0, X0);
         // Empty substs have no effect
-        assert!(
-            instantiate_internal(&existsx0phi0, &[1, 2], &[Rc::clone(&x0), Rc::clone(&X0)]) == None
-        );
-        assert!(
-            instantiate_internal(&existsx0phi0, &[2, 1], &[Rc::clone(&x0), Rc::clone(&X0)]) == None
-        );
-        assert!(
-            instantiate_internal(&muX0phi0, &[1, 2], &[Rc::clone(&x0), Rc::clone(&X0)]) == None
-        );
-        assert!(
-            instantiate_internal(&muX0phi0, &[2, 1], &[Rc::clone(&x0), Rc::clone(&X0)]) == None
-        );
+        assert!(instantiate(existsx0phi0, &[1, 2], &[x0, X0]) == existsx0phi0);
+        assert!(instantiate(existsx0phi0, &[2, 1], &[x0, X0]) == existsx0phi0);
+        assert!(instantiate(muX0phi0, &[1, 2], &[x0, X0]) == muX0phi0);
+        assert!(instantiate(muX0phi0, &[2, 1], &[x0, X0]) == muX0phi0);
 
         // Order matters if corresponding value is not moved
-        assert!(
-            instantiate_internal(&existsx0phi0, &[1, 0], &[Rc::clone(&x0), Rc::clone(&X0)])
-                == Some(Rc::clone(&existsx0X0))
-        );
-        assert!(
-            instantiate_internal(&existsx0phi0, &[0, 1], &[Rc::clone(&x0), Rc::clone(&X0)])
-                == Some(Rc::clone(&existsx0x0))
-        );
-        assert!(
-            instantiate_internal(&muX0phi0, &[1, 0], &[Rc::clone(&x0), Rc::clone(&X0)])
-                == Some(Rc::clone(&muX0X0))
-        );
-        assert!(
-            instantiate_internal(&muX0phi0, &[0, 1], &[Rc::clone(&x0), Rc::clone(&X0)])
-                == Some(Rc::clone(&muX0x0))
-        );
+        assert!(instantiate(existsx0phi0, &[1, 0], &[x0, X0]) == existsx0X0);
+        assert!(instantiate(existsx0phi0, &[0, 1], &[x0, X0]) == existsx0x0);
+        assert!(instantiate(muX0phi0, &[1, 0], &[x0, X0]) == muX0X0);
+        assert!(instantiate(muX0phi0, &[0, 1], &[x0, X0]) == muX0x0);
 
         // Order does not matter if corresponding value is moved
-        let muX0phi0_implies_ph1 = implies(Rc::clone(&muX0phi0), Rc::clone(&phi1));
-        let muX0x0_implies_X0 = implies(Rc::clone(&muX0x0), Rc::clone(&X0));
-        assert!(
-            instantiate_internal(
-                &muX0phi0_implies_ph1,
-                &[0, 1],
-                &[Rc::clone(&x0), Rc::clone(&X0)]
-            ) == Some(Rc::clone(&muX0x0_implies_X0))
-        );
-        assert!(
-            instantiate_internal(
-                &muX0phi0_implies_ph1,
-                &[1, 0],
-                &[Rc::clone(&X0), Rc::clone(&x0)]
-            ) == Some(Rc::clone(&muX0x0_implies_X0))
-        );
-        let muX0phi0_app_ph1 = app(Rc::clone(&muX0phi0), Rc::clone(&phi1));
-        let muX0x0_app_X0 = app(Rc::clone(&muX0x0), Rc::clone(&X0));
-        assert!(
-            instantiate_internal(
-                &muX0phi0_app_ph1,
-                &[0, 1],
-                &[Rc::clone(&x0), Rc::clone(&X0)]
-            ) == Some(Rc::clone(&muX0x0_app_X0))
-        );
-        assert!(
-            instantiate_internal(
-                &muX0phi0_app_ph1,
-                &[1, 0],
-                &[Rc::clone(&X0), Rc::clone(&x0)]
-            ) == Some(Rc::clone(&muX0x0_app_X0))
-        );
+        let muX0phi0_implies_ph1 = implies(muX0phi0, phi1);
+        let muX0x0_implies_X0 = implies(muX0x0, X0);
+        assert!(instantiate(muX0phi0_implies_ph1, &[0, 1], &[x0, X0]) == muX0x0_implies_X0);
+        assert!(instantiate(muX0phi0_implies_ph1, &[1, 0], &[X0, x0]) == muX0x0_implies_X0);
+        let muX0phi0_app_ph1 = app(muX0phi0, phi1);
+        let muX0x0_app_X0 = app(muX0x0, X0);
+        assert!(instantiate(muX0phi0_app_ph1, &[0, 1], &[x0, X0]) == muX0x0_app_X0);
+        assert!(instantiate(muX0phi0_app_ph1, &[1, 0], &[X0, x0]) == muX0x0_app_X0);
 
         // No side-effects
-        let muX0ph1_implies_X0 = implies(Rc::clone(&muX0phi1), Rc::clone(&X0));
-        assert!(
-            instantiate_internal(
-                &muX0phi0_implies_ph1,
-                &[0, 1],
-                &[Rc::clone(&phi1), Rc::clone(&X0)]
-            ) == Some(Rc::clone(&muX0ph1_implies_X0))
-        );
-        assert!(
-            instantiate_internal(
-                &muX0phi0_implies_ph1,
-                &[1, 0],
-                &[Rc::clone(&X0), Rc::clone(&phi1)]
-            ) == Some(Rc::clone(&muX0ph1_implies_X0))
-        );
-        let muX0ph1_app_X0 = app(Rc::clone(&muX0phi1), Rc::clone(&X0));
-        assert!(
-            instantiate_internal(
-                &muX0phi0_app_ph1,
-                &[0, 1],
-                &[Rc::clone(&phi1), Rc::clone(&X0)]
-            ) == Some(Rc::clone(&muX0ph1_app_X0))
-        );
-        assert!(
-            instantiate_internal(
-                &muX0phi0_app_ph1,
-                &[1, 0],
-                &[Rc::clone(&X0), Rc::clone(&phi1)]
-            ) == Some(Rc::clone(&muX0ph1_app_X0))
-        );
+        let muX0ph1_implies_X0 = implies(muX0phi1, X0);
+        assert!(instantiate(muX0phi0_implies_ph1, &[0, 1], &[phi1, X0]) == muX0ph1_implies_X0);
+        assert!(instantiate(muX0phi0_implies_ph1, &[1, 0], &[X0, phi1]) == muX0ph1_implies_X0);
+        let muX0ph1_app_X0 = app(muX0phi1, X0);
+        assert!(instantiate(muX0phi0_app_ph1, &[0, 1], &[phi1, X0]) == muX0ph1_app_X0);
+        assert!(instantiate(muX0phi0_app_ph1, &[1, 0], &[X0, phi1]) == muX0ph1_app_X0);
 
         // First comes first
-        assert!(
-            instantiate_internal(
-                &muX0phi0_app_ph1,
-                &[0, 1, 1],
-                &[Rc::clone(&phi1), Rc::clone(&X0), Rc::clone(&x0)]
-            ) == Some(Rc::clone(&muX0ph1_app_X0))
-        );
-        assert!(
-            instantiate_internal(
-                &muX0phi0_app_ph1,
-                &[1, 0, 0],
-                &[Rc::clone(&X0), Rc::clone(&phi1), Rc::clone(&x0)]
-            ) == Some(Rc::clone(&muX0ph1_app_X0))
-        );
+        assert!(instantiate(muX0phi0_app_ph1, &[0, 1, 1], &[phi1, X0, x0]) == muX0ph1_app_X0);
+        assert!(instantiate(muX0phi0_app_ph1, &[1, 0, 0], &[X0, phi1, x0]) == muX0ph1_app_X0);
 
         // Extra values are ignored
         assert!(
-            instantiate_internal(
-                &muX0phi0_app_ph1,
+            instantiate(
+                muX0phi0_app_ph1,
                 &[0, 1, 1],
-                &[
-                    Rc::clone(&phi1),
-                    Rc::clone(&X0),
-                    Rc::clone(&x0),
-                    Rc::clone(&x0),
-                    Rc::clone(&x0),
-                    Rc::clone(&x0),
-                    Rc::clone(&x0),
-                    Rc::clone(&x0)
-                ]
-            ) == Some(Rc::clone(&muX0ph1_app_X0))
+                &[phi1, X0, x0, x0, x0, x0, x0, x0]
+            ) == muX0ph1_app_X0
         );
-        assert!(
-            instantiate_internal(
-                &muX0phi0_app_ph1,
-                &[0, 1, 2],
-                &[Rc::clone(&phi1), Rc::clone(&X0)]
-            ) == Some(Rc::clone(&muX0ph1_app_X0))
-        );
+        assert!(instantiate(muX0phi0_app_ph1, &[0, 1, 2], &[phi1, X0]) == muX0ph1_app_X0);
 
         // Instantiate with concrete patterns applies pending substitutions
-        let val = esubst(Rc::clone(&phi0), 0, Rc::clone(&c0));
-        assert_eq!(
-            instantiate_internal(&val, &[0], &[Rc::clone(&x0)]),
-            Some(Rc::clone(&c0))
-        );
-        let val = ssubst(Rc::clone(&phi0), 0, Rc::clone(&c0));
-        assert_eq!(
-            instantiate_internal(&val, &[0], &[Rc::clone(&X0)]),
-            Some(Rc::clone(&c0))
-        );
-        let val = ssubst(
-            Rc::clone(&esubst(Rc::clone(&phi0), 0, Rc::clone(&X0))),
-            0,
-            Rc::clone(&c0),
-        );
-        assert_eq!(
-            instantiate_internal(&val, &[0], &[Rc::clone(&X0)]),
-            Some(Rc::clone(&c0))
-        );
+        let val = esubst(phi0, 0, c0);
+        assert_eq!(instantiate(val, &[0], &[x0]), c0);
+        let val = ssubst(phi0, 0, c0);
+        assert_eq!(instantiate(val, &[0], &[X0]), c0);
+        let val = ssubst(esubst(phi0, 0, X0), 0, c0);
+        assert_eq!(instantiate(val, &[0], &[X0]), c0);
 
         // Instantiate with metavar keeps pending substitutions
-        let val = esubst(Rc::clone(&phi0), 0, Rc::clone(&c0));
-        assert_eq!(
-            instantiate_internal(&val, &[0], &[Rc::clone(&phi1)]),
-            Some(esubst(Rc::clone(&phi1), 0, Rc::clone(&c0)))
-        );
-        let val = ssubst(Rc::clone(&phi0), 0, Rc::clone(&c0));
-        assert_eq!(
-            instantiate_internal(&val, &[0], &[Rc::clone(&phi1)]),
-            Some(ssubst(Rc::clone(&phi1), 0, Rc::clone(&c0)))
-        );
+        let val = esubst(phi0, 0, c0);
+        assert_eq!(instantiate(val, &[0], &[phi1]), esubst(phi1, 0, c0));
+        let val = ssubst(phi0, 0, c0);
+        assert_eq!(instantiate(val, &[0], &[phi1]), ssubst(phi1, 0, c0));
 
         // The plug in a subst. needs to be instantiated as well
-        let val = ssubst(Rc::clone(&phi0), 0, Rc::clone(&phi0));
-        assert_eq!(
-            instantiate_internal(&val, &[0], &[Rc::clone(&X0)]),
-            Some(Rc::clone(&X0))
-        );
-        let val = ssubst(Rc::clone(&phi0), 0, Rc::clone(&phi1));
-        assert_eq!(
-            instantiate_internal(&val, &[0, 1], &[Rc::clone(&X0), Rc::clone(&c0)]),
-            Some(c0)
-        );
+        let val = ssubst(phi0, 0, phi0);
+        assert_eq!(instantiate(val, &[0], &[X0]), X0);
+        let val = ssubst(phi0, 0, phi1);
+        assert_eq!(instantiate(val, &[0, 1], &[X0, c0]), c0);
     }
 
     // TODO: Add more cases
@@ -1746,10 +1607,10 @@ mod tests {
         #[case] s_fresh: IdList,
         #[case] positive: IdList,
         #[case] negative: IdList,
-        #[case] plug: Rc<Pattern>,
+        #[case] plug: Ptr<Pattern>,
     ) {
-        instantiate_internal(
-            &Rc::new(Pattern::MetaVar {
+        instantiate(
+            Ptr::new(Pattern::MetaVar {
                 id: 0,
                 e_fresh,
                 s_fresh,
@@ -1766,7 +1627,7 @@ mod tests {
     #[should_panic]
     fn test_illformed_instantiation() {
         let phi0 = metavar_unconstrained(0);
-        instantiate_internal(&phi0, &[1, 0], &[Rc::clone(&phi0)]);
+        instantiate(phi0, &[1, 0], &[phi0]);
     }
 
     #[cfg(test)]
@@ -1848,7 +1709,7 @@ mod tests {
         let phi0 = metavar_unconstrained(0);
         assert_eq!(
             stack,
-            vec![Term::Pattern(Rc::new(Pattern::Implies {
+            vec![Term::Pattern(Ptr::new(Pattern::Implies {
                 left: phi0.clone(),
                 right: phi0.clone()
             }))]
@@ -1889,7 +1750,7 @@ mod tests {
                 ExecutionPhase::Proof,
             );
 
-            let phi1 = Rc::new(Pattern::MetaVar {
+            let phi1 = Ptr::new(Pattern::MetaVar {
                 id: 1,
                 e_fresh: cons[0].clone(),
                 s_fresh: cons[1].clone(),
@@ -1900,7 +1761,7 @@ mod tests {
 
             assert_eq!(
                 stack,
-                vec![Term::Pattern(Rc::new(Pattern::Implies {
+                vec![Term::Pattern(Ptr::new(Pattern::Implies {
                     left: phi1.clone(),
                     right: phi1.clone()
                 }))]
@@ -1948,9 +1809,9 @@ mod tests {
         let phi0 = metavar_unconstrained(0);
         assert_eq!(
             stack,
-            vec![Term::Proved(Rc::new(Pattern::Implies {
-                left: Rc::clone(&phi0),
-                right: Rc::clone(&phi0)
+            vec![Term::Proved(Ptr::new(Pattern::Implies {
+                left: phi0,
+                right: phi0
             }))]
         )
     }
@@ -1985,7 +1846,7 @@ mod tests {
     #[test]
     fn test_apply_esubst() {
         // Define test cases as tuples of input pattern, evar_id, plug, and expected pattern
-        let test_cases: Vec<(Rc<Pattern>, u8, Rc<Pattern>, Rc<Pattern>)> = vec![
+        let test_cases: Vec<(Ptr<Pattern>, u8, Ptr<Pattern>, Ptr<Pattern>)> = vec![
             // Atomic cases
             (evar(0), 0, symbol(1), symbol(1)),
             (evar(0), 0, evar(2), evar(2)),
@@ -2050,7 +1911,7 @@ mod tests {
         // Iterate over the test cases
         for (pattern, evar_id, plug, expected) in test_cases.iter() {
             // Call the apply_esubst function (replace with your Rust code)
-            let result = apply_esubst(pattern, *evar_id, plug); // Replace with the actual function or code you want to test
+            let result = apply_esubst(*pattern, *evar_id, *plug); // Replace with the actual function or code you want to test
 
             // Assert that the result matches the expected value
             assert_eq!(result, *expected);
@@ -2062,16 +1923,16 @@ mod tests {
     // Test that eVar substitution is capture avoiding
     #[case(exists(0, evar(1)), 1, evar(0))]
     fn test_apply_esubst_negative(
-        #[case] pattern: Rc<Pattern>,
+        #[case] pattern: Ptr<Pattern>,
         #[case] evar_id: Id,
-        #[case] plug: Rc<Pattern>,
+        #[case] plug: Ptr<Pattern>,
     ) {
-        _ = apply_esubst(&pattern, evar_id, &plug);
+        _ = apply_esubst(pattern, evar_id, plug);
     }
 
     #[test]
     fn test_apply_ssubst() {
-        let test_cases: Vec<(Rc<Pattern>, u8, Rc<Pattern>, Rc<Pattern>)> = vec![
+        let test_cases: Vec<(Ptr<Pattern>, u8, Ptr<Pattern>, Ptr<Pattern>)> = vec![
             // Atomic cases
             (evar(0), 0, symbol(1), evar(0)),
             (evar(0), 1, evar(2), evar(0)),
@@ -2134,7 +1995,7 @@ mod tests {
         ];
 
         for (pattern, svar_id, plug, expected) in test_cases {
-            assert_eq!(apply_ssubst(&pattern, svar_id, &plug), expected);
+            assert_eq!(apply_ssubst(pattern, svar_id, plug), expected);
         }
     }
 
@@ -2143,11 +2004,11 @@ mod tests {
     // Test that sVar substitution is capture avoiding
     #[case(mu(0, svar(1)), 1, svar(0))]
     fn test_apply_ssubst_negative(
-        #[case] pattern: Rc<Pattern>,
+        #[case] pattern: Ptr<Pattern>,
         #[case] svar_id: Id,
-        #[case] plug: Rc<Pattern>,
+        #[case] plug: Ptr<Pattern>,
     ) {
-        _ = apply_ssubst(&pattern, svar_id, &plug);
+        _ = apply_ssubst(pattern, svar_id, plug);
     }
 
     #[test]
