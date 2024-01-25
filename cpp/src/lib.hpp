@@ -358,6 +358,47 @@ struct Pattern {
     }
   }
 
+  bool pattern_app_ctx_hole(Id evar) noexcept {
+    switch (inst) {
+    case Instruction::EVar:
+      return id == evar;
+    case Instruction::SVar:
+      return false;
+    case Instruction::Symbol:
+      return false;
+    case Instruction::Implication:
+      return false;
+    case Instruction::Application: {
+      return (left->pattern_app_ctx_hole(evar) && right->pattern_e_fresh(evar))
+               || (left->pattern_e_fresh(evar) && right->pattern_app_ctx_hole(evar));
+    }
+    case Instruction::Exists:
+      return false;
+    case Instruction::Mu:
+      return false;
+    case Instruction::MetaVar:
+      return app_ctx_holes.contains(evar);
+    case Instruction::ESubst: {
+      if (id == evar) {
+        return subpattern->pattern_app_ctx_hole(evar) && plug->pattern_app_ctx_hole(evar);
+      } else {
+        return (subpattern->pattern_app_ctx_hole(evar) && plug->pattern_e_fresh(evar))
+                 || (subpattern->pattern_app_ctx_hole(id)
+                     && plug->pattern_app_ctx_hole(evar)
+                     && subpattern->pattern_e_fresh(evar));
+      }
+    }
+    case Instruction::SSubst: {
+#ifdef DEBUG
+        throw std::runtime_error("application context hole checking not supported for SSubst's");
+#endif
+        exit(1);
+    }
+    default:
+      return false;
+    }
+  }
+
   // Checks whether pattern is well-formed ASSUMING
   // that the sub-patterns are well-formed
   // TODO: Audit this function to see if we need to add any more cases
@@ -809,6 +850,17 @@ struct Pattern {
                   "Instantiation of MetaVar " + std::to_string(p->id) +
                   " breaks a negativity constraint: SVar " +
                   std::to_string(svar));
+#endif
+              exit(1);
+            }
+          }
+          for (const auto &evar : p->app_ctx_holes) {
+            if (!plugs[pos]->pattern_app_ctx_hole(evar)) {
+#ifdef DEBUG
+              throw std::runtime_error(
+                  "Instantiation of MetaVar " + std::to_string(p->id) +
+                  " breaks an application context hole constraint: EVar " +
+                  std::to_string(evar));
 #endif
               exit(1);
             }

@@ -30,6 +30,10 @@ int main() {
   test_positivity();
   std::cout << std::endl;
 
+  std::cout << "Executing test_app_ctx_hole()" << std::endl;
+  test_app_ctx_hole();
+  std::cout << std::endl;
+
   std::cout << "Executing test_wellformedness_positive()" << std::endl;
   test_wellformedness_positive();
   std::cout << std::endl;

@@ -1,5 +1,7 @@
 #include "../src/lib.hpp"
 
+#define MAX_SIZE 27001
+
 void test_pattern_construction() {
   std::array<int, MAX_SIZE> proof;
   proof[0] = 6; // Size
@@ -377,6 +379,34 @@ void test_positivity() {
   std::cout << std::endl;
 
 #endif
+
+}
+
+void test_app_ctx_hole() {
+
+  assert(!Pattern::metavar_unconstrained(0)->pattern_app_ctx_hole(0));
+  assert(Pattern::metavar(0, IdList(), IdList(), IdList(), IdList(), IdList(0))
+          ->pattern_app_ctx_hole(0));
+  assert(Pattern::evar(0)->pattern_app_ctx_hole(0));
+  assert(!Pattern::evar(1)->pattern_app_ctx_hole(0));
+  assert(!Pattern::svar(0)->pattern_app_ctx_hole(0));
+  assert(!Pattern::symbol(0)->pattern_app_ctx_hole(0));
+  assert(!Pattern::implies(Pattern::evar(0), Pattern::evar(1))
+          ->pattern_app_ctx_hole(0));
+  assert(Pattern::app(Pattern::evar(0), Pattern::evar(1))
+          ->pattern_app_ctx_hole(0));
+  assert(Pattern::app(Pattern::evar(1), Pattern::evar(0))
+          ->pattern_app_ctx_hole(0));
+  assert(!Pattern::app(Pattern::evar(0), Pattern::evar(0))
+          ->pattern_app_ctx_hole(0));
+  assert(!Pattern::app(Pattern::evar(1), Pattern::evar(1))
+          ->pattern_app_ctx_hole(0));
+  assert(!Pattern::exists(0, Pattern::evar(0))->pattern_app_ctx_hole(0));
+  assert(!Pattern::exists(0, Pattern::evar(1))->pattern_app_ctx_hole(0));
+  assert(!Pattern::exists(1, Pattern::evar(0))->pattern_app_ctx_hole(0));
+  assert(!Pattern::exists(1, Pattern::evar(1))->pattern_app_ctx_hole(0));
+  assert(!Pattern::mu(0, Pattern::evar(0))->pattern_app_ctx_hole(0));
+  assert(!Pattern::mu(0, Pattern::svar(1))->pattern_app_ctx_hole(0));
 
 }
 
