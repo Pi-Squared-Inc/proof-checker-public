@@ -4,8 +4,9 @@
 # Options:
 #  -a, --available            Print if the program is available or not
 #  -h, --help                 Print this help message
-#  -o, --output FILENAME      Output file
+#  -l, --log FILENAME         Save the output log to a file
 #  -s, --stats                Print statistics about the input
+#  -v, --verbose              Print the output of the execution
 
 BASH_SOURCE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 BUILD_DIR="$BASH_SOURCE_DIR/../.build"
@@ -30,17 +31,22 @@ while [[ $# -gt 0 ]]; do
             echo "Options:"
             echo " -a, --available         Print if the program is available or not"
             echo " -h, --help              Print this help message"
-            echo " -o, --output FILENAME   Save the output to a file"
+            echo " -l, --log FILENAME      Save the output log to a file"
             echo " -s, --stats             Print statistics about the execution"
+            echo " -v, --verbose           Print the output of the execution"
             exit 0
             ;;
-        -o|--output)
-            output_file="$2"
+        -o|--log)
+            log_file="$2"
             shift
             shift
             ;;
         -s|--stats)
             stats=true
+            shift
+            ;;
+        -v|--verbose)
+            verbose=true
             shift
             ;;
         *)
@@ -83,14 +89,17 @@ gamma="$input/$input_filename.ml-gamma"
 claim="$input/$input_filename.ml-claim"
 proof="$input/$input_filename.ml-proof"
 
-# If $output_file is not set, then we will print the output to stdout
-if [ -z "$output_file" ]; then
-    output_file="/dev/stdout"
+# If $log_file is not set, then we will print the output to stdout
+if [ -z "$log_file" ]; then
+    log_file="/dev/stdout"
 fi
 
 # Execute the RISC0 Proof-Checker with the input files
 if [ "$stats" ]; then
    output=$(cargo run --release --bin host "$gamma" "$claim" "$proof")
+   if [ "$verbose" ]; then
+       echo "$output"
+   fi
    {
         echo "$input_filename"
         echo "$output" | grep -E "Total cycles"
@@ -99,7 +108,7 @@ if [ "$stats" ]; then
         echo "$output" | grep -E "Verified in "
         echo "$output" | grep -E "Running execution \+ ZK certficate generation \+ verification"
         echo "-----------------------------------------------------------------------"
-   } >> "$output_file"
+   } >> "$log_file"
 else
     cargo run --release --bin host "$gamma" "$claim" "$proof" >> /dev/null
 fi

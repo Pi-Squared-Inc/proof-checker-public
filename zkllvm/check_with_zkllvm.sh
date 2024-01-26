@@ -10,17 +10,12 @@
 #                              THREAD_MODE can be 'single' or 'multi'
 #  -s,  --stats                Print the time spent of the assigner and transpiler
 #  -t,  --transpiler           [Deprecated] Use the transpiler to proof and verify
-#  -ti, --translate-input-off  Turn off the translation of the input files and 
+#  -ti, --translate-input-off  Turn off the translation of the input files and
 #                              assume that the input is a JSON file
 #  -v,  --verbose              Print the output of the assigner and transpiler
 #  -vv, --very-verbose         Print the versbose execution of this script
 #       --version              Print the version of all tools
 
-# Check if ZKLLVM_ROOT is set, as it is necessary for the script to work
-if [[ -z "${ZKLLVM_ROOT}" ]]; then
-  echo "ZKLLVM_ROOT is not set"
-  exit 1
-fi
 
 bash_source_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 build_dir="$bash_source_dir/../.build"
@@ -32,34 +27,37 @@ PROOF_PRODUCER_BIN="proof-generator-single-threaded"
 PROOF_PRODUCER_MODE=single-threaded
 
 assigner_is_available() {
+    output=${1:-/dev/null}
     if command -v assigner &> /dev/null; then
         return 0
     else
         echo "Error: Assigner is not installed." \
-             "Please install the assigner from zkLLVM and include it in your PATH."
-        return 1 
+             "Please install the assigner from zkLLVM and include it in your PATH." >&"$output"
+        return 1
     fi
 }
 
 transpiler_is_available() {
+    output=${1:-/dev/null}
     if command -v transpiler &> /dev/null; then
         return 0
     else
         echo "Error: Transpiler is not installed." \
-             "Please install the transpiler from zkLLVM and include it in your PATH."
+             "Please install the transpiler from zkLLVM and include it in your PATH." >&"$output"
         return 1
     fi
 }
 
 proof_producer_is_available() {
+    output=${1:-/dev/null}
     if command -v proof-generator-single-threaded &> /dev/null; then
         return 0
-    else 
+    else
         if command -v proof-generator-multi-threaded &> /dev/null; then
             return 0
         else
              echo "Error: Proof-Producer is not installed." \
-                  "Please install the proof-producer from proof-producer and include it in your PATH."
+                  "Please install the proof-producer from proof-producer and include it in your PATH." >&"$output"
             return 1
         fi
     fi
@@ -120,7 +118,7 @@ while [[ $# -gt 0 ]]; do
             transpiler=false
             if [ "$2" == "single" ]; then
                 PROOF_PRODUCER_BIN="proof-generator-single-threaded"
-                PROOF_PRODUCER_MODE=single-threaded 
+                PROOF_PRODUCER_MODE=single-threaded
             elif [ "$2" == "multi" ]; then
                 PROOF_PRODUCER_BIN="proof-generator-multi-threaded"
                 PROOF_PRODUCER_MODE=multi-threaded
@@ -140,7 +138,7 @@ while [[ $# -gt 0 ]]; do
             proof_producer=false
             echo "Use transpiler to generate the proof and verify it is" \
                  "deprecated and will be removed in the future. Please consider" \
-                 "use the proof-producer instead." 
+                 "use the proof-producer instead."
             shift
             ;;
         -ti|--translate-input-off)
@@ -158,17 +156,15 @@ while [[ $# -gt 0 ]]; do
             shift
             ;;
         --version)
-            if assigner_is_available; then
+            if assigner_is_available "/dev/stderr"; then
                 echo "Assigner Version: $(assigner --version)"
             fi
 
-            if transpiler_is_available; then
-                # TODO: Modify when https://github.com/NilFoundation/zkLLVM/issues/494
-                #       is fixed
-                echo "Transpiler Version: $(transpiler -e pallas --version)"
+            if transpiler_is_available "/dev/stderr"; then
+                echo "Transpiler Version: $(transpiler --version)"
             fi
 
-            if proof_producer_is_available; then
+            if proof_producer_is_available "/dev/stderr"; then
                 # TODO: Modify when https://github.com/NilFoundation/proof-producer/issues/52
                 #       is fixed
                 echo "Currently, isn't possible to show proof-producer version."
@@ -190,6 +186,12 @@ while [[ $# -gt 0 ]]; do
             ;;
     esac
 done
+
+# Check if ZKLLVM_ROOT is set, as it is necessary for the script to work
+if [[ -z "${ZKLLVM_ROOT}" ]]; then
+  echo "ZKLLVM_ROOT is not set"
+  exit 1
+fi
 
 if [ -z "$input" ]; then
     echo "Usage: check_with_zkllvm.sh [options] <input directory>"
@@ -336,7 +338,7 @@ ${llvm_link} -S "$OUTPUT_CLANG" -o "$OUTPUT_LLVM_LINK_1"
 ${llvm_link} -S "$OUTPUT_LLVM_LINK_1" "${LIB_C}/zkllvm-libc.ll" -o "$OUTPUT_LLVM_LINK_2"
 
 # Check if the assigner is available
-assigner_is_available || exit 0
+assigner_is_available "/dev/stderr" || exit 0
 
 # If stasts is not set then no output will be printed
 if [ -z "$stats" ]; then
@@ -349,7 +351,7 @@ if [ -z "$stats" ]; then
 
     if [ $transpiler == true ]; then
         # Check if the transpiler is available
-        transpiler_is_available || exit 0
+        transpiler_is_available "/dev/stderr" || exit 0
 
         # Generate the test proof
         if [ "$verbose" ]; then
@@ -360,7 +362,7 @@ if [ -z "$stats" ]; then
     else
         if [ $proof_producer == true ]; then
             # Check if the proof-producer is available
-            proof_producer_is_available || exit 0
+            proof_producer_is_available "/dev/stderr" || exit 0
 
             # Generate the test proof
             if [ "$verbose" ]; then
@@ -395,7 +397,7 @@ echo "$input_filename circuit generation .." $(("$CIRCUIT_TIME" / 1000)).$(("$CI
 
 if [ $transpiler == true ]; then
     # Check if the transpiler is available
-    transpiler_is_available || exit 0
+    transpiler_is_available "/dev/stderr" || exit 0
 
     # Generate the test proof
     [ "$verbose" ] && echo "Generate proof and verify with transpiler" >> "$log_file"
@@ -415,7 +417,7 @@ if [ $transpiler == true ]; then
 else
     if [ $proof_producer == true ]; then
         # Check if the proof-producer is available
-        proof_producer_is_available || exit 0
+        proof_producer_is_available "/dev/stderr" || exit 0
 
         # Generate the test proof
         echo "Generate proof and verify with proof-producer using $PROOF_PRODUCER_MODE mode" >> "$log_file"

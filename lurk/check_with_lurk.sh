@@ -18,16 +18,13 @@
 
 
 # Default values
-# available=false
 cpu=true
-# gpu=false
-# input=""
 log="/dev/stdout"
 stats=false
-# verbose=false
 verify=true
 translate_input=true
 rc=400
+script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 # Parse the arguments
 while [[ $# -gt 0 ]]; do
@@ -161,7 +158,7 @@ if [ "$translate_input" == true ]; then
      claim="$input/$input_filename.ml-claim"
      proof="$input/$input_filename.ml-proof"
 
-     lib_lurk="$(pwd)/src/lib.lurk"
+     lib_lurk="$script_dir/src/lib.lurk"
 
      # Check if the lib.lurk file exists
     if [ ! -f "$lib_lurk" ]; then
@@ -171,7 +168,7 @@ if [ "$translate_input" == true ]; then
 
      # Execute the translator with the input files and save the output to a temporary file
      tmp_input_file=$(mktemp)
-     ./translator.py "$gamma" "$claim" "$proof" "$lib_lurk" > "$tmp_input_file"
+     "$script_dir"/translator.py "$gamma" "$claim" "$proof" "$lib_lurk" > "$tmp_input_file"
 else
     # Check if the input file exists
     if [ ! -f "$input" ]; then
