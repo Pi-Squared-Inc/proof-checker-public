@@ -9,6 +9,11 @@ use alloc::vec;
 use alloc::vec::Vec;
 use core::ops::Deref;
 
+// Keep this version in sync with the one in Cargo.toml!
+// We could read from Cargo.toml but want to avoid String.
+const VERSION_MAJOR: u8 = 0;
+const VERSION_MINOR: u8 = 1;
+
 /// Instructions
 /// ============
 ///
@@ -35,6 +40,8 @@ pub enum Instruction {
     Save, Load,
     // Journal Manipulation,
     Publish,
+    // Version Control
+    Version,
     // Metavar with no constraints
     CleanMetaVar = (9 + 128)
 }
@@ -74,6 +81,7 @@ impl Instruction {
             28 => Instruction::Save,
             29 => Instruction::Load,
             30 => Instruction::Publish,
+            31 => Instruction::Version,
             // Sub-instructions
             137 => Instruction::CleanMetaVar,
             _ => panic!("Bad Instruction!"),
@@ -1058,6 +1066,18 @@ fn execute_instructions<'a>(
                     }
                 }
             },
+            Instruction::Version => {
+                let major = *iterator.next().expect("Expected a major.");
+                let minor = *iterator.next().expect("Expected a minor.");
+                assert_eq!(
+                    major, VERSION_MAJOR,
+                    "Proof checker does not support proofs in this version"
+                );
+                assert_eq!(
+                    minor, VERSION_MINOR,
+                    "Proof checker does not support proofs in this version"
+                );
+            }
             _ => {
                 unimplemented!("Instruction: {}", instr_u32)
             }
