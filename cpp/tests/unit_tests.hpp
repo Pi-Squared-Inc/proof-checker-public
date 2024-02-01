@@ -1177,7 +1177,7 @@ void test_no_remaining_claims() {
   claims[1] = (int)Instruction::Symbol;
   claims[2] = 0;
   claims[3] = (int)Instruction::Publish;
-  claims[4] = (int)138;
+  claims[4] = (int)138; // NO_OP
 
   std::array<int, MAX_SIZE> proof;
   proof[0] = 0;        // Size
@@ -1185,4 +1185,45 @@ void test_no_remaining_claims() {
 
   Pattern::verify(gamma, claims, proof);
 
+}
+
+void test_version_ok() {
+  std::array<int, MAX_SIZE> gamma;
+  gamma[0] = 3;        // Size
+  gamma[1] = (int)Instruction::Version;
+  gamma[2] = 0;
+  gamma[3] = 1;
+  gamma[1] = (int)138; // NO_OP
+
+  std::array<int, MAX_SIZE> claims;
+  claims[0] = 1;        // Size
+  claims[1] = (int)138; // NO_OP
+
+  std::array<int, MAX_SIZE> proof;
+  proof[0] = 1;        // Size
+  proof[1] = (int)138; // NO_OP
+
+  Pattern::verify(gamma, claims, proof);
+}
+
+void test_version_fail() {
+  std::array<int, MAX_SIZE> gamma;
+  gamma[0] = 3;        // Size
+  gamma[1] = (int)Instruction::Version;
+  gamma[2] = 0;
+  gamma[3] = 0;
+  gamma[4] = (int)Instruction::NO_OP;
+
+    std::array<int, MAX_SIZE> claims;
+  claims[0] = 1;        // Size
+  claims[1] = (int)Instruction::NO_OP;
+
+  std::array<int, MAX_SIZE> proof;
+  proof[0] = 1;        // Size
+  proof[1] = (int)Instruction::NO_OP;
+
+  // This will raise an excetion what we can't catch due to 
+  // `execute_instructions` and `verify` being `noexcept` fuctions as required
+  // by zkLLVM
+  Pattern::verify(gamma, claims, proof);
 }

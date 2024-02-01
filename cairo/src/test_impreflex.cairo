@@ -3,7 +3,7 @@ use debug::PrintTrait;
 fn impreflex_goal() -> (Array<u8>, Array<u8>, Array<u8>) {
     'Impreflex goal ... '.print();
     'Reading proofs ... '.print();
-    let gamma: Array<u8> = array![];
+    let gamma: Array<u8> = array![31, 0, 1];
 
     let claims: Array<u8> = array![137, 0, 137, 0, 5, 28, 30];
 

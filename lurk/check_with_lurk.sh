@@ -14,8 +14,12 @@
 #       --rc NUMBER            Set the number of iterations packed in a batch [default: 400]
 #       --translate-input-off  Turn off the translation of the input files and 
 #                              assume that the input is a JSON file
-#       --version              Print the version of Lurk
+#       --version              Print the Proof Version accepted by Lurk
 
+# This version should always be in sync with the proof that will be the input
+# When changing this version, remember to change the version in:
+# proof-checker/lurk/src/lib.lurk
+pi2_lurk_version="0.1.0"
 
 # Default values
 cpu=true
@@ -55,6 +59,7 @@ while [[ $# -gt 0 ]]; do
             echo "      --rc NUMBER            Set the number of iterations packed in a batch [default: 400]"
             echo "      --translate-input-off  Turn off the translation of the input files and"
             echo "                             assume that the input is a JSON file"
+            echo "      --version              Print the Proof Version accepted by Lurk"
             exit 0
             ;;
         -l|--log)
@@ -96,12 +101,7 @@ while [[ $# -gt 0 ]]; do
             shift
             ;;
         --version)
-        if command -v lurk &> /dev/null; then
-                echo "Lurk version: $(lurk --version)"
-            else
-                echo "Error: Lurk is not available." \
-                     "Please install Lurk-rs and make sure that the binary is in your PATH."
-            fi
+            echo "$pi2_lurk_version"
             exit 0
             ;;
         *)
@@ -126,6 +126,13 @@ fi
 # If very_verbose is set, then set -x
 if [ "$very_verbose" == true ]; then
     set -x
+fi
+
+# Check if the version accepted by Lurk is the same as the version of the proof
+proof_generation_version=$(poetry -C "$script_dir/../generation" run python -c "from importlib.metadata import version; print(version('proof_generation'))" )
+if [ "$pi2_lurk_version" != "$proof_generation_version" ]; then
+    echo "Error: The version of the proof ($proof_generation_version) is different from the version accepted by Lurk ($pi2_lurk_version)"
+    exit 1
 fi
 
 # Translate the binary files into the unique input JSON file accepted by zkLLVM

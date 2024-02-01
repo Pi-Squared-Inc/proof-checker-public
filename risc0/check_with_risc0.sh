@@ -7,10 +7,11 @@
 #  -l, --log FILENAME         Save the output log to a file
 #  -s, --stats                Print statistics about the input
 #  -v, --verbose              Print the output of the execution
+#      --version              Print the Proof Version accepted by RISC0
 
 BASH_SOURCE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 BUILD_DIR="$BASH_SOURCE_DIR/../.build"
-
+pi2_risc0_version=$(cargo pkgid --manifest-path "$BASH_SOURCE_DIR/pi2/Cargo.toml" | cut -d "@" -f2)
 
 # Parse arguments
 while [[ $# -gt 0 ]]; do
@@ -34,6 +35,7 @@ while [[ $# -gt 0 ]]; do
             echo " -l, --log FILENAME      Save the output log to a file"
             echo " -s, --stats             Print statistics about the execution"
             echo " -v, --verbose           Print the output of the execution"
+            echo "     --version           Print the Proof Version accepted by RISC0"
             exit 0
             ;;
         -o|--log)
@@ -48,6 +50,10 @@ while [[ $# -gt 0 ]]; do
         -v|--verbose)
             verbose=true
             shift
+            ;;
+        --version)
+            echo "$pi2_risc0_version"
+            exit 0
             ;;
         *)
             input="$1"
@@ -64,6 +70,13 @@ fi
 # Check if the input directory exists
 if [ ! -d "$input" ]; then
     echo "Input directory does not exist"
+    exit 1
+fi
+
+# Check if the version accepted by RISC0 is the same as the version of the proof
+proof_generation_version=$(poetry -C "$BASH_SOURCE_DIR/../generation" run python -c "from importlib.metadata import version; print(version('proof_generation'))" )
+if [ "$pi2_risc0_version" != "$proof_generation_version" ]; then
+    echo "Error: The version of the proof ($proof_generation_version) is different from the version accepted by RISC0 ($pi2_risc0_version)"
     exit 1
 fi
 

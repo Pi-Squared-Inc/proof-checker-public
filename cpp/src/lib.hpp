@@ -4,6 +4,9 @@
 #include <iostream>
 #include <memory>
 
+#define MAJOR_VERSION 0
+#define MINOR_VERSION 1
+
 #ifndef ALEN
 #define ALEN 27001
 #endif
@@ -58,6 +61,8 @@ enum class Instruction : int {
   Load,
   // Journal Manipulation,
   Publish,
+  // Version Control
+  Version,
   // Metavar with no constraints
   CleanMetaVar, // For some reason setting CleanMetaVar = (int)(9 + 128)
                 // isn't working with zkLLVM
@@ -125,6 +130,8 @@ Instruction from(int value) noexcept {
     return Instruction::Load;
   case 30:
     return Instruction::Publish;
+  case 31:
+    return Instruction::Version;
   case 137:
     return Instruction::CleanMetaVar;
   case 138:
@@ -1466,6 +1473,32 @@ struct Pattern {
           claim.release();
           break;
         }
+        }
+        break;
+      }
+      case Instruction::Version: {
+        auto major = iterator;
+        iterator++;
+        if (major == buffer.end()) {
+#if DEBUG
+          throw std::runtime_error("Expected a major.");
+#endif
+          exit(1);
+        }
+        auto minor = iterator;
+        iterator++;
+        if (minor == buffer.end()) {
+#if DEBUG
+          throw std::runtime_error("Expected a minor.");
+#endif
+          exit(1);
+        }
+        if (*major != MAJOR_VERSION || *minor != MINOR_VERSION) {
+#if DEBUG
+          throw std::runtime_error(
+              "Proof checker does not support proofs in this version");
+#endif
+          exit(1);
         }
         break;
       }

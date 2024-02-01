@@ -14,8 +14,12 @@
 #                              assume that the input is a JSON file
 #  -v,  --verbose              Print the output of the assigner and transpiler
 #  -vv, --very-verbose         Print the versbose execution of this script
-#       --version              Print the version of all tools
+#       --version              Print the Proof Version accepted by zkLLVM
 
+# This version should always be in sync with the proof that will be the input
+# When changing this version, remember to change the version in:
+# proof-checker/cpp/src/lib.hpp
+pi2_zkllvm_version="0.1.0"
 
 bash_source_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 build_dir="$bash_source_dir/../.build"
@@ -100,7 +104,7 @@ while [[ $# -gt 0 ]]; do
             echo " -t,  --transpiler                   [Deprecated] Use the transpiler to proof and verify"
             echo " -ti, --translate-input              Turn off the translation of the input files and assume that the input is a JSON file"
             echo " -v,  --verbose                      Print the output of the assigner and transpiler"
-            echo "      --version                      Print the version of all tools"
+            echo "      --version                      Print the Proof Version accepted by zkLLVM"
             exit 0
             ;;
         -l|--log)
@@ -156,19 +160,7 @@ while [[ $# -gt 0 ]]; do
             shift
             ;;
         --version)
-            if assigner_is_available "/dev/stderr"; then
-                echo "Assigner Version: $(assigner --version)"
-            fi
-
-            if transpiler_is_available "/dev/stderr"; then
-                echo "Transpiler Version: $(transpiler --version)"
-            fi
-
-            if proof_producer_is_available "/dev/stderr"; then
-                # TODO: Modify when https://github.com/NilFoundation/proof-producer/issues/52
-                #       is fixed
-                echo "Currently, isn't possible to show proof-producer version."
-            fi
+            echo "$pi2_zkllvm_version"
             exit 0
             ;;
         *)
@@ -203,6 +195,13 @@ if [ "$very_verbose" ]; then
     set -x
 fi
 
+# Check if the version accepted by zkLLVM is the same as the version of the proof
+proof_generation_version=$(poetry -C "$bash_source_dir/../generation" run python -c "from importlib.metadata import version; print(version('proof_generation'))" )
+if [ "$pi2_zkllvm_version" != "$proof_generation_version" ]; then
+    echo "Error: The version of the proof ($proof_generation_version) is different from the version accepted by zkLLVM ($pi2_zkllvm_version)"
+    exit 1
+fi
+
 # Translate the binary files into the unique input JSON file accepted by zkLLVM
 # Check if the input directory contains the input files necessaries for the translator
 input_filename=$(basename "$input")
@@ -235,7 +234,7 @@ if [ "$translate_input" == true ]; then
     # Execute the translator with the input files and save the output to a temporary file
     tmp_input_file=$(mktemp)
 
-    result=$(python3 $bash_source_dir/translator.py "$input" -o "$tmp_input_file")
+    result=$(python3 "$bash_source_dir/translator.py" "$input" -o "$tmp_input_file")
 
     IFS=', ' read -r -a arr <<< "$result"
     alen=${arr[0]}

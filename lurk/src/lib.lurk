@@ -19,6 +19,9 @@
    )
 )
 
+;; Proof Version Accepted
+!(def major_version 0)
+!(def minor_version 1)
 
 ;; ExecutionPhase
 !(def Gamma_phase 0)
@@ -331,24 +334,36 @@
                                                                                                   )
                                                                                               )
                                                                                           )
-                                                                                          (if (= instr_u32 137) ; CleanMetaVar
-                                                                                              (let ((id (car instructions))
-                                                                                                    (instructions (cdr instructions)))
-                                                                                                   (if (eq id nil)
-                                                                                                       nil ;; Error
-                                                                                                       (cons (cons (cons 0 (cons (cons :inst (cons 9
-                                                                                                                              (cons :id (cons id
-                                                                                                                              (cons :e_fresh (cons nil
-                                                                                                                              (cons :s_fresh (cons nil
-                                                                                                                              (cons :positive (cons nil
-                                                                                                                              (cons :negative (cons nil
-                                                                                                                              (cons :app_ctx_holes (cons nil nil)))))))))))))) nil)) ;; (Pattern_ (metavar_unconstrained id))
-                                                                                                         stack) (cons memory (cons claims (cons instructions nil))))
-
-                                                                                                   )
+                                                                                          (if (= instr_u32 31) ; Version
+                                                                                              (let ((major (car instructions))
+                                                                                                    (minor (car (cdr instructions)))
+                                                                                                    (instructions (cdr (cdr instructions)))
+                                                                                                    )
+                                                                                                    (if (or (not (= major major_version))
+                                                                                                            (not (= minor minor_version)))
+                                                                                                        nil ;; Error
+                                                                                                        (cons stack (cons memory (cons claims (cons instructions nil))))
+                                                                                                    )
+                                                                                                    
                                                                                               )
-                                                                                              nil
-                                                                                          )))))))))))))))))))))))))))
+                                                                                              (if (= instr_u32 137) ; CleanMetaVar
+                                                                                                  (let ((id (car instructions))
+                                                                                                        (instructions (cdr instructions)))
+                                                                                                       (if (eq id nil)
+                                                                                                         nil ;; Error
+                                                                                                         (cons (cons (cons 0 (cons (cons :inst (cons 9
+                                                                                                                                   (cons :id (cons id
+                                                                                                                                   (cons :e_fresh (cons nil
+                                                                                                                                   (cons :s_fresh (cons nil
+                                                                                                                                   (cons :positive (cons nil
+                                                                                                                                   (cons :negative (cons nil
+                                                                                                                                   (cons :app_ctx_holes (cons nil nil)))))))))))))) nil)) ;; (Pattern_ (metavar_unconstrained id))
+                                                                                                               stack) (cons memory (cons claims (cons instructions nil))))
+
+                                                                                                       )
+                                                                                                 )
+                                                                                                 nil
+                                                                                              ))))))))))))))))))))))))))))
 
 ;; Definition: execute_instructions(buffer, stack, memory, claims, phase) = (stack', memory', claims', instructions')
 !(def execute_instructions (lambda (buffer stack memory claims phase)

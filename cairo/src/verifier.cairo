@@ -24,6 +24,10 @@ use pattern::{
 };
 
 use pattern::PatternOptionBoxClone;
+
+const MAJOR_VERSION: u8 = 0;
+const MINOR_VERSION: u8 = 1;
+
 // Instructions
 // ============
 //
@@ -51,6 +55,8 @@ enum Instruction {
     Load,
     // Journal Manipulation,
     Publish,
+    // Version Control
+    Version,
     // Metavar with no constraints
     CleanMetaVar,
     // NoOp to fill Cairo match requirements
@@ -93,7 +99,7 @@ fn from(value: felt252) -> Instruction {
         28 => Instruction::Save,
         29 => Instruction::Load,
         30 => Instruction::Publish,
-        31 => Instruction::NoOp,
+        31 => Instruction::Version,
         32 => Instruction::NoOp,
         33 => Instruction::NoOp,
         34 => Instruction::NoOp,
@@ -838,6 +844,19 @@ fn execute_instructions(
                                 );
                             }
                         },
+                    },
+                    Instruction::Version => {
+                        let major = buffer.pop_front().expect('Expected major version').into();
+                        let minor = buffer.pop_front().expect('Expected minor version').into();
+                        if major != MAJOR_VERSION || minor != MINOR_VERSION {
+                            panic!(
+                                "Version mismatch: expected {}.{} but got {}.{}",
+                                MAJOR_VERSION,
+                                MINOR_VERSION,
+                                major,
+                                minor
+                            );
+                        }
                     },
                     Instruction::CleanMetaVar => {
                         let id = buffer.pop_front().expect('Expected id for MetaVar').into();
@@ -1627,6 +1646,26 @@ mod tests {
         ];
         let proof = array![];
 
+        verify(gamma, claims, proof);
+    }
+
+    // Testing version instruction
+    #[test]
+    #[available_gas(1000000000000000)]
+    fn test_version_ok() {
+        let gamma = array![31, 0, 1];
+        let claims = array![];
+        let proof = array![];
+        verify(gamma, claims, proof);
+    }
+
+    #[test]
+    #[should_panic]
+    #[available_gas(1000000000000000)]
+    fn test_version_fail() {
+        let gamma = array![31, 0, 0];
+        let claims = array![];
+        let proof = array![];
         verify(gamma, claims, proof);
     }
 }

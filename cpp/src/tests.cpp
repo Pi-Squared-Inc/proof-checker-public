@@ -70,5 +70,16 @@ int main() {
   test_no_remaining_claims();
   std::cout << std::endl;
 
+  std::cout << "Executing test_version_ok()" << std::endl;
+  test_version_ok();
+  std::cout << std::endl;
+
+  // This will raise an excetion what we can't catch due to 
+  // `execute_instructions` and `verify` being `noexcept` fuctions as required
+  // by zkLLVM
+  std::cout << "Executing test_version_fail()" << std::endl;
+  test_version_fail();
+  std::cout << std::endl;
+
   return 0;
 }
