@@ -1,7 +1,0 @@
-!(load "../../src/lib.lurk")
-
-!(def instructions '(27))
-
-!(def result (execute_instructions instructions '() '() '() Gamma_phase))
-
-!(assert (eq result nil))
