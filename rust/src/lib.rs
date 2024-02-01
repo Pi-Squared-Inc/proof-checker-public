@@ -279,7 +279,7 @@ impl Pattern {
             Pattern::EVar(_) => true,
             Pattern::SVar(_) => true,
             Pattern::Symbol(_) => true,
-            Pattern::MetaVar { positive, .. } => positive.contains(&svar),
+            Pattern::MetaVar { positive, .. } => positive.contains(&svar) || self.s_fresh(svar),
             Pattern::Implies { left, right } => left.negative(svar) && right.positive(svar),
             Pattern::App { left, right } => left.positive(svar) && right.positive(svar),
             Pattern::Exists { subpattern, .. } => subpattern.positive(svar),
@@ -312,7 +312,7 @@ impl Pattern {
             Pattern::EVar(_) => true,
             Pattern::SVar(name) => *name != svar,
             Pattern::Symbol(_) => true,
-            Pattern::MetaVar { negative, .. } => negative.contains(&svar),
+            Pattern::MetaVar { negative, .. } => negative.contains(&svar) || self.s_fresh(svar),
             Pattern::Implies { left, right } => left.positive(svar) && right.negative(svar),
             Pattern::App { left, right } => left.negative(svar) && right.negative(svar),
             Pattern::Exists { subpattern, .. } => subpattern.negative(svar),
@@ -1384,12 +1384,13 @@ mod tests {
         assert!(!metavar_unconstrained(1).negative(1));
         assert!(!metavar_unconstrained(1).negative(2));
 
-        // Do not imply positivity from freshness
-        assert!(!metavar_s_fresh(1, 1, vec![], vec![]).positive(1));
-        assert!(!metavar_s_fresh(1, 1, vec![], vec![]).negative(1));
+        assert!(metavar_s_fresh(1, 1, vec![], vec![]).positive(1));
+        assert!(metavar_s_fresh(1, 1, vec![], vec![]).negative(1));
         assert!(metavar_s_fresh(1, 1, vec![1], vec![1]).positive(1));
         assert!(metavar_s_fresh(1, 1, vec![1], vec![1]).negative(1));
         assert!(metavar_s_fresh(1, 1, vec![1], vec![]).positive(1));
+        assert!(metavar_s_fresh(1, 1, vec![1], vec![]).negative(1));
+        assert!(metavar_s_fresh(1, 1, vec![], vec![1]).positive(1));
         assert!(metavar_s_fresh(1, 1, vec![], vec![1]).negative(1));
 
         assert!(!metavar_s_fresh(1, 1, vec![], vec![]).positive(2));
@@ -1479,11 +1480,9 @@ mod tests {
         let mux_phi = mu(1, phi);
         assert!(!mux_phi.well_formed());
 
-        // Even though freshness implies positivity, we do not want to do any
-        // additional reasoning and let everything on the prover
         let phi2 = metavar_s_fresh(98, 1, vec![], vec![]);
         let mux_phi2 = mu(1, phi2);
-        assert!(!mux_phi2.well_formed());
+        assert!(mux_phi2.well_formed());
 
         // It's ok if 2 is negative, the only thing we care about is that 2 is guaranteed to be positive
         // (we can instantiate without this variable)
