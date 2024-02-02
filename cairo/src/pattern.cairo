@@ -252,7 +252,8 @@ impl PatternTraitImpl of PatternTrait {
                 let subpattern = subpattern.clone().unwrap().unbox();
                 svar == *var || subpattern.positive(svar)
             },
-            Pattern::MetaVar(MetaVarType{positive, .. }) => { contains(positive, svar) },
+            Pattern::MetaVar(MetaVarType{positive,
+            .. }) => { contains(positive, svar) || self.s_fresh(svar) },
             Pattern::ESubst(ESubstType{pattern,
             plug,
             .. }) => {
@@ -307,7 +308,8 @@ impl PatternTraitImpl of PatternTrait {
                 let subpattern = subpattern.clone().unwrap().unbox();
                 svar == *var || subpattern.negative(svar)
             },
-            Pattern::MetaVar(MetaVarType{negative, .. }) => { contains(negative, svar) },
+            Pattern::MetaVar(MetaVarType{negative,
+            .. }) => { contains(negative, svar) || self.s_fresh(svar) },
             Pattern::ESubst(ESubstType{pattern,
             plug,
             .. }) => {
@@ -838,11 +840,13 @@ mod tests {
         assert!(!metavar_unconstrained(1).negative(2));
 
         // Do not imply positivity from freshness
-        assert!(!metavar_s_fresh(1, 1, array![], array![]).positive(1));
-        assert!(!metavar_s_fresh(1, 1, array![], array![]).negative(1));
+        assert!(metavar_s_fresh(1, 1, array![], array![]).positive(1));
+        assert!(metavar_s_fresh(1, 1, array![], array![]).negative(1));
         assert!(metavar_s_fresh(1, 1, array![1], array![1]).positive(1));
         assert!(metavar_s_fresh(1, 1, array![1], array![1]).negative(1));
         assert!(metavar_s_fresh(1, 1, array![1], array![]).positive(1));
+        assert!(metavar_s_fresh(1, 1, array![1], array![]).negative(1));
+        assert!(metavar_s_fresh(1, 1, array![], array![1]).positive(1));
         assert!(metavar_s_fresh(1, 1, array![], array![1]).negative(1));
 
         assert!(!metavar_s_fresh(1, 1, array![], array![]).positive(2));
@@ -923,11 +927,9 @@ mod tests {
         let mux_phi = mu(1, phi);
         assert!(!mux_phi.well_formed());
 
-        // Even though freshness implies positivity, we do not want to do any
-        // additional reasoning and let everything on the prover
         let phi2 = metavar_s_fresh(98, 1, array![], array![]);
         let mux_phi2 = mu(1, phi2);
-        assert!(!mux_phi2.well_formed());
+        assert!(mux_phi2.well_formed());
 
         // It's ok if 2 is negative, the only thing we care about is that 2 is guaranteed to be positive
         // (we can instantiate without this variable)
