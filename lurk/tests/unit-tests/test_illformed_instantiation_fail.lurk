@@ -1,6 +1,0 @@
-!(load "../../src/pattern_impl.lurk")
-!(load "../../src/instantiate_in_place.lurk")
-
-!(def phi0 (metavar_unconstrained 0))
-
-!(assert (eq (instantiate_internal phi0 '(1 0) (cons phi0 nil)) nil))

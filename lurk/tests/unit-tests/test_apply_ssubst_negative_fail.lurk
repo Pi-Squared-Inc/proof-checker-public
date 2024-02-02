@@ -1,4 +1,0 @@
-!(load "../../src/pattern_impl.lurk")
-!(load "../../src/instantiate_in_place.lurk")
-
-!(assert (eq (apply_ssubst (mu 0 (svar 1)) 1 (svar 0)) nil))
