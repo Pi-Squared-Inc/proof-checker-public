@@ -30,27 +30,36 @@
             t
         ))))
 
+!(defrec is_app_ctx_hole? (lambda (p idList)
+    (if (eq idList nil)
+        nil
+        (if (pattern_is_app_ctx_hole (car idList) p)
+            (is_app_ctx_hole? p (cdr idList))
+            t
+        ))))
+
 !(defrec for_it_vars_checks (lambda (vars plugs pos p)
     (if (eq vars nil)
         nil
-        (if (eq (car vars) (car (cdr (cdr (cdr p))))) ; (get :id p))
+        (if (eq (car vars) (car (cdr (cdr (cdr p))))) ; (get :id p)
             (let ((plugs_pos (nth pos plugs)))
-                 (if (is_e_fresh? plugs_pos  (car (cdr (cdr (cdr (cdr (cdr p))))))) ; (get :e_fresh p))
+                 (if (is_e_fresh? plugs_pos  (car (cdr (cdr (cdr (cdr (cdr p))))))) ; (get :e_fresh p)
                     nil
-                    (if (is_s_fresh? plugs_pos (car (cdr (cdr (cdr (cdr (cdr (cdr (cdr p))))))))) ; (get :s_fresh p))
+                    (if (is_s_fresh? plugs_pos (car (cdr (cdr (cdr (cdr (cdr (cdr (cdr p))))))))) ; (get :s_fresh p)
                         nil
-                        (if (is_positive? plugs_pos (car (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr p))))))))))) ; (get :positive p))
+                        (if (is_positive? plugs_pos (car (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr p))))))))))) ; (get :positive p)
                             nil
-                            (if (is_negative? plugs_pos  (car (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr p))))))))))))) ; (get :negative p))
+                            (if (is_negative? plugs_pos  (car (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr p))))))))))))) ; (get :negative p)
                                 nil
-                                (if (>= pos (length plugs))
+                                (if (is_app_ctx_hole? plugs_pos (car (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr (cdr p))))))))))))))) ; (get app_ctx_holes p)
                                     nil
-                                    plugs_pos
-                                ))))
-                 )
-            )
-            (for_it_vars_checks (cdr vars) plugs (+ pos 1) p))
-        )))
+                                    (if (>= pos (length plugs))
+                                        nil
+                                        plugs_pos
+                                    )))))))
+            (for_it_vars_checks (cdr vars) plugs (+ pos 1) p)
+        )
+    )))
 
 !(defrec apply_esubst (lambda (pattern evar_id plug)
     (let ((wrap_subst (esubst evar_id pattern plug))

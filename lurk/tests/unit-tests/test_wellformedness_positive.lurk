@@ -13,13 +13,13 @@
 !(def mux_x_not (mu 1 (negate svar1)))
 !(assert (not (pattern_well_formed mux_x_not)))
 
-!(def phi (metavar_s_fresh 97 2 nil nil))
+!(def phi (metavar_s_fresh 97 2 '() '()))
 !(def mux_phi (mu 1 phi))
 !(assert (not (pattern_well_formed mux_phi)))
 
-!(def phi2 (metavar_s_fresh 98 1 nil nil))
+!(def phi2 (metavar_s_fresh 98 1 '() '()))
 !(def mux_phi2 (mu 1 phi2))
-!(assert (not (pattern_well_formed mux_phi2)))
+!(assert (pattern_well_formed mux_phi2))
 
 !(def phi3 (metavar_s_fresh 99 1 '(2) '(2)))
 !(def mux_phi3 (mu 2 phi3))

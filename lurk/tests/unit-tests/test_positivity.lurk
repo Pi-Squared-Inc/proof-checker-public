@@ -84,12 +84,14 @@
 !(assert (not (pattern_negative 2 mvarun1)))
 
 ;; Do not imply positivity from freshness
-!(assert (not (pattern_positive 1 (metavar_s_fresh 1  1  nil nil))))
-!(assert (not (pattern_negative 1 (metavar_s_fresh 1  1  nil nil))))
+!(assert (pattern_positive 1 (metavar_s_fresh 1 1 '() '())))
+!(assert (pattern_negative 1 (metavar_s_fresh 1 1 '() '())))
 !(assert (pattern_positive 1 (metavar_s_fresh 1 1 '(1) '(1))))
 !(assert (pattern_negative 1 (metavar_s_fresh 1 1 '(1) '(1))))
-!(assert (pattern_positive 1 (metavar_s_fresh 1 1 '(1) '(0))))
-!(assert (pattern_negative 1 (metavar_s_fresh 1 1 '(0) '(1))))
+!(assert (pattern_positive 1 (metavar_s_fresh 1 1 '(1) '())))
+!(assert (pattern_negative 1 (metavar_s_fresh 1 1 '(1) '())))
+!(assert (pattern_positive 1 (metavar_s_fresh 1 1 '() '(1))))
+!(assert (pattern_negative 1 (metavar_s_fresh 1 1 '() '(1))))
 
 ;; ESubst
 !(assert (not (pattern_positive 0 (esubst 0 (metavar_unconstrained 0) x0))))

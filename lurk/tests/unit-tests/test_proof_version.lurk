@@ -16,5 +16,5 @@
     )
 ))
 
-(check_version_in_gamma_phase gamma_ok) ;; should return t
-(check_version_in_gamma_phase gamma_fail) ;; should return nil
+!(assert (eq (check_version_in_gamma_phase gamma_ok) t))     ;; should return t
+!(assert (eq (check_version_in_gamma_phase gamma_fail) nil)) ;; should return nil
