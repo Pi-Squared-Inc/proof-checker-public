@@ -1,0 +1,26 @@
+!(load "../../src/basic_operations.lurk")
+!(load "../../src/pattern_impl.lurk")
+
+!(def phi0_x1_s1 (esubst 1 (metavar_unconstrained 0) (symbol 1)))
+!(assert (pattern_well_formed phi0_x1_s1))
+
+!(def s0_x1_s1 (esubst 1 (symbol 0) (symbol 1)))
+!(assert (not (pattern_well_formed s0_x1_s1)))
+
+!(def phi0_x1_x1 (esubst 1 (metavar_unconstrained 0) (evar 1)))
+!(assert (not (pattern_well_formed phi0_x1_x1)))
+
+!(def phi0_fresh_x1_s1 (esubst 1 (metavar_e_fresh 0 1 '() '()) (symbol 1)))
+!(assert (not (pattern_well_formed phi0_fresh_x1_s1)))
+
+!(def phi0_X1_s1 (ssubst 1 (metavar_unconstrained 0) (symbol 1)))
+!(assert (pattern_well_formed phi0_X1_s1))
+
+!(def phi0_X1_X1 (ssubst 1 (metavar_unconstrained 0) (svar 1)))
+!(assert (not (pattern_well_formed phi0_X1_X1)))
+
+!(def s0_X1_s1 (ssubst 1 (symbol 0) (symbol 1)))
+!(assert (not (pattern_well_formed s0_X1_s1)))
+
+!(def phi0_fresh_X1_s1 (ssubst 1 (metavar_s_fresh 0 1 '() '()) (symbol 1)))
+!(assert (not (pattern_well_formed phi0_fresh_X1_s1)))

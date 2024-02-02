@@ -7,7 +7,9 @@
                 (if (eq buffer nil)
                     (cons stack (cons memory (cons claims (cons buffer nil))))
                     (let ((result (f stack memory claims buffer)))
-                         (map f (car result) (car (cdr result)) (car (cdr (cdr result)))  (car (cdr (cdr (cdr result)))))))))
+                         (if (eq result nil)
+                            nil ;; Error
+                            (map f (car result) (car (cdr result)) (car (cdr (cdr result)))  (car (cdr (cdr (cdr result))))))))))
 
 
 ;; This function is used to get the value of a key in a pattern.

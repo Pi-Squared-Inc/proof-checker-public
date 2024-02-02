@@ -170,15 +170,11 @@
                                                 (pattern_inst (get :inst pattern))
 
                                                 (pop2 (pop_stack_pattern (cdr pop1)))
-                                                (plug (car pop2)))
+                                                (plug (car pop2))
+                                                (esubst_pat (esubst evar_id pattern plug)))
 
-                                                (if (or (= pattern_inst 9)
-                                                        (or (= pattern_inst 10)
-                                                            (= pattern_inst 11)))
-                                                    (let ((esubst_pat (esubst evar_id pattern plug)))
-                                                          (if (pattern_well_formed esubst_pat)
-                                                              (cons (cons (cons 0 (cons pattern nil)) (cdr pop2)) (cons memory (cons claims (cons instructions nil)))) ;; (Pattern_ pattern)
-                                                              (cons (cons (cons 0 (cons esubst_pat nil)) (cdr pop2)) (cons memory (cons claims (cons instructions nil)))))) ;; (Pattern_ esubst_pat)
+                                                (if (pattern_well_formed esubst_pat)
+                                                    (cons (cons (cons 0 (cons esubst_pat nil)) (cdr pop2)) (cons memory (cons claims (cons instructions nil))))
                                                     nil))
                                           (if (= instr_u32 11) ; SSubst
                                              (let ((svar_id (car instructions))
@@ -188,15 +184,11 @@
                                                    (pattern_inst (get :inst pattern))
 
                                                    (pop2 (pop_stack_pattern (cdr pop1)))
-                                                   (plug (car pop2)))
+                                                   (plug (car pop2))
+                                                   (ssubst_pat (ssubst svar_id pattern plug)))
 
-                                                   (if (or (= pattern_inst 9)
-                                                           (or (= pattern_inst 10)
-                                                               (= pattern_inst 11)))
-                                                       (let ((ssubst_pat (ssubst svar_id pattern plug)))
-                                                             (if (eq (pattern_well_formed ssubst_pat) nil)
-                                                                 (cons (cons (cons 0 (cons pattern nil)) (cdr pop2)) (cons memory (cons claims (cons instructions nil)))) ;; (Pattern_ pattern)
-                                                                 (cons (cons (cons 0 (cons ssubst_pat nil)) (cdr pop2)) (cons memory (cons claims (cons instructions nil)))))) ;; (Pattern_ ssubst_pat)
+                                                   (if (pattern_well_formed ssubst_pat)
+                                                       (cons (cons (cons 0 (cons ssubst_pat nil)) (cdr pop2)) (cons memory (cons claims (cons instructions nil))))
                                                        nil))
                                              (if (= instr_u32 12) ; Prop1
                                                 (cons (cons (cons 1 (cons prop1 nil)) stack) (cons memory (cons claims (cons instructions nil)))) ;; (Proved_ prop1)
@@ -244,20 +236,12 @@
                                                                   (if (= instr_u32 24) ; Substitution
                                                                       (let ((svar_id (car instructions))
                                                                             (instructions (cdr instructions))
-                                                                            (pop1 (pop_stack_pattern stack))
-                                                                            (plug (car pop1))
+                                                                            (pop1 (pop_stack_proved stack))
+                                                                            (pattern (car pop1))
 
-                                                                            (pop2 (pop_stack_proved (cdr pop1)))
-                                                                            (pattern (car pop2))
-                                                                            (pattern_inst (get :inst pattern)))
-                                                                           (if (or (= pattern_inst 9)
-                                                                                   (or (= pattern_inst 10)
-                                                                                       (= pattern_inst 11)))
-                                                                               (let ((ssubst_pat (ssubst svar_id pattern plug)))
-                                                                                    (if (eq (pattern_well_formed ssubst_pat) nil)
-                                                                                        (cons (cons (cons 1 (cons pattern nil)) (cdr pop2)) (cons memory (cons claims (cons instructions nil)))) ;; (Proved_ pattern)
-                                                                                        (cons (cons (cons 1 (cons ssubst_pat nil)) (cdr pop2)) (cons memory (cons claims (cons instructions nil)))))) ;; (Proved_ ssubst_pat)
-                                                                               nil))
+                                                                            (pop2 (pop_stack_pattern (cdr pop1)))
+                                                                            (plug (car pop2)))
+                                                                          (cons (cons (cons 1 (cons (apply_ssubst pattern svar_id plug) nil)) (cdr pop2)) (cons memory (cons claims (cons instructions nil)))))
                                                                       (if (= instr_u32 26) ; Instantiate
                                                                           (let ((n (car instructions))
                                                                                 (instructions (cdr instructions))
@@ -286,7 +270,10 @@
                                                                                )
                                                                           )
                                                                           (if (= instr_u32 27) ; Pop only the first item
-                                                                              (cons (cdr stack) (cons memory (cons claims (cons instructions nil))))
+                                                                              (if (> (length stack) 0)
+                                                                                  (cons (cdr stack) (cons memory (cons claims (cons instructions nil))))
+                                                                                  nil ;; Error
+                                                                              )
                                                                               (if (= instr_u32 28) ; Save
                                                                                  (cons stack (cons (append (car stack) memory) (cons claims (cons instructions nil)))) ;; append term memory
                                                                                  (if (= instr_u32 29) ; Load
