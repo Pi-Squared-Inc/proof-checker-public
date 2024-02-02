@@ -298,7 +298,7 @@ struct Pattern {
     case Instruction::Symbol:
       return true;
     case Instruction::MetaVar:
-      return positive.contains(svar);
+      return positive.contains(svar) || pattern_s_fresh(svar);
     case Instruction::Implication:
       return left->pattern_negative(svar) && right->pattern_positive(svar);
     case Instruction::Application:
@@ -336,7 +336,7 @@ struct Pattern {
     case Instruction::Symbol:
       return true;
     case Instruction::MetaVar:
-      return negative.contains(svar);
+      return negative.contains(svar) || pattern_s_fresh(svar);
     case Instruction::Implication:
       return left->pattern_positive(svar) && right->pattern_negative(svar);
     case Instruction::Application:

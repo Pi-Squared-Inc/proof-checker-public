@@ -265,11 +265,13 @@ void test_positivity() {
   auto metavarSFresh111_ =  Pattern::metavar_s_fresh(1, 1, IdList(1), IdList());
   auto metavarSFresh11_1 = Pattern::metavar_s_fresh(1, 1, IdList(), IdList(1));
 
-  assert(!metavarSFresh11__->pattern_positive(1));
-  assert(!metavarSFresh11__->pattern_negative(1));
+  assert(metavarSFresh11__->pattern_positive(1));
+  assert(metavarSFresh11__->pattern_negative(1));
   assert(metavarSFresh1111->pattern_positive(1));
   assert(metavarSFresh1111->pattern_negative(1));
   assert(metavarSFresh111_->pattern_positive(1));
+  assert(metavarSFresh111_->pattern_negative(1));
+  assert(metavarSFresh11_1->pattern_positive(1));
   assert(metavarSFresh11_1->pattern_negative(1));
 
   assert(!metavarSFresh11__->pattern_positive(2));
@@ -429,11 +431,9 @@ void test_wellformedness_positive() {
   auto mux_phi = Pattern::mu(1, phi.clone());
   assert(!mux_phi->pattern_well_formed());
 
-  // Even though freshness implies positivity, we do not want to do any
-  // additional reasoning and let everything on the prover
   auto phi2 = Pattern::metavar_s_fresh(98, 1, IdList(), IdList());
   auto mux_phi2 = Pattern::mu(1, phi2.clone());
-  assert(!mux_phi2->pattern_well_formed());
+  assert(mux_phi2->pattern_well_formed());
 
   // It's ok if 2 is negative, the only thing we care about is that 2 is
   // guaranteed to be positive (we can instantiate without this variable)
