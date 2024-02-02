@@ -1,0 +1,4 @@
+!(load "../../src/pattern_impl.lurk")
+!(load "../../src/instantiate_in_place.lurk")
+
+!(assert (eq (apply_esubst (exists 0 (evar 1)) 1 (evar 0)) nil))

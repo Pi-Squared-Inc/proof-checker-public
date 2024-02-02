@@ -1,0 +1,13 @@
+!(load "../../src/lib.lurk")
+
+!(def instructions '(3 0 137 0 10 0))
+!(def expected_pat (esubst 0 (metavar_unconstrained 0) (svar 0)))
+
+!(def result (execute_instructions instructions '() '() '() Gamma_phase))
+!(def stack (car result))
+
+;; assert_eq!(stack.len(), 1);
+!(assert (eq (length stack) 1))
+
+;; assert_eq!(stack[0], Term::Pattern(expected_pattern));
+!(assert (eq (car stack) (cons 0 (cons expected_pat nil))))

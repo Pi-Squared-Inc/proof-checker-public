@@ -1,0 +1,333 @@
+Load (phi0 -> phi0)=5
+MetaVar 0
+Prop2
+Instantiate 1, 2
+Load (phi0 -> phi0)=5
+Prop1
+Instantiate 1
+ModusPonens
+MetaVar 0
+Prop1
+Instantiate 1
+ModusPonens
+Publish
+	Stack:
+	0: ⊢ (phi0 -> phi0)
+Load (μ X0 . X0)[]=0
+Load (μ X0 . X0)[]=0
+Load (μ X0 . X0)[]=0
+Implies
+Save
+Load (μ X0 . X0)[]=0
+Prop2
+Instantiate 0, 1, 2
+Load (μ X0 . X0)[]=0
+Load ((μ X0 . X0)[] -> (μ X0 . X0)[])=6
+Prop1
+Instantiate 0, 1
+ModusPonens
+Load (μ X0 . X0)[]=0
+Load (μ X0 . X0)[]=0
+Prop1
+Instantiate 0, 1
+ModusPonens
+Publish
+	Stack:
+	0: ⊢ (phi0 -> phi0)
+	1: ⊢ (⊥ -> ⊥)
+Load (μ X0 . X0)[]=0
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]=3
+MetaVar 0
+Prop2
+Instantiate 0, 1, 2
+Load (((phi0 -> (μ X0 . X0)[]) -> (μ X0 . X0)[]) -> phi0)=4
+Load (μ X0 . X0)[]=0
+Prop1
+Instantiate 0, 1
+Prop3
+ModusPonens
+ModusPonens
+Load (μ X0 . X0)[]=0
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+Prop1
+Instantiate 0, 1
+ModusPonens
+Publish
+	Stack:
+	0: ⊢ (phi0 -> phi0)
+	1: ⊢ (⊥ -> ⊥)
+	2: ⊢ (⊥ -> phi0)
+Prop3
+Publish
+	Stack:
+	0: ⊢ (phi0 -> phi0)
+	1: ⊢ (⊥ -> ⊥)
+	2: ⊢ (⊥ -> phi0)
+	3: ⊢ (((phi0 -> ⊥) -> ⊥) -> phi0)
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+MetaVar 0
+Implies
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (μ X0 . X0)[])=3
+Prop2
+Instantiate 1, 2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+MetaVar 0
+Implies
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (μ X0 . X0)[])=3
+Implies
+Save
+MetaVar 0
+Prop1
+Instantiate 0, 1
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+MetaVar 0
+Load (μ X0 . X0)[]=0
+Prop2
+Instantiate 0, 1, 2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+Implies
+Save
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+Prop2
+Instantiate 0, 1, 2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (phi0 -> (μ X0 . X0)[])[0: phi0])=8
+Prop1
+Instantiate 0, 1
+ModusPonens
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+Prop1
+Instantiate 0, 1
+ModusPonens
+ModusPonens
+ModusPonens
+ModusPonens
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+Prop1
+Instantiate 1
+ModusPonens
+Publish
+	Stack:
+	0: ⊢ (phi0 -> phi0)
+	1: ⊢ (⊥ -> ⊥)
+	2: ⊢ (⊥ -> phi0)
+	3: ⊢ (((phi0 -> ⊥) -> ⊥) -> phi0)
+	4: ⊢ (phi0 -> (¬phi0 -> ⊥))
+Load (μ X0 . X0)[]=0
+MetaVar 1
+Prop2
+Instantiate 1, 2
+Load (μ X0 . X0)[]=0
+MetaVar 1
+Implies
+MetaVar 0
+Prop1
+Instantiate 0, 1
+Load (μ X0 . X0)[]=0
+MetaVar 1
+Load (phi0 -> (μ X0 . X0)[])=2
+Instantiate 0
+Save
+Load (phi0 -> (μ X0 . X0)[])=2
+Instantiate 0
+MetaVar 1
+Prop2
+Instantiate 0, 1, 2
+Load (phi1 -> (μ X0 . X0)[])=9
+Load (μ X0 . X0)[]=0
+Implies
+MetaVar 1
+Implies
+Save
+Load (μ X0 . X0)[]=0
+Prop1
+Instantiate 0, 1
+MetaVar 1
+Prop3
+Instantiate 0
+ModusPonens
+ModusPonens
+Load (μ X0 . X0)[]=0
+Load (phi0 -> (μ X0 . X0)[])[0: phi1]=9
+Prop1
+Instantiate 0, 1
+ModusPonens
+ModusPonens
+ModusPonens
+Publish
+	Stack:
+	0: ⊢ (phi0 -> phi0)
+	1: ⊢ (⊥ -> ⊥)
+	2: ⊢ (⊥ -> phi0)
+	3: ⊢ (((phi0 -> ⊥) -> ⊥) -> phi0)
+	4: ⊢ (phi0 -> (¬phi0 -> ⊥))
+	5: ⊢ ((phi0 -> ⊥) -> (phi0 -> phi1))
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+MetaVar 0
+Implies
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (μ X0 . X0)[])=3
+MetaVar 0
+Prop2
+Instantiate 0, 1, 2
+Load (((phi0 -> (μ X0 . X0)[]) -> (μ X0 . X0)[]) -> phi0)=4
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+MetaVar 0
+Implies
+Prop1
+Instantiate 0, 1
+Prop3
+ModusPonens
+ModusPonens
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+MetaVar 0
+Load (μ X0 . X0)[]=0
+Prop2
+Instantiate 0, 1, 2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (phi0 -> (μ X0 . X0)[])[0: phi0])=8
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+Prop2
+Instantiate 0, 1, 2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (phi0 -> (μ X0 . X0)[])[0: phi0])=8
+Prop1
+Instantiate 0, 1
+ModusPonens
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+Prop1
+Instantiate 0, 1
+ModusPonens
+ModusPonens
+ModusPonens
+Publish
+	Stack:
+	0: ⊢ (phi0 -> phi0)
+	1: ⊢ (⊥ -> ⊥)
+	2: ⊢ (⊥ -> phi0)
+	3: ⊢ (((phi0 -> ⊥) -> ⊥) -> phi0)
+	4: ⊢ (phi0 -> (¬phi0 -> ⊥))
+	5: ⊢ ((phi0 -> ⊥) -> (phi0 -> phi1))
+	6: ⊢ ((¬phi0 -> phi0) -> phi0)
+MetaVar 0
+MetaVar 1
+Implies
+MetaVar 1
+MetaVar 2
+Implies
+MetaVar 0
+MetaVar 1
+Implies
+Implies
+MetaVar 1
+MetaVar 2
+Implies
+MetaVar 0
+MetaVar 2
+Implies
+Implies
+Prop2
+Instantiate 0, 1, 2
+MetaVar 1
+MetaVar 2
+Implies
+MetaVar 0
+MetaVar 1
+Implies
+Implies
+MetaVar 1
+MetaVar 2
+Implies
+MetaVar 0
+MetaVar 2
+Implies
+Implies
+Implies
+Save
+MetaVar 0
+MetaVar 1
+Implies
+Prop1
+Instantiate 0, 1
+MetaVar 1
+MetaVar 2
+Implies
+MetaVar 0
+MetaVar 1
+Implies
+MetaVar 0
+MetaVar 2
+Implies
+Prop2
+Instantiate 0, 1, 2
+MetaVar 1
+MetaVar 2
+Implies
+MetaVar 0
+MetaVar 1
+MetaVar 2
+Implies
+Implies
+MetaVar 0
+MetaVar 1
+Implies
+MetaVar 0
+MetaVar 2
+Implies
+Implies
+Prop2
+Instantiate 0, 1, 2
+MetaVar 0
+MetaVar 1
+MetaVar 2
+Implies
+Implies
+MetaVar 0
+MetaVar 1
+Implies
+MetaVar 0
+MetaVar 2
+Implies
+Implies
+Implies
+Save
+MetaVar 1
+MetaVar 2
+Implies
+Prop1
+Instantiate 0, 1
+Prop2
+ModusPonens
+ModusPonens
+MetaVar 1
+MetaVar 2
+Implies
+MetaVar 0
+Prop1
+Instantiate 0, 1
+ModusPonens
+ModusPonens
+ModusPonens
+ModusPonens
+MetaVar 0
+MetaVar 1
+Implies
+MetaVar 1
+MetaVar 2
+Implies
+Prop1
+Instantiate 0, 1
+ModusPonens
+Publish
+	Stack:
+	0: ⊢ (phi0 -> phi0)
+	1: ⊢ (⊥ -> ⊥)
+	2: ⊢ (⊥ -> phi0)
+	3: ⊢ (((phi0 -> ⊥) -> ⊥) -> phi0)
+	4: ⊢ (phi0 -> (¬phi0 -> ⊥))
+	5: ⊢ ((phi0 -> ⊥) -> (phi0 -> phi1))
+	6: ⊢ ((¬phi0 -> phi0) -> phi0)
+	7: ⊢ ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
