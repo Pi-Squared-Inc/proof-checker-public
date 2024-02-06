@@ -1,8 +1,8 @@
-Load (phi0 -> phi0)=5
+Load (phi0 -> phi0)=7
 MetaVar 0
 Prop2
 Instantiate 1, 2
-Load (phi0 -> phi0)=5
+Load (phi0 -> phi0)=7
 Prop1
 Instantiate 1
 ModusPonens
@@ -10,54 +10,58 @@ MetaVar 0
 Prop1
 Instantiate 1
 ModusPonens
+Save
 Publish
 	Stack:
 	0: ⊢ (phi0 -> phi0)
-Load (μ X0 . X0)[]=0
-Load (μ X0 . X0)[]=0
-Load (μ X0 . X0)[]=0
+Load (μ X0 . X0)[]=1
+Load (μ X0 . X0)[]=1
+Load (μ X0 . X0)[]=1
 Implies
 Save
-Load (μ X0 . X0)[]=0
+Load (μ X0 . X0)[]=1
 Prop2
 Instantiate 0, 1, 2
-Load (μ X0 . X0)[]=0
-Load ((μ X0 . X0)[] -> (μ X0 . X0)[])=6
+Load (μ X0 . X0)[]=1
+Load ((μ X0 . X0)[] -> (μ X0 . X0)[])=9
 Prop1
 Instantiate 0, 1
 ModusPonens
-Load (μ X0 . X0)[]=0
-Load (μ X0 . X0)[]=0
+Load (μ X0 . X0)[]=1
+Load (μ X0 . X0)[]=1
 Prop1
 Instantiate 0, 1
 ModusPonens
+Save
 Publish
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
-Load (μ X0 . X0)[]=0
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]=3
+Load (μ X0 . X0)[]=1
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]=4
 MetaVar 0
 Prop2
 Instantiate 0, 1, 2
-Load (((phi0 -> (μ X0 . X0)[]) -> (μ X0 . X0)[]) -> phi0)=4
-Load (μ X0 . X0)[]=0
+Load (((phi0 -> (μ X0 . X0)[]) -> (μ X0 . X0)[]) -> phi0)=5
+Load (μ X0 . X0)[]=1
 Prop1
 Instantiate 0, 1
 Prop3
 ModusPonens
 ModusPonens
-Load (μ X0 . X0)[]=0
+Load (μ X0 . X0)[]=1
 Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 Prop1
 Instantiate 0, 1
 ModusPonens
+Save
 Publish
 	Stack:
 	0: ⊢ (phi0 -> phi0)
 	1: ⊢ (⊥ -> ⊥)
 	2: ⊢ (⊥ -> phi0)
 Prop3
+Save
 Publish
 	Stack:
 	0: ⊢ (phi0 -> phi0)
@@ -67,13 +71,13 @@ Publish
 Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 MetaVar 0
 Implies
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (μ X0 . X0)[])=3
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (μ X0 . X0)[])=4
 Prop2
 Instantiate 1, 2
 Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 MetaVar 0
 Implies
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (μ X0 . X0)[])=3
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (μ X0 . X0)[])=4
 Implies
 Save
 MetaVar 0
@@ -81,7 +85,7 @@ Prop1
 Instantiate 0, 1
 Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 MetaVar 0
-Load (μ X0 . X0)[]=0
+Load (μ X0 . X0)[]=1
 Prop2
 Instantiate 0, 1, 2
 Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
@@ -93,7 +97,7 @@ Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 Prop2
 Instantiate 0, 1, 2
 Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (phi0 -> (μ X0 . X0)[])[0: phi0])=8
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (phi0 -> (μ X0 . X0)[])[0: phi0])=14
 Prop1
 Instantiate 0, 1
 ModusPonens
@@ -109,6 +113,7 @@ Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 Prop1
 Instantiate 1
 ModusPonens
+Save
 Publish
 	Stack:
 	0: ⊢ (phi0 -> phi0)
@@ -116,17 +121,17 @@ Publish
 	2: ⊢ (⊥ -> phi0)
 	3: ⊢ (((phi0 -> ⊥) -> ⊥) -> phi0)
 	4: ⊢ (phi0 -> (¬phi0 -> ⊥))
-Load (μ X0 . X0)[]=0
+Load (μ X0 . X0)[]=1
 MetaVar 1
 Prop2
 Instantiate 1, 2
-Load (μ X0 . X0)[]=0
+Load (μ X0 . X0)[]=1
 MetaVar 1
 Implies
 MetaVar 0
 Prop1
 Instantiate 0, 1
-Load (μ X0 . X0)[]=0
+Load (μ X0 . X0)[]=1
 MetaVar 1
 Load (phi0 -> (μ X0 . X0)[])=2
 Instantiate 0
@@ -136,13 +141,13 @@ Instantiate 0
 MetaVar 1
 Prop2
 Instantiate 0, 1, 2
-Load (phi1 -> (μ X0 . X0)[])=9
-Load (μ X0 . X0)[]=0
+Load (phi1 -> (μ X0 . X0)[])=16
+Load (μ X0 . X0)[]=1
 Implies
 MetaVar 1
 Implies
 Save
-Load (μ X0 . X0)[]=0
+Load (μ X0 . X0)[]=1
 Prop1
 Instantiate 0, 1
 MetaVar 1
@@ -150,13 +155,14 @@ Prop3
 Instantiate 0
 ModusPonens
 ModusPonens
-Load (μ X0 . X0)[]=0
-Load (phi0 -> (μ X0 . X0)[])[0: phi1]=9
+Load (μ X0 . X0)[]=1
+Load (phi0 -> (μ X0 . X0)[])[0: phi1]=16
 Prop1
 Instantiate 0, 1
 ModusPonens
 ModusPonens
 ModusPonens
+Save
 Publish
 	Stack:
 	0: ⊢ (phi0 -> phi0)
@@ -168,11 +174,11 @@ Publish
 Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 MetaVar 0
 Implies
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (μ X0 . X0)[])=3
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (μ X0 . X0)[])=4
 MetaVar 0
 Prop2
 Instantiate 0, 1, 2
-Load (((phi0 -> (μ X0 . X0)[]) -> (μ X0 . X0)[]) -> phi0)=4
+Load (((phi0 -> (μ X0 . X0)[]) -> (μ X0 . X0)[]) -> phi0)=5
 Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 MetaVar 0
 Implies
@@ -183,16 +189,16 @@ ModusPonens
 ModusPonens
 Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 MetaVar 0
-Load (μ X0 . X0)[]=0
+Load (μ X0 . X0)[]=1
 Prop2
 Instantiate 0, 1, 2
 Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (phi0 -> (μ X0 . X0)[])[0: phi0])=8
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (phi0 -> (μ X0 . X0)[])[0: phi0])=14
 Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
 Prop2
 Instantiate 0, 1, 2
 Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (phi0 -> (μ X0 . X0)[])[0: phi0])=8
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> (phi0 -> (μ X0 . X0)[])[0: phi0])=14
 Prop1
 Instantiate 0, 1
 ModusPonens
@@ -203,6 +209,7 @@ Instantiate 0, 1
 ModusPonens
 ModusPonens
 ModusPonens
+Save
 Publish
 	Stack:
 	0: ⊢ (phi0 -> phi0)
@@ -321,6 +328,7 @@ Implies
 Prop1
 Instantiate 0, 1
 ModusPonens
+Save
 Publish
 	Stack:
 	0: ⊢ (phi0 -> phi0)

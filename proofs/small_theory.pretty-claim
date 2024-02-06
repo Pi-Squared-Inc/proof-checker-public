@@ -1,6 +1,15 @@
+MetaVar 1
 Symbol s0
 Symbol s2
 Implies
+Save
+Implies
+Save
 Publish
 	Stack:
-	0: (s0 -> s2)
+	0: (phi1 -> (s0 -> s2))
+Load (s0 -> s2)=4
+Publish
+	Stack:
+	0: (phi1 -> (s0 -> s2))
+	1: (s0 -> s2)

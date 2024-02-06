@@ -12,6 +12,17 @@ ModusPonens
 ModusPonens
 Load Axiom (s0 -> s1)=1
 ModusPonens
+Save
 Publish
 	Stack:
 	0: ⊢ (s0 -> s2)
+Load (s0 -> s2)=4
+Prop1
+Instantiate 0
+Load Proved claim (s0 -> s2)=6
+ModusPonens
+Save
+Publish
+	Stack:
+	0: ⊢ (s0 -> s2)
+	1: ⊢ (phi1 -> (s0 -> s2))

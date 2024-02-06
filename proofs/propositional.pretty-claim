@@ -9,6 +9,7 @@ MetaVar 2
 Implies
 Implies
 Implies
+Save
 Publish
 	Stack:
 	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
@@ -17,7 +18,6 @@ MetaVar 0
 SVar 0
 Mu 0
 Save
-Save
 Implies
 Save
 Instantiate 0
@@ -25,6 +25,7 @@ MetaVar 0
 Implies
 MetaVar 0
 Implies
+Save
 Publish
 	Stack:
 	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
@@ -51,7 +52,7 @@ Publish
 	1: ((¬phi0 -> phi0) -> phi0)
 	2: (¬phi0 -> (phi0 -> phi1))
 	3: (phi0 -> ¬¬phi0)
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]=3
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]=4
 MetaVar 0
 Implies
 Save
@@ -62,9 +63,10 @@ Publish
 	2: (¬phi0 -> (phi0 -> phi1))
 	3: (phi0 -> ¬¬phi0)
 	4: (¬¬phi0 -> phi0)
-Load (μ X0 . X0)[]=0
+Load (μ X0 . X0)[]=1
 MetaVar 0
 Implies
+Save
 Publish
 	Stack:
 	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
@@ -73,7 +75,7 @@ Publish
 	3: (phi0 -> ¬¬phi0)
 	4: (¬¬phi0 -> phi0)
 	5: (⊥ -> phi0)
-Load (μ X0 . X0)[]=0
+Load (μ X0 . X0)[]=1
 Load (phi0 -> (μ X0 . X0)[])=2
 Instantiate 0
 Publish
