@@ -1,14 +1,60 @@
 Symbol ksort_SortGeneratedTopCell
 Symbol ksort_SortGeneratedTopCell
-Symbol ksort_SortInt
-Symbol ksort_SortInt
-Symbol 10
+Symbol ksort_SortJSON
+Symbol ksort_SortString
+Symbol ksort_SortString
+Symbol key
 Symbol kore_dv
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
+Symbol ksort_SortJSONKey
+Symbol inj
+MetaVar 0
+App
+MetaVar 1
+App
+MetaVar 2
+App
+Instantiate 0, 2, 1
+Symbol ksort_SortInt
+Symbol ksort_SortInt
+Symbol 2
+Symbol kore_dv
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol ksort_SortJSON
+Symbol inj
+MetaVar 0
+App
+MetaVar 1
+App
+MetaVar 2
+App
+Instantiate 0, 2, 1
+Symbol JSONEntry
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol .List⦃"JSONs"⦄_JSONs
+Instantiate 
+Symbol JSONs
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol JSONObject
+MetaVar 0
+App
+Instantiate 0
 Symbol ksort_SortKItem
 Symbol inj
 MetaVar 0
@@ -37,16 +83,16 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksort_SortInt
-Symbol ksort_SortInt
-Symbol 10
+Symbol ksort_SortString
+Symbol ksort_SortString
+Symbol key
 Symbol kore_dv
 MetaVar 0
 App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksort_SortKItem
+Symbol ksort_SortJSONKey
 Symbol inj
 MetaVar 0
 App
@@ -55,7 +101,43 @@ App
 MetaVar 2
 App
 Instantiate 0, 2, 1
-Symbol #next(_)_BUILTIN-FUNCTIONS-SYNTAX_KItem_KItem
+Symbol ksort_SortInt
+Symbol ksort_SortInt
+Symbol 2
+Symbol kore_dv
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol ksort_SortJSON
+Symbol inj
+MetaVar 0
+App
+MetaVar 1
+App
+MetaVar 2
+App
+Instantiate 0, 2, 1
+Symbol JSONEntry
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol .List⦃"JSONs"⦄_JSONs
+Instantiate 
+Symbol JSONs
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol JSONObject
+MetaVar 0
+App
+Instantiate 0
+Symbol #next(_)_BUILTIN-JSON-SYNTAX_KItem_JSON
 MetaVar 0
 App
 Instantiate 0
@@ -202,10 +284,11 @@ ModusPonens
 Instantiate 1
 Symbol ksort_SortGeneratedTopCell
 Symbol ksort_SortGeneratedTopCell
-Symbol ksort_SortInt
-Symbol ksort_SortKItem
-Symbol ksort_SortInt
-Symbol 10
+Symbol ksort_SortJSON
+Symbol ksort_SortString
+Symbol ksort_SortJSONKey
+Symbol ksort_SortString
+Symbol key
 Symbol kore_dv
 MetaVar 0
 App
@@ -220,6 +303,51 @@ App
 MetaVar 2
 App
 Instantiate 0, 1, 2
+Symbol ksort_SortInt
+Symbol ksort_SortJSON
+Symbol ksort_SortInt
+Symbol 2
+Symbol kore_dv
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol inj
+MetaVar 0
+App
+MetaVar 1
+App
+MetaVar 2
+App
+Instantiate 0, 1, 2
+Symbol JSONEntry
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol .List⦃"JSONs"⦄_JSONs
+Instantiate 
+Symbol JSONs
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol JSONObject
+MetaVar 0
+App
+Instantiate 0
+Symbol ksort_SortKItem
+Symbol inj
+MetaVar 0
+App
+MetaVar 1
+App
+MetaVar 2
+App
+Instantiate 0, 2, 1
 EVar 1
 Symbol kore_kseq
 MetaVar 0
@@ -238,10 +366,10 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol ksort_SortInt
-Symbol ksort_SortKItem
-Symbol ksort_SortInt
-Symbol 10
+Symbol ksort_SortString
+Symbol ksort_SortJSONKey
+Symbol ksort_SortString
+Symbol key
 Symbol kore_dv
 MetaVar 0
 App
@@ -256,7 +384,43 @@ App
 MetaVar 2
 App
 Instantiate 0, 1, 2
-Symbol #next(_)_BUILTIN-FUNCTIONS-SYNTAX_KItem_KItem
+Symbol ksort_SortInt
+Symbol ksort_SortJSON
+Symbol ksort_SortInt
+Symbol 2
+Symbol kore_dv
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol inj
+MetaVar 0
+App
+MetaVar 1
+App
+MetaVar 2
+App
+Instantiate 0, 1, 2
+Symbol JSONEntry
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol .List⦃"JSONs"⦄_JSONs
+Instantiate 
+Symbol JSONs
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol JSONObject
+MetaVar 0
+App
+Instantiate 0
+Symbol #next(_)_BUILTIN-JSON-SYNTAX_KItem_JSON
 MetaVar 0
 App
 Instantiate 0
@@ -404,7 +568,7 @@ Instantiate 1
 Symbol ksort_SortGeneratedTopCell
 Symbol ksort_SortGeneratedTopCell
 EVar 0
-Symbol #next(_)_BUILTIN-FUNCTIONS-SYNTAX_KItem_KItem
+Symbol #next(_)_BUILTIN-JSON-SYNTAX_KItem_JSON
 MetaVar 0
 App
 Instantiate 0
@@ -426,7 +590,17 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
+Symbol ksort_SortJSON
+Symbol ksort_SortKItem
 EVar 0
+Symbol inj
+MetaVar 0
+App
+MetaVar 1
+App
+MetaVar 2
+App
+Instantiate 0, 1, 2
 EVar 1
 Symbol kore_kseq
 MetaVar 0
@@ -572,10 +746,10 @@ SVar 0
 Mu 0
 Instantiate 
 Implies
-Symbol ksort_SortInt
-Symbol ksort_SortKItem
-Symbol ksort_SortInt
-Symbol 10
+Symbol ksort_SortString
+Symbol ksort_SortJSONKey
+Symbol ksort_SortString
+Symbol key
 Symbol kore_dv
 MetaVar 0
 App
@@ -590,15 +764,51 @@ App
 MetaVar 2
 App
 Instantiate 0, 1, 2
+Symbol ksort_SortInt
+Symbol ksort_SortJSON
+Symbol ksort_SortInt
+Symbol 2
+Symbol kore_dv
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol inj
+MetaVar 0
+App
+MetaVar 1
+App
+MetaVar 2
+App
+Instantiate 0, 1, 2
+Symbol JSONEntry
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol .List⦃"JSONs"⦄_JSONs
+Instantiate 
+Symbol JSONs
+MetaVar 0
+App
+MetaVar 1
+App
+Instantiate 0, 1
+Symbol JSONObject
+MetaVar 0
+App
+Instantiate 0
 Load Axiom ((∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0]) -> ((phi0 -> (μ X0 . X0)[])[0: (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: phi0])][0: phi1] -> phi1[phi0/x0]))=15
 Instantiate 0
-Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: (((inj · phi0) · phi1) · phi2)[0: ksort_SortInt, 1: ksort_SortKItem, 2: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 10]]]=31
+Load Axiom (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x0])[0: (JSONObject · phi0)[0: ((JSONs · phi0) · phi1)[0: ((JSONEntry · phi0) · phi1)[0: (((inj · phi0) · phi1) · phi2)[0: ksort_SortString, 1: ksort_SortJSONKey, 2: ((kore_dv · phi0) · phi1)[0: ksort_SortString, 1: key]], 1: (((inj · phi0) · phi1) · phi2)[0: ksort_SortInt, 1: ksort_SortJSON, 2: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 2]]], 1: .List⦃"JSONs"⦄_JSONs[]]]]=31
 ModusPonens
 Instantiate 1
-Load Axiom ((∃ x0 . (phi0 -> (μ X0 . X0)[])[0: ((∃ x1 . (phi0 -> (μ X0 . X0)[])[0: ((∃ x2 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: ksort_SortGeneratedTopCell, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]][0: ksort_SortGeneratedTopCell, 1: ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: (#next(_)_BUILTIN-FUNCTIONS-SYNTAX_KItem_KItem · phi0)[0: x0], 1: x1]], 1: x2], 2: ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: x0, 1: x1]], 1: x2]]]]) -> (μ X0 . X0)[])]) -> (μ X0 . X0)[])]) -> (μ X0 . X0)[])=28
+Load Axiom ((∃ x0 . (phi0 -> (μ X0 . X0)[])[0: ((∃ x1 . (phi0 -> (μ X0 . X0)[])[0: ((∃ x2 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: ksort_SortGeneratedTopCell, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]][0: ksort_SortGeneratedTopCell, 1: ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: (#next(_)_BUILTIN-JSON-SYNTAX_KItem_JSON · phi0)[0: x0], 1: x1]], 1: x2], 2: ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: (((inj · phi0) · phi1) · phi2)[0: ksort_SortJSON, 1: ksort_SortKItem, 2: x0], 1: x1]], 1: x2]]]]) -> (μ X0 . X0)[])]) -> (μ X0 . X0)[])]) -> (μ X0 . X0)[])=28
 ModusPonens
 ModusPonens
 ModusPonens
 Publish
 	Stack:
-	0: ⊢ ⊩ksort_SortGeneratedTopCell (<generatedTop> <k> (#next(_)_BUILTIN-FUNCTIONS-SYNTAX_KItem_KItem(inj(ksort_SortInt, ksort_SortKItem, dv(10):ksort_SortInt)) ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop> k=> <generatedTop> <k> (inj(ksort_SortInt, ksort_SortKItem, dv(10):ksort_SortInt) ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop>):ksort_SortGeneratedTopCell
+	0: ⊢ ⊩ksort_SortGeneratedTopCell (<generatedTop> <k> (#next(_)_BUILTIN-JSON-SYNTAX_KItem_JSON(JSONObject(JSONs(JSONEntry(inj(ksort_SortString, ksort_SortJSONKey, dv(key):ksort_SortString), inj(ksort_SortInt, ksort_SortJSON, dv(2):ksort_SortInt)), .List⦃"JSONs"⦄_JSONs()))) ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop> k=> <generatedTop> <k> (inj(ksort_SortJSON, ksort_SortKItem, JSONObject(JSONs(JSONEntry(inj(ksort_SortString, ksort_SortJSONKey, dv(key):ksort_SortString), inj(ksort_SortInt, ksort_SortJSON, dv(2):ksort_SortInt)), .List⦃"JSONs"⦄_JSONs()))) ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop>):ksort_SortGeneratedTopCell
