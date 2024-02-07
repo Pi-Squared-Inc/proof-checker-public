@@ -1,8 +1,6 @@
 Symbol ksort_SortGeneratedTopCell
 Symbol ksort_SortGeneratedTopCell
 Symbol ksort_SortInt
-Symbol ksort_SortKItem
-Symbol ksort_SortInt
 Symbol 5
 Symbol kore_dv
 MetaVar 0
@@ -10,14 +8,6 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol inj
-MetaVar 0
-App
-MetaVar 1
-App
-MetaVar 2
-App
-Instantiate 0, 1, 2
 Symbol dotk
 Instantiate 
 Symbol kore_kseq
@@ -49,8 +39,6 @@ MetaVar 1
 App
 Instantiate 0, 1
 Symbol ksort_SortInt
-Symbol ksort_SortKItem
-Symbol ksort_SortInt
 Symbol 5
 Symbol kore_dv
 MetaVar 0
@@ -58,14 +46,6 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol inj
-MetaVar 0
-App
-MetaVar 1
-App
-MetaVar 2
-App
-Instantiate 0, 1, 2
 Symbol #next(_)_BUILTIN-FUNCTIONS-SYNTAX_KItem_KItem
 MetaVar 0
 App
@@ -207,4 +187,4 @@ Instantiate 0, 1
 Instantiate 0, 1
 Publish
 	Stack:
-	0: ⊩ksort_SortGeneratedTopCell (<generatedTop> <k> (#next(_)_BUILTIN-FUNCTIONS-SYNTAX_KItem_KItem(inj(ksort_SortInt, ksort_SortKItem, dv(5):ksort_SortInt)) ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop> k=> <generatedTop> <k> (inj(ksort_SortInt, ksort_SortKItem, dv(5):ksort_SortInt) ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop>):ksort_SortGeneratedTopCell
+	0: ⊩ksort_SortGeneratedTopCell (<generatedTop> <k> (#next(_)_BUILTIN-FUNCTIONS-SYNTAX_KItem_KItem(dv(5):ksort_SortInt) ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop> k=> <generatedTop> <k> (dv(5):ksort_SortInt ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop>):ksort_SortGeneratedTopCell

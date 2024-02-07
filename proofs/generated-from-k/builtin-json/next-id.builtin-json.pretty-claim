@@ -1,8 +1,5 @@
 Symbol ksort_SortGeneratedTopCell
 Symbol ksort_SortGeneratedTopCell
-Symbol ksort_SortJSON
-Symbol ksort_SortString
-Symbol ksort_SortJSONKey
 Symbol ksort_SortString
 Symbol key
 Symbol kore_dv
@@ -11,16 +8,6 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol inj
-MetaVar 0
-App
-MetaVar 1
-App
-MetaVar 2
-App
-Instantiate 0, 1, 2
-Symbol ksort_SortInt
-Symbol ksort_SortJSON
 Symbol ksort_SortInt
 Symbol 2
 Symbol kore_dv
@@ -29,14 +16,6 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol inj
-MetaVar 0
-App
-MetaVar 1
-App
-MetaVar 2
-App
-Instantiate 0, 1, 2
 Symbol JSONEntry
 MetaVar 0
 App
@@ -55,15 +34,6 @@ Symbol JSONObject
 MetaVar 0
 App
 Instantiate 0
-Symbol ksort_SortKItem
-Symbol inj
-MetaVar 0
-App
-MetaVar 1
-App
-MetaVar 2
-App
-Instantiate 0, 2, 1
 Symbol dotk
 Instantiate 
 Symbol kore_kseq
@@ -95,8 +65,6 @@ MetaVar 1
 App
 Instantiate 0, 1
 Symbol ksort_SortString
-Symbol ksort_SortJSONKey
-Symbol ksort_SortString
 Symbol key
 Symbol kore_dv
 MetaVar 0
@@ -104,16 +72,6 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol inj
-MetaVar 0
-App
-MetaVar 1
-App
-MetaVar 2
-App
-Instantiate 0, 1, 2
-Symbol ksort_SortInt
-Symbol ksort_SortJSON
 Symbol ksort_SortInt
 Symbol 2
 Symbol kore_dv
@@ -122,14 +80,6 @@ App
 MetaVar 1
 App
 Instantiate 0, 1
-Symbol inj
-MetaVar 0
-App
-MetaVar 1
-App
-MetaVar 2
-App
-Instantiate 0, 1, 2
 Symbol JSONEntry
 MetaVar 0
 App
@@ -289,4 +239,4 @@ Instantiate 0, 1
 Instantiate 0, 1
 Publish
 	Stack:
-	0: ⊩ksort_SortGeneratedTopCell (<generatedTop> <k> (#next(_)_BUILTIN-JSON-SYNTAX_KItem_JSON(JSONObject(JSONs(JSONEntry(inj(ksort_SortString, ksort_SortJSONKey, dv(key):ksort_SortString), inj(ksort_SortInt, ksort_SortJSON, dv(2):ksort_SortInt)), .List⦃"JSONs"⦄_JSONs()))) ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop> k=> <generatedTop> <k> (inj(ksort_SortJSON, ksort_SortKItem, JSONObject(JSONs(JSONEntry(inj(ksort_SortString, ksort_SortJSONKey, dv(key):ksort_SortString), inj(ksort_SortInt, ksort_SortJSON, dv(2):ksort_SortInt)), .List⦃"JSONs"⦄_JSONs()))) ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop>):ksort_SortGeneratedTopCell
+	0: ⊩ksort_SortGeneratedTopCell (<generatedTop> <k> (#next(_)_BUILTIN-JSON-SYNTAX_KItem_JSON(JSONObject(JSONs(JSONEntry(dv(key):ksort_SortString, dv(2):ksort_SortInt), .List⦃"JSONs"⦄_JSONs()))) ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop> k=> <generatedTop> <k> (JSONObject(JSONs(JSONEntry(dv(key):ksort_SortString, dv(2):ksort_SortInt), .List⦃"JSONs"⦄_JSONs())) ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop>):ksort_SortGeneratedTopCell
