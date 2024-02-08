@@ -67,10 +67,10 @@ We consider the following ZK backends:
 Last Update: Dec 22th, 2023
 |                                                             Examples                                                                            | CPU Exec Time | CPU Prove Time | CPU Verify Time | CPU Total Time |
 |:------------------------------------------------------------------------------------------------------------------------------------------------|:-------------:|:--------------:|:---------------:|:--------------:|
-| [transfer](https://github.com/runtimeverification/proof-checker/blob/main/cairo/tests/direct-implementation/cairo0/transfer.cairo)              |         0.440 |          0.195 |           0.008 |          0.643 |
-| [batch-transfer](https://github.com/runtimeverification/proof-checker/blob/main/cairo/tests/direct-implementation/cairo0/batch_transfer.cairo)  |         6.825 |         30.196 |           0.869 |         37.890 |
-| [perceptron](https://github.com/runtimeverification/proof-checker/blob/main/cairo/tests/direct-implementation/cairo0/perceptron.cairo)          |         0.448 |          0.166 |           0.008 |          0.662 |
-| [svm](https://github.com/runtimeverification/proof-checker/blob/main/cairo/tests/direct-implementation/cairo0/svm.cairo)                        |         0.443 |          0.176 |           0.008 |          0.627 |
+| [transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo0/transfer.cairo)              |         0.440 |          0.195 |           0.008 |          0.643 |
+| [batch-transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo0/batch_transfer.cairo)  |         6.825 |         30.196 |           0.869 |         37.890 |
+| [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo0/perceptron.cairo)          |         0.448 |          0.166 |           0.008 |          0.662 |
+| [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo0/svm.cairo)                        |         0.443 |          0.176 |           0.008 |          0.627 |
 
 \* The programs were compiled with Cairo Zero's default compiler and proved and verified using  Lambdaworks Cairo Platinum Prover (v0.3.0)
 
@@ -79,10 +79,10 @@ Last Update: Dec 22th, 2023
 Last Update: Jan 10th, 2024
 |                                                             Examples                                                                            | CPU Exec Time | CPU Prove Time | CPU Verify Time | CPU Total Time |
 |:------------------------------------------------------------------------------------------------------------------------------------------------|:-------------:|:--------------:|:---------------:|:--------------:|
-| [transfer](https://github.com/runtimeverification/proof-checker/blob/main/cairo/tests/direct-implementation/cairo1/transfer.cairo)              |         0.583 |          0.009 |           0.002 |          0.594 |
-| [batch-transfer](https://github.com/runtimeverification/proof-checker/blob/main/cairo/tests/direct-implementation/cairo1/batch_transfer.cairo)  |         0.691 |         65.693 |           1.787 |         68.171 |
-| [perceptron](https://github.com/runtimeverification/proof-checker/blob/main/cairo/tests/direct-implementation/cairo1/perceptron.cairo)          |         0.592 |          0.029 |           0.003 |          0.624 |
-| [svm](https://github.com/runtimeverification/proof-checker/blob/main/cairo/tests/direct-implementation/cairo1/svm.cairo)                        |         0.593 |          0.032 |           0.003 |          0.628 |
+| [transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo1/transfer.cairo)              |         0.583 |          0.009 |           0.002 |          0.594 |
+| [batch-transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo1/batch_transfer.cairo)  |         0.691 |         65.693 |           1.787 |         68.171 |
+| [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo1/perceptron.cairo)          |         0.592 |          0.029 |           0.003 |          0.624 |
+| [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo1/svm.cairo)                        |         0.593 |          0.032 |           0.003 |          0.628 |
 
 \* The programs were compiled with LambdaClass Cairo-VM (v1.0.0-rc0) and proved and verified using Lambdaworks Cairo Platinum Prover (v0.3.0)
 
@@ -91,10 +91,10 @@ Last Update: Jan 10th, 2024
 Last Update: Dec 19th, 2023
 |                                                       Examples                                                                         | Iterations | CPU Prove Time | GPU Prove Time | CPU Verify Time | GPU Verify Time | CPU Total Time | GPU Total Time |
 |:--------------------------------------------------------------------------------------------------------------------------------------:|:----------:|:--------------:|:--------------:|:---------------:|:---------------:|:--------------:|:--------------:|
-| [transfer](https://github.com/runtimeverification/proof-checker/blob/main/lurk/tests/direct-implementation/transfer.lurk)              |         34 |          2.393 |          2.313 |           0.554 |           0.618 |          2.947 |          2.931 |
-| [batch-transfer](https://github.com/runtimeverification/proof-checker/blob/main/lurk/tests/direct-implementation/batch_transfer.lurk)* |     505037 |       3681.819 |       1193.355 |           9.845 |           6.571 |       3691.664 |       1199.926 |
-| [perceptron](https://github.com/runtimeverification/proof-checker/blob/main/lurk/tests/direct-implementation/perceptron.lurk)          |         11 |          3.501 |          0.830 |           0.541 |           0.579 |          4.042 |          1.409 |
-| [svm](https://github.com/runtimeverification/proof-checker/blob/main/lurk/tests/direct-implementation/svm.lurk)                        |          9 |          1.832 |          0.820 |           0.538 |           0.598 |          2.370 |          1.418 |
+| [transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/direct-implementation/transfer.lurk)              |         34 |          2.393 |          2.313 |           0.554 |           0.618 |          2.947 |          2.931 |
+| [batch-transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/direct-implementation/batch_transfer.lurk)* |     505037 |       3681.819 |       1193.355 |           9.845 |           6.571 |       3691.664 |       1199.926 |
+| [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/direct-implementation/perceptron.lurk)          |         11 |          3.501 |          0.830 |           0.541 |           0.579 |          4.042 |          1.409 |
+| [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/direct-implementation/svm.lurk)                        |          9 |          1.832 |          0.820 |           0.538 |           0.598 |          2.370 |          1.418 |
 
 \* Using `lurk --rc 400 batch_transfer.lurk`, other tests doesn't use `--rc`
 
@@ -103,20 +103,20 @@ Last Update: Dec 19th, 2023
 Last Update: Dec 22th, 2023
 |                                                         Examples                                                                             |  Cycles | CPU Exec Time | GPU Exec Time | CPU Prove Time | GPU Prove Time | CPU Verify Time | GPU Verify Time | CPU Total Time | GPU Total Time |
 |:--------------------------------------------------------------------------------------------------------------------------------------------:|:-------:|:-------------:|:-------------:|:--------------:|:--------------:|:---------------:|:---------------:|:--------------:|:--------------:|
-| [transfer](https://github.com/runtimeverification/proof-checker/blob/main/risc0/tests/direct-implementation/guest/src/transfer.rs)           |  21156  |     0.017     |     0.030     |      2.353     |      0.613     |      0.001      |      0.002      |      2.371     |      0.645     |
-| [batch-transfer](https://github.com/runtimeverification/proof-checker/blob/main/risc0/tests/direct-implementation/guest/src/transfer5000.rs) | 754199  |     0.057     |     0.057     |     37.878     |      7.532     |      0.002      |      0.001      |     37.937     |      7.590     |
-| [perceptron](https://github.com/runtimeverification/proof-checker/blob/main/risc0/tests/direct-implementation/guest/src/perceptron.rs)       |  21156  |     0.017     |     0.028     |      2.355     |      0.595     |      0.001      |      0.002      |      2.373     |      0.625     |
-| [svm](https://github.com/runtimeverification/proof-checker/blob/main/risc0/tests/direct-implementation/guest/src/svm5.rs)                    |  21156  |     0.028     |     0.028     |      2.351     |      0.602     |      0.002      |      0.002      |      2.381     |      0.632     |
+| [transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/risc0/tests/direct-implementation/guest/src/transfer.rs)           |  21156  |     0.017     |     0.030     |      2.353     |      0.613     |      0.001      |      0.002      |      2.371     |      0.645     |
+| [batch-transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/risc0/tests/direct-implementation/guest/src/transfer5000.rs) | 754199  |     0.057     |     0.057     |     37.878     |      7.532     |      0.002      |      0.001      |     37.937     |      7.590     |
+| [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/risc0/tests/direct-implementation/guest/src/perceptron.rs)       |  21156  |     0.017     |     0.028     |      2.355     |      0.595     |      0.001      |      0.002      |      2.373     |      0.625     |
+| [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/risc0/tests/direct-implementation/guest/src/svm5.rs)                    |  21156  |     0.028     |     0.028     |      2.351     |      0.602     |      0.002      |      0.002      |      2.381     |      0.632     |
 
 
 #### zkLLVM (v0.1.11-48)
 Last Update: Jan 8th, 2024
 |                                                  Examples                                                                          | CPU Circuit Gen Time | CPU Prove+Verify Time |
 |:----------------------------------------------------------------------------------------------------------------------------------:|:--------------------:|:---------------------:|
-| [transfer](https://github.com/runtimeverification/proof-checker/tree/main/zkllvm/tests/direct-implementation/transfer)             |                0.730 |                 0.131 |
-| [batch-transfer](https://github.com/runtimeverification/proof-checker/tree/main/zkllvm/tests/direct-implementation/batch_transfer) |                1.367 |               143.183 |
-| [perceptron](https://github.com/runtimeverification/proof-checker/tree/main/zkllvm/tests/direct-implementation/perceptron)         |                0.750 |                 0.130 |
-| [svm](https://github.com/runtimeverification/proof-checker/tree/main/zkllvm/tests/direct-implementation/svm)                       |                0.730 |                 0.132 |
+| [transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/zkllvm/tests/direct-implementation/transfer)             |                0.730 |                 0.131 |
+| [batch-transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/zkllvm/tests/direct-implementation/batch_transfer) |                1.367 |               143.183 |
+| [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/zkllvm/tests/direct-implementation/perceptron)         |                0.750 |                 0.130 |
+| [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/zkllvm/tests/direct-implementation/svm)                       |                0.730 |                 0.132 |
 
 ### Proofs of Proofs
 
@@ -124,11 +124,11 @@ Last Update: Jan 8th, 2024
 Last Update: Dec 19th, 2023
 |                                                            Examples                                                                             | Cycles | CPU Prove Time | GPU Prove Time | CPU Verify Time | GPU Verify Time | CPU Total Time | GPU Total Time |
 |:-----------------------------------------------------------------------------------------------------------------------------------------------:|:------:|:--------------:|:--------------:|:---------------:|:---------------:|:--------------:|:--------------:|
-| [impreflex](https://github.com/runtimeverification/proof-checker/blob/main/lurk/tests/proofs-of-proofs/test_impreflex.lurk)*                    |   55651|        217.268 |        107.558 |           5.800 |           3.967 |        223.068 |        111.525 |
-| [transfer-goal](https://github.com/runtimeverification/proof-checker/blob/main/lurk/tests/proofs-of-proofs/test_transfer_goal.lurk)             | 3202986|             ∞  |             ∞  |              ∞  |               ∞ |              ∞ |              ∞ |
-| [batch-transfer-goal](https://github.com/runtimeverification/proof-checker/blob/main/lurk/tests/proofs-of-proofs/test_batch_transfer_goal.lurk) |30122047|             ∞  |             ∞  |              ∞  |               ∞ |              ∞ |              ∞ |
-| [perceptron-goal](https://github.com/runtimeverification/proof-checker/blob/main/lurk/tests/proofs-of-proofs/test_perceptron_goal.lurk)         | 6404208|             ∞  |             ∞  |              ∞  |               ∞ |              ∞ |              ∞ |
-| [svm-goal](https://github.com/runtimeverification/proof-checker/blob/main/lurk/tests/proofs-of-proofs/test_svm_goal.lurk)                       | 6404208|             ∞  |             ∞  |              ∞  |               ∞ |              ∞ |              ∞ |
+| [impreflex](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/proofs-of-proofs/test_impreflex.lurk)*                    |   55651|        217.268 |        107.558 |           5.800 |           3.967 |        223.068 |        111.525 |
+| [transfer-goal](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/proofs-of-proofs/test_transfer_goal.lurk)             | 3202986|             ∞  |             ∞  |              ∞  |               ∞ |              ∞ |              ∞ |
+| [batch-transfer-goal](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/proofs-of-proofs/test_batch_transfer_goal.lurk) |30122047|             ∞  |             ∞  |              ∞  |               ∞ |              ∞ |              ∞ |
+| [perceptron-goal](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/proofs-of-proofs/test_perceptron_goal.lurk)         | 6404208|             ∞  |             ∞  |              ∞  |               ∞ |              ∞ |              ∞ |
+| [svm-goal](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/proofs-of-proofs/test_svm_goal.lurk)                       | 6404208|             ∞  |             ∞  |              ∞  |               ∞ |              ∞ |              ∞ |
 
 \* Using `lurk --rc 400 ...`
 
@@ -144,8 +144,8 @@ Last Update: Dec 22th, 2023
 | svm-goal            | 3212346 |     0.069     |     0.050     |     128.289    |     28.695     |      0.006      |      0.006      |     128.364    |     28.751     |
 
 \* For the RISC Zero $PI^2$ implementation, we have the main implementation defined
-[here](https://github.com/runtimeverification/proof-checker/tree/main/risc0/pi2)
-and the inputs defined [here](https://github.com/runtimeverification/proof-checker/tree/main/proofs/translated).
+[here](https://github.com/Pi-Squared-Network/proof-checker-public/tree/master/risc0/pi2)
+and the inputs defined [here](https://github.com/Pi-Squared-Network/proof-checker-public/tree/master/proofs/translated).
 The inputs are split into three files: `*-gamma`, `*-claim`, and `*-proof`.
 Ultimately, we expect that all $PI^2$ implementations will support an unique
 binary input format, and therefore, all implementations will share these same
@@ -162,8 +162,8 @@ Last Update: Jan 22th, 2024
 | svm-goal            |              93.431 |                     ∞ |
 
 \* For the zkLLVM $PI^2$ implementation, we have the main implementation defined
-[here](https://github.com/runtimeverification/proof-checker/tree/main/zkllvm/src).
-We translate the inputs defined [here](https://github.com/runtimeverification/proof-checker/tree/main/proofs/translated).
+[here](https://github.com/Pi-Squared-Network/proof-checker-public/tree/master/zkllvm/src).
+We translate the inputs defined [here](https://github.com/Pi-Squared-Network/proof-checker-public/tree/master/proofs/translated).
 The binary inputs are split and encoded into three arrays on a file for each file to
 match the input requirements of the zkLLVM implementation.
 
