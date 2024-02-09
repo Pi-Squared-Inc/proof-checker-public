@@ -1050,10 +1050,14 @@ fn execute_instructions<'a>(
                 }
             }
             Instruction::Publish => match phase {
-                ExecutionPhase::Gamma => memory.push(Entry::Proved(pop_stack_pattern(stack))),
+                ExecutionPhase::Gamma => {
+                    memory.push(Entry::Proved(pop_stack_pattern(stack)));
+                    assert!(stack.is_empty())
+                }
                 ExecutionPhase::Claim => {
                     let claim = pop_stack_pattern(stack);
-                    claims.push(claim)
+                    claims.push(claim);
+                    assert!(stack.is_empty())
                 }
                 ExecutionPhase::Proof => {
                     let claim = claims.pop().expect("Insufficient claims.");
