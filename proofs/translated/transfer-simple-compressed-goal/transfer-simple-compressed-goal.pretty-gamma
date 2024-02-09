@@ -1,0 +1,1808 @@
+Version 0.1.0
+MetaVar 0
+MetaVar 1
+Save
+Implies
+Save
+Load phi1=0
+MetaVar 2
+Save
+Implies
+MetaVar 0
+Load phi2=2
+Implies
+Save
+Implies
+Implies
+Save
+Publish
+Load (phi0 -> phi1)=1
+Load (phi0 -> phi2)=3
+MetaVar 0
+Symbol \and
+Load phi1=0
+App
+Load phi2=2
+App
+Implies
+Implies
+Implies
+Save
+Publish
+Symbol \and
+Symbol \in-sort
+Save
+Load phi1=0
+App
+MetaVar 0
+App
+Save
+App
+Load \in-sort=8
+Load phi2=2
+App
+MetaVar 0
+App
+Save
+App
+Load \in-sort=8
+Symbol \kore-and
+MetaVar 0
+App
+Load phi1=0
+App
+Load phi2=2
+App
+Save
+App
+MetaVar 0
+App
+Implies
+Save
+Publish
+MetaVar 4
+Save
+Symbol \kore-valid
+MetaVar 0
+App
+Symbol \kore-implies
+MetaVar 0
+App
+Load phi1=0
+App
+Load phi2=2
+App
+App
+Implies
+Load phi4=14
+Symbol \kore-valid
+MetaVar 0
+App
+Symbol \kore-rewrites-star
+MetaVar 0
+App
+Load phi2=2
+App
+MetaVar 3
+App
+App
+Implies
+Load phi4=14
+Symbol \kore-valid
+MetaVar 0
+App
+Symbol \kore-rewrites-star
+MetaVar 0
+App
+Load phi1=0
+App
+MetaVar 3
+App
+App
+Implies
+Implies
+Save
+Implies
+Save
+Publish
+Load phi4=14
+Load ((\in-sort · phi1) · phi0)=9
+Implies
+Load phi4=14
+Load ((\in-sort · phi2) · phi0)=10
+Implies
+Load phi4=14
+Load \in-sort=8
+MetaVar 3
+App
+MetaVar 0
+App
+Implies
+Load phi4=14
+Symbol \kore-valid
+MetaVar 0
+App
+Symbol \kore-rewrites-star
+MetaVar 0
+App
+Load phi1=0
+App
+Load phi2=2
+App
+App
+Implies
+Load ((phi4 -> ((\kore-valid · phi0) · (((\kore-rewrites-star · phi0) · phi2) · phi3))) -> (phi4 -> ((\kore-valid · phi0) · (((\kore-rewrites-star · phi0) · phi1) · phi3))))=15
+Implies
+Implies
+Implies
+Implies
+Save
+Publish
+Symbol \and
+Load \in-sort=8
+MetaVar 5
+Save
+App
+Save
+Symbol \kore-sort-SortKCell
+Save
+App
+App
+Load \in-sort=8
+MetaVar 6
+Save
+App
+Save
+Symbol \kore-sort-SortStateCell
+Save
+App
+App
+Load \in-sort=8
+Symbol \kore-symbol-Lbl'-LT-'T'-GT-'
+Load phi5=20
+App
+Load phi6=23
+App
+Save
+App
+Symbol \kore-sort-SortTCell
+Save
+App
+Implies
+Save
+Publish
+Symbol \and
+Load (\in-sort · phi5)=21
+Load \kore-sort-SortTCell=27
+App
+App
+Load (\in-sort · phi6)=24
+Symbol \kore-sort-SortGeneratedCounterCell
+Save
+App
+App
+Load \in-sort=8
+Symbol \kore-symbol-Lbl'-LT-'generatedTop'-GT-'
+Load phi5=20
+App
+Load phi6=23
+App
+Save
+App
+Symbol \kore-sort-SortGeneratedTopCell
+App
+Implies
+Save
+Publish
+Symbol \top
+Save
+Load \in-sort=8
+Symbol \kore-top
+Symbol \kore-sort-SortGeneratedTopCell
+App
+App
+Symbol \kore-sort-SortGeneratedTopCell
+App
+Implies
+Save
+Publish
+Load \top=34
+Load \in-sort=8
+Symbol \kore-symbol-Lbl'-LT-'generatedCounter'-GT-'
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "0"
+App
+App
+App
+Load \kore-sort-SortGeneratedCounterCell=30
+App
+Implies
+Save
+Publish
+Load \top=34
+Load \in-sort=8
+Symbol \kore-symbol-Lbl'-LT-'k'-GT-'
+Symbol \kore-symbol-kseq
+Symbol \kore-inj
+Symbol \kore-sort-SortStmt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "ret"
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "1"
+App
+App
+App
+App
+App
+Symbol \kore-symbol-dotk
+App
+App
+App
+Load \kore-sort-SortKCell=22
+App
+Implies
+Save
+Publish
+Load \top=34
+Load \in-sort=8
+Symbol \kore-symbol-Lbl'-LT-'state'-GT-'
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceTo"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "210"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "ret"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "0"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceSender"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "90"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "addressTo"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "12345"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "amount"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "10"
+App
+App
+App
+App
+App
+App
+App
+App
+App
+Load \kore-sort-SortStateCell=25
+App
+Implies
+Save
+Publish
+Load \top=34
+Load \in-sort=8
+Symbol \kore-symbol-Lbl'-LT-'k'-GT-'
+Symbol \kore-symbol-dotk
+App
+App
+Load \kore-sort-SortKCell=22
+App
+Implies
+Save
+Publish
+Load \top=34
+Load \in-sort=8
+Symbol \kore-symbol-Lbl'-LT-'state'-GT-'
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "ret"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "1"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceSender"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "90"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "addressTo"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "12345"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceTo"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "210"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "amount"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "10"
+App
+App
+App
+App
+App
+App
+App
+App
+App
+Load \kore-sort-SortStateCell=25
+App
+Implies
+Save
+Publish
+Load \top=34
+Load \in-sort=8
+Symbol \kore-symbol-LblinitGeneratedTopCell
+Save
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'Stop'Map
+App
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortKConfigVar
+Save
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Load \kore-sort-SortKConfigVar=48
+App
+Symbol "%24PGM"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortPgm
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-symbol-Lblint'UndsSClnUndsUnds'IMP-SYNTAX'Unds'Pgm'Unds'Ids'Unds'Stmt
+Symbol \kore-symbol-Lbl'UndsCommUndsUnds'IMP-SYNTAX'Unds'Ids'Unds'Id'Unds'Ids
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "addressTo"
+App
+App
+Symbol \kore-symbol-Lbl'UndsCommUndsUnds'IMP-SYNTAX'Unds'Ids'Unds'Id'Unds'Ids
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "amount"
+App
+App
+Symbol \kore-symbol-Lbl'UndsCommUndsUnds'IMP-SYNTAX'Unds'Ids'Unds'Id'Unds'Ids
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceSender"
+App
+App
+Symbol \kore-symbol-Lbl'UndsCommUndsUnds'IMP-SYNTAX'Unds'Ids'Unds'Id'Unds'Ids
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceTo"
+App
+App
+Symbol \kore-symbol-Lbl'UndsCommUndsUnds'IMP-SYNTAX'Unds'Ids'Unds'Id'Unds'Ids
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "ret"
+App
+App
+Symbol \kore-symbol-Lbl'Stop'List'LBraQuotUndsCommUndsUnds'IMP-SYNTAX'Unds'Ids'Unds'Id'Unds'Ids'QuotRBraUnds'Ids
+App
+App
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'UndsUndsUnds'IMP-SYNTAX'Unds'Stmt'Unds'Stmt'Unds'Stmt
+Symbol \kore-symbol-Lbl'UndsUndsUnds'IMP-SYNTAX'Unds'Stmt'Unds'Stmt'Unds'Stmt
+Symbol \kore-symbol-Lbl'UndsUndsUnds'IMP-SYNTAX'Unds'Stmt'Unds'Stmt'Unds'Stmt
+Symbol \kore-symbol-Lbl'UndsUndsUnds'IMP-SYNTAX'Unds'Stmt'Unds'Stmt'Unds'Stmt
+Symbol \kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "addressTo"
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "12345"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "amount"
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "10"
+App
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceSender"
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "100"
+App
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceTo"
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "200"
+App
+App
+App
+App
+App
+Symbol \kore-symbol-Lblif'LParUndsRParUnds'else'UndsUnds'IMP-SYNTAX'Unds'Stmt'Unds'BExp'Unds'Block'Unds'Block
+Symbol \kore-symbol-Lbl'Unds-GT-UndsUnds'IMP-SYNTAX'Unds'BExp'Unds'AExp'Unds'AExp
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "amount"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceSender"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'LBraUndsRBraUnds'IMP-SYNTAX'Unds'Block'Unds'Stmt
+Symbol \kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "ret"
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "0"
+App
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'LBraUndsRBraUnds'IMP-SYNTAX'Unds'Block'Unds'Stmt
+Symbol \kore-symbol-Lbl'UndsUndsUnds'IMP-SYNTAX'Unds'Stmt'Unds'Stmt'Unds'Stmt
+Symbol \kore-symbol-Lbl'UndsUndsUnds'IMP-SYNTAX'Unds'Stmt'Unds'Stmt'Unds'Stmt
+Symbol \kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceSender"
+App
+App
+Symbol \kore-symbol-Lbl'Unds'-'UndsUnds'IMP-SYNTAX'Unds'AExp'Unds'AExp'Unds'AExp
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceSender"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "amount"
+App
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceTo"
+App
+App
+Symbol \kore-symbol-Lbl'UndsPlusUndsUnds'IMP-SYNTAX'Unds'AExp'Unds'AExp'Unds'AExp
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceTo"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "amount"
+App
+App
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "ret"
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "1"
+App
+App
+App
+App
+App
+App
+App
+App
+App
+App
+App
+App
+App
+Symbol \kore-sort-SortGeneratedTopCell
+App
+Implies
+Save
+Publish
+Load \top=34
+Symbol \kore-valid
+Symbol \kore-sort-SortGeneratedTopCell
+App
+Symbol \kore-rewrites-star
+Symbol \kore-sort-SortGeneratedTopCell
+App
+Symbol \kore-and
+Symbol \kore-sort-SortGeneratedTopCell
+App
+Symbol \kore-and
+Symbol \kore-sort-SortGeneratedTopCell
+App
+Symbol \kore-top
+Symbol \kore-sort-SortGeneratedTopCell
+App
+App
+Symbol \kore-top
+Symbol \kore-sort-SortGeneratedTopCell
+App
+App
+App
+Load \kore-symbol-LblinitGeneratedTopCell=47
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'Stop'Map
+App
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Load \kore-sort-SortKConfigVar=48
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Load \kore-sort-SortKConfigVar=48
+App
+Symbol "%24PGM"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortPgm
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-symbol-Lblint'UndsSClnUndsUnds'IMP-SYNTAX'Unds'Pgm'Unds'Ids'Unds'Stmt
+Symbol \kore-symbol-Lbl'UndsCommUndsUnds'IMP-SYNTAX'Unds'Ids'Unds'Id'Unds'Ids
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "addressTo"
+App
+App
+Symbol \kore-symbol-Lbl'UndsCommUndsUnds'IMP-SYNTAX'Unds'Ids'Unds'Id'Unds'Ids
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "amount"
+App
+App
+Symbol \kore-symbol-Lbl'UndsCommUndsUnds'IMP-SYNTAX'Unds'Ids'Unds'Id'Unds'Ids
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceSender"
+App
+App
+Symbol \kore-symbol-Lbl'UndsCommUndsUnds'IMP-SYNTAX'Unds'Ids'Unds'Id'Unds'Ids
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceTo"
+App
+App
+Symbol \kore-symbol-Lbl'UndsCommUndsUnds'IMP-SYNTAX'Unds'Ids'Unds'Id'Unds'Ids
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "ret"
+App
+App
+Symbol \kore-symbol-Lbl'Stop'List'LBraQuotUndsCommUndsUnds'IMP-SYNTAX'Unds'Ids'Unds'Id'Unds'Ids'QuotRBraUnds'Ids
+App
+App
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'UndsUndsUnds'IMP-SYNTAX'Unds'Stmt'Unds'Stmt'Unds'Stmt
+Symbol \kore-symbol-Lbl'UndsUndsUnds'IMP-SYNTAX'Unds'Stmt'Unds'Stmt'Unds'Stmt
+Symbol \kore-symbol-Lbl'UndsUndsUnds'IMP-SYNTAX'Unds'Stmt'Unds'Stmt'Unds'Stmt
+Symbol \kore-symbol-Lbl'UndsUndsUnds'IMP-SYNTAX'Unds'Stmt'Unds'Stmt'Unds'Stmt
+Symbol \kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "addressTo"
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "12345"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "amount"
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "10"
+App
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceSender"
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "100"
+App
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceTo"
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "200"
+App
+App
+App
+App
+App
+Symbol \kore-symbol-Lblif'LParUndsRParUnds'else'UndsUnds'IMP-SYNTAX'Unds'Stmt'Unds'BExp'Unds'Block'Unds'Block
+Symbol \kore-symbol-Lbl'Unds-GT-UndsUnds'IMP-SYNTAX'Unds'BExp'Unds'AExp'Unds'AExp
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "amount"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceSender"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'LBraUndsRBraUnds'IMP-SYNTAX'Unds'Block'Unds'Stmt
+Symbol \kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "ret"
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "0"
+App
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'LBraUndsRBraUnds'IMP-SYNTAX'Unds'Block'Unds'Stmt
+Symbol \kore-symbol-Lbl'UndsUndsUnds'IMP-SYNTAX'Unds'Stmt'Unds'Stmt'Unds'Stmt
+Symbol \kore-symbol-Lbl'UndsUndsUnds'IMP-SYNTAX'Unds'Stmt'Unds'Stmt'Unds'Stmt
+Symbol \kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceSender"
+App
+App
+Symbol \kore-symbol-Lbl'Unds'-'UndsUnds'IMP-SYNTAX'Unds'AExp'Unds'AExp'Unds'AExp
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceSender"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "amount"
+App
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceTo"
+App
+App
+Symbol \kore-symbol-Lbl'UndsPlusUndsUnds'IMP-SYNTAX'Unds'AExp'Unds'AExp'Unds'AExp
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceTo"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "amount"
+App
+App
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "ret"
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "1"
+App
+App
+App
+App
+App
+App
+App
+App
+App
+App
+App
+App
+App
+App
+Symbol \kore-and
+Symbol \kore-sort-SortGeneratedTopCell
+App
+Symbol \kore-and
+Symbol \kore-sort-SortGeneratedTopCell
+App
+Symbol \kore-top
+Symbol \kore-sort-SortGeneratedTopCell
+App
+App
+Symbol \kore-top
+Symbol \kore-sort-SortGeneratedTopCell
+App
+App
+App
+Symbol \kore-symbol-Lbl'-LT-'generatedTop'-GT-'
+Symbol \kore-symbol-Lbl'-LT-'T'-GT-'
+Symbol \kore-symbol-Lbl'-LT-'k'-GT-'
+Symbol \kore-symbol-kseq
+Symbol \kore-inj
+Symbol \kore-sort-SortStmt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "ret"
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "1"
+App
+App
+App
+App
+App
+Symbol \kore-symbol-dotk
+App
+App
+App
+Symbol \kore-symbol-Lbl'-LT-'state'-GT-'
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceTo"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "210"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "ret"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "0"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceSender"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "90"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "addressTo"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "12345"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "amount"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "10"
+App
+App
+App
+App
+App
+App
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'-LT-'generatedCounter'-GT-'
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "0"
+App
+App
+App
+App
+Save
+App
+App
+Implies
+Save
+Publish
+Load \top=34
+Symbol \kore-valid
+Symbol \kore-sort-SortGeneratedTopCell
+App
+Symbol \kore-rewrites-star
+Symbol \kore-sort-SortGeneratedTopCell
+App
+Symbol \kore-and
+Symbol \kore-sort-SortGeneratedTopCell
+App
+Symbol \kore-and
+Symbol \kore-sort-SortGeneratedTopCell
+App
+Symbol \kore-top
+Symbol \kore-sort-SortGeneratedTopCell
+App
+App
+Symbol \kore-top
+Symbol \kore-sort-SortGeneratedTopCell
+App
+App
+App
+Symbol \kore-symbol-Lbl'-LT-'generatedTop'-GT-'
+Symbol \kore-symbol-Lbl'-LT-'T'-GT-'
+Symbol \kore-symbol-Lbl'-LT-'k'-GT-'
+Symbol \kore-symbol-kseq
+Symbol \kore-inj
+Symbol \kore-sort-SortStmt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "ret"
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortAExp
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "1"
+App
+App
+App
+App
+App
+Symbol \kore-symbol-dotk
+App
+App
+App
+Symbol \kore-symbol-Lbl'-LT-'state'-GT-'
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "ret"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "0"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceSender"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "90"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "addressTo"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "12345"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceTo"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "210"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "amount"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "10"
+App
+App
+App
+App
+App
+App
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'-LT-'generatedCounter'-GT-'
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "0"
+App
+App
+App
+App
+Save
+App
+Symbol \kore-and
+Symbol \kore-sort-SortGeneratedTopCell
+App
+Symbol \kore-and
+Symbol \kore-sort-SortGeneratedTopCell
+App
+Symbol \kore-top
+Symbol \kore-sort-SortGeneratedTopCell
+App
+App
+Symbol \kore-top
+Symbol \kore-sort-SortGeneratedTopCell
+App
+App
+App
+Symbol \kore-symbol-Lbl'-LT-'generatedTop'-GT-'
+Symbol \kore-symbol-Lbl'-LT-'T'-GT-'
+Symbol \kore-symbol-Lbl'-LT-'k'-GT-'
+Symbol \kore-symbol-dotk
+App
+App
+Symbol \kore-symbol-Lbl'-LT-'state'-GT-'
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "ret"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "1"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceSender"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "90"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "addressTo"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "12345"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'Unds'Map'Unds'
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "balanceTo"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "210"
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'UndsPipe'-'-GT-Unds'
+Symbol \kore-inj
+Symbol \kore-sort-SortId
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortId
+App
+Symbol "amount"
+App
+App
+App
+Symbol \kore-inj
+Symbol \kore-sort-SortInt
+App
+Symbol \kore-sort-SortKItem
+App
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "10"
+App
+App
+App
+App
+App
+App
+App
+App
+App
+App
+Symbol \kore-symbol-Lbl'-LT-'generatedCounter'-GT-'
+Symbol \kore-dv
+Symbol \kore-sort-SortInt
+App
+Symbol "0"
+App
+App
+App
+App
+App
+App
+Implies
+Save
+Publish
+Load \top=34
+Symbol \kore-valid
+Symbol \kore-sort-SortGeneratedTopCell
+App
+Symbol \kore-implies
+Symbol \kore-sort-SortGeneratedTopCell
+App
+Save
+Load (((\kore-and · \kore-sort-SortGeneratedTopCell) · (((\kore-and · \kore-sort-SortGeneratedTopCell) · (\kore-top · \kore-sort-SortGeneratedTopCell)) · (\kore-top · \kore-sort-SortGeneratedTopCell))) · ((\kore-symbol-Lbl'-LT-'generatedTop'-GT-' · ((\kore-symbol-Lbl'-LT-'T'-GT-' · (\kore-symbol-Lbl'-LT-'k'-GT-' · ((\kore-symbol-kseq · (((\kore-inj · \kore-sort-SortStmt) · \kore-sort-SortKItem) · ((\kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp · ((\kore-dv · \kore-sort-SortId) · "ret")) · (((\kore-inj · \kore-sort-SortInt) · \kore-sort-SortAExp) · ((\kore-dv · \kore-sort-SortInt) · "1"))))) · \kore-symbol-dotk))) · (\kore-symbol-Lbl'-LT-'state'-GT-' · ((\kore-symbol-Lbl'Unds'Map'Unds' · ((\kore-symbol-Lbl'UndsPipe'-'-GT-Unds' · (((\kore-inj · \kore-sort-SortId) · \kore-sort-SortKItem) · ((\kore-dv · \kore-sort-SortId) · "balanceTo"))) · (((\kore-inj · \kore-sort-SortInt) · \kore-sort-SortKItem) · ((\kore-dv · \kore-sort-SortInt) · "210")))) · ((\kore-symbol-Lbl'Unds'Map'Unds' · ((\kore-symbol-Lbl'UndsPipe'-'-GT-Unds' · (((\kore-inj · \kore-sort-SortId) · \kore-sort-SortKItem) · ((\kore-dv · \kore-sort-SortId) · "ret"))) · (((\kore-inj · \kore-sort-SortInt) · \kore-sort-SortKItem) · ((\kore-dv · \kore-sort-SortInt) · "0")))) · ((\kore-symbol-Lbl'Unds'Map'Unds' · ((\kore-symbol-Lbl'UndsPipe'-'-GT-Unds' · (((\kore-inj · \kore-sort-SortId) · \kore-sort-SortKItem) · ((\kore-dv · \kore-sort-SortId) · "balanceSender"))) · (((\kore-inj · \kore-sort-SortInt) · \kore-sort-SortKItem) · ((\kore-dv · \kore-sort-SortInt) · "90")))) · ((\kore-symbol-Lbl'Unds'Map'Unds' · ((\kore-symbol-Lbl'UndsPipe'-'-GT-Unds' · (((\kore-inj · \kore-sort-SortId) · \kore-sort-SortKItem) · ((\kore-dv · \kore-sort-SortId) · "addressTo"))) · (((\kore-inj · \kore-sort-SortInt) · \kore-sort-SortKItem) · ((\kore-dv · \kore-sort-SortInt) · "12345")))) · ((\kore-symbol-Lbl'UndsPipe'-'-GT-Unds' · (((\kore-inj · \kore-sort-SortId) · \kore-sort-SortKItem) · ((\kore-dv · \kore-sort-SortId) · "amount"))) · (((\kore-inj · \kore-sort-SortInt) · \kore-sort-SortKItem) · ((\kore-dv · \kore-sort-SortInt) · "10")))))))))) · (\kore-symbol-Lbl'-LT-'generatedCounter'-GT-' · ((\kore-dv · \kore-sort-SortInt) · "0"))))=51
+App
+Load (((\kore-and · \kore-sort-SortGeneratedTopCell) · (((\kore-and · \kore-sort-SortGeneratedTopCell) · (\kore-top · \kore-sort-SortGeneratedTopCell)) · (\kore-top · \kore-sort-SortGeneratedTopCell))) · ((\kore-symbol-Lbl'-LT-'generatedTop'-GT-' · ((\kore-symbol-Lbl'-LT-'T'-GT-' · (\kore-symbol-Lbl'-LT-'k'-GT-' · ((\kore-symbol-kseq · (((\kore-inj · \kore-sort-SortStmt) · \kore-sort-SortKItem) · ((\kore-symbol-Lbl'UndsEqlsUndsSClnUnds'IMP-SYNTAX'Unds'Stmt'Unds'Id'Unds'AExp · ((\kore-dv · \kore-sort-SortId) · "ret")) · (((\kore-inj · \kore-sort-SortInt) · \kore-sort-SortAExp) · ((\kore-dv · \kore-sort-SortInt) · "1"))))) · \kore-symbol-dotk))) · (\kore-symbol-Lbl'-LT-'state'-GT-' · ((\kore-symbol-Lbl'Unds'Map'Unds' · ((\kore-symbol-Lbl'UndsPipe'-'-GT-Unds' · (((\kore-inj · \kore-sort-SortId) · \kore-sort-SortKItem) · ((\kore-dv · \kore-sort-SortId) · "ret"))) · (((\kore-inj · \kore-sort-SortInt) · \kore-sort-SortKItem) · ((\kore-dv · \kore-sort-SortInt) · "0")))) · ((\kore-symbol-Lbl'Unds'Map'Unds' · ((\kore-symbol-Lbl'UndsPipe'-'-GT-Unds' · (((\kore-inj · \kore-sort-SortId) · \kore-sort-SortKItem) · ((\kore-dv · \kore-sort-SortId) · "balanceSender"))) · (((\kore-inj · \kore-sort-SortInt) · \kore-sort-SortKItem) · ((\kore-dv · \kore-sort-SortInt) · "90")))) · ((\kore-symbol-Lbl'Unds'Map'Unds' · ((\kore-symbol-Lbl'UndsPipe'-'-GT-Unds' · (((\kore-inj · \kore-sort-SortId) · \kore-sort-SortKItem) · ((\kore-dv · \kore-sort-SortId) · "addressTo"))) · (((\kore-inj · \kore-sort-SortInt) · \kore-sort-SortKItem) · ((\kore-dv · \kore-sort-SortInt) · "12345")))) · ((\kore-symbol-Lbl'Unds'Map'Unds' · ((\kore-symbol-Lbl'UndsPipe'-'-GT-Unds' · (((\kore-inj · \kore-sort-SortId) · \kore-sort-SortKItem) · ((\kore-dv · \kore-sort-SortId) · "balanceTo"))) · (((\kore-inj · \kore-sort-SortInt) · \kore-sort-SortKItem) · ((\kore-dv · \kore-sort-SortInt) · "210")))) · ((\kore-symbol-Lbl'UndsPipe'-'-GT-Unds' · (((\kore-inj · \kore-sort-SortId) · \kore-sort-SortKItem) · ((\kore-dv · \kore-sort-SortId) · "amount"))) · (((\kore-inj · \kore-sort-SortInt) · \kore-sort-SortKItem) · ((\kore-dv · \kore-sort-SortInt) · "10")))))))))) · (\kore-symbol-Lbl'-LT-'generatedCounter'-GT-' · ((\kore-dv · \kore-sort-SortInt) · "0"))))=54
+App
+App
+Implies
+Save
+Publish

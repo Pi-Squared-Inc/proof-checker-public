@@ -1,0 +1,31 @@
+Symbol 10
+Symbol 100
+Symbol 90
+Symbol 200
+Symbol 210
+Symbol 0
+Load Axiom ((((are-terms · 10) · 100) · 200) · 0)=17
+Load Axiom ((leq · 10) · 100)=11
+Load Axiom ((\equals · 90) · ((minus · 100) · 10))=13
+Load Axiom ((\equals · 210) · ((plus · 200) · 10))=15
+Save
+Pop
+Save
+Pop
+Save
+Pop
+Save
+Pop
+Load Axiom (((((are-terms · phi0) · phi1) · phi3) · phi5) -> (((leq · phi0) · phi1) -> (((\equals · phi2) · ((minus · phi1) · phi0)) -> (((\equals · phi4) · ((plus · phi3) · phi0)) -> ((\rewrites · ((((state · phi0) · phi1) · phi3) · phi5)) · ((((state · phi0) · phi2) · phi4) · 1))))))=9
+Instantiate 0, 1, 2, 3, 4, 5
+Load ((((are-terms · 10) · 100) · 200) · 0)=17
+ModusPonens
+Load ((leq · 10) · 100)=11
+ModusPonens
+Load ((\equals · 90) · ((minus · 100) · 10))=13
+ModusPonens
+Load ((\equals · 210) · ((plus · 200) · 10))=15
+ModusPonens
+Publish
+	Stack:
+	0: ⊢ ((\rewrites · ((((state · 10) · 100) · 200) · 0)) · ((((state · 10) · 90) · 210) · 1))
