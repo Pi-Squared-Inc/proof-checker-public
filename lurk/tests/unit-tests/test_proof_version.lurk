@@ -1,7 +1,7 @@
 !(load "../../src/lib.lurk")
 
 !(def gamma_ok '(31 0 1))
-!(def gamma_fail '(31 3 10))
+!(def gamma_fail '(31 -1 -1))
 
 !(def check_version_in_gamma_phase (lambda (input)
     (let ((stack Stack)

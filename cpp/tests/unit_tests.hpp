@@ -1210,8 +1210,8 @@ void test_version_fail() {
   std::array<int, MAX_SIZE> gamma;
   gamma[0] = 3;        // Size
   gamma[1] = (int)Instruction::Version;
-  gamma[2] = 0;
-  gamma[3] = 0;
+  gamma[2] = -1;
+  gamma[3] = -1;
   gamma[4] = (int)Instruction::NO_OP;
 
     std::array<int, MAX_SIZE> claims;
