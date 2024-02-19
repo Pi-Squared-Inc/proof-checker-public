@@ -556,9 +556,23 @@ Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[
 Instantiate 0, 1, 2
 Save
 Publish
+Load phi0=2
+Load phi1=3
+Load phi0=2
+Load phi0=2
+Load phi1=3
+Load phi1=3
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=41
+Instantiate 0, 1, 2
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=54
+Instantiate 0, 1
+Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=95
+Instantiate 0, 1, 2
+Save
+Publish
 Symbol ksort_SortGeneratedTopCell
 Save
-Load ksort_SortGeneratedTopCell=112
+Load ksort_SortGeneratedTopCell=114
 Load x0=30
 Symbol s(_)_DECREMENT-SYNTAX_Nat_Nat
 Load phi0=2
@@ -593,15 +607,15 @@ Save
 Instantiate 0, 1
 Save
 Load x0=30
-Load x1=115
-Load ((kore_kseq · phi0) · phi1)=116
+Load x1=117
+Load ((kore_kseq · phi0) · phi1)=118
 Instantiate 0, 1
 Save
-Load (<k> · phi0)=118
+Load (<k> · phi0)=120
 Instantiate 0
 Save
-Load x2=120
-Load ((<generatedTop> · phi0) · phi1)=121
+Load x2=122
+Load ((<generatedTop> · phi0) · phi1)=123
 Instantiate 0, 1
 Save
 Load phi0=2

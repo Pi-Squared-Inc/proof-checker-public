@@ -556,9 +556,23 @@ Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[
 Instantiate 0, 1, 2
 Save
 Publish
+Load phi0=2
+Load phi1=3
+Load phi0=2
+Load phi0=2
+Load phi1=3
+Load phi1=3
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=41
+Instantiate 0, 1, 2
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=54
+Instantiate 0, 1
+Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=95
+Instantiate 0, 1, 2
+Save
+Publish
 Symbol ksort_SortGeneratedTopCell
 Save
-Load ksort_SortGeneratedTopCell=112
+Load ksort_SortGeneratedTopCell=114
 Symbol ⦃⦄_IMP5-SYNTAX_Block
 Save
 Save
@@ -598,15 +612,15 @@ Save
 Instantiate 0, 1
 Save
 Load x0=30
-Load (<k> · phi0)=117
+Load (<k> · phi0)=119
 Instantiate 0
 Save
-Load x1=119
-Load ((<T> · phi0) · phi1)=120
+Load x1=121
+Load ((<T> · phi0) · phi1)=122
 Instantiate 0, 1
 Save
-Load x2=122
-Load ((<generatedTop> · phi0) · phi1)=123
+Load x2=124
+Load ((<generatedTop> · phi0) · phi1)=125
 Instantiate 0, 1
 Save
 Load phi0=2
@@ -655,12 +669,12 @@ Load (∃ x100 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X
 Instantiate 0
 Save
 Publish
-Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]=139
-Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]=139
-Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]=139
-Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]=139
-Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]=139
-Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]=139
+Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]=141
+Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]=141
+Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]=141
+Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]=141
+Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]=141
+Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]=141
 Symbol _,_,_,_,_,__IMP5-SYNTAX_Vars5_Int_Int_Int_Int_Int_Int
 Load phi0=2
 App
