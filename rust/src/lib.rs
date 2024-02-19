@@ -11,8 +11,8 @@ use core::ops::Deref;
 
 // Keep this version in sync with the one in Cargo.toml!
 // We could read from Cargo.toml but want to avoid String.
-const VERSION_MAJOR: u8 = 0;
-const VERSION_MINOR: u8 = 1;
+const VERSION_MAJOR: u8 = 1;
+const VERSION_MINOR: u8 = 0;
 
 /// Instructions
 /// ============
@@ -38,12 +38,12 @@ pub enum Instruction {
     Pop,
     // Memory Manipulation,
     Save, Load,
-    // Journal Manipulation,
-    Publish,
     // Version Control
     Version,
     // Metavar with no constraints
-    CleanMetaVar = (9 + 128)
+    CleanMetaVar = (9 + 128),
+    // Journal Manipulation,
+    Publish = 255,
 }
 
 type InstByte = u8;
@@ -80,10 +80,10 @@ impl Instruction {
             27 => Instruction::Pop,
             28 => Instruction::Save,
             29 => Instruction::Load,
-            30 => Instruction::Publish,
             31 => Instruction::Version,
             // Sub-instructions
             137 => Instruction::CleanMetaVar,
+            255 => Instruction::Publish,
             _ => panic!("Bad Instruction!"),
         }
     }
