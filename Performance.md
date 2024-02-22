@@ -104,7 +104,7 @@ The programs were compiled using LambdaClass Cairo-VM (v1.0.0-rc0), and were pro
 
 *Last Update: Dec 19th, 2023*
 
-<sup>*</sup> The batch-transfer example utilizes `lurk --rc 400 batch_transfer.lurk`, while other tests do not use the `--rc` tag
+<sup>*</sup> The batch-transfer example utilizes `lurk --rc 400 batch_transfer.lurk`, while other tests do not use the `--rc` flag
 </details>
 
 <details open>
@@ -149,7 +149,7 @@ The programs were compiled using LambdaClass Cairo-VM (v1.0.0-rc0), and were pro
 
 *Last Update: Dec 19th, 2023*
 
-<sup>*</sup> The impreflex example utilizes `lurk --rc 400 batch_transfer.lurk`, while other tests do not use the `--rc` tag
+<sup>*</sup> The impreflex example utilizes `lurk --rc 400 batch_transfer.lurk`, while other tests do not use the `--rc` flag
 </details>
 
 <details open>
@@ -163,15 +163,10 @@ The programs were compiled using LambdaClass Cairo-VM (v1.0.0-rc0), and were pro
 | perceptron-goal     | 3212346 |     0.049     |     0.050     |     127.911    |     28.433     |      0.006      |      0.006      |     127.966    |     28.489     |
 | svm-goal            | 3212346 |     0.069     |     0.050     |     128.289    |     28.695     |      0.006      |      0.006      |     128.364    |     28.751     |
 
-> <sup>*</sup>For the RISC Zero $PI^2$ implementation, we have the main implementation defined
-[here](https://github.com/Pi-Squared-Network/proof-checker-public/tree/master/risc0/pi2)
-and the inputs defined [here](https://github.com/Pi-Squared-Network/proof-checker-public/tree/master/proofs/translated).
-The inputs are split into three files: `*-gamma`, `*-claim`, and `*-proof`.
-Ultimately, we expect that all $PI^2$ implementations will support an unique
-binary input format, and therefore, all implementations will share these same
-inputs and have only one main implementation.
+*Last Update: Dec 22th, 2023*
 
-  > Last Update: Dec 22th, 2023
+<sup>*</sup> The main implementation for RISC Zero $PI^2$ implementation is defined [here](https://github.com/Pi-Squared-Network/proof-checker-public/tree/master/risc0/pi2), and the inputs are defined [here](https://github.com/Pi-Squared-Network/proof-checker-public/tree/master/proofs/translated). The inputs are divided into three files: `*-gamma`, `*-claim`, and `*-proof`.
+Ultimately, we anticipate that all $PI^2$ implementations will support a unique binary input format. As a result, all implementations will utilize the same inputs and have a single main implementation.
 </details>
 
 <details open> 
@@ -185,52 +180,33 @@ inputs and have only one main implementation.
 | perceptron-goal     |              94.530 |                     ∞ |
 | svm-goal            |              93.431 |                     ∞ |
 
-> For the zkLLVM $PI^2$ implementation, we have the main implementation defined
-[here](https://github.com/Pi-Squared-Network/proof-checker-public/tree/master/zkllvm/src).
-We translate the inputs defined [here](https://github.com/Pi-Squared-Network/proof-checker-public/tree/master/proofs/translated).
-The binary inputs are split and encoded into three arrays on a file for each file to
-match the input requirements of the zkLLVM implementation.
+*Last Update: Jan 22nd, 2024*
 
-  > Last Update: Jan 22nd, 2024
+The main implementation for the zkLLVM $PI^2$ implementation can be found [here](https://github.com/Pi-Squared-Network/proof-checker-public/tree/master/zkllvm/src). We translate the inputs, which are defined [here](https://github.com/Pi-Squared-Network/proof-checker-public/tree/master/proofs/translated). Binary inputs are divided and encoded into three arrays. Each file corresponds to the input requirements of the zkLLVM implementation.
 </details>
 
 
 ## Implementation Details
 
 ### Lurk Implementation Details
-Lurk is a interpreted programming language, that said, when we execute an
-example in Lurk, we are actually executing the interpreter that will execute the
-program. This means that the execution time required for the interpreter to load
-(interpret) every function and definition is also counted in the execution time
-of the program, and therefore, we can't measure the compilation time of the
-program itself.
 
-To execute large Lurk examples requires an increased swap memory, resulting in
-slower execution times compared to other implementations. Due to this limitation,
-it is difficult to accurately measure and compare execution times between Lurk
-and other implementations. Even though we have 128GB of RAM + 108Gb of swap
-memory, we still couldn't execute most of $PI^2$ examples in Lurk, that what
-the `∞` means on the performance tables.
+Lurk is an interpreted programming language. When we run a Lurk examplee, we are actually executing the interpreter, which in turn executes the program. The execution time includes the time needed for the interpreter to load every function and definition. Consequently, we cannot measure the compilation time of the program itself.
 
-The `--rc n` flag is used to improve the performance execution of larger
-programs in Lurk. The `rc` value is the number of iterations that Lurk packs
-together in a single [Nova](https://github.com/microsoft/Nova) folding step.
-Iterations in Lurk represents reduction steps in the [Lurk Universal Circuit](https://blog.lurk-lang.org/posts/circuit-spec/).
-In terms of parallelism, Lurk is capable of generating more partial witnesses in
-parallel with higher rc values. However, the higher the rc value, the more
-memory is required to execute the program. The default value of `rc` is 10, and
-we used `rc=400` for the `batch-transfer` example. In small cases, a higher `rc`
-value can decrease the execution time, that is why we use it for programs with
-more than 100K iterations.
+Executing large Lurk examples requires an increase in swap memory, which results in slower execution times compared to other implementations. This limitation makes it challenging to measure and compare execution times between Lurk and other implementations accurately. Despite having 128GB of RAM plus 108GB of swap memory, we were still unable to execute most of the $PI^2$ examples in Lurk. The symbol `∞` in the performance tables indicates this inability.
 
-The Lurk's examples were executed within the following version:
+The `--rc n` flag in Lurk is used to enhance execution performance of larger programs. The `rc` value indicates the number of iterations that Lurk bundles together in a single [Nova](https://github.com/microsoft/Nova) folding step. Here, iterations represent reduction steps in the [Lurk Universal Circuit](https://blog.lurk-lang.org/posts/circuit-spec/).
+
+In terms of parallelism, higher `rc` values allow Lurk to generate more partial witnesses simultaneously. However, a larger `rc` value also requires more memory to execute the program. The default `rc` value is 10. For the `batch-transfer` example, we used `rc=400`. In smaller cases, increasing the `rc` value can reduce execution time, which is why it's used for programs with
+over than 100K iterations.
+
+The Lurk examples were run on the following version:
 
 ```bash
 commit: 2023-12-21 510d7042990844760d97d65c7e6c7ab75f934630
 lurk 0.3.1
 ```
 
-To execute the examples using GPU this setup was used to compile the Lurk binary:
+The following setup was used to compile the Lurk binary and run the example using GPU: 
 
 ```bash
 export EC_GPU_CUDA_NVCC_ARGS='--fatbin --gpu-architecture=sm_89 --generate-code=arch=compute_89,code=sm_89'
@@ -241,8 +217,7 @@ export EC_GPU_FRAMEWORK=cuda
 cargo install --path . --features=cuda --force
 ```
 
-To execute the examples using only CPU this setup was used to compile the Lurk
-binary:
+The following setup was used to compile the Lurk binary and run the example using CPU:
 
 ```bash
 export CUDA_PATH=
@@ -253,24 +228,18 @@ cargo install --path . --force
 
 ### RISC Zero Implementation Details
 
-From [RiscZero Terminogy](https://dev.risczero.com/terminology#clock-cycles) the `Cycles` we use in the performance tables are the
-smallest unit of compute in the zkVM circuit, analogous to a clock cycle on a
-physical CPU. The complexity of a guest program's execution is measured in clock
-cycles as they directly affect the memory, proof size, and time performance of
+From the [RiscZero Terminogy](https://dev.risczero.com/terminology#clock-cycles), the `Cycles` we refer to in the performance tables are the smallest unit of computation in the zkVM circuit, similar to a clock cycle on a physical CPU. The execution complexity of a guest program is measured in these clock cycles as they directly impact the memory, proof size, and time performance of
 the zkVM.
 
-Generally, a single cycle corresponds to a single RISC-V operation. However,
-some operations require two cycles.
+Generally, a single cycle corresponds to one RISC-V operation. However, some operations may require two cycles.
 
 ### zkLLVM Implementation Details
 
-zkLLVM doesn't support GPU acceleration in any phase, therefore, we don't have
-GPU results for these experiments.
+zkLLVM does not support GPU acceleration in any stage, so there are no GPU results for these experiments. 
 
-The proof and verification on zkLLVM were genereted using
-`transpiler -m gen-test-proof`.
+The proof and verification for zkLLVM were genereted using the command `transpiler -m gen-test-proof`.
 
-The version of the individual tools used to execute the examples were:
+The versions of the individual tools used for the examples are as follows:
 
 ```bash
 $ clang-17 --version
@@ -283,5 +252,4 @@ $ transpiler --version
 0.1.11-48
 ```
 
-The `∞` on the performance tables means that the example didn't finish executing
-after 6 hours or was killed by the OS due to lack of memory.
+The `∞` symbol in the performance tables indicate that the example either did not finish executing after 6 hours or was terminated by the OS due to lack of memory.
