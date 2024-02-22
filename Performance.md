@@ -27,7 +27,7 @@ For a program `Pgm` in a programming language `PL`, we use the [K framework](htt
 
 A logical proof checker can automatically verify `proof_check(PI(Pgm, PL))`. We then generate a ZK proof demonstrating the correctness of an execution trace of `proof_check`.
 
-In essence, we generate a ZK proof that validates the correctness of a logical proof, which in turn verifires the correctness of `Pgm` written in language `PL`. This is why we refer to this benchmark set as Proofs of Proofs--it generates (ZK) proofs of (logical) proofs.
+In essence, we generate a ZK proof that validates the correctness of a logical proof, which in turn verifies the correctness of `Pgm` written in the language `PL`. This is why we refer to this benchmark set as Proofs of Proofs--it generates (ZK) proofs of (logical) proofs.
 
 ## ZK Backend Evaluation
 This describes the ZK backends we evaluated, including details on their performance.
@@ -43,18 +43,18 @@ The ZK backends under consideration are:
 ## Performance Tables
 
 - Machine Spec: AMD Ryzen 9 7950X(16 cores/32 threads/128GB), 4090RTX
-- Memory Swap: 108GB
+- Memory Swap: 108 GB
 - Performance Time Measured in Seconds
-- The execution time for all implementations, except RISC Zero, was measured by taking the difference between the start and end timestamps for each execution phace.
-- RISC Zero has its own performance counter, which was used to measure the execution time and cycles.
+- The execution time for all implementations, except RISC Zero, was measured by taking the difference between the start and end timestamps for each execution phase.
+- RISC Zero has its own performance counter, which is used to measure the execution time and cycles.
 - The "CPU" prefix denotes implementation **without** GPU acceleration
 - The "GPU" prefix denotes implementation **with** GPU acceleration
 - Last Update: Dec 19th, 2023
 
 **Other option for this section**
-Some key details about the performance data for the ZK backends. The evaluations were carried out on an AMD Ryzen 9 7950X machine, with 16 cores, 32 threads, and 128GB of memory, paired with a 4090RTX GPU and 108GB of memory swap.
+Some key details about the performance data for the ZK backends. The evaluations were carried out on an AMD Ryzen 9 7950X machine, with 16 cores, 32 threads, and 128 GB of memory, paired with a 4090RTX GPU and 108 GB of memory swap.
 
-The performance time is measured in seconds, and it's important to note how these times were calculated. For all implementations, except RISC Zero, the execution time was determined by measuring the time differnce between the start and end timestamps of each execution phase. RISC Zero, has its own performance counter that was utilized to measure both the execution time and cycles.
+The performance time is measured in seconds, and it's important to note how these times were calculated. For all implementations, except RISC Zero, the execution time was determined by measuring the time difference between the start and end timestamps of each execution phase. RISC Zero, has its own performance counter that was utilized to measure both the execution time and cycles.
 
 We've also noted where the implementation is using CPU or GPU acceleration. If you see the prefix "CPU", this refers to an implementation without GPU acceleration, whereas "GPU" denotes an implementation that utilized GPU acceleration.
 
@@ -190,14 +190,14 @@ The main implementation for the zkLLVM $PI^2$ implementation can be found [here]
 
 ### Lurk Implementation Details
 
-Lurk is an interpreted programming language. When we run a Lurk examplee, we are actually executing the interpreter, which in turn executes the program. The execution time includes the time needed for the interpreter to load every function and definition. Consequently, we cannot measure the compilation time of the program itself.
+Lurk is an interpreted programming language. When we run a Lurk example, we are actually executing the interpreter, which in turn executes the program. The execution time includes the time needed for the interpreter to load every function and definition. Consequently, we cannot measure the compilation time of the program itself.
 
 Executing large Lurk examples requires an increase in swap memory, which results in slower execution times compared to other implementations. This limitation makes it challenging to measure and compare execution times between Lurk and other implementations accurately. Despite having 128GB of RAM plus 108GB of swap memory, we were still unable to execute most of the $PI^2$ examples in Lurk. The symbol `∞` in the performance tables indicates this inability.
 
 The `--rc n` flag in Lurk is used to enhance execution performance of larger programs. The `rc` value indicates the number of iterations that Lurk bundles together in a single [Nova](https://github.com/microsoft/Nova) folding step. Here, iterations represent reduction steps in the [Lurk Universal Circuit](https://blog.lurk-lang.org/posts/circuit-spec/).
 
 In terms of parallelism, higher `rc` values allow Lurk to generate more partial witnesses simultaneously. However, a larger `rc` value also requires more memory to execute the program. The default `rc` value is 10. For the `batch-transfer` example, we used `rc=400`. In smaller cases, increasing the `rc` value can reduce execution time, which is why it's used for programs with
-over than 100K iterations.
+over 100K iterations.
 
 The Lurk examples were run on the following version:
 
@@ -237,7 +237,7 @@ Generally, a single cycle corresponds to one RISC-V operation. However, some ope
 
 zkLLVM does not support GPU acceleration in any stage, so there are no GPU results for these experiments. 
 
-The proof and verification for zkLLVM were genereted using the command `transpiler -m gen-test-proof`.
+The proof and verification for zkLLVM were generated using the command `transpiler -m gen-test-proof`.
 
 The versions of the individual tools used for the examples are as follows:
 
