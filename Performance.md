@@ -71,10 +71,10 @@ This section was last updated Dec 19th, 2023.
 | [batch-transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo0/batch_transfer.cairo)  |         6.825 |         30.196 |           0.869 |         37.890 |
 | [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo0/perceptron.cairo)          |         0.448 |          0.166 |           0.008 |          0.662 |
 | [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo0/svm.cairo)                        |         0.443 |          0.176 |           0.008 |          0.627 |
-> The programs were compiled using Cairo Zero's default compiler and were proved and verified using Lambdaworks Cairo Platinum Prover (v0.3.0)
 
-> Last Update: Dec 22th, 2023
+*Last Update: Dec 22th, 2023*
 
+The programs were compiled using the default compiler of Cairo Zero, and were proven and verified using Lambdaworks Cairo Platinum Prover (v0.3.0)
 </details>
 
 <details open>
@@ -87,9 +87,9 @@ This section was last updated Dec 19th, 2023.
 | [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo1/perceptron.cairo)          |         0.592 |          0.029 |           0.003 |          0.624 |
 | [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo1/svm.cairo)                        |         0.593 |          0.032 |           0.003 |          0.628 |
 
-> The programs were compiled using LambdaClass Cairo-VM (v1.0.0-rc0) and were proved and verified using Lambdaworks Cairo Platinum Prover (v0.3.0)
+*Last Update: Jan 10th, 2024*
 
->Last Update: Jan 10th, 2024
+The programs were compiled using LambdaClass Cairo-VM (v1.0.0-rc0), and were proven and verified using Lambdaworks Cairo Platinum Prover (v0.3.0)
 </details>
 
 <details open>
@@ -102,9 +102,9 @@ This section was last updated Dec 19th, 2023.
 | [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/direct-implementation/perceptron.lurk)          |         11 |          3.501 |          0.830 |           0.541 |           0.579 |          4.042 |          1.409 |
 | [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/direct-implementation/svm.lurk)                        |          9 |          1.832 |          0.820 |           0.538 |           0.598 |          2.370 |          1.418 |
 
-  > <sup>*</sup>Using `lurk --rc 400 batch_transfer.lurk`, other tests doesn't use `--rc`
-  
-  > Last Update: Dec 19th, 2023
+*Last Update: Dec 19th, 2023*
+
+<sup>*</sup> The batch-transfer example utilizes `lurk --rc 400 batch_transfer.lurk`, while other tests do not use the `--rc` tag
 </details>
 
 <details open>
@@ -117,8 +117,7 @@ This section was last updated Dec 19th, 2023.
 | [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/risc0/tests/direct-implementation/guest/src/perceptron.rs)       |  21156  |     0.017     |     0.028     |      2.355     |      0.595     |      0.001      |      0.002      |      2.373     |      0.625     |
 | [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/risc0/tests/direct-implementation/guest/src/svm5.rs)                    |  21156  |     0.028     |     0.028     |      2.351     |      0.602     |      0.002      |      0.002      |      2.381     |      0.632     |
 
-
-  > Last Update: Dec 22th, 2023
+*Last Update: Dec 22th, 2023*
 </details>
 
 <details open>
@@ -131,7 +130,7 @@ This section was last updated Dec 19th, 2023.
 | [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/zkllvm/tests/direct-implementation/perceptron)         |                0.750 |                 0.130 |
 | [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/zkllvm/tests/direct-implementation/svm)                       |                0.730 |                 0.132 |
 
-  > Last Update: Jan 8th, 2024
+*Last Update: Jan 8th, 2024*
 </details>
 
 
@@ -148,9 +147,9 @@ This section was last updated Dec 19th, 2023.
 | [perceptron-goal](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/proofs-of-proofs/test_perceptron_goal.lurk)         | 6404208|             ∞  |             ∞  |              ∞  |               ∞ |              ∞ |              ∞ |
 | [svm-goal](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/proofs-of-proofs/test_svm_goal.lurk)                       | 6404208|             ∞  |             ∞  |              ∞  |               ∞ |              ∞ |              ∞ |
 
-> <sup>*</sup> Using `lurk --rc 400 ...`
+*Last Update: Dec 19th, 2023*
 
-  > Last Update: Dec 19th, 2023
+<sup>*</sup> The impreflex example utilizes `lurk --rc 400 batch_transfer.lurk`, while other tests do not use the `--rc` tag
 </details>
 
 <details open>
