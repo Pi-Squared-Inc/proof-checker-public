@@ -16,8 +16,6 @@ The programs include:
 - `svm`: a [support vector machine (SVM)](https://en.wikipedia.org/wiki/Support_vector_machine)
   model.
 
-The pseudocode for these examples is provided at the end of this document.
-
 For each ZK backend, we directly implement these programs in the respective programming language and generate ZK proofs of their execution traces.
 
 ### Proofs of Proofs
@@ -42,23 +40,11 @@ The ZK backends under consideration are:
 
 ## Performance Tables
 
-- Machine Spec: AMD Ryzen 9 7950X(16 cores/32 threads/128GB), 4090RTX
-- Memory Swap: 108 GB
-- Performance Time Measured in Seconds
-- The execution time for all implementations, except RISC Zero, was measured by taking the difference between the start and end timestamps for each execution phase.
-- RISC Zero has its own performance counter, which is used to measure the execution time and cycles.
-- The "CPU" prefix denotes implementation **without** GPU acceleration
-- The "GPU" prefix denotes implementation **with** GPU acceleration
-- Last Update: Dec 19th, 2023
-
-**Other option for this section**
 Some key details about the performance data for the ZK backends. The evaluations were carried out on an AMD Ryzen 9 7950X machine, with 16 cores, 32 threads, and 128 GB of memory, paired with a 4090RTX GPU and 108 GB of memory swap.
 
 The performance time is measured in seconds, and it's important to note how these times were calculated. For all implementations, except RISC Zero, the execution time was determined by measuring the time difference between the start and end timestamps of each execution phase. RISC Zero, has its own performance counter that was utilized to measure both the execution time and cycles.
 
 We've also noted where the implementation is using CPU or GPU acceleration. If you see the prefix "CPU", this refers to an implementation without GPU acceleration, whereas "GPU" denotes an implementation that utilized GPU acceleration.
-
-This section was last updated Dec 19th, 2023.
 
 ### Direct Implementation
 
@@ -72,7 +58,6 @@ This section was last updated Dec 19th, 2023.
 | [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo0/perceptron.cairo)          |         0.448 |          0.166 |           0.008 |          0.662 |
 | [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo0/svm.cairo)                        |         0.443 |          0.176 |           0.008 |          0.627 |
 
-*Last Update: Dec 22th, 2023*
 
 The programs were compiled using the default compiler of Cairo Zero, and were proven and verified using Lambdaworks Cairo Platinum Prover (v0.3.0)
 </details>
@@ -87,7 +72,6 @@ The programs were compiled using the default compiler of Cairo Zero, and were pr
 | [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo1/perceptron.cairo)          |         0.592 |          0.029 |           0.003 |          0.624 |
 | [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo1/svm.cairo)                        |         0.593 |          0.032 |           0.003 |          0.628 |
 
-*Last Update: Jan 10th, 2024*
 
 The programs were compiled using LambdaClass Cairo-VM (v1.0.0-rc0), and were proven and verified using Lambdaworks Cairo Platinum Prover (v0.3.0)
 </details>
@@ -102,7 +86,6 @@ The programs were compiled using LambdaClass Cairo-VM (v1.0.0-rc0), and were pro
 | [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/direct-implementation/perceptron.lurk)          |         11 |          3.501 |          0.830 |           0.541 |           0.579 |          4.042 |          1.409 |
 | [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/direct-implementation/svm.lurk)                        |          9 |          1.832 |          0.820 |           0.538 |           0.598 |          2.370 |          1.418 |
 
-*Last Update: Dec 19th, 2023*
 
 <sup>*</sup> The batch-transfer example utilizes `lurk --rc 400 batch_transfer.lurk`, while other tests do not use the `--rc` flag
 </details>
@@ -117,7 +100,6 @@ The programs were compiled using LambdaClass Cairo-VM (v1.0.0-rc0), and were pro
 | [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/risc0/tests/direct-implementation/guest/src/perceptron.rs)       |  21156  |     0.017     |     0.028     |      2.355     |      0.595     |      0.001      |      0.002      |      2.373     |      0.625     |
 | [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/risc0/tests/direct-implementation/guest/src/svm5.rs)                    |  21156  |     0.028     |     0.028     |      2.351     |      0.602     |      0.002      |      0.002      |      2.381     |      0.632     |
 
-*Last Update: Dec 22th, 2023*
 </details>
 
 <details open>
@@ -130,7 +112,6 @@ The programs were compiled using LambdaClass Cairo-VM (v1.0.0-rc0), and were pro
 | [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/zkllvm/tests/direct-implementation/perceptron)         |                0.750 |                 0.130 |
 | [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/zkllvm/tests/direct-implementation/svm)                       |                0.730 |                 0.132 |
 
-*Last Update: Jan 8th, 2024*
 </details>
 
 
@@ -147,8 +128,6 @@ The programs were compiled using LambdaClass Cairo-VM (v1.0.0-rc0), and were pro
 | [perceptron-goal](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/proofs-of-proofs/test_perceptron_goal.lurk)         | 6404208|             ∞  |             ∞  |              ∞  |               ∞ |              ∞ |              ∞ |
 | [svm-goal](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/proofs-of-proofs/test_svm_goal.lurk)                       | 6404208|             ∞  |             ∞  |              ∞  |               ∞ |              ∞ |              ∞ |
 
-*Last Update: Dec 19th, 2023*
-
 <sup>*</sup> The impreflex example utilizes `lurk --rc 400 batch_transfer.lurk`, while other tests do not use the `--rc` flag
 </details>
 
@@ -162,8 +141,6 @@ The programs were compiled using LambdaClass Cairo-VM (v1.0.0-rc0), and were pro
 | batch-transfer-goal | 6724805 |     0.114     |     0.114     |     274.237    |     59.819     |      0.011      |      0.011      |     274.362    |     59.944     |
 | perceptron-goal     | 3212346 |     0.049     |     0.050     |     127.911    |     28.433     |      0.006      |      0.006      |     127.966    |     28.489     |
 | svm-goal            | 3212346 |     0.069     |     0.050     |     128.289    |     28.695     |      0.006      |      0.006      |     128.364    |     28.751     |
-
-*Last Update: Dec 22th, 2023*
 
 <sup>*</sup> The main implementation for RISC Zero $PI^2$ implementation is defined [here](https://github.com/Pi-Squared-Network/proof-checker-public/tree/master/risc0/pi2), and the inputs are defined [here](https://github.com/Pi-Squared-Network/proof-checker-public/tree/master/proofs/translated). The inputs are divided into three files: `*-gamma`, `*-claim`, and `*-proof`.
 Ultimately, we anticipate that all $PI^2$ implementations will support a unique binary input format. As a result, all implementations will utilize the same inputs and have a single main implementation.
@@ -180,7 +157,6 @@ Ultimately, we anticipate that all $PI^2$ implementations will support a unique 
 | perceptron-goal     |              94.530 |                     ∞ |
 | svm-goal            |              93.431 |                     ∞ |
 
-*Last Update: Jan 22nd, 2024*
 
 The main implementation for the zkLLVM $PI^2$ implementation can be found [here](https://github.com/Pi-Squared-Network/proof-checker-public/tree/master/zkllvm/src). We translate the inputs, which are defined [here](https://github.com/Pi-Squared-Network/proof-checker-public/tree/master/proofs/translated). Binary inputs are divided and encoded into three arrays. Each file corresponds to the input requirements of the zkLLVM implementation.
 </details>
