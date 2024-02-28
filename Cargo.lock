@@ -50,16 +50,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "080e9890a082662b09c1ad45f567faeeb47f22b5fb23895fbe1e651e718e25ca"
 
 [[package]]
-name = "apr"
-version = "0.1.0"
-dependencies = [
- "bincode",
- "risc0-zkvm",
- "serde",
- "serde_json",
-]
-
-[[package]]
 name = "autocfg"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1822,17 +1812,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "sdc_prover"
-version = "0.1.0"
-dependencies = [
- "bincode",
- "env_logger",
- "risc0-build",
- "risc0-zkvm",
- "serde",
-]
-
-[[package]]
 name = "security-framework"
 version = "2.9.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2557,6 +2536,8 @@ dependencies = [
  "checker",
  "risc0-build",
  "risc0-zkvm",
+ "serde",
+ "serde_json",
 ]
 
 [[package]]
