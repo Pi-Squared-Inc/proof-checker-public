@@ -35,16 +35,8 @@ The performance time is measured in seconds, and it's important to note how thes
 
 We've also noted where the implementation is using CPU or GPU acceleration. If you see the prefix "CPU", this refers to an implementation without GPU acceleration, whereas "GPU" denotes an implementation that utilized GPU acceleration.
 
-## ZK Backend Evaluation
-This describes the ZK backends we evaluated, including details on their performance.
-
-The ZK backends under consideration are:
-- [Cairo](https://www.cairo-lang.org/)
-- [Lurk](https://lurk-lang.org/)
-- [RISC Zero](https://www.risczero.com/)
-- [zkLLVM](https://github.com/NilFoundation/zkLLVM)
-
-### Cairo Direct Implementation
+### [Cairo](https://www.cairo-lang.org/) Backend
+#### Cairo Direct Implementation
 
 <details open>
 <summary>Cairo Zero (v0.13.0)</summary>
@@ -74,7 +66,8 @@ The programs were compiled using the default compiler of Cairo Zero, and were pr
 The programs were compiled using LambdaClass Cairo-VM (v1.0.0-rc0), and were proven and verified using Lambdaworks Cairo Platinum Prover (v0.3.0)
 </details>
 
-### Lurk Direct Implementation
+### [Lurk](https://lurk-lang.org/) Backend
+#### Lurk Direct Implementation
 <details open>
   <summary>Lurk (v0.3.1)</summary>
 
@@ -89,7 +82,7 @@ The programs were compiled using LambdaClass Cairo-VM (v1.0.0-rc0), and were pro
 <sup>*</sup> The batch-transfer example utilizes `lurk --rc 400 batch_transfer.lurk`, while other tests do not use the `--rc` flag
 </details>
 
-### Lurk Proofs of Proofs
+#### Lurk Proofs of Proofs
 
 <details open>
   <summary>Lurk (v0.3.1)</summary>
@@ -105,7 +98,7 @@ The programs were compiled using LambdaClass Cairo-VM (v1.0.0-rc0), and were pro
 <sup>*</sup> The impreflex example utilizes `lurk --rc 400 batch_transfer.lurk`, while other tests do not use the `--rc` flag
 </details>
 
-## Lurk Implementation Details
+#### Lurk Implementation Details
 
 Lurk is an interpreted programming language. When we run a Lurk example, we are actually executing the interpreter, which in turn executes the program. The execution time includes the time needed for the interpreter to load every function and definition. Consequently, we cannot measure the compilation time of the program itself.
 
@@ -142,8 +135,8 @@ export NVCC=off
 export EC_GPU_FRAMEWORK=none
 cargo install --path . --force
 ```
-
-### RISC Zero Direct Implementation
+### [RISC Zero](https://www.risczero.com/) Backend
+#### RISC Zero Direct Implementation
 <details open>
   <summary>RISC Zero (v0.16.1)</summary>
   
@@ -156,7 +149,7 @@ cargo install --path . --force
 
 </details>
 
-### RISC Zero Proofs of Proofs
+#### RISC Zero Proofs of Proofs
 <details open>
   <summary>RISC Zero (v0.16.1)</summary>
 
@@ -172,14 +165,15 @@ cargo install --path . --force
 Ultimately, we anticipate that all $PI^2$ implementations will support a unique binary input format. As a result, all implementations will utilize the same inputs and have a single main implementation.
 </details>
 
-### RISC Zero Implementation Details
+#### RISC Zero Implementation Details
 
 From the [RiscZero Terminogy](https://dev.risczero.com/terminology#clock-cycles), the `Cycles` we refer to in the performance tables are the smallest unit of computation in the zkVM circuit, similar to a clock cycle on a physical CPU. The execution complexity of a guest program is measured in these clock cycles as they directly impact the memory, proof size, and time performance of
 the zkVM.
 
 Generally, a single cycle corresponds to one RISC-V operation. However, some operations may require two cycles.
 
-### zkLLVM Zero Direct Implementation
+### [zkLLVM](https://github.com/NilFoundation/zkLLVM) Backend
+#### zkLLVM Zero Direct Implementation
 <details open>
   <summary>zkLLVM (v0.1.11-48)</summary>
 
@@ -192,7 +186,7 @@ Generally, a single cycle corresponds to one RISC-V operation. However, some ope
 
 </details>
 
-### zkLLVM Proofs of Proofs
+#### zkLLVM Proofs of Proofs
 <details open> 
 <summary>zkLLVM (v0.1.11-48)</summary>
 
@@ -208,7 +202,7 @@ Generally, a single cycle corresponds to one RISC-V operation. However, some ope
 The main implementation for the zkLLVM $PI^2$ implementation can be found [here](https://github.com/Pi-Squared-Network/proof-checker-public/tree/master/zkllvm/src). We translate the inputs, which are defined [here](https://github.com/Pi-Squared-Network/proof-checker-public/tree/master/proofs/translated). Binary inputs are divided and encoded into three arrays. Each file corresponds to the input requirements of the zkLLVM implementation.
 </details>
 
-### zkLLVM Implementation Details
+#### zkLLVM Implementation Details
 
 zkLLVM does not support GPU acceleration in any stage, so there are no GPU results for these experiments. 
 
