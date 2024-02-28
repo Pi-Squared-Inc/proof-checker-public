@@ -103,20 +103,6 @@ The programs were compiled using LambdaClass Cairo-VM (v1.0.0-rc0), and were pro
 | [svm-goal](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/proofs-of-proofs/test_svm_goal.lurk)                       | 6404208|             ∞  |             ∞  |              ∞  |               ∞ |              ∞ |              ∞ |
 
 <sup>*</sup> The impreflex example utilizes `lurk --rc 400 batch_transfer.lurk`, while other tests do not use the `--rc` flag
-</details>### Lurk Proofs of Proofs
-
-<details open>
-  <summary>Lurk (v0.3.1)</summary>
-
-  |                                                            Examples                                                                             | Cycles | CPU Prove Time | GPU Prove Time | CPU Verify Time | GPU Verify Time | CPU Total Time | GPU Total Time |
-|:-----------------------------------------------------------------------------------------------------------------------------------------------:|:------:|:--------------:|:--------------:|:---------------:|:---------------:|:--------------:|:--------------:|
-| [impreflex](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/proofs-of-proofs/test_impreflex.lurk)<sup>*</sup>                    |   55651|        217.268 |        107.558 |           5.800 |           3.967 |        223.068 |        111.525 |
-| [transfer-goal](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/proofs-of-proofs/test_transfer_goal.lurk)             | 3202986|             ∞  |             ∞  |              ∞  |               ∞ |              ∞ |              ∞ |
-| [batch-transfer-goal](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/proofs-of-proofs/test_batch_transfer_goal.lurk) |30122047|             ∞  |             ∞  |              ∞  |               ∞ |              ∞ |              ∞ |
-| [perceptron-goal](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/proofs-of-proofs/test_perceptron_goal.lurk)         | 6404208|             ∞  |             ∞  |              ∞  |               ∞ |              ∞ |              ∞ |
-| [svm-goal](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/proofs-of-proofs/test_svm_goal.lurk)                       | 6404208|             ∞  |             ∞  |              ∞  |               ∞ |              ∞ |              ∞ |
-
-<sup>*</sup> The impreflex example utilizes `lurk --rc 400 batch_transfer.lurk`, while other tests do not use the `--rc` flag
 </details>
 
 ## Lurk Implementation Details
