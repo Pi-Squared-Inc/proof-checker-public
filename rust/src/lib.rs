@@ -11,7 +11,7 @@ use core::ops::Deref;
 
 // Keep this version in sync with the one in Cargo.toml!
 // We could read from Cargo.toml but want to avoid String.
-const VERSION_MAJOR: u8 = 1;
+const VERSION_MAJOR: u8 = 2;
 const VERSION_MINOR: u8 = 0;
 
 /// Instructions
@@ -384,15 +384,23 @@ impl Pattern {
                 ..
             } => return !app_ctx_holes.into_iter().any(|hole| e_fresh.contains(hole)),
             Pattern::Mu { var, subpattern } => subpattern.positive(*var),
-            Pattern::ESubst { pattern, .. } => {
-                !self.is_redundant_subst()
+            Pattern::ESubst {
+                pattern,
+                evar_id,
+                plug,
+            } => {
+                !pattern.is_redundant_esubst(*evar_id, *plug)
                     && matches!(
                         **pattern,
                         Pattern::MetaVar { .. } | Pattern::ESubst { .. } | Pattern::SSubst { .. }
                     )
             }
-            Pattern::SSubst { pattern, .. } => {
-                !self.is_redundant_subst()
+            Pattern::SSubst {
+                pattern,
+                svar_id,
+                plug,
+            } => {
+                !pattern.is_redundant_ssubst(*svar_id, *plug)
                     && matches!(
                         **pattern,
                         Pattern::MetaVar { .. } | Pattern::ESubst { .. } | Pattern::SSubst { .. }
@@ -407,20 +415,12 @@ impl Pattern {
         }
     }
 
-    fn is_redundant_subst(&self) -> bool {
-        match self {
-            Pattern::ESubst {
-                pattern,
-                evar_id,
-                plug,
-            } => evar(*evar_id) == *plug || pattern.e_fresh(*evar_id),
-            Pattern::SSubst {
-                pattern,
-                svar_id,
-                plug,
-            } => svar(*svar_id) == *plug || pattern.s_fresh(*svar_id),
-            _ => false,
-        }
+    fn is_redundant_esubst(&self, evar_id: Id, plug: Ptr<Pattern>) -> bool {
+        self.e_fresh(evar_id) || *plug == Pattern::EVar(evar_id)
+    }
+
+    fn is_redundant_ssubst(&self, svar_id: Id, plug: Ptr<Pattern>) -> bool {
+        self.s_fresh(svar_id) || *plug == Pattern::SVar(svar_id)
     }
 }
 
@@ -544,6 +544,9 @@ fn forall(evar: Id, pat: Ptr<Pattern>) -> Ptr<Pattern> {
 /// ----------------------
 
 fn apply_esubst(pattern: Ptr<Pattern>, evar_id: Id, plug: Ptr<Pattern>) -> Ptr<Pattern> {
+    if pattern.is_redundant_esubst(evar_id, plug) {
+        return pattern;
+    }
     match *pattern {
         Pattern::EVar(e) => {
             if e == evar_id {
@@ -578,6 +581,9 @@ fn apply_esubst(pattern: Ptr<Pattern>, evar_id: Id, plug: Ptr<Pattern>) -> Ptr<P
 }
 
 fn apply_ssubst(pattern: Ptr<Pattern>, svar_id: Id, plug: Ptr<Pattern>) -> Ptr<Pattern> {
+    if pattern.is_redundant_ssubst(svar_id, plug) {
+        return pattern;
+    }
     match *pattern {
         Pattern::SVar(s) => {
             if s == svar_id {
@@ -814,9 +820,16 @@ fn execute_instructions<'a>(
         implies(implies(phi0, phi1), implies(phi0, phi2)),
     );
     let prop3 = implies(not(not(phi0)), phi0);
-    let quantifier = implies(esubst(phi0, 0, evar(1)), exists(0, phi0));
+    fn quantifier(evar_x_id: Id, evar_y_id: Id) -> Ptr<Pattern> {
+        implies(
+            apply_esubst(metavar_unconstrained(0), evar_x_id, evar(evar_y_id)),
+            exists(evar_x_id, metavar_unconstrained(0)),
+        )
+    }
 
-    let existence = exists(0, evar(0));
+    fn existence(evar_id: Id) -> Ptr<Pattern> {
+        exists(evar_id, evar(evar_id))
+    }
 
     while let Some(instr_u32) = iterator.next() {
         match Instruction::from(*instr_u32) {
@@ -978,7 +991,15 @@ fn execute_instructions<'a>(
                 }
             }
             Instruction::Quantifier => {
-                stack.push(Term::Proved(quantifier));
+                let evar_x_id = *iterator
+                    .next()
+                    .expect("Insufficient parameters for Quantifier instruction")
+                    as Id;
+                let evar_y_id = *iterator
+                    .next()
+                    .expect("Insufficient parameters for Quantifier instruction")
+                    as Id;
+                stack.push(Term::Proved(quantifier(evar_x_id, evar_y_id)));
             }
             Instruction::Generalization => match *pop_stack_proved(stack) {
                 Pattern::Implies { left, right } => {
@@ -998,7 +1019,11 @@ fn execute_instructions<'a>(
                 }
             },
             Instruction::Existence => {
-                stack.push(Term::Proved(existence));
+                let evar_id = *iterator
+                    .next()
+                    .expect("Insufficient parameters for Existence instruction.")
+                    as Id;
+                stack.push(Term::Proved(existence(evar_id)));
             }
             Instruction::Substitution => {
                 let svar_id = *iterator
@@ -1915,13 +1940,25 @@ mod tests {
                 esubst(metavar_unconstrained(0), 0, symbol(1)),
             ),
             // Subst when evar_id is fresh should do nothing
-            //(metavar_(0).with_e_fresh((evar(0), evar(1))), 0, symbol(1), metavar_unconstrained(0).with_e_fresh((evar(0), evar(1)))),
+            (
+                metavar_e_fresh(0, 0, vec![], vec![]),
+                0,
+                symbol(1),
+                metavar_e_fresh(0, 0, vec![], vec![]),
+            ),
+            // Subst when evar_id = evar(plug) should do nothing
+            (
+                metavar_unconstrained(0),
+                1,
+                evar(1),
+                metavar_unconstrained(0),
+            ),
             // Subst on substs should stack
             (
                 esubst(metavar_unconstrained(0), 0, symbol(1)),
-                0,
+                1,
                 symbol(1),
-                esubst(esubst(metavar_unconstrained(0), 0, symbol(1)), 0, symbol(1)),
+                esubst(esubst(metavar_unconstrained(0), 0, symbol(1)), 1, symbol(1)),
             ),
             (
                 ssubst(metavar_unconstrained(0), 0, symbol(1)),
@@ -2000,9 +2037,20 @@ mod tests {
                 symbol(1),
                 ssubst(metavar_unconstrained(0), 0, symbol(1)),
             ),
-            // Subst when evar_id is fresh should do nothing
-            //(metavar_unconstrained(0).with_s_fresh((svar(0), svar(1))), 0, symbol(1), metavar_unconstrained(0).with_s_fresh((svar(0), svar(1)))),
-            // Subst on substs should stack
+            // Subst when svar_id is fresh should do nothing
+            (
+                metavar_s_fresh(0, 0, vec![], vec![]),
+                0,
+                symbol(1),
+                metavar_s_fresh(0, 0, vec![], vec![]),
+            ),
+            // Subst when svar_id = svar(plug) should do nothing
+            (
+                metavar_unconstrained(0),
+                1,
+                svar(1),
+                metavar_unconstrained(0),
+            ), // Subst on substs should stack
             (
                 esubst(metavar_unconstrained(0), 0, symbol(1)),
                 0,
@@ -2011,9 +2059,9 @@ mod tests {
             ),
             (
                 ssubst(metavar_unconstrained(0), 0, symbol(1)),
-                0,
+                1,
                 symbol(1),
-                ssubst(ssubst(metavar_unconstrained(0), 0, symbol(1)), 0, symbol(1)),
+                ssubst(ssubst(metavar_unconstrained(0), 0, symbol(1)), 1, symbol(1)),
             ),
         ];
 
@@ -2032,6 +2080,34 @@ mod tests {
         #[case] plug: Ptr<Pattern>,
     ) {
         _ = apply_ssubst(pattern, svar_id, plug);
+    }
+
+    #[rstest]
+    #[case(metavar_unconstrained(0), 0, evar(0), true)]
+    #[case(metavar_unconstrained(0), 0, evar(1), false)]
+    #[case(metavar_e_fresh(0, 0, vec![], vec![]), 0, symbol(0), true)]
+    #[case(metavar_e_fresh(0, 1, vec![], vec![]), 0, symbol(0), false)]
+    fn test_redundant_esubst(
+        #[case] pattern: Ptr<Pattern>,
+        #[case] evar_id: Id,
+        #[case] plug: Ptr<Pattern>,
+        #[case] expected: bool,
+    ) {
+        assert_eq!(pattern.is_redundant_esubst(evar_id, plug), expected);
+    }
+
+    #[rstest]
+    #[case(metavar_unconstrained(0), 0, svar(0), true)]
+    #[case(metavar_unconstrained(0), 0, svar(1), false)]
+    #[case(metavar_s_fresh(0, 0, vec![], vec![]), 0, symbol(0), true)]
+    #[case(metavar_s_fresh(0, 1, vec![], vec![]), 0, symbol(0), false)]
+    fn test_redundant_ssubst(
+        #[case] pattern: Ptr<Pattern>,
+        #[case] svar_id: Id,
+        #[case] plug: Ptr<Pattern>,
+        #[case] expected: bool,
+    ) {
+        assert_eq!(pattern.is_redundant_ssubst(svar_id, plug), expected);
     }
 
     #[test]
