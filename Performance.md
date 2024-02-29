@@ -65,6 +65,9 @@ The programs were compiled using the default compiler of Cairo Zero, and were pr
 The programs were compiled using LambdaClass Cairo-VM (v1.0.0-rc0), and were proven and verified using Lambdaworks Cairo Platinum Prover (v0.3.0)
 </details>
 
+#### Cairo Proofs of Proofs
+Currently, we do not have Proof of Proofs for Cairo. However, we are making progress towards implementing them.
+
 ---
 
 ### [Lurk](https://lurk-lang.org/) Backend
