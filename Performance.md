@@ -33,6 +33,39 @@ We've also noted where the implementation is using CPU or GPU acceleration. If y
 
 --- 
 ## ZK Backends
+### [Cairo](https://www.cairo-lang.org/) Backend
+#### Cairo Zero Direct Implementation
+
+<details open>
+<summary>Cairo Zero (v0.13.0)</summary>
+
+|                                                             Examples                                                                            | CPU Exec Time | CPU Prove Time | CPU Verify Time | CPU Total Time |
+|:------------------------------------------------------------------------------------------------------------------------------------------------|:-------------:|:--------------:|:---------------:|:--------------:|
+| [transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo0/transfer.cairo)              |         0.440 |          0.195 |           0.008 |          0.643 |
+| [batch-transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo0/batch_transfer.cairo)  |         6.825 |         30.196 |           0.869 |         37.890 |
+| [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo0/perceptron.cairo)          |         0.448 |          0.166 |           0.008 |          0.662 |
+| [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo0/svm.cairo)                        |         0.443 |          0.176 |           0.008 |          0.627 |
+
+
+The programs were compiled using the default compiler of Cairo Zero, and were proven and verified using Lambdaworks Cairo Platinum Prover (v0.3.0)
+</details>
+
+#### Cairo One Direct Implementation
+<details open>
+  <summary>Cairo One (v2.3.1)</summary>
+
+  |                                                             Examples                                                                            | CPU Exec Time | CPU Prove Time | CPU Verify Time | CPU Total Time |
+|:------------------------------------------------------------------------------------------------------------------------------------------------|:-------------:|:--------------:|:---------------:|:--------------:|
+| [transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo1/transfer.cairo)              |         0.583 |          0.009 |           0.002 |          0.594 |
+| [batch-transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo1/batch_transfer.cairo)  |         0.691 |         65.693 |           1.787 |         68.171 |
+| [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo1/perceptron.cairo)          |         0.592 |          0.029 |           0.003 |          0.624 |
+| [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo1/svm.cairo)                        |         0.593 |          0.032 |           0.003 |          0.628 |
+
+
+The programs were compiled using LambdaClass Cairo-VM (v1.0.0-rc0), and were proven and verified using Lambdaworks Cairo Platinum Prover (v0.3.0)
+</details>
+
+---
 
 ### [Lurk](https://lurk-lang.org/) Backend
 
@@ -197,38 +230,4 @@ The `∞` symbol in the performance tables indicate that the example either did 
 
 
 The main implementation for the zkLLVM $PI^2$ implementation can be found [here](https://github.com/Pi-Squared-Network/proof-checker-public/tree/master/zkllvm/src). We translate the inputs, which are defined [here](https://github.com/Pi-Squared-Network/proof-checker-public/tree/master/proofs/translated). Binary inputs are divided and encoded into three arrays. Each file corresponds to the input requirements of the zkLLVM implementation.
-</details>
-
----
-
-### [Cairo](https://www.cairo-lang.org/) Backend
-#### Cairo Zero Direct Implementation
-
-<details open>
-<summary>Cairo Zero (v0.13.0)</summary>
-
-|                                                             Examples                                                                            | CPU Exec Time | CPU Prove Time | CPU Verify Time | CPU Total Time |
-|:------------------------------------------------------------------------------------------------------------------------------------------------|:-------------:|:--------------:|:---------------:|:--------------:|
-| [transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo0/transfer.cairo)              |         0.440 |          0.195 |           0.008 |          0.643 |
-| [batch-transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo0/batch_transfer.cairo)  |         6.825 |         30.196 |           0.869 |         37.890 |
-| [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo0/perceptron.cairo)          |         0.448 |          0.166 |           0.008 |          0.662 |
-| [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo0/svm.cairo)                        |         0.443 |          0.176 |           0.008 |          0.627 |
-
-
-The programs were compiled using the default compiler of Cairo Zero, and were proven and verified using Lambdaworks Cairo Platinum Prover (v0.3.0)
-</details>
-
-#### Cairo One Direct Implementation
-<details open>
-  <summary>Cairo One (v2.3.1)</summary>
-
-  |                                                             Examples                                                                            | CPU Exec Time | CPU Prove Time | CPU Verify Time | CPU Total Time |
-|:------------------------------------------------------------------------------------------------------------------------------------------------|:-------------:|:--------------:|:---------------:|:--------------:|
-| [transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo1/transfer.cairo)              |         0.583 |          0.009 |           0.002 |          0.594 |
-| [batch-transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo1/batch_transfer.cairo)  |         0.691 |         65.693 |           1.787 |         68.171 |
-| [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo1/perceptron.cairo)          |         0.592 |          0.029 |           0.003 |          0.624 |
-| [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/cairo/tests/direct-implementation/cairo1/svm.cairo)                        |         0.593 |          0.032 |           0.003 |          0.628 |
-
-
-The programs were compiled using LambdaClass Cairo-VM (v1.0.0-rc0), and were proven and verified using Lambdaworks Cairo Platinum Prover (v0.3.0)
 </details>
