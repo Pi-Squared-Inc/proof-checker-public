@@ -127,11 +127,6 @@ cargo install --path . --force
 From the [RiscZero Terminogy](https://dev.risczero.com/terminology#clock-cycles), the `Cycles` we refer to in the performance tables are the smallest unit of computation in the zkVM circuit, similar to a clock cycle on a physical CPU. The execution complexity of a guest program is measured in these clock cycles as they directly impact the memory, proof size, and time performance of
 the zkVM.
 
-Generally, a single cycle corresponds to one RISC-V operation. However, some operations may require two cycles.#### RISC Zero Implementation Details
-
-From the [RiscZero Terminogy](https://dev.risczero.com/terminology#clock-cycles), the `Cycles` we refer to in the performance tables are the smallest unit of computation in the zkVM circuit, similar to a clock cycle on a physical CPU. The execution complexity of a guest program is measured in these clock cycles as they directly impact the memory, proof size, and time performance of
-the zkVM.
-
 Generally, a single cycle corresponds to one RISC-V operation. However, some operations may require two cycles.
 
 #### RISC Zero Proofs of Proofs
