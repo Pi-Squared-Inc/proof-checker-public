@@ -35,7 +35,23 @@ We've also noted where the implementation is using CPU or GPU acceleration. If y
 ## ZK Backends
 
 ### [Lurk](https://lurk-lang.org/) Backend
-#### Lurk Implementation Details
+
+#### Lurk Direct Implementation
+<details open>
+  <summary>Lurk (v0.3.1)</summary>
+
+|                                                       Examples                                                                         | Iterations | CPU Prove Time | GPU Prove Time | CPU Verify Time | GPU Verify Time | CPU Total Time | GPU Total Time |
+|:--------------------------------------------------------------------------------------------------------------------------------------:|:----------:|:--------------:|:--------------:|:---------------:|:---------------:|:--------------:|:--------------:|
+| [transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/direct-implementation/transfer.lurk)              |         34 |          2.393 |          2.313 |           0.554 |           0.618 |          2.947 |          2.931 |
+| [batch-transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/direct-implementation/batch_transfer.lurk)<sup>*</sup> |     505037 |       3681.819 |       1193.355 |           9.845 |           6.571 |       3691.664 |       1199.926 |
+| [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/direct-implementation/perceptron.lurk)          |         11 |          3.501 |          0.830 |           0.541 |           0.579 |          4.042 |          1.409 |
+| [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/direct-implementation/svm.lurk)                        |          9 |          1.832 |          0.820 |           0.538 |           0.598 |          2.370 |          1.418 |
+
+
+<sup>*</sup> The batch-transfer example utilizes `lurk --rc 400 batch_transfer.lurk`, while other tests do not use the `--rc` flag
+</details>
+
+#### Lurk Implementation Notes
 
 Lurk is an interpreted programming language. When we run a Lurk example, we are actually executing the interpreter, which in turn executes the program. The execution time includes the time needed for the interpreter to load every function and definition. Consequently, we cannot measure the compilation time of the program itself.
 
@@ -73,21 +89,6 @@ export EC_GPU_FRAMEWORK=none
 cargo install --path . --force
 ```
 
-#### Lurk Direct Implementation
-<details open>
-  <summary>Lurk (v0.3.1)</summary>
-
-|                                                       Examples                                                                         | Iterations | CPU Prove Time | GPU Prove Time | CPU Verify Time | GPU Verify Time | CPU Total Time | GPU Total Time |
-|:--------------------------------------------------------------------------------------------------------------------------------------:|:----------:|:--------------:|:--------------:|:---------------:|:---------------:|:--------------:|:--------------:|
-| [transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/direct-implementation/transfer.lurk)              |         34 |          2.393 |          2.313 |           0.554 |           0.618 |          2.947 |          2.931 |
-| [batch-transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/direct-implementation/batch_transfer.lurk)<sup>*</sup> |     505037 |       3681.819 |       1193.355 |           9.845 |           6.571 |       3691.664 |       1199.926 |
-| [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/direct-implementation/perceptron.lurk)          |         11 |          3.501 |          0.830 |           0.541 |           0.579 |          4.042 |          1.409 |
-| [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/lurk/tests/direct-implementation/svm.lurk)                        |          9 |          1.832 |          0.820 |           0.538 |           0.598 |          2.370 |          1.418 |
-
-
-<sup>*</sup> The batch-transfer example utilizes `lurk --rc 400 batch_transfer.lurk`, while other tests do not use the `--rc` flag
-</details>
-
 #### Lurk Proofs of Proofs
 
 <details open>
@@ -107,17 +108,6 @@ cargo install --path . --force
 ---
 
 ### [RISC Zero](https://www.risczero.com/) Backend
-#### RISC Zero Implementation Details
-
-From the [RiscZero Terminogy](https://dev.risczero.com/terminology#clock-cycles), the `Cycles` we refer to in the performance tables are the smallest unit of computation in the zkVM circuit, similar to a clock cycle on a physical CPU. The execution complexity of a guest program is measured in these clock cycles as they directly impact the memory, proof size, and time performance of
-the zkVM.
-
-Generally, a single cycle corresponds to one RISC-V operation. However, some operations may require two cycles.#### RISC Zero Implementation Details
-
-From the [RiscZero Terminogy](https://dev.risczero.com/terminology#clock-cycles), the `Cycles` we refer to in the performance tables are the smallest unit of computation in the zkVM circuit, similar to a clock cycle on a physical CPU. The execution complexity of a guest program is measured in these clock cycles as they directly impact the memory, proof size, and time performance of
-the zkVM.
-
-Generally, a single cycle corresponds to one RISC-V operation. However, some operations may require two cycles.
 
 #### RISC Zero Direct Implementation
 <details open>
@@ -131,6 +121,18 @@ Generally, a single cycle corresponds to one RISC-V operation. However, some ope
 | [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/risc0/tests/direct-implementation/guest/src/svm5.rs)                    |  21156  |     0.028     |     0.028     |      2.351     |      0.602     |      0.002      |      0.002      |      2.381     |      0.632     |
 
 </details>
+
+#### RISC Zero Implementation Notes
+
+From the [RiscZero Terminogy](https://dev.risczero.com/terminology#clock-cycles), the `Cycles` we refer to in the performance tables are the smallest unit of computation in the zkVM circuit, similar to a clock cycle on a physical CPU. The execution complexity of a guest program is measured in these clock cycles as they directly impact the memory, proof size, and time performance of
+the zkVM.
+
+Generally, a single cycle corresponds to one RISC-V operation. However, some operations may require two cycles.#### RISC Zero Implementation Details
+
+From the [RiscZero Terminogy](https://dev.risczero.com/terminology#clock-cycles), the `Cycles` we refer to in the performance tables are the smallest unit of computation in the zkVM circuit, similar to a clock cycle on a physical CPU. The execution complexity of a guest program is measured in these clock cycles as they directly impact the memory, proof size, and time performance of
+the zkVM.
+
+Generally, a single cycle corresponds to one RISC-V operation. However, some operations may require two cycles.
 
 #### RISC Zero Proofs of Proofs
 <details open>
@@ -151,7 +153,21 @@ Ultimately, we anticipate that all $PI^2$ implementations will support a unique 
 ---
 
 ### [zkLLVM](https://github.com/NilFoundation/zkLLVM) Backend
-#### zkLLVM Implementation Details
+
+#### zkLLVM Zero Direct Implementation
+<details open>
+  <summary>zkLLVM (v0.1.11-48)</summary>
+
+|                                                  Examples                                                                          | CPU Circuit Gen Time | CPU Prove+Verify Time |
+|:----------------------------------------------------------------------------------------------------------------------------------:|:--------------------:|:---------------------:|
+| [transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/zkllvm/tests/direct-implementation/transfer)             |                0.730 |                 0.131 |
+| [batch-transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/zkllvm/tests/direct-implementation/batch_transfer) |                1.367 |               143.183 |
+| [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/zkllvm/tests/direct-implementation/perceptron)         |                0.750 |                 0.130 |
+| [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/zkllvm/tests/direct-implementation/svm)                       |                0.730 |                 0.132 |
+
+</details>
+
+#### zkLLVM Implementation Notes
 
 zkLLVM does not support GPU acceleration in any stage, so there are no GPU results for these experiments. 
 
@@ -172,19 +188,6 @@ $ transpiler --version
 
 The `∞` symbol in the performance tables indicate that the example either did not finish executing after 6 hours or was terminated by the OS due to lack of memory.
 
-#### zkLLVM Zero Direct Implementation
-<details open>
-  <summary>zkLLVM (v0.1.11-48)</summary>
-
-|                                                  Examples                                                                          | CPU Circuit Gen Time | CPU Prove+Verify Time |
-|:----------------------------------------------------------------------------------------------------------------------------------:|:--------------------:|:---------------------:|
-| [transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/zkllvm/tests/direct-implementation/transfer)             |                0.730 |                 0.131 |
-| [batch-transfer](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/zkllvm/tests/direct-implementation/batch_transfer) |                1.367 |               143.183 |
-| [perceptron](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/zkllvm/tests/direct-implementation/perceptron)         |                0.750 |                 0.130 |
-| [svm](https://github.com/Pi-Squared-Network/proof-checker-public/blob/master/zkllvm/tests/direct-implementation/svm)                       |                0.730 |                 0.132 |
-
-</details>
-
 #### zkLLVM Proofs of Proofs
 <details open> 
 <summary>zkLLVM (v0.1.11-48)</summary>
@@ -204,7 +207,7 @@ The main implementation for the zkLLVM $PI^2$ implementation can be found [here]
 ---
 
 ### [Cairo](https://www.cairo-lang.org/) Backend
-#### Cairo Direct Implementation
+#### Cairo Zero Direct Implementation
 
 <details open>
 <summary>Cairo Zero (v0.13.0)</summary>
@@ -220,6 +223,7 @@ The main implementation for the zkLLVM $PI^2$ implementation can be found [here]
 The programs were compiled using the default compiler of Cairo Zero, and were proven and verified using Lambdaworks Cairo Platinum Prover (v0.3.0)
 </details>
 
+#### Cairo One Direct Implementation
 <details open>
   <summary>Cairo One (v2.3.1)</summary>
 
