@@ -7,7 +7,10 @@ if [ -z "$1" ]; then
 fi
 
 output_file="$1"
-proofs_path="../proofs/translated"
+
+current_dir=$(pwd)
+script_dir=$(dirname "$0")
+proofs_path="${script_dir}/../.build/proofs/translated"
 
 direct-example() {
     (
@@ -71,6 +74,10 @@ direct() {
 }
 
 pi2() {
+    cd "${script_dir}/.." || exit
+    make test-proof-translate-bin
+    cd "${current_dir}" || exit
+
     echo "Running pi2"
     impreflex
     transfer-goal

@@ -1,0 +1,21 @@
+[package]
+name = "zk-verifier"
+version = "2.0.0"
+edition = "2021"
+
+[dependencies]
+risc0-zkvm = { version = "0.19.1" }
+checker = { path = "../../rust" }
+serde = { version = "1.0.196", features = ["derive"] }
+serde_json = {version = "1.0"}
+bincode = { version = "1.3.3"}
+
+[build-dependencies]
+risc0-build = { version = "0.19.1" }
+
+[package.metadata.risc0]
+methods = ["guest"]
+
+[[bin]]
+name = "verifier"
+path = "src/main.rs"
