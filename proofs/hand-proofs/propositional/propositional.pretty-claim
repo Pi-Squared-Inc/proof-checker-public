@@ -1,0 +1,104 @@
+Version 2.1.0
+MetaVar 0
+MetaVar 1
+Implies
+MetaVar 1
+MetaVar 2
+Implies
+MetaVar 0
+MetaVar 2
+Implies
+Implies
+Implies
+Save
+Publish
+	Stack:
+	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
+MetaVar 0
+MetaVar 0
+SVar 0
+Mu 0
+Save
+Implies
+Save
+Instantiate 0
+MetaVar 0
+Implies
+MetaVar 0
+Implies
+Save
+Publish
+	Stack:
+	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
+	1: ((¬phi0 -> phi0) -> phi0)
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+MetaVar 0
+MetaVar 1
+Implies
+Implies
+Publish
+	Stack:
+	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
+	1: ((¬phi0 -> phi0) -> phi0)
+	2: (¬phi0 -> (phi0 -> phi1))
+MetaVar 0
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=2
+Load (phi0 -> (μ X0 . X0)[])=2
+Instantiate 0
+Save
+Implies
+Publish
+	Stack:
+	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
+	1: ((¬phi0 -> phi0) -> phi0)
+	2: (¬phi0 -> (phi0 -> phi1))
+	3: (phi0 -> ¬¬phi0)
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]=4
+MetaVar 0
+Implies
+Save
+Publish
+	Stack:
+	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
+	1: ((¬phi0 -> phi0) -> phi0)
+	2: (¬phi0 -> (phi0 -> phi1))
+	3: (phi0 -> ¬¬phi0)
+	4: (¬¬phi0 -> phi0)
+Load (μ X0 . X0)[]=1
+MetaVar 0
+Implies
+Save
+Publish
+	Stack:
+	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
+	1: ((¬phi0 -> phi0) -> phi0)
+	2: (¬phi0 -> (phi0 -> phi1))
+	3: (phi0 -> ¬¬phi0)
+	4: (¬¬phi0 -> phi0)
+	5: (⊥ -> phi0)
+Load (μ X0 . X0)[]=1
+Load (phi0 -> (μ X0 . X0)[])=2
+Instantiate 0
+Publish
+	Stack:
+	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
+	1: ((¬phi0 -> phi0) -> phi0)
+	2: (¬phi0 -> (phi0 -> phi1))
+	3: (phi0 -> ¬¬phi0)
+	4: (¬¬phi0 -> phi0)
+	5: (⊥ -> phi0)
+	6: ¬⊥
+MetaVar 0
+MetaVar 0
+Implies
+Save
+Publish
+	Stack:
+	0: ((phi0 -> phi1) -> ((phi1 -> phi2) -> (phi0 -> phi2)))
+	1: ((¬phi0 -> phi0) -> phi0)
+	2: (¬phi0 -> (phi0 -> phi1))
+	3: (phi0 -> ¬¬phi0)
+	4: (¬¬phi0 -> phi0)
+	5: (⊥ -> phi0)
+	6: ¬⊥
+	7: (phi0 -> phi0)
