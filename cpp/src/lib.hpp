@@ -49,7 +49,7 @@ enum class Instruction : int {
   // Inference rules,
   ModusPonens,
   Generalization,
-  Frame,
+  Framing,
   Substitution,
   KnasterTarski,
   // Meta Incference rules,
@@ -115,7 +115,7 @@ Instruction from(int value) noexcept {
   case 22:
     return Instruction::Generalization;
   case 23:
-    return Instruction::Frame;
+    return Instruction::Framing;
   case 24:
     return Instruction::Substitution;
   case 25:

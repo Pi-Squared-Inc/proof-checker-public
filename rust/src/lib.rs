@@ -12,7 +12,7 @@ use core::ops::Deref;
 // Keep this version in sync with the one in Cargo.toml!
 // We could read from Cargo.toml but want to avoid String.
 const VERSION_MAJOR: u8 = 2;
-const VERSION_MINOR: u8 = 0;
+const VERSION_MINOR: u8 = 1;
 
 /// Instructions
 /// ============
@@ -31,7 +31,7 @@ pub enum Instruction {
     Prop1, Prop2, Prop3, Quantifier, PropagationOr, PropagationExists,
     PreFixpoint, Existence, Singleton,
     // Inference rules,
-    ModusPonens, Generalization, Frame, Substitution, KnasterTarski,
+    ModusPonens, Generalization, Framing, Substitution, KnasterTarski,
     // Meta Incference rules,
     Instantiate,
     // Stack Manipulation,
@@ -73,7 +73,7 @@ impl Instruction {
             20 => Instruction::Singleton,
             21 => Instruction::ModusPonens,
             22 => Instruction::Generalization,
-            23 => Instruction::Frame,
+            23 => Instruction::Framing,
             24 => Instruction::Substitution,
             25 => Instruction::KnasterTarski,
             26 => Instruction::Instantiate,
@@ -461,6 +461,28 @@ fn metavar_unconstrained(var_id: Id) -> Ptr<Pattern> {
     });
 }
 
+fn metavar_positive(var_id: Id, evar: Id) -> Ptr<Pattern> {
+    return Ptr::new(Pattern::MetaVar {
+        id: var_id,
+        e_fresh: vec![],
+        s_fresh: vec![],
+        positive: vec![evar],
+        negative: vec![],
+        app_ctx_holes: vec![],
+    });
+}
+
+fn metavar_app_ctx_hole(var_id: Id, evar: Id) -> Ptr<Pattern> {
+    return Ptr::new(Pattern::MetaVar {
+        id: var_id,
+        e_fresh: vec![],
+        s_fresh: vec![],
+        positive: vec![],
+        negative: vec![],
+        app_ctx_holes: vec![evar],
+    });
+}
+
 #[cfg(test)]
 fn metavar_e_fresh(var_id: Id, fresh: Id, positive: IdList, negative: IdList) -> Ptr<Pattern> {
     return Ptr::new(Pattern::MetaVar {
@@ -831,6 +853,12 @@ fn execute_instructions<'a>(
         exists(evar_id, evar(evar_id))
     }
 
+    fn prefixpoint(binder: Id) -> Ptr<Pattern> {
+        let phi = metavar_positive(0, binder);
+        let fp = mu(binder, phi);
+        return implies(apply_ssubst(phi, binder, fp), fp);
+    }
+
     while let Some(instr_u32) = iterator.next() {
         match Instruction::from(*instr_u32) {
             // TODO: Add an abstraction for pushing these one-argument terms on stack?
@@ -1001,6 +1029,20 @@ fn execute_instructions<'a>(
                     as Id;
                 stack.push(Term::Proved(quantifier(evar_x_id, evar_y_id)));
             }
+            Instruction::PreFixpoint => {
+                let binder = *iterator
+                    .next()
+                    .expect("Insufficient parameters for Existence instruction.")
+                    as Id;
+                stack.push(Term::Proved(prefixpoint(binder)));
+            }
+            Instruction::Existence => {
+                let evar_id = *iterator
+                    .next()
+                    .expect("Insufficient parameters for Existence instruction.")
+                    as Id;
+                stack.push(Term::Proved(existence(evar_id)));
+            }
             Instruction::Generalization => match *pop_stack_proved(stack) {
                 Pattern::Implies { left, right } => {
                     let evar_id = *iterator
@@ -1018,13 +1060,22 @@ fn execute_instructions<'a>(
                     panic!("Expected an implication as a first parameter.")
                 }
             },
-            Instruction::Existence => {
-                let evar_id = *iterator
-                    .next()
-                    .expect("Insufficient parameters for Existence instruction.")
-                    as Id;
-                stack.push(Term::Proved(existence(evar_id)));
-            }
+            Instruction::Framing => match *pop_stack_proved(stack) {
+                Pattern::Implies { left, right } => {
+                    let hole = *iterator
+                        .next()
+                        .expect("Insufficient parameters for Framing instruction")
+                        as Id;
+                    let phi = metavar_app_ctx_hole(0, hole);
+                    stack.push(Term::Proved(implies(
+                        apply_esubst(phi, hole, left),
+                        apply_esubst(phi, hole, right),
+                    )));
+                }
+                _ => {
+                    panic!("Expected an implication as a first parameter.")
+                }
+            },
             Instruction::Substitution => {
                 let svar_id = *iterator
                     .next()
@@ -1034,6 +1085,25 @@ fn execute_instructions<'a>(
 
                 stack.push(Term::Proved(apply_ssubst(pattern, svar_id, plug)));
             }
+            Instruction::KnasterTarski => match *pop_stack_proved(stack) {
+                Pattern::Implies { left, right } => {
+                    let phi = pop_stack_pattern(stack);
+                    let binder = *iterator
+                        .next()
+                        .expect("Insufficient parameters for KnasterTarski instruction")
+                        as Id;
+                    if !phi.positive(binder) {
+                        panic!("The binding variable has to be positive in phi.");
+                    }
+                    if apply_ssubst(phi, binder, right) != left {
+                        panic!("Incorrect LHS for KnasterTarski");
+                    }
+                    stack.push(Term::Proved(implies(mu(binder, phi), right)));
+                }
+                _ => {
+                    panic!("Expected an implication as a first parameter.")
+                }
+            },
             Instruction::Instantiate => {
                 let n = *iterator
                     .next()
