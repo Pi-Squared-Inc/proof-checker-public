@@ -20,6 +20,7 @@ Load phi0=2
 Load phi1=3
 Load phi0=2
 SVar 0
+Save
 Mu 0
 Save
 Save
@@ -29,21 +30,21 @@ Instantiate 0
 Save
 Implies
 Save
-Load (phi0 -> (μ X0 . X0)[])=8
+Load (phi0 -> (μ X0 . X0)[])=9
 Instantiate 0
 Save
 Instantiate 0, 1
 Save
 Instantiate 0, 1
 Save
-Load (phi0 -> (μ X0 . X0)[])[0: phi0]=8
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=9
 Symbol ⌈_⌉
 Load phi0=2
 App
 Save
 Instantiate 0
 Save
-Load (phi0 -> (μ X0 . X0)[])=8
+Load (phi0 -> (μ X0 . X0)[])=9
 Instantiate 0
 Save
 Instantiate 0
@@ -52,10 +53,10 @@ Instantiate 0, 1
 Exists 100
 Save
 Load phi1=3
-Load (phi0 -> (μ X0 . X0)[])[0: phi0]=8
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=9
 Exists 2
 Save
-Load (phi0 -> (μ X0 . X0)[])=8
+Load (phi0 -> (μ X0 . X0)[])=9
 Instantiate 0
 Save
 Instantiate 0
@@ -66,12 +67,12 @@ Implies
 Implies
 Save
 Publish
-Load (∃ x100 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100])=18
+Load (∃ x100 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100])=19
 Load phi1=3
-Load (phi0 -> (μ X0 . X0)[])[0: phi0]=8
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=9
 Exists 1
 Save
-Load (phi0 -> (μ X0 . X0)[])=8
+Load (phi0 -> (μ X0 . X0)[])=9
 Instantiate 0
 Save
 Instantiate 0
@@ -82,12 +83,12 @@ Implies
 Implies
 Save
 Publish
-Load (∃ x100 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100])=18
+Load (∃ x100 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100])=19
 Load phi1=3
-Load (phi0 -> (μ X0 . X0)[])[0: phi0]=8
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=9
 Exists 0
 Save
-Load (phi0 -> (μ X0 . X0)[])=8
+Load (phi0 -> (μ X0 . X0)[])=9
 Instantiate 0
 Save
 Instantiate 0
@@ -100,15 +101,15 @@ Save
 Publish
 EVar 0
 Save
-Load (⌈_⌉ · phi0)=14
+Load (⌈_⌉ · phi0)=15
 Instantiate 0
 Save
 Publish
-Load (μ X0 . X0)[]=6
+Load (μ X0 . X0)[]=7
 MetaVar 0appctx, len=1 x0 
 
 ESubst id=0
-Load (μ X0 . X0)[]=6
+Load (μ X0 . X0)[]=7
 Implies
 Save
 Publish
@@ -122,14 +123,14 @@ Save
 Load phi0=2
 Load phi1=3
 Load phi0=2
-Load phi2=36
-Load phi3=37
+Load phi2=37
+Load phi3=38
 Load phi0=2
 Load phi1=3
-Load phi2=36
+Load phi2=37
 Load phi0=2
 Load phi1=3
-Load (phi0 -> (μ X0 . X0)[])[0: phi1]=9
+Load (phi0 -> (μ X0 . X0)[])[0: phi1]=10
 Load phi0=2
 Symbol inhabitant
 Load phi0=2
@@ -137,15 +138,15 @@ App
 Save
 Instantiate 0
 Save
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])]=11
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])]=12
 Instantiate 0, 1
 Save
 Instantiate 0, 1
 Save
-Load phi2=36
+Load phi2=37
 Load phi0=2
 Load phi1=3
-Load (phi0 -> (μ X0 . X0)[])[0: phi0]=8
+Load (phi0 -> (μ X0 . X0)[])[0: phi0]=9
 Load phi1=3
 Implies
 Save
@@ -156,12 +157,12 @@ Save
 Instantiate 0, 1, 2
 Save
 Load phi0=2
-Load phi2=36
+Load phi2=37
 Load phi1=3
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=44
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=45
 Instantiate 0, 1, 2
 Save
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1]=11
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1]=12
 Instantiate 0, 1
 Save
 Instantiate 0, 1, 2
@@ -170,24 +171,24 @@ Load phi1=3
 Load phi0=2
 Load phi1=3
 Load phi0=2
-Load phi2=36
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]]=40
+Load phi2=37
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]]=41
 Instantiate 0, 1
 Save
-Load phi2=36
-Load (⌈_⌉ · phi0)=14
+Load phi2=37
+Load (⌈_⌉ · phi0)=15
 Instantiate 0
 Save
 Load phi1=3
-Load (inhabitant · phi0)=38
+Load (inhabitant · phi0)=39
 Instantiate 0
 Save
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])]=11
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])]=12
 Instantiate 0, 1
 Save
 Instantiate 0, 1, 2
 Save
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]]=40
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]]=41
 Instantiate 0, 1
 Save
 Instantiate 0, 1, 2
@@ -195,8 +196,8 @@ Save
 Instantiate 0, 1, 2, 3
 Save
 Load phi1=3
-Load (inhabitant · phi0)[0: phi0]=38
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]]=17
+Load (inhabitant · phi0)[0: phi0]=39
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]]=18
 Instantiate 0, 1
 Save
 Instantiate 0, 1
@@ -204,16 +205,16 @@ Save
 Load phi1=3
 Load phi0=2
 Load phi1=3
-Load phi2=36
+Load phi2=37
 MetaVar 4
 Save
 ESubst id=0
-Load phi3=37
-Load phi4=59
+Load phi3=38
+Load phi4=60
 ESubst id=0
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=55
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=56
 Instantiate 0, 1, 2, 3
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
 Implies
 Save
@@ -221,16 +222,16 @@ Publish
 Load phi1=3
 Load phi0=2
 Load phi1=3
-Load phi2=36
-Load phi3=37
-Load (inhabitant · phi0)[0: phi0]=38
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1]=11
+Load phi2=37
+Load phi3=38
+Load (inhabitant · phi0)[0: phi0]=39
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1]=12
 Instantiate 0, 1
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=55
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=56
 Instantiate 0, 1, 2, 3
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi3]]=58
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi3]]=59
 Implies
 Save
 Publish
@@ -238,37 +239,37 @@ Load phi1=3
 Load phi1=3
 Load phi0=2
 Load phi1=3
-Load phi2=36
-Load phi2=36
-Load phi2=36
+Load phi2=37
+Load phi2=37
+Load phi2=37
 Load phi0=2
 Load phi1=3
-Load phi2=36
-Load phi3=37
-Load phi4=59
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1]=11
+Load phi2=37
+Load phi3=38
+Load phi4=60
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1]=12
 Instantiate 0, 1
 Load phi0=2
 Load phi1=3
 Load phi0=2
-Load phi2=36
-Load phi3=37
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=44
+Load phi2=37
+Load phi3=38
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=45
 Instantiate 0, 1, 2
 Save
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]]=54
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]]=55
 Instantiate 0, 1, 2
 Save
 Instantiate 0, 1, 2, 3
 Instantiate 0, 1, 2, 3, 4
-Load phi3=37
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=44
+Load phi3=38
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=45
 Instantiate 0, 1, 2
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
 Load phi1=3
-Load phi3=37
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load phi3=38
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
 Save
 Implies
@@ -278,34 +279,34 @@ Load phi1=3
 Load phi1=3
 Load phi0=2
 Load phi1=3
-Load phi2=36
-Load phi2=36
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi3]]=65
+Load phi2=37
+Load phi2=37
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi3]]=66
 Instantiate 0, 1, 2, 3
-Load phi3=37
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=44
+Load phi3=38
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=45
 Instantiate 0, 1, 2
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: phi3]=66
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: phi3]=67
 Implies
 Save
 Publish
 Load phi0=2
 Load phi0=2
-Load (inhabitant · phi0)[0: phi0]=38
+Load (inhabitant · phi0)[0: phi0]=39
 Load phi1=3
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1]=11
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1]=12
 Instantiate 0, 1
 Save
-Load phi2=36
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=44
+Load phi2=37
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=45
 Instantiate 0, 1, 2
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
 Load phi0=2
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2]=44
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2]=45
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
 Save
 Implies
@@ -314,37 +315,37 @@ Publish
 Load phi0=2
 Load phi0=2
 Load phi1=3
-Load (inhabitant · phi0)[0: phi0]=38
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1]=11
+Load (inhabitant · phi0)[0: phi0]=39
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1]=12
 Instantiate 0, 1
 Save
-Load phi2=36
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=44
+Load phi2=37
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=45
 Instantiate 0, 1, 2
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2]]=72
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2]]=73
 Implies
 Save
 Publish
 Load phi0=2
 Load phi0=2
-Load (inhabitant · phi0)[0: phi0]=38
+Load (inhabitant · phi0)[0: phi0]=39
 Load phi1=3
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=44
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=45
 Instantiate 0, 1, 2
 Save
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1]=58
 Implies
 Save
 Publish
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi3]]=58
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi3]]=59
 Load phi1=3
 Load phi0=2
 Load phi1=3
-Load phi2=36
+Load phi2=37
 MetaVar 4appctx, len=1 x0 
 
 Save
@@ -354,34 +355,34 @@ Load phi0=2
 App
 Save
 Instantiate 0
-Load phi3=37
-Load phi4=81
+Load phi3=38
+Load phi4=82
 ESubst id=0
-Load (kore_next · phi0)=82
+Load (kore_next · phi0)=83
 Instantiate 0
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=55
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=56
 Instantiate 0, 1, 2, 3
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
 Implies
 Save
 Publish
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi3]]=58
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi3]]=59
 Load phi1=3
 Load phi1=3
-Load phi4=59
-Load phi2=36
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=44
+Load phi4=60
+Load phi2=37
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=45
 Instantiate 0, 1, 2
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
 Load phi1=3
 Load phi1=3
-Load phi4=59
-Load phi3=37
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=44
+Load phi4=60
+Load phi3=38
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=45
 Instantiate 0, 1, 2
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
 Implies
 Implies
@@ -390,48 +391,48 @@ Publish
 Load phi1=3
 Load phi0=2
 Load phi1=3
-Load phi2=36
-Load phi2=36
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=55
+Load phi2=37
+Load phi2=37
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=56
 Instantiate 0, 1, 2, 3
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
 Save
 Publish
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi3]]=58
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi3]]=59
 Load phi1=3
 Load phi0=2
 Load phi1=3
-Load phi3=37
-Load phi4=59
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=55
+Load phi3=38
+Load phi4=60
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=56
 Instantiate 0, 1, 2, 3
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
 Load phi1=3
 Load phi0=2
 Load phi1=3
-Load phi2=36
-Load phi4=59
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=55
+Load phi2=37
+Load phi4=60
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=56
 Instantiate 0, 1, 2, 3
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
 Implies
 Implies
 Save
 Publish
 Load phi0=2
-Load (inhabitant · phi0)[0: phi0]=38
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (inhabitant · phi0)[0: phi0]=39
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
 Save
 Publish
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1]=57
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2]]=72
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1]=58
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2]]=73
 Load phi0=2
-Load phi2=36
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load phi2=37
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
 Implies
 Implies
@@ -439,19 +440,19 @@ Save
 Publish
 Load phi0=2
 Load phi1=3
-Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: (inhabitant · phi0)[0: phi0], 2: phi1]] -> (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1])=79
+Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: (inhabitant · phi0)[0: phi0], 2: phi1]] -> (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1])=80
 Load phi1=3
 Load phi0=2
 Load phi0=2
-Load (inhabitant · phi0)[0: phi1]=51
+Load (inhabitant · phi0)[0: phi1]=52
 Load (phi0 -> phi1)=4
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=17
 Instantiate 0
 Save
 Instantiate 0, 1
 Save
 Instantiate 0, 1
-Load phi2=36
+Load phi2=37
 Implies
 Save
 Instantiate 0, 1, 2
@@ -459,98 +460,98 @@ Save
 Publish
 Load phi0=2
 Load phi1=3
-Load phi2=36
+Load phi2=37
 Load phi0=2
-Load phi2=36
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: (inhabitant · phi0)[0: phi0], 1: phi1]=71
+Load phi2=37
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: (inhabitant · phi0)[0: phi0], 1: phi1]=72
 Load phi1=3
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=55
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=56
 Instantiate 0, 1, 2, 3
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
-Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=97
+Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=98
 Instantiate 0, 1, 2
 Save
 Publish
 Load phi0=2
 Load phi1=3
-Load phi2=36
+Load phi2=37
 Load phi0=2
-Load phi2=36
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=75
+Load phi2=37
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=76
 Load phi1=3
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=55
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=56
 Instantiate 0, 1, 2, 3
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
-Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=97
+Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=98
 Instantiate 0, 1, 2
 Save
 Publish
 Load phi0=2
 Load phi1=3
 Load phi0=2
-Load phi2=36
-Load phi3=37
+Load phi2=37
+Load phi3=38
 Load phi0=2
-Load phi3=37
+Load phi3=38
 Load phi1=3
-Load phi2=36
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=55
+Load phi2=37
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=56
 Instantiate 0, 1, 2, 3
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
 Save
-Load phi3=37
+Load phi3=38
 Load phi0=2
-Load phi3=37
-Load phi2=36
+Load phi3=38
+Load phi2=37
 Load phi1=3
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=55
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=56
 Instantiate 0, 1, 2, 3
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
 Save
 Implies
-Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=97
+Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=98
 Instantiate 0, 1, 2
-Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=97
+Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=98
 Instantiate 0, 1, 2
 Save
 Publish
 Load phi0=2
 Load phi1=3
-Load phi3=37
-Load phi2=36
-Load phi3=37
+Load phi3=38
+Load phi2=37
+Load phi3=38
 Load phi0=2
-Load phi2=36
+Load phi2=37
 Load phi1=3
 Load phi1=3
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi3]]=65
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi3]]=66
 Instantiate 0, 1, 2, 3
-Load phi2=36
-Load (inhabitant · phi0)=38
+Load phi2=37
+Load (inhabitant · phi0)=39
 Instantiate 0
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=55
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=56
 Instantiate 0, 1, 2, 3
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
-Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=97
+Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=98
 Instantiate 0, 1, 2
 Save
 Publish
-Load phi2=36
+Load phi2=37
 Load phi0=2
-Load phi2=36
+Load phi2=37
 Load phi1=3
 Load phi1=3
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1]=11
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1]=12
 Instantiate 0, 1
 Load phi1=3
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=55
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=56
 Instantiate 0, 1, 2, 3
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
 Save
 Publish
@@ -560,59 +561,154 @@ Load phi0=2
 Load phi0=2
 Load phi1=3
 Load phi1=3
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=44
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=45
 Instantiate 0, 1, 2
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
-Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=97
+Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=98
 Instantiate 0, 1, 2
 Save
 Publish
 Load phi0=2
 Load phi0=2
 Load phi1=3
-Load phi2=36
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1]=11
+Load phi2=37
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1]=12
 Instantiate 0, 1
-Load phi3=37
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=44
+Load phi3=38
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=45
 Instantiate 0, 1, 2
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
 Load phi0=2
 Load phi0=2
-Load phi2=36
+Load phi2=37
 Load phi0=2
 Load phi1=3
-Load phi3=37
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=44
+Load phi3=38
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=45
 Instantiate 0, 1, 2
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=44
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=45
 Instantiate 0, 1, 2
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
 Implies
 Save
 Publish
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1]=58
 Load phi0=2
 Load phi0=2
 Load phi0=2
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1]=57
-Load phi2=36
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=55
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1]=58
+Load phi2=37
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=56
 Instantiate 0, 1, 2, 3
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
-Load phi2=36
+Load phi2=37
 Implies
 Implies
+Save
+Publish
+MetaVar 0sFresh, len=1 X0 
+
+Save
+MetaVar 1sFresh, len=1 X0 
+
+Save
+Load phi0=119
+Load phi0=119
+Load phi1=120
+Load phi1=120
+Load phi0=119
+Load phi1=3
+Load phi0=119
+MetaVar 2sFresh, len=1 X0 
+
+Save
+Load phi0=119
+Load phi1=120
+Load X0=6
+Load (kore_next · phi0)=83
+Instantiate 0
+Save
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1]=43
+Instantiate 0, 1
+Save
+MetaVar 1pos, len=1 X0 
+
+Mu 0
+Save
+Load (inhabitant · phi0)[0: phi0]=39
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])]=12
+Instantiate 0, 1
+Save
+Instantiate 0, 1
+Save
+Instantiate 0, 1
+Save
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=45
+Instantiate 0, 1, 2
+Save
+Instantiate 0, 1, 2
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
+Instantiate 0, 1
+Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=98
+Instantiate 0, 1, 2
+Save
+Publish
+Load phi0=119
+Load phi1=3
+Load phi0=119
+Load phi2=121
+Load phi0=119
+MetaVar 3sFresh, len=1 X0 
+
+Save
+Load phi0=119
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (μ X0 . phi1), 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: phi1, 1: (kore_next · phi0)[0: X0]]][0: phi0, 1: phi2]][0: phi0, 1: phi1, 2: phi2]=128
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
+Instantiate 0, 1
+Save
+Load phi0=119
+Load phi0=119
+Load phi2=121
+Load phi3=131
+Load phi0=2
+Load phi1=3
+Load phi2=37
+Load (kore_next · phi0)=83
+Instantiate 0
+Save
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=45
+Instantiate 0, 1, 2
+Save
+Instantiate 0, 1, 2
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
+Instantiate 0, 1
+Load phi0=119
+Load phi0=119
+Load phi1=3
+Load phi3=131
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (μ X0 . phi1), 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: phi1, 1: (kore_next · phi0)[0: X0]]][0: phi0, 1: phi2]]=128
+Instantiate 0, 1, 2
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
+Instantiate 0, 1
+Implies
+Save
+Implies
+Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=98
+Instantiate 0, 1, 2
+Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=98
+Instantiate 0, 1, 2
+Load ((phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=98
+Instantiate 0, 1, 2
 Save
 Publish
 Symbol ksort_SortGeneratedTopCell
 Save
-Load ksort_SortGeneratedTopCell=118
-Load x0=31
+Load ksort_SortGeneratedTopCell=138
+Load x0=32
 Symbol baz(_)_NON-REC-FUNCTION-SYNTAX_Foo_Foo
 Load phi0=2
 App
@@ -651,8 +747,8 @@ App
 Save
 Instantiate 0, 1
 Save
-Load x0=31
-Load (bar(_)_NON-REC-FUNCTION-SYNTAX_Foo_Foo · phi0)=121
+Load x0=32
+Load (bar(_)_NON-REC-FUNCTION-SYNTAX_Foo_Foo · phi0)=141
 Instantiate 0
 Save
 Symbol id(_)_NON-REC-FUNCTION-SYNTAX_Foo_Foo
@@ -661,41 +757,33 @@ App
 Save
 Instantiate 0
 Save
-Load (id(_)_NON-REC-FUNCTION-SYNTAX_Foo_Foo · phi0)=132
+Load (id(_)_NON-REC-FUNCTION-SYNTAX_Foo_Foo · phi0)=152
 Instantiate 0
 Save
-Load x1=123
-Load ((kore_kseq · phi0) · phi1)=124
+Load x1=143
+Load ((kore_kseq · phi0) · phi1)=144
 Instantiate 0, 1
 Save
-Load (<k> · phi0)=126
+Load (<k> · phi0)=146
 Instantiate 0
 Save
-Load x2=128
-Load ((<generatedTop> · phi0) · phi1)=129
+Load x2=148
+Load ((<generatedTop> · phi0) · phi1)=149
 Instantiate 0, 1
 Save
-Load phi0=2
-Load phi1=3
-Load phi2=36
-Load (kore_next · phi0)=82
-Instantiate 0
-Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=44
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]]=134
 Instantiate 0, 1, 2
 Save
-Instantiate 0, 1, 2
-Save
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
 Save
-Load (phi0 -> (μ X0 . X0)[])[0: (∃ x2 . (phi0 -> (μ X0 . X0)[])[0: phi0])]=20
+Load (phi0 -> (μ X0 . X0)[])[0: (∃ x2 . (phi0 -> (μ X0 . X0)[])[0: phi0])]=21
 Instantiate 0
 Save
-Load (phi0 -> (μ X0 . X0)[])[0: (∃ x1 . (phi0 -> (μ X0 . X0)[])[0: phi0])]=24
+Load (phi0 -> (μ X0 . X0)[])[0: (∃ x1 . (phi0 -> (μ X0 . X0)[])[0: phi0])]=25
 Instantiate 0
 Save
-Load (phi0 -> (μ X0 . X0)[])[0: (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: phi0])]=28
+Load (phi0 -> (μ X0 . X0)[])[0: (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: phi0])]=29
 Instantiate 0
 Save
 Publish
@@ -717,50 +805,50 @@ App
 Save
 Instantiate 0
 Save
-Load (∃ x100 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100])=18
+Load (∃ x100 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100])=19
 Instantiate 0
 Save
 Publish
 Symbol dotk
 Save
 Save
-Load (∃ x100 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100])=18
+Load (∃ x100 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100])=19
 Instantiate 0
 Save
 Publish
 Symbol a_NON-REC-FUNCTION-SYNTAX_Foo
 Save
 Save
-Load (∃ x100 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100])=18
+Load (∃ x100 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100])=19
 Instantiate 0
 Save
 Publish
-Load ksort_SortGeneratedTopCell=118
+Load ksort_SortGeneratedTopCell=138
 Symbol ksort_SortFoo
 Save
-Load ksort_SortGeneratedTopCell=118
-Load x1=123
-Load (id(_)_NON-REC-FUNCTION-SYNTAX_Foo_Foo · phi0)=132
+Load ksort_SortGeneratedTopCell=138
+Load x1=143
+Load (id(_)_NON-REC-FUNCTION-SYNTAX_Foo_Foo · phi0)=152
 Instantiate 0
 Save
-Load x1=123
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=55
+Load x1=143
+Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=56
 Instantiate 0, 1, 2, 3
 Save
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=57
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=58
 Instantiate 0, 1
 Save
-Load (phi0 -> (μ X0 . X0)[])[0: (∃ x1 . (phi0 -> (μ X0 . X0)[])[0: phi0])]=24
+Load (phi0 -> (μ X0 . X0)[])[0: (∃ x1 . (phi0 -> (μ X0 . X0)[])[0: phi0])]=25
 Instantiate 0
 Save
 Publish
-Load a_NON-REC-FUNCTION-SYNTAX_Foo[]=158
-Load (bar(_)_NON-REC-FUNCTION-SYNTAX_Foo_Foo · phi0)=121
+Load a_NON-REC-FUNCTION-SYNTAX_Foo[]=176
+Load (bar(_)_NON-REC-FUNCTION-SYNTAX_Foo_Foo · phi0)=141
 Instantiate 0
 Save
-Load (∃ x100 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100])=18
+Load (∃ x100 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100])=19
 Instantiate 0
 Save
 Publish
-Load ((∃ x100 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100]) -> ((phi0 -> (μ X0 . X0)[])[0: (∃ x1 . (phi0 -> (μ X0 . X0)[])[0: phi0])][0: phi1] -> phi1[phi0/x1]))=25
+Load ((∃ x100 . (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100]) -> ((phi0 -> (μ X0 . X0)[])[0: (∃ x1 . (phi0 -> (μ X0 . X0)[])[0: phi0])][0: phi1] -> phi1[phi0/x1]))=26
 Publish
