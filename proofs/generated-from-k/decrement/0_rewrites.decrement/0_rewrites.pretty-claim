@@ -1,0 +1,13 @@
+Version 2.1.0
+Load ksort_SortGeneratedTopCell=136
+Load ksort_SortGeneratedTopCell=136
+Load ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: 0_DECREMENT-SYNTAX_Nat[], 1: dotk[]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]=135
+Load ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: 0_DECREMENT-SYNTAX_Nat[], 1: dotk[]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]=135
+Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=22
+Instantiate 0, 1, 2
+Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=42
+Instantiate 0, 1
+Save
+Publish
+	Stack:
+	0: ⊩ksort_SortGeneratedTopCell (<generatedTop>(<k>((0_DECREMENT-SYNTAX_Nat() ~> dotk())), <generatedCounter>(dv(0):ksort_SortInt)) k-> <generatedTop>(<k>((0_DECREMENT-SYNTAX_Nat() ~> dotk())), <generatedCounter>(dv(0):ksort_SortInt))):ksort_SortGeneratedTopCell
