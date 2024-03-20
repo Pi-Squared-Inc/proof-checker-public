@@ -31,7 +31,7 @@ Instantiate 0, 1
 Save
 Publish
 	Stack:
-	0: ⊩ksort_SortGeneratedTopCell (<generatedTop> <k> (FooB()_DOUBLE-REWRITE-SYNTAX_Foo() ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop> k=> <generatedTop> <k> (FooC()_DOUBLE-REWRITE-SYNTAX_Foo() ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop>):ksort_SortGeneratedTopCell
+	0: ⊩ksort_SortGeneratedTopCell (<generatedTop>(<k>((FooB()_DOUBLE-REWRITE-SYNTAX_Foo() ~> dotk())), <generatedCounter>(dv(0):ksort_SortInt)) k=> <generatedTop>(<k>((FooC()_DOUBLE-REWRITE-SYNTAX_Foo() ~> dotk())), <generatedCounter>(dv(0):ksort_SortInt))):ksort_SortGeneratedTopCell
 Load ksort_SortGeneratedTopCell=134
 Load ksort_SortGeneratedTopCell=134
 Load ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: FooB()_DOUBLE-REWRITE-SYNTAX_Foo[], 1: dotk[]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]=180
@@ -53,5 +53,5 @@ Instantiate 0, 1
 Save
 Publish
 	Stack:
-	0: ⊩ksort_SortGeneratedTopCell (<generatedTop> <k> (FooB()_DOUBLE-REWRITE-SYNTAX_Foo() ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop> k=> <generatedTop> <k> (FooC()_DOUBLE-REWRITE-SYNTAX_Foo() ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop>):ksort_SortGeneratedTopCell
-	1: ⊩ksort_SortGeneratedTopCell (<generatedTop> <k> (FooA()_DOUBLE-REWRITE-SYNTAX_Foo() ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop> k=> <generatedTop> <k> (FooB()_DOUBLE-REWRITE-SYNTAX_Foo() ~> dotk()) </k> <generatedCounter> dv(0):ksort_SortInt </generatedCounter> </generatedTop>):ksort_SortGeneratedTopCell
+	0: ⊩ksort_SortGeneratedTopCell (<generatedTop>(<k>((FooB()_DOUBLE-REWRITE-SYNTAX_Foo() ~> dotk())), <generatedCounter>(dv(0):ksort_SortInt)) k=> <generatedTop>(<k>((FooC()_DOUBLE-REWRITE-SYNTAX_Foo() ~> dotk())), <generatedCounter>(dv(0):ksort_SortInt))):ksort_SortGeneratedTopCell
+	1: ⊩ksort_SortGeneratedTopCell (<generatedTop>(<k>((FooA()_DOUBLE-REWRITE-SYNTAX_Foo() ~> dotk())), <generatedCounter>(dv(0):ksort_SortInt)) k=> <generatedTop>(<k>((FooB()_DOUBLE-REWRITE-SYNTAX_Foo() ~> dotk())), <generatedCounter>(dv(0):ksort_SortInt))):ksort_SortGeneratedTopCell
