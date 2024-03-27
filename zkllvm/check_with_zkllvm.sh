@@ -197,7 +197,7 @@ fi
 
 # Check if the version accepted by zkLLVM is the same as the version of the proof
 proof_generation_version=$(poetry -C "$bash_source_dir/../generation" run python -c "from importlib.metadata import version; print(version('proof_generation'))" )
-if [ "$pi2_zkllvm_version" != "$proof_generation_version" ]; then
+if [ "$pi2_zkllvm_version" != "$proof_generation_version" ] && [ "$translate_input" = true ]; then
     echo "Error: The version of the proof ($proof_generation_version) is different from the version accepted by zkLLVM ($pi2_zkllvm_version)"
     exit 1
 fi
@@ -276,14 +276,21 @@ else
 fi
 
 crypto3_lib_dir="$ZKLLVM_ROOT/libs/crypto3"
-clang="${ZKLLVM_ROOT}"/build/libs/circifier/llvm/bin/clang-17
+clang="${ZKLLVM_ROOT}"/build/libs/circifier/llvm/bin/clang-16
 llvm_link="${ZKLLVM_ROOT}"/build/libs/circifier/llvm/bin/llvm-link
 LIB_C="${ZKLLVM_ROOT}/build/libs/stdlib/libc"
 
-crypto3_lib_dir="${ZKLLVM_ROOT}"/libs/crypto3
-clang="${ZKLLVM_ROOT}"/build/libs/circifier/llvm/bin/clang-17
-llvm_link="${ZKLLVM_ROOT}"/build/libs/circifier/llvm/bin/llvm-link
-LIB_C="${ZKLLVM_ROOT}/build/libs/stdlib/libc"
+# if clang and libc doesn't exist, then exit
+if [ ! -f "$clang" ]; then
+    echo "Error: clang-17 is not installed. Please install the circifier from zkLLVM and include it in your PATH."
+    exit 1
+fi
+
+if [ ! -d "$LIB_C" ]; then
+    echo "Error: libc is not installed. Please install the circifier from zkLLVM and include it in your PATH."
+    exit 1
+fi
+
 
 # Intermediary outputs:
 OUTPUT_CLANG="$output_dir/${main_file_name}_cpp_example_no_stdlib_${main_file_name}.cpp.ll"
@@ -332,9 +339,19 @@ $clang -DALEN=${alen} -DCLEN=${clen} -DPLEN=${plen} -DMAXLEN=${maxlen} -target a
     -I "${main_file_path}/../../cpp" \
     -emit-llvm -O1 -S -std=c++20 "$main_source" -o "$OUTPUT_CLANG"
 
+if [ $? -ne 0 ]; then
+    echo "Error: The program could not be compiled to LLVM IR"
+    exit 1
+fi
+
 # Link the program with the ZKLLVM libc
 ${llvm_link} -S "$OUTPUT_CLANG" -o "$OUTPUT_LLVM_LINK_1"
 ${llvm_link} -S "$OUTPUT_LLVM_LINK_1" "${LIB_C}/zkllvm-libc.ll" -o "$OUTPUT_LLVM_LINK_2"
+
+if [ $? -ne 0 ]; then
+    echo "Error: The program could not be linked with the ZKLLVM libc"
+    exit 1
+fi
 
 # Check if the assigner is available
 assigner_is_available "/dev/stderr" || exit 0
@@ -348,6 +365,11 @@ if [ -z "$stats" ]; then
         assigner -b "$OUTPUT_LLVM_LINK_2" -i "$tmp_input_file" -c "$OUTPUT_CIRCUIT" -t "$OUTPUT_TABLE" -e pallas > /dev/null
     fi
 
+    if [ $? -ne 0 ]; then
+        echo "Error: The circuit could not be generated"
+        exit 1
+    fi
+
     if [ $transpiler == true ]; then
         # Check if the transpiler is available
         transpiler_is_available "/dev/stderr" || exit 0
@@ -357,6 +379,11 @@ if [ -z "$stats" ]; then
             transpiler -m gen-test-proof -i "$tmp_input_file" -c "$OUTPUT_CIRCUIT" -t "$OUTPUT_TABLE" -e pallas -o "$output_dir"
         else
             transpiler -m gen-test-proof -i "$tmp_input_file" -c "$OUTPUT_CIRCUIT" -t "$OUTPUT_TABLE" -e pallas -o "$output_dir" > /dev/null
+        fi
+
+        if [ $? -ne 0 ]; then
+            echo "Error: The proof could not be generated"
+            exit 1
         fi
     else
         if [ $proof_producer == true ]; then
@@ -403,9 +430,9 @@ if [ $transpiler == true ]; then
     TIME3=$(date +%s%3N);
 
     if [ "$verbose" ]; then
-        transpiler -m gen-test-proof -i "$tmp_input_file" -c "$OUTPUT_CIRCUIT" -t "$OUTPUT_TABLE" -e pallas -o "$output_dir"
+        transpiler -m gen-test-proof -i "$tmp_input_file" -c "$OUTPUT_CIRCUIT" -t "$OUTPUT_TABLE" -o "$output_dir"
     else
-        transpiler -m gen-test-proof -i "$tmp_input_file" -c "$OUTPUT_CIRCUIT" -t "$OUTPUT_TABLE" -e pallas -o "$output_dir" > /dev/null
+        transpiler -m gen-test-proof -i "$tmp_input_file" -c "$OUTPUT_CIRCUIT" -t "$OUTPUT_TABLE" -o "$output_dir" > /dev/null
     fi
 
     TIME4=$(date +%s%3N);
