@@ -589,12 +589,19 @@ fn apply_esubst(pattern: Ptr<Pattern>, evar_id: Id, plug: Ptr<Pattern>) -> Ptr<P
         Pattern::Exists { var, subpattern } => {
             assert!(
                 plug.e_fresh(var),
-                "EVar substitution would capture free variable {}!",
+                "EVar substitution would capture free element variable {}!",
                 var
             );
             exists(var, apply_esubst(subpattern, evar_id, plug))
         }
-        Pattern::Mu { var, subpattern } => mu(var, apply_esubst(subpattern, evar_id, plug)),
+        Pattern::Mu { var, subpattern } => {
+            assert!(
+                plug.s_fresh(var),
+                "EVar substitution would capture free set variable {}!",
+                var
+            );
+            mu(var, apply_esubst(subpattern, evar_id, plug))
+        }
         Pattern::ESubst { .. } => esubst(pattern, evar_id, plug),
         Pattern::SSubst { .. } => esubst(pattern, evar_id, plug),
         Pattern::MetaVar { .. } => esubst(pattern, evar_id, plug),
@@ -622,12 +629,19 @@ fn apply_ssubst(pattern: Ptr<Pattern>, svar_id: Id, plug: Ptr<Pattern>) -> Ptr<P
             apply_ssubst(left, svar_id, plug),
             apply_ssubst(right, svar_id, plug),
         ),
-        Pattern::Exists { var, subpattern } => exists(var, apply_ssubst(subpattern, svar_id, plug)),
+        Pattern::Exists { var, subpattern } => {
+            assert!(
+                plug.e_fresh(var),
+                "SVar substitution would capture free element variable {}!",
+                var
+            );
+            exists(var, apply_ssubst(subpattern, svar_id, plug))
+        }
         Pattern::Mu { var, .. } if var == svar_id => pattern,
         Pattern::Mu { var, subpattern } => {
             assert!(
                 plug.s_fresh(var),
-                "SVar substitution would capture free variable {}!",
+                "SVar substitution would capture free set variable {}!",
                 var
             );
             mu(var, apply_ssubst(subpattern, svar_id, plug))
@@ -2049,9 +2063,11 @@ mod tests {
     }
 
     #[rstest]
-    #[should_panic]
     // Test that eVar substitution is capture avoiding
+    #[should_panic]
     #[case(exists(0, evar(1)), 1, evar(0))]
+    #[should_panic]
+    #[case(mu(0, evar(1)), 1, svar(0))]
     fn test_apply_esubst_negative(
         #[case] pattern: Ptr<Pattern>,
         #[case] evar_id: Id,
@@ -2141,8 +2157,10 @@ mod tests {
     }
 
     #[rstest]
-    #[should_panic]
     // Test that sVar substitution is capture avoiding
+    #[should_panic]
+    #[case(exists(0, svar(1)), 1, evar(0))]
+    #[should_panic]
     #[case(mu(0, svar(1)), 1, svar(0))]
     fn test_apply_ssubst_negative(
         #[case] pattern: Ptr<Pattern>,
