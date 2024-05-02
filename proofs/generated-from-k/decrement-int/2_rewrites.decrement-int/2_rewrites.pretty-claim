@@ -1,40 +1,40 @@
-Version 2.1.0
-Load ksort_SortGeneratedTopCell=166
-Load ksort_SortGeneratedTopCell=166
-Load ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 2], 1: dotk[]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]=165
-Load ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0], 1: dotk[]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]=214
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (μ X0 . phi1), 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: phi1, 1: (kore_next · phi0)[0: X0]]][0: phi0, 1: phi2]]=140
+Version 3.0.0
+Load ksort_SortGeneratedTopCell=165
+Load ksort_SortGeneratedTopCell=165
+Load ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 2], 1: dotk[]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]=164
+Load ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0], 1: dotk[]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]=213
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (μ X0 . phi1), 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: phi1, 1: (kore_next · phi0)[0: X0]]][0: phi0, 1: phi2]]=139
 Instantiate 0, 1, 2
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=76
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=74
 Instantiate 0, 1
 Save
 Publish
 	Stack:
 	0: ⊩ksort_SortGeneratedTopCell (phi1 k-> ((μ X0 . phi1) ⋀ k⊤:phi0)[0: phi0, 1: (phi1 k⋁ ♦X0)][0: phi0, 1: phi2]):phi0[0: ksort_SortGeneratedTopCell, 1: <generatedTop>(<k>((dv(2):ksort_SortInt ~> dotk())), <generatedCounter>(dv(0):ksort_SortInt)), 2: <generatedTop>(<k>((dv(0):ksort_SortInt ~> dotk())), <generatedCounter>(dv(0):ksort_SortInt))]
-Load ksort_SortGeneratedTopCell=166
-Load ksort_SortGeneratedTopCell=166
-Load ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1], 1: dotk[]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]=206
-Load ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0], 1: dotk[]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]=214
-Load (kore_next · phi0)=99
+Load ksort_SortGeneratedTopCell=165
+Load ksort_SortGeneratedTopCell=165
+Load ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1], 1: dotk[]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]=205
+Load ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0], 1: dotk[]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]=213
+Load (kore_next · phi0)=97
 Instantiate 0
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=63
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=61
 Instantiate 0, 1, 2
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=76
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=74
 Instantiate 0, 1
 Save
 Publish
 	Stack:
 	0: ⊩ksort_SortGeneratedTopCell (phi1 k-> ((μ X0 . phi1) ⋀ k⊤:phi0)[0: phi0, 1: (phi1 k⋁ ♦X0)][0: phi0, 1: phi2]):phi0[0: ksort_SortGeneratedTopCell, 1: <generatedTop>(<k>((dv(2):ksort_SortInt ~> dotk())), <generatedCounter>(dv(0):ksort_SortInt)), 2: <generatedTop>(<k>((dv(0):ksort_SortInt ~> dotk())), <generatedCounter>(dv(0):ksort_SortInt))]
 	1: ⊩ksort_SortGeneratedTopCell (<generatedTop>(<k>((dv(1):ksort_SortInt ~> dotk())), <generatedCounter>(dv(0):ksort_SortInt)) k-> ♦<generatedTop>(<k>((dv(0):ksort_SortInt ~> dotk())), <generatedCounter>(dv(0):ksort_SortInt))):ksort_SortGeneratedTopCell
-Load ksort_SortGeneratedTopCell=166
-Load ksort_SortGeneratedTopCell=166
-Load ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 2], 1: dotk[]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]=165
-Load ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1], 1: dotk[]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]=206
-Load (kore_next · phi0)=99
+Load ksort_SortGeneratedTopCell=165
+Load ksort_SortGeneratedTopCell=165
+Load ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 2], 1: dotk[]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]=164
+Load ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1], 1: dotk[]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]=205
+Load (kore_next · phi0)=97
 Instantiate 0
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> (μ X0 . X0)[])[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=63
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=61
 Instantiate 0, 1, 2
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=76
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=74
 Instantiate 0, 1
 Save
 Publish

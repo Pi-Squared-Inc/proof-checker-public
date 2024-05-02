@@ -11,8 +11,8 @@ use core::ops::Deref;
 
 // Keep this version in sync with the one in Cargo.toml!
 // We could read from Cargo.toml but want to avoid String.
-const VERSION_MAJOR: u8 = 2;
-const VERSION_MINOR: u8 = 1;
+const VERSION_MAJOR: u8 = 3;
+const VERSION_MINOR: u8 = 0;
 
 /// Instructions
 /// ============
@@ -24,7 +24,7 @@ const VERSION_MINOR: u8 = 1;
 #[derive(Debug, Eq, PartialEq)]
 pub enum Instruction {
     // Patterns
-    EVar = 2, SVar, Symbol, Implies, App, Exists, Mu,
+    Bot = 1, EVar, SVar, Symbol, Implies, App, Exists, Mu,
     // Meta Patterns,
     MetaVar, ESubst, SSubst,
     // Axiom Schemas,
@@ -52,6 +52,7 @@ type InstrIterator<'a> = core::slice::Iter<'a, InstByte>;
 impl Instruction {
     fn from(value: InstByte) -> Instruction {
         match value {
+            1 => Instruction::Bot,
             2 => Instruction::EVar,
             3 => Instruction::SVar,
             4 => Instruction::Symbol,
@@ -153,6 +154,7 @@ impl<T> Deref for Ptr<T> {
 
 #[derive(Debug, Eq, PartialEq, Clone)]
 pub enum Pattern {
+    Bot(),
     EVar(Id),
     SVar(Id),
     Symbol(Id),
@@ -195,6 +197,7 @@ pub enum Pattern {
 impl Pattern {
     fn e_fresh(&self, evar: Id) -> bool {
         match self {
+            Pattern::Bot() => true,
             Pattern::EVar(name) => *name != evar,
             Pattern::SVar(_) => true,
             Pattern::Symbol(_) => true,
@@ -236,6 +239,7 @@ impl Pattern {
 
     fn s_fresh(&self, svar: Id) -> bool {
         match self {
+            Pattern::Bot() => true,
             Pattern::EVar(_) => true,
             Pattern::SVar(name) => *name != svar,
             Pattern::Symbol(_) => true,
@@ -276,6 +280,7 @@ impl Pattern {
 
     fn positive(&self, svar: Id) -> bool {
         match self {
+            Pattern::Bot() => true,
             Pattern::EVar(_) => true,
             Pattern::SVar(_) => true,
             Pattern::Symbol(_) => true,
@@ -309,6 +314,7 @@ impl Pattern {
 
     fn negative(&self, svar: Id) -> bool {
         match self {
+            Pattern::Bot() => true,
             Pattern::EVar(_) => true,
             Pattern::SVar(name) => *name != svar,
             Pattern::Symbol(_) => true,
@@ -342,6 +348,7 @@ impl Pattern {
 
     fn app_ctx_hole(&self, evar: Id) -> bool {
         match self {
+            Pattern::Bot() => false,
             Pattern::EVar(name) => *name == evar,
             Pattern::SVar(_) => false,
             Pattern::Symbol(_) => false,
@@ -437,6 +444,10 @@ pub enum Entry {
 
 /// Pattern construction utilities
 /// ------------------------------
+
+fn bot() -> Ptr<Pattern> {
+    return Ptr::new(Pattern::Bot());
+}
 
 fn evar(id: Id) -> Ptr<Pattern> {
     return Ptr::new(Pattern::EVar(id));
@@ -548,11 +559,6 @@ fn app(left: Ptr<Pattern>, right: Ptr<Pattern>) -> Ptr<Pattern> {
 
 // Notation
 #[inline(always)]
-fn bot() -> Ptr<Pattern> {
-    mu(0, svar(0))
-}
-
-#[inline(always)]
 fn not(pat: Ptr<Pattern>) -> Ptr<Pattern> {
     implies(pat, bot())
 }
@@ -655,6 +661,7 @@ fn apply_ssubst(pattern: Ptr<Pattern>, svar_id: Id, plug: Ptr<Pattern>) -> Ptr<P
 
 fn instantiate(p: Ptr<Pattern>, vars: &[Id], plugs: &[Ptr<Pattern>]) -> Ptr<Pattern> {
     match &*p {
+        Pattern::Bot() => p,
         Pattern::EVar(_) => p,
         Pattern::SVar(_) => p,
         Pattern::Symbol(_) => p,
@@ -876,6 +883,9 @@ fn execute_instructions<'a>(
     while let Some(instr_u32) = iterator.next() {
         match Instruction::from(*instr_u32) {
             // TODO: Add an abstraction for pushing these one-argument terms on stack?
+            Instruction::Bot => {
+                stack.push(Term::Pattern(bot()));
+            }
             Instruction::EVar => {
                 let id = *iterator
                     .next()
@@ -1285,6 +1295,7 @@ mod tests {
 
     #[test]
     fn test_efresh() {
+        assert!(bot().e_fresh(0));
         let evar = evar(1);
         let left = Ptr::new(Pattern::Exists {
             var: 1,
@@ -1317,6 +1328,7 @@ mod tests {
 
     #[test]
     fn test_sfresh() {
+        assert!(bot().s_fresh(0));
         let svar = svar(1);
         let left = Ptr::new(Pattern::Mu {
             var: 1,
@@ -1417,6 +1429,10 @@ mod tests {
         let X2 = svar(2);
         let c1 = symbol(1);
         let neg_X1 = not(X1);
+
+        // Bot
+        assert!(bot().positive(0));
+        assert!(bot().negative(0));
 
         // EVar
         let evar1 = evar(1);
@@ -1547,6 +1563,7 @@ mod tests {
     #[test]
     #[allow(non_snake_case)]
     fn test_app_ctx_hole() {
+        assert!(!bot().app_ctx_hole(0));
         assert!(!metavar_unconstrained(0).app_ctx_hole(0));
         assert!((Pattern::MetaVar {
             id: 0,
@@ -1620,6 +1637,7 @@ mod tests {
         let muX0x0 = mu(0, x0);
 
         // Concrete patterns are unaffected by instantiate
+        assert!(instantiate(bot(), &[0], &[X0]) == bot());
         assert!(instantiate(x0, &[0], &[X0]) == x0);
         assert!(instantiate(x0, &[1], &[X0]) == x0);
         assert!(instantiate(X0, &[0], &[x0]) == X0);
@@ -1980,6 +1998,7 @@ mod tests {
         // Define test cases as tuples of input pattern, evar_id, plug, and expected pattern
         let test_cases: Vec<(Ptr<Pattern>, u8, Ptr<Pattern>, Ptr<Pattern>)> = vec![
             // Atomic cases
+            (bot(), 0, symbol(1), bot()),
             (evar(0), 0, symbol(1), symbol(1)),
             (evar(0), 0, evar(2), evar(2)),
             (evar(0), 1, evar(2), evar(0)),
@@ -2080,6 +2099,7 @@ mod tests {
     fn test_apply_ssubst() {
         let test_cases: Vec<(Ptr<Pattern>, u8, Ptr<Pattern>, Ptr<Pattern>)> = vec![
             // Atomic cases
+            (bot(), 0, symbol(1), bot()),
             (evar(0), 0, symbol(1), evar(0)),
             (evar(0), 1, evar(2), evar(0)),
             (svar(0), 0, symbol(0), symbol(0)),

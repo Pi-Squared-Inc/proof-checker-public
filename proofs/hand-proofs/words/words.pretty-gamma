@@ -1,4 +1,4 @@
-Version 2.1.0
+Version 3.0.0
 EVar 0
 Save
 Symbol ⌈_⌉
@@ -9,15 +9,12 @@ Save
 Instantiate 0
 Save
 Publish
-SVar 0
-Save
-Mu 0
-Save
+⊥
 MetaVar 0appctx, len=1 x0 
 
 Save
 ESubst id=0
-Load (μ X0 . X0)[]=6
+⊥
 Implies
 Save
 Publish
@@ -34,24 +31,24 @@ Implies
 Load phi0=1
 MetaVar 1
 Load phi0=1
-Load (μ X0 . X0)[]=6
+⊥
 Implies
 Save
 Instantiate 0
 Implies
 Save
-Load (phi0 -> (μ X0 . X0)[])=10
+Load (phi0 -> ⊥)=8
 Instantiate 0
 Save
 Instantiate 0, 1
 Save
 Instantiate 0, 1
 Save
-Load (phi0 -> (μ X0 . X0)[])[0: phi0]=10
+Load (phi0 -> ⊥)[0: phi0]=8
 Load (⌈_⌉ · phi0)=2
 Instantiate 0
 Save
-Load (phi0 -> (μ X0 . X0)[])=10
+Load (phi0 -> ⊥)=8
 Instantiate 0
 Save
 Instantiate 0
@@ -64,19 +61,19 @@ ESubst id=0
 MetaVar 1
 MetaVar 2
 ESubst id=0
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]]=17
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]]=15
 Instantiate 0, 1
 Implies
 Save
 Publish
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: phi1]=17
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: phi1]=15
 MetaVar 1
 MetaVar 2
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]]=17
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]]=15
 Instantiate 0, 1
 Load phi0=1
 MetaVar 2
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]]=17
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]]=15
 Instantiate 0, 1
 Implies
 Implies
@@ -84,11 +81,11 @@ Save
 Publish
 Load phi0=1
 Load phi0=1
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]]=17
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]]=15
 Instantiate 0, 1
 Save
 Publish
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: phi1]=17
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: phi1]=15
 Load phi0=1
 MetaVar 1
 Implies
@@ -104,14 +101,15 @@ Save
 Symbol b
 Save
 Save
-Load (phi0 -> (μ X0 . X0)[])[0: phi0]=10
+Load (phi0 -> ⊥)[0: phi0]=8
 MetaVar 1
 Implies
 Save
 Instantiate 0, 1
 Save
 Save
-Load X0=5
+SVar 0
+Save
 Symbol concat
 Load phi0=1
 App
@@ -119,27 +117,27 @@ MetaVar 1
 App
 Save
 Instantiate 0, 1
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Save
 Mu 0
 Save
 Publish
-Load eps[]=27
-Load X0=5
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load eps[]=25
+Load X0=34
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Save
 Mu 0
 Save
 Publish
 Load x0=0
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
 Load phi0=1
@@ -149,102 +147,102 @@ MetaVar 1
 Load phi0=1
 MetaVar 1
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
 Save
 Instantiate 0, 1
 Save
-Load (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])]=12
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])]=10
 Instantiate 0, 1
 Exists 0
 Save
 Instantiate 0, 1
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Load phi0=1
 Implies
 Save
 Publish
-Load eps[]=27
+Load eps[]=25
 MetaVar 0pos, len=1 X0 
 
 Save
 MetaVar 1pos, len=1 X0 
 
 Save
-Load eps[]=27
-Load a[]=29
-Load phi0=50
-Load ((concat · phi0) · phi1)=36
+Load eps[]=25
+Load a[]=27
+Load phi0=49
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load b[]=31
-Load phi1=51
-Load ((concat · phi0) · phi1)=36
+Load b[]=29
+Load phi1=50
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Mu 0
 Save
 Instantiate 0, 1
 Save
-Load phi0=50
+Load phi0=49
 SSubst id=0
 Save
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load eps[]=27
-Load (μ X0 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=55
-Load phi1=51
+Load eps[]=25
+Load (μ X0 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=54
+Load phi1=50
 SSubst id=0
 Save
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]]=44
-Load (μ X0 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=55
-Load (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: x0, 1: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=47
+Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]]=43
+Load (μ X0 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=54
+Load (∃ x0 . (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: x0, 1: (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=46
 Instantiate 0, 1
 Save
 MetaVar 2pos, len=1 X0 
 
 Save
 SSubst id=0
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load phi0[(μ X0 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X0]=57
+Load phi0[(μ X0 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X0]=56
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: x0, 1: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])[0: ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]], 1: (μ X0 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]]=59
+Load (∃ x0 . (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: x0, 1: (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])[0: ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]], 1: (μ X0 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]]=58
 MetaVar 3pos, len=1 X0 
 
 Save
 SSubst id=0
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load phi1[(μ X0 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X0]=58
+Load phi1[(μ X0 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X0]=57
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load phi2=60
-Load phi3=62
-Load (μ X0 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=55
+Load phi2=59
+Load phi3=61
+Load (μ X0 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=54
 Instantiate 0, 1
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load (μ X0 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=55
+Load (μ X0 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=54
 Implies
 Implies
 Implies
@@ -252,85 +250,85 @@ Implies
 Implies
 Save
 Publish
-Load eps[]=27
+Load eps[]=25
 MetaVar 0pos, len=1 X1 
 
 Save
 MetaVar 1pos, len=1 X1 
 
 Save
-Load eps[]=27
-Load a[]=29
-Load phi0=66
-Load ((concat · phi0) · phi1)=36
+Load eps[]=25
+Load a[]=27
+Load phi0=65
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load b[]=31
-Load phi1=67
-Load ((concat · phi0) · phi1)=36
+Load b[]=29
+Load phi1=66
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Mu 1
 Save
 Instantiate 0, 1
 Save
-Load phi0=66
+Load phi0=65
 SSubst id=1
 Save
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load eps[]=27
-Load (μ X1 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=71
-Load phi1=67
+Load eps[]=25
+Load (μ X1 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=70
+Load phi1=66
 SSubst id=1
 Save
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]]=44
-Load (μ X1 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=71
-Load (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: x0, 1: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=47
+Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]]=43
+Load (μ X1 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=70
+Load (∃ x0 . (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: x0, 1: (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=46
 Instantiate 0, 1
 Save
 MetaVar 2pos, len=1 X1 
 
 Save
 SSubst id=1
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load phi0[(μ X1 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X1]=73
+Load phi0[(μ X1 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X1]=72
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: x0, 1: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])[0: ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]], 1: (μ X1 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]]=75
+Load (∃ x0 . (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: x0, 1: (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])[0: ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]], 1: (μ X1 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]]=74
 MetaVar 3pos, len=1 X1 
 
 Save
 SSubst id=1
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load phi1[(μ X1 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X1]=74
+Load phi1[(μ X1 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X1]=73
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load phi2=76
-Load phi3=78
-Load (μ X1 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=71
+Load phi2=75
+Load phi3=77
+Load (μ X1 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=70
 Instantiate 0, 1
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load (μ X1 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=71
+Load (μ X1 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=70
 Implies
 Implies
 Implies
@@ -338,85 +336,85 @@ Implies
 Implies
 Save
 Publish
-Load eps[]=27
+Load eps[]=25
 MetaVar 0pos, len=1 X2 
 
 Save
 MetaVar 1pos, len=1 X2 
 
 Save
-Load eps[]=27
-Load a[]=29
-Load phi0=82
-Load ((concat · phi0) · phi1)=36
+Load eps[]=25
+Load a[]=27
+Load phi0=81
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load b[]=31
-Load phi1=83
-Load ((concat · phi0) · phi1)=36
+Load b[]=29
+Load phi1=82
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Mu 2
 Save
 Instantiate 0, 1
 Save
-Load phi0=82
+Load phi0=81
 SSubst id=2
 Save
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load eps[]=27
-Load (μ X2 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=87
-Load phi1=83
+Load eps[]=25
+Load (μ X2 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=86
+Load phi1=82
 SSubst id=2
 Save
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]]=44
-Load (μ X2 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=87
-Load (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: x0, 1: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=47
+Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]]=43
+Load (μ X2 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=86
+Load (∃ x0 . (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: x0, 1: (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=46
 Instantiate 0, 1
 Save
 MetaVar 2pos, len=1 X2 
 
 Save
 SSubst id=2
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load phi0[(μ X2 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X2]=89
+Load phi0[(μ X2 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X2]=88
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: x0, 1: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])[0: ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]], 1: (μ X2 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]]=91
+Load (∃ x0 . (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: x0, 1: (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])[0: ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]], 1: (μ X2 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]]=90
 MetaVar 3pos, len=1 X2 
 
 Save
 SSubst id=2
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load phi1[(μ X2 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X2]=90
+Load phi1[(μ X2 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X2]=89
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load phi2=92
-Load phi3=94
-Load (μ X2 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=87
+Load phi2=91
+Load phi3=93
+Load (μ X2 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=86
 Instantiate 0, 1
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load (μ X2 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=87
+Load (μ X2 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=86
 Implies
 Implies
 Implies
@@ -424,83 +422,84 @@ Implies
 Implies
 Save
 Publish
-Load eps[]=27
+Load eps[]=25
 MetaVar 0pos, len=1 X3 
 
 Save
 MetaVar 1pos, len=1 X3 
 
 Save
-Load eps[]=27
-Load a[]=29
-Load phi0=98
-Load ((concat · phi0) · phi1)=36
+Load eps[]=25
+Load a[]=27
+Load phi0=97
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load b[]=31
-Load phi1=99
-Load ((concat · phi0) · phi1)=36
+Load b[]=29
+Load phi1=98
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Mu 3
 Save
 Instantiate 0, 1
 Save
-Load phi0=98
+Load phi0=97
 SSubst id=3
 Save
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load eps[]=27
-Load (μ X3 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=103
-Load phi1=99
+Load eps[]=25
+Load (μ X3 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=102
+Load phi1=98
 SSubst id=3
 Save
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]]=44
-Load (μ X3 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=103
-Load (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: x0, 1: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=47
+Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]]=43
+Load (μ X3 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=102
+Load (∃ x0 . (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: x0, 1: (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=46
 Instantiate 0, 1
 Save
 MetaVar 2pos, len=1 X3 
 
 Save
 SSubst id=3
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load phi0[(μ X3 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X3]=105
+Save
+Load phi0[(μ X3 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X3]=104
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: x0, 1: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])[0: ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]], 1: (μ X3 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]]=107
+Load (∃ x0 . (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: x0, 1: (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])[0: ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]], 1: (μ X3 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]]=106
 MetaVar 3pos, len=1 X3 
 
 SSubst id=3
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load phi1[(μ X3 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X3]=106
+Load phi1[(μ X3 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X3]=105
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load phi2=108
+Load phi2=107
 MetaVar 3pos, len=1 X3 
 
-Load (μ X3 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=103
+Load (μ X3 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=102
 Instantiate 0, 1
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load (μ X3 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=103
+Load (μ X3 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=102
 Implies
 Implies
 Implies
@@ -508,28 +507,28 @@ Implies
 Implies
 Save
 Publish
-Load eps[]=27
+Load eps[]=25
 MetaVar 0pos, len=1 X4 
 
 Save
 MetaVar 1pos, len=1 X4 
 
 Save
-Load eps[]=27
-Load a[]=29
+Load eps[]=25
+Load a[]=27
 Load phi0=111
-Load ((concat · phi0) · phi1)=36
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load b[]=31
+Load b[]=29
 Load phi1=112
-Load ((concat · phi0) · phi1)=36
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Mu 4
 Save
@@ -539,54 +538,54 @@ Load phi0=111
 SSubst id=4
 Save
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load eps[]=27
-Load (μ X4 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=116
+Load eps[]=25
+Load (μ X4 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=116
 Load phi1=112
 SSubst id=4
 Save
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]]=44
-Load (μ X4 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=116
-Load (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: x0, 1: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=47
+Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]]=43
+Load (μ X4 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=116
+Load (∃ x0 . (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: x0, 1: (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=46
 Instantiate 0, 1
 MetaVar 2pos, len=1 X4 
 
 SSubst id=4
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load phi0[(μ X4 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X4]=118
+Load phi0[(μ X4 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X4]=118
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]]=44
-Load (μ X4 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=116
-Load (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: x0, 1: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=47
+Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]]=43
+Load (μ X4 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=116
+Load (∃ x0 . (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: x0, 1: (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=46
 Instantiate 0, 1
 MetaVar 3pos, len=1 X4 
 
 SSubst id=4
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load phi1[(μ X4 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X4]=119
+Load phi1[(μ X4 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X4]=119
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
 MetaVar 2pos, len=1 X4 
 
 MetaVar 3pos, len=1 X4 
 
-Load (μ X4 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=116
+Load (μ X4 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=116
 Instantiate 0, 1
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load (μ X4 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=116
+Load (μ X4 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=116
 Implies
 Implies
 Implies
@@ -594,28 +593,28 @@ Implies
 Implies
 Save
 Publish
-Load eps[]=27
+Load eps[]=25
 MetaVar 0pos, len=1 X5 
 
 Save
 MetaVar 1pos, len=1 X5 
 
 Save
-Load eps[]=27
-Load a[]=29
+Load eps[]=25
+Load a[]=27
 Load phi0=122
-Load ((concat · phi0) · phi1)=36
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load b[]=31
+Load b[]=29
 Load phi1=123
-Load ((concat · phi0) · phi1)=36
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Mu 5
 Save
@@ -625,54 +624,54 @@ Load phi0=122
 SSubst id=5
 Save
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load eps[]=27
-Load (μ X5 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=127
+Load eps[]=25
+Load (μ X5 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=127
 Load phi1=123
 SSubst id=5
 Save
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]]=44
-Load (μ X5 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=127
-Load (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: x0, 1: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=47
+Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]]=43
+Load (μ X5 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=127
+Load (∃ x0 . (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: x0, 1: (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=46
 Instantiate 0, 1
 MetaVar 2pos, len=1 X5 
 
 SSubst id=5
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load phi0[(μ X5 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X5]=129
+Load phi0[(μ X5 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X5]=129
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]]=44
-Load (μ X5 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=127
-Load (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: x0, 1: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=47
+Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]]=43
+Load (μ X5 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=127
+Load (∃ x0 . (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: x0, 1: (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=46
 Instantiate 0, 1
 MetaVar 3pos, len=1 X5 
 
 SSubst id=5
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load phi1[(μ X5 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X5]=130
+Load phi1[(μ X5 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X5]=130
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
 MetaVar 2pos, len=1 X5 
 
 MetaVar 3pos, len=1 X5 
 
-Load (μ X5 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=127
+Load (μ X5 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=127
 Instantiate 0, 1
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load (μ X5 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=127
+Load (μ X5 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=127
 Implies
 Implies
 Implies
@@ -680,28 +679,28 @@ Implies
 Implies
 Save
 Publish
-Load eps[]=27
+Load eps[]=25
 MetaVar 0pos, len=1 X6 
 
 Save
 MetaVar 1pos, len=1 X6 
 
 Save
-Load eps[]=27
-Load a[]=29
+Load eps[]=25
+Load a[]=27
 Load phi0=133
-Load ((concat · phi0) · phi1)=36
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load b[]=31
+Load b[]=29
 Load phi1=134
-Load ((concat · phi0) · phi1)=36
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Mu 6
 Save
@@ -711,54 +710,54 @@ Load phi0=133
 SSubst id=6
 Save
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load eps[]=27
-Load (μ X6 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=138
+Load eps[]=25
+Load (μ X6 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=138
 Load phi1=134
 SSubst id=6
 Save
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]]=44
-Load (μ X6 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=138
-Load (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: x0, 1: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=47
+Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]]=43
+Load (μ X6 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=138
+Load (∃ x0 . (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: x0, 1: (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=46
 Instantiate 0, 1
 MetaVar 2pos, len=1 X6 
 
 SSubst id=6
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load phi0[(μ X6 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X6]=140
+Load phi0[(μ X6 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X6]=140
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]]=44
-Load (μ X6 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=138
-Load (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: x0, 1: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=47
+Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]]=43
+Load (μ X6 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=138
+Load (∃ x0 . (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: x0, 1: (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=46
 Instantiate 0, 1
 MetaVar 3pos, len=1 X6 
 
 SSubst id=6
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load phi1[(μ X6 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X6]=141
+Load phi1[(μ X6 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X6]=141
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
 MetaVar 2pos, len=1 X6 
 
 MetaVar 3pos, len=1 X6 
 
-Load (μ X6 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=138
+Load (μ X6 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=138
 Instantiate 0, 1
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load (μ X6 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=138
+Load (μ X6 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=138
 Implies
 Implies
 Implies
@@ -766,28 +765,28 @@ Implies
 Implies
 Save
 Publish
-Load eps[]=27
+Load eps[]=25
 MetaVar 0pos, len=1 X7 
 
 Save
 MetaVar 1pos, len=1 X7 
 
 Save
-Load eps[]=27
-Load a[]=29
+Load eps[]=25
+Load a[]=27
 Load phi0=144
-Load ((concat · phi0) · phi1)=36
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load b[]=31
+Load b[]=29
 Load phi1=145
-Load ((concat · phi0) · phi1)=36
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Mu 7
 Save
@@ -797,54 +796,54 @@ Load phi0=144
 SSubst id=7
 Save
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load eps[]=27
-Load (μ X7 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=149
+Load eps[]=25
+Load (μ X7 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=149
 Load phi1=145
 SSubst id=7
 Save
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]]=44
-Load (μ X7 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=149
-Load (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: x0, 1: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=47
+Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]]=43
+Load (μ X7 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=149
+Load (∃ x0 . (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: x0, 1: (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=46
 Instantiate 0, 1
 MetaVar 2pos, len=1 X7 
 
 SSubst id=7
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load phi0[(μ X7 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X7]=151
+Load phi0[(μ X7 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X7]=151
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]]=44
-Load (μ X7 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=149
-Load (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: x0, 1: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=47
+Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]]=43
+Load (μ X7 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=149
+Load (∃ x0 . (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: x0, 1: (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=46
 Instantiate 0, 1
 MetaVar 3pos, len=1 X7 
 
 SSubst id=7
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load phi1[(μ X7 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X7]=152
+Load phi1[(μ X7 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X7]=152
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
 MetaVar 2pos, len=1 X7 
 
 MetaVar 3pos, len=1 X7 
 
-Load (μ X7 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=149
+Load (μ X7 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=149
 Instantiate 0, 1
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load (μ X7 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=149
+Load (μ X7 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=149
 Implies
 Implies
 Implies
@@ -852,28 +851,28 @@ Implies
 Implies
 Save
 Publish
-Load eps[]=27
+Load eps[]=25
 MetaVar 0pos, len=1 X8 
 
 Save
 MetaVar 1pos, len=1 X8 
 
 Save
-Load eps[]=27
-Load a[]=29
+Load eps[]=25
+Load a[]=27
 Load phi0=155
-Load ((concat · phi0) · phi1)=36
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load b[]=31
+Load b[]=29
 Load phi1=156
-Load ((concat · phi0) · phi1)=36
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Mu 8
 Save
@@ -883,54 +882,54 @@ Load phi0=155
 SSubst id=8
 Save
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load eps[]=27
-Load (μ X8 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=160
+Load eps[]=25
+Load (μ X8 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=160
 Load phi1=156
 SSubst id=8
 Save
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]]=44
-Load (μ X8 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=160
-Load (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: x0, 1: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=47
+Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]]=43
+Load (μ X8 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=160
+Load (∃ x0 . (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: x0, 1: (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=46
 Instantiate 0, 1
 MetaVar 2pos, len=1 X8 
 
 SSubst id=8
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load phi0[(μ X8 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X8]=162
+Load phi0[(μ X8 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X8]=162
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]]=44
-Load (μ X8 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=160
-Load (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: x0, 1: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=47
+Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]]=43
+Load (μ X8 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=160
+Load (∃ x0 . (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: x0, 1: (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=46
 Instantiate 0, 1
 MetaVar 3pos, len=1 X8 
 
 SSubst id=8
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load phi1[(μ X8 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X8]=163
+Load phi1[(μ X8 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X8]=163
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
 MetaVar 2pos, len=1 X8 
 
 MetaVar 3pos, len=1 X8 
 
-Load (μ X8 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=160
+Load (μ X8 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=160
 Instantiate 0, 1
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load (μ X8 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=160
+Load (μ X8 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=160
 Implies
 Implies
 Implies
@@ -938,28 +937,28 @@ Implies
 Implies
 Save
 Publish
-Load eps[]=27
+Load eps[]=25
 MetaVar 0pos, len=1 X9 
 
 Save
 MetaVar 1pos, len=1 X9 
 
 Save
-Load eps[]=27
-Load a[]=29
+Load eps[]=25
+Load a[]=27
 Load phi0=166
-Load ((concat · phi0) · phi1)=36
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load b[]=31
+Load b[]=29
 Load phi1=167
-Load ((concat · phi0) · phi1)=36
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Save
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)=33
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=31
 Instantiate 0, 1
 Mu 9
 Save
@@ -969,54 +968,54 @@ Load phi0=166
 SSubst id=9
 Save
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load eps[]=27
-Load (μ X9 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=171
+Load eps[]=25
+Load (μ X9 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=171
 Load phi1=167
 SSubst id=9
 Save
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]]=44
-Load (μ X9 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=171
-Load (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: x0, 1: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=47
+Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]]=43
+Load (μ X9 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=171
+Load (∃ x0 . (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: x0, 1: (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=46
 Instantiate 0, 1
 MetaVar 2pos, len=1 X9 
 
 SSubst id=9
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load phi0[(μ X9 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X9]=173
+Load phi0[(μ X9 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X9]=173
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
-Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]]=44
-Load (μ X9 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=171
-Load (∃ x0 . (phi0 -> (μ X0 . X0)[])[0: (phi0 -> (phi0 -> (μ X0 . X0)[])[0: phi1])][0: x0, 1: (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=47
+Load ((concat · phi0) · phi1)[0: x0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]]=43
+Load (μ X9 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=171
+Load (∃ x0 . (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: x0, 1: (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: phi1]])=46
 Instantiate 0, 1
 MetaVar 3pos, len=1 X9 
 
 SSubst id=9
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load phi1[(μ X9 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X9]=174
+Load phi1[(μ X9 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]/X9]=174
 Implies
-Load (phi0 -> (μ X0 . X0)[])[0: (⌈_⌉ · phi0)[0: (phi0 -> (μ X0 . X0)[])[0: phi0]]]=16
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
 MetaVar 2pos, len=1 X9 
 
 MetaVar 3pos, len=1 X9 
 
-Load (μ X9 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=171
+Load (μ X9 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=171
 Instantiate 0, 1
-Load ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: a[], 1: b[]][]=34
-Load ((concat · phi0) · phi1)=36
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: a[], 1: b[]][]=32
+Load ((concat · phi0) · phi1)=35
 Instantiate 0, 1
-Load (μ X9 . ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> (μ X0 . X0)[])[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=171
+Load (μ X9 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: phi0, 1: phi1]=171
 Implies
 Implies
 Implies
