@@ -1,9 +1,32 @@
 Version 3.0.0
-Load X0=34
-Load X0=34
-Load (μ X0 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=54
+SVar 2
+Save
+SVar 3
+Save
+Load X3=109
+Load (μ X3 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=72
+Instantiate 0, 1
+Save
+Load (μ X4 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=80
+Instantiate 0, 1
+Save
+Load (μ X3 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: X3, 1: X3]=110
+Load (μ X2 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=64
+Instantiate 0, 1
+Save
+Load (μ X3 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])[0: X3, 1: X3]=110
+Load (μ X1 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=56
 Instantiate 0, 1
 Save
 Publish
 	Stack:
-	0: accepting(0, X0, X0)
+	0: accepting(1, accepting(2, accepting(4, X2, accepting(3, X3, X3)), accepting(3, X3, X3)), accepting(3, X3, X3))
+Load X0=31
+Load X0=31
+Load (μ X0 . ((phi0 -> ⊥)[0: phi0] -> phi1)[0: eps[], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: ((concat · phi0) · phi1)[0: a[], 1: phi0], 1: ((concat · phi0) · phi1)[0: b[], 1: phi1]]])=48
+Instantiate 0, 1
+Save
+Publish
+	Stack:
+	0: accepting(1, accepting(2, accepting(4, X2, accepting(3, X3, X3)), accepting(3, X3, X3)), accepting(3, X3, X3))
+	1: accepting(0, X0, X0)
