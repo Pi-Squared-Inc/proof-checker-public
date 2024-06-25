@@ -142,7 +142,6 @@ Load (∃ x100 . (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][
 Load phi1=3
 Load (phi0 -> ⊥)[0: phi0]=6
 Exists 7
-Save
 Load (phi0 -> ⊥)=6
 Instantiate 0
 Instantiate 0
@@ -157,7 +156,6 @@ Load (∃ x100 . (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][
 Load phi1=3
 Load (phi0 -> ⊥)[0: phi0]=6
 Exists 6
-Save
 Load (phi0 -> ⊥)=6
 Instantiate 0
 Instantiate 0
@@ -180,9 +178,9 @@ Load ((∃ x100 . (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]
 Publish
 Load ((∃ x100 . (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100]) -> ((phi0 -> ⊥)[0: (∃ x5 . (phi0 -> ⊥)[0: phi0])][0: phi1] -> phi1[phi0/x5]))=34
 Publish
-Load ((∃ x100 . (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100]) -> ((phi0 -> ⊥)[0: (∃ x7 . (phi0 -> ⊥)[0: phi0])][0: phi1] -> phi1[phi0/x7]))=37
+Load ((∃ x100 . (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100]) -> ((phi0 -> ⊥)[0: (∃ x7 . (phi0 -> ⊥)[0: phi0])][0: phi1] -> phi1[phi0/x7]))=36
 Publish
-Load ((∃ x100 . (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100]) -> ((phi0 -> ⊥)[0: (∃ x6 . (phi0 -> ⊥)[0: phi0])][0: phi1] -> phi1[phi0/x6]))=40
+Load ((∃ x100 . (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100]) -> ((phi0 -> ⊥)[0: (∃ x6 . (phi0 -> ⊥)[0: phi0])][0: phi1] -> phi1[phi0/x6]))=38
 Publish
 EVar 0
 Save
@@ -204,7 +202,7 @@ MetaVar 2
 Save
 ESubst id=0
 Load phi1=3
-Load phi2=55
+Load phi2=53
 ESubst id=0
 Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]]=15
 Instantiate 0, 1
@@ -213,11 +211,11 @@ Save
 Publish
 Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: phi1]=15
 Load phi1=3
-Load phi2=55
+Load phi2=53
 Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]]=15
 Instantiate 0, 1
 Load phi0=2
-Load phi2=55
+Load phi2=53
 Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]]=15
 Instantiate 0, 1
 Implies
@@ -236,23 +234,72 @@ Implies
 Save
 Publish
 Load phi0=2
-Load phi2=55
+Load phi1=3
+Load (phi0 -> ⊥)[0: phi0]=6
+Load phi1=3
+Implies
+Save
+Instantiate 0, 1
+Save
+Load phi2=53
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=62
+Instantiate 0, 1
 Load phi0=2
+Load phi1=3
+Load phi2=53
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=62
+Instantiate 0, 1
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=62
+Instantiate 0, 1
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]]=15
+Instantiate 0, 1
+Save
+Publish
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: phi1]=15
+Load phi2=53
 MetaVar 3
 Save
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]]=15
+Instantiate 0, 1
+Load phi0=2
+Load phi2=53
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=62
+Instantiate 0, 1
+Load phi1=3
+Load phi3=66
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)=62
+Instantiate 0, 1
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]]=15
+Instantiate 0, 1
+Implies
+Implies
+Save
+Publish
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: phi1]=15
+Load (phi0 -> ⊥)[0: phi0]=6
+Load (phi0 -> ⊥)[0: phi1]=7
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]]=15
+Instantiate 0, 1
+Implies
+Save
+Publish
+Load phi0=2
+Load phi2=53
+Load phi0=2
+Load phi3=66
 Load phi1=3
 Load phi0=2
 Load phi1=3
-Load phi2=55
-Load phi3=64
+Load phi2=53
+Load phi3=66
 Load phi0=2
 Load phi1=3
 Load phi0=2
-Load phi2=55
-Load phi3=64
+Load phi2=53
+Load phi3=66
 Load phi0=2
 Load phi1=3
-Load phi2=55
+Load phi2=53
 Load phi0=2
 Load phi1=3
 Load (phi0 -> ⊥)[0: phi1]=7
@@ -268,23 +315,16 @@ Instantiate 0, 1
 Save
 Instantiate 0, 1
 Save
-Load phi2=55
-Load phi0=2
-Load phi1=3
-Load (phi0 -> ⊥)[0: phi0]=6
-Load phi1=3
-Implies
-Save
-Instantiate 0, 1
-Save
+Load phi2=53
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1]=62
 Instantiate 0, 1
 Save
 Instantiate 0, 1, 2
 Save
 Load phi0=2
-Load phi2=55
+Load phi2=53
 Load phi1=3
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=75
 Instantiate 0, 1, 2
 Save
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1]=9
@@ -296,16 +336,16 @@ Load phi1=3
 Load phi0=2
 Load phi1=3
 Load phi0=2
-Load phi2=55
-Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]]=67
+Load phi2=53
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]]=73
 Instantiate 0, 1
 Save
-Load phi2=55
+Load phi2=53
 Load (⌈_⌉ · phi0)=12
 Instantiate 0
 Save
 Load phi1=3
-Load (inhabitant · phi0)=65
+Load (inhabitant · phi0)=71
 Instantiate 0
 Save
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])]=9
@@ -313,38 +353,37 @@ Instantiate 0, 1
 Save
 Instantiate 0, 1, 2
 Save
-Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]]=67
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]]=73
 Instantiate 0, 1
 Save
 Instantiate 0, 1, 2
 Save
 Instantiate 0, 1, 2, 3
 Load phi1=3
-Load (inhabitant · phi0)[0: phi0]=65
+Load (inhabitant · phi0)[0: phi0]=71
 Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]]=15
 Instantiate 0, 1
 Save
 Instantiate 0, 1
-Save
 Load phi1=3
 MetaVar 5
 Load phi1=3
-Load phi2=55
+Load phi2=53
 MetaVar 4
 Save
 ESubst id=0
-Load phi3=64
-Load phi4=85
+Load phi3=66
+Load phi4=88
 ESubst id=0
-Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=82
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=86
 Instantiate 0, 1, 2, 3
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Implies
 Load phi1=3
 Load phi0=2
 Load phi0=2
-Load (inhabitant · phi0)[0: phi1]=78
+Load (inhabitant · phi0)[0: phi1]=82
 Load (phi0 -> phi1)=4
 Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]=14
 Instantiate 0
@@ -352,27 +391,30 @@ Save
 Instantiate 0, 1
 Save
 Instantiate 0, 1
-Load phi2=55
+Load phi2=53
 Implies
 Save
 Instantiate 0, 1, 2
-Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=88
+Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=91
 Instantiate 0, 1, 2
 Save
 Publish
 Load phi1=3
 Load phi0=2
 Load phi1=3
-Load phi2=55
-Load phi3=64
-Load (inhabitant · phi0)[0: phi0]=65
+Load phi2=53
+Load phi3=66
+Load (inhabitant · phi0)[0: phi0]=71
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1]=9
 Instantiate 0, 1
-Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=82
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=86
 Instantiate 0, 1, 2, 3
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi3]]=84
+Load phi1=3
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi3]=86
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
+Instantiate 0, 1
 Implies
 Save
 Publish
@@ -380,35 +422,35 @@ Load phi1=3
 Load phi1=3
 Load phi0=2
 Load phi1=3
-Load phi2=55
-Load phi2=55
-Load phi2=55
+Load phi2=53
+Load phi2=53
+Load phi2=53
 Load phi0=2
 Load phi1=3
-Load phi2=55
-Load phi3=64
-Load phi4=85
+Load phi2=53
+Load phi3=66
+Load phi4=88
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1]=9
 Instantiate 0, 1
 Load phi0=2
 Load phi1=3
 Load phi0=2
-Load phi2=55
-Load phi3=64
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Load phi2=53
+Load phi3=66
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=75
 Instantiate 0, 1, 2
-Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]]=81
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]]=85
 Instantiate 0, 1, 2
 Instantiate 0, 1, 2, 3
 Instantiate 0, 1, 2, 3, 4
-Load phi3=64
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Load phi3=66
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=75
 Instantiate 0, 1, 2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Load phi1=3
-Load phi3=64
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load phi3=66
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Implies
 Save
@@ -417,44 +459,44 @@ Load phi1=3
 Load phi1=3
 Load phi0=2
 Load phi1=3
-Load phi2=55
-Load phi2=55
+Load phi2=53
+Load phi2=53
 Load phi0=2
 Load phi1=3
 Load phi0=2
-Load phi2=55
-Load phi3=64
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Load phi2=53
+Load phi3=66
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=75
 Instantiate 0, 1, 2
-Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]]=81
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]]=85
 Instantiate 0, 1, 2
 Instantiate 0, 1, 2, 3
-Load phi3=64
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Load phi3=66
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=75
 Instantiate 0, 1, 2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Load phi1=3
-Load phi3=64
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load phi3=66
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Implies
 Save
 Publish
 Load phi0=2
 Load phi0=2
-Load (inhabitant · phi0)[0: phi0]=65
+Load (inhabitant · phi0)[0: phi0]=71
 Load phi1=3
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1]=9
 Instantiate 0, 1
-Load phi2=55
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Load phi2=53
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=75
 Instantiate 0, 1, 2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Load phi0=2
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2]=71
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2]=75
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Implies
 Save
@@ -462,128 +504,133 @@ Publish
 Load phi0=2
 Load phi0=2
 Load phi1=3
-Load (inhabitant · phi0)[0: phi0]=65
+Load (inhabitant · phi0)[0: phi0]=71
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1]=9
 Instantiate 0, 1
-Load phi2=55
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Load phi2=53
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=75
 Instantiate 0, 1, 2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Load phi0=2
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2]=71
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2]=75
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Implies
 Save
 Publish
 Load phi0=2
 Load phi0=2
-Load (inhabitant · phi0)[0: phi0]=65
+Load (inhabitant · phi0)[0: phi0]=71
 Load phi1=3
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=75
 Instantiate 0, 1, 2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1]=87
 Implies
 Save
 Publish
 Load phi0=2
-Load phi2=55
+Load phi2=53
 Load phi0=2
-Load phi3=64
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi3]]=84
-Load phi4=85
-Load phi4=85
+Load phi3=66
+Load phi1=3
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi3]=86
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
+Instantiate 0, 1
+Load phi4=88
+Load phi4=88
 MetaVar 5
-Load phi2=55
+Load phi2=53
 MetaVar 6appctx, len=1 x0 
 
 ESubst id=0
 Load phi0=2
 Load phi1=3
-Load phi2=55
+Load phi2=53
 Symbol kore_next
 Load phi0=2
 App
 Save
 Instantiate 0
 Save
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=75
 Instantiate 0, 1, 2
 Save
 Instantiate 0, 1, 2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
-Load phi4=85
-Load phi4=85
+Load phi4=88
+Load phi4=88
 MetaVar 5
-Load phi3=64
+Load phi3=66
 MetaVar 6appctx, len=1 x0 
 
 ESubst id=0
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]]=105
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]]=108
 Instantiate 0, 1, 2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Implies
-Save
 Implies
-Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=88
+Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=91
 Instantiate 0, 1, 2
-Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=88
+Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=91
 Instantiate 0, 1, 2
 Save
 Publish
 Load phi1=3
 Load phi0=2
 Load phi1=3
-Load phi2=55
-Load phi2=55
-Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=82
+Load phi2=53
+Load phi2=53
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=86
 Instantiate 0, 1, 2, 3
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Save
 Publish
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi3]]=84
+Load phi1=3
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]][0: phi0, 1: phi1, 2: phi2, 3: phi3]=86
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
+Instantiate 0, 1
 Load phi1=3
 Load phi0=2
 Load phi1=3
-Load phi3=64
-Load phi4=85
-Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=82
+Load phi3=66
+Load phi4=88
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=86
 Instantiate 0, 1, 2, 3
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Load phi1=3
 Load phi0=2
 Load phi1=3
-Load phi2=55
-Load phi4=85
-Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=82
+Load phi2=53
+Load phi4=88
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=86
 Instantiate 0, 1, 2, 3
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Implies
 Implies
 Save
 Publish
 Load phi0=2
-Load (inhabitant · phi0)[0: phi0]=65
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (inhabitant · phi0)[0: phi0]=71
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Save
 Publish
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1]=87
 Load phi0=2
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2]=71
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2]=75
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Load phi0=2
-Load phi2=55
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load phi2=53
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Implies
 Implies
@@ -591,103 +638,103 @@ Save
 Publish
 Load phi0=2
 Load phi1=3
-Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: (inhabitant · phi0)[0: phi0], 2: phi1]] -> (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1])=101
-Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=88
+Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: (inhabitant · phi0)[0: phi0], 2: phi1]] -> (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1])=104
+Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=91
 Instantiate 0, 1, 2
 Save
 Publish
 Load phi0=2
 Load phi1=3
-Load phi2=55
+Load phi2=53
 Load phi0=2
-Load phi2=55
-Load (inhabitant · phi0)[0: phi0]=65
+Load phi2=53
+Load (inhabitant · phi0)[0: phi0]=71
 Load phi1=3
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1]=9
 Instantiate 0, 1
 Load phi1=3
-Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=82
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=86
 Instantiate 0, 1, 2, 3
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
-Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=88
+Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=91
 Instantiate 0, 1, 2
 Save
 Publish
 Load phi0=2
 Load phi1=3
-Load phi2=55
+Load phi2=53
 Load phi0=2
-Load phi2=55
+Load phi2=53
 Load phi1=3
-Load (inhabitant · phi0)[0: phi0]=65
+Load (inhabitant · phi0)[0: phi0]=71
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1]=9
 Instantiate 0, 1
 Load phi1=3
-Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=82
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=86
 Instantiate 0, 1, 2, 3
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
-Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=88
+Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=91
 Instantiate 0, 1, 2
 Save
 Publish
 Load phi0=2
 Load phi1=3
 Load phi0=2
-Load phi2=55
-Load phi3=64
+Load phi2=53
+Load phi3=66
 Load phi0=2
-Load phi3=64
+Load phi3=66
 Load phi1=3
-Load phi2=55
-Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=82
+Load phi2=53
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=86
 Instantiate 0, 1, 2, 3
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
-Load phi3=64
+Load phi3=66
 Load phi0=2
-Load phi3=64
-Load phi2=55
+Load phi3=66
+Load phi2=53
 Load phi1=3
-Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=82
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=86
 Instantiate 0, 1, 2, 3
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Implies
-Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=88
+Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=91
 Instantiate 0, 1, 2
-Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=88
+Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=91
 Instantiate 0, 1, 2
 Save
 Publish
 Load phi0=2
 Load phi1=3
-Load phi3=64
-Load phi2=55
-Load phi3=64
+Load phi3=66
+Load phi2=53
+Load phi3=66
 Load phi0=2
-Load phi2=55
+Load phi2=53
 Load phi1=3
 Load phi1=3
 Load phi0=2
 Load phi1=3
 Load phi0=2
-Load phi2=55
-Load phi3=64
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Load phi2=53
+Load phi3=66
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=75
 Instantiate 0, 1, 2
-Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]]=81
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]]=85
 Instantiate 0, 1, 2
 Instantiate 0, 1, 2, 3
-Load phi2=55
-Load (inhabitant · phi0)=65
+Load phi2=53
+Load (inhabitant · phi0)=71
 Instantiate 0
-Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=82
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=86
 Instantiate 0, 1, 2, 3
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
-Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=88
+Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=91
 Instantiate 0, 1, 2
 Save
 Publish
@@ -697,36 +744,36 @@ Load phi0=2
 Load phi0=2
 Load phi1=3
 Load phi1=3
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=75
 Instantiate 0, 1, 2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
-Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=88
+Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=91
 Instantiate 0, 1, 2
 Save
 Publish
 Load phi0=2
 Load phi0=2
 Load phi1=3
-Load phi2=55
+Load phi2=53
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1]=9
 Instantiate 0, 1
-Load phi3=64
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Load phi3=66
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=75
 Instantiate 0, 1, 2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Load phi0=2
 Load phi0=2
-Load phi2=55
+Load phi2=53
 Load phi0=2
 Load phi1=3
-Load phi3=64
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Load phi3=66
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=75
 Instantiate 0, 1, 2
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=75
 Instantiate 0, 1, 2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Implies
 Save
@@ -737,118 +784,117 @@ Save
 MetaVar 1sFresh, len=1 X0 
 
 Save
-Load phi0=131
-Load phi0=131
-Load phi1=132
-Load phi1=132
-Load phi0=131
+Load phi0=133
+Load phi0=133
+Load phi1=134
+Load phi1=134
+Load phi0=133
 Load phi1=3
-Load phi0=131
+Load phi0=133
 MetaVar 2sFresh, len=1 X0 
 
 Save
-Load phi0=131
-Load phi1=132
+Load phi0=133
+Load phi1=134
 SVar 0
-Load (kore_next · phi0)=103
+Load (kore_next · phi0)=106
 Instantiate 0
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1]=69
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1]=62
 Instantiate 0, 1
 MetaVar 1pos, len=1 X0 
 
 Mu 0
 Save
-Load (inhabitant · phi0)[0: phi0]=65
+Load (inhabitant · phi0)[0: phi0]=71
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])]=9
 Instantiate 0, 1
 Instantiate 0, 1
 Instantiate 0, 1
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=75
 Instantiate 0, 1, 2
 Instantiate 0, 1, 2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
-Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=88
+Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=91
 Instantiate 0, 1, 2
 Save
 Publish
-Load phi0=131
+Load phi0=133
 Load phi1=3
-Load phi0=131
-Load phi2=133
-Load phi0=131
+Load phi0=133
+Load phi2=135
+Load phi0=133
 MetaVar 3sFresh, len=1 X0 
 
-Load phi0=131
-Load phi0=131
+Load phi0=133
+Load phi0=133
 Load phi1=3
-Load phi2=133
-Load phi0=131
+Load phi2=135
+Load phi0=133
 Load phi1=3
-Load phi0=131
-Load phi2=133
-Load phi0=131
-Load phi1=132
+Load phi0=133
+Load phi2=135
+Load phi0=133
+Load phi1=134
 SVar 0
-Load (kore_next · phi0)=103
+Load (kore_next · phi0)=106
 Instantiate 0
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1]=69
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1]=62
 Instantiate 0, 1
-Load (μ X0 . phi1)=134
-Load (inhabitant · phi0)[0: phi0]=65
+Load (μ X0 . phi1)=136
+Load (inhabitant · phi0)[0: phi0]=71
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])]=9
 Instantiate 0, 1
 Instantiate 0, 1
 Instantiate 0, 1
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=75
 Instantiate 0, 1, 2
 Instantiate 0, 1, 2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
-Load phi0=131
-Load phi0=131
-Load phi2=133
+Load phi0=133
+Load phi0=133
+Load phi2=135
 MetaVar 3sFresh, len=1 X0 
 
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]]=105
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]]=108
 Instantiate 0, 1, 2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
-Load phi0=131
-Load phi0=131
+Load phi0=133
+Load phi0=133
 Load phi1=3
 MetaVar 3sFresh, len=1 X0 
 
-Load phi0=131
+Load phi0=133
 Load phi1=3
-Load phi0=131
-Load phi2=133
-Load phi0=131
-Load phi1=132
+Load phi0=133
+Load phi2=135
+Load phi0=133
+Load phi1=134
 SVar 0
-Load (kore_next · phi0)=103
+Load (kore_next · phi0)=106
 Instantiate 0
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1]=69
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1]=62
 Instantiate 0, 1
-Load (μ X0 . phi1)=134
-Load (inhabitant · phi0)[0: phi0]=65
+Load (μ X0 . phi1)=136
+Load (inhabitant · phi0)[0: phi0]=71
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])]=9
 Instantiate 0, 1
 Instantiate 0, 1
 Instantiate 0, 1
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=75
 Instantiate 0, 1, 2
 Instantiate 0, 1, 2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Implies
-Save
 Implies
-Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=88
+Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=91
 Instantiate 0, 1, 2
-Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=88
+Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=91
 Instantiate 0, 1, 2
-Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=88
+Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: phi1, 1: phi0] -> phi2)=91
 Instantiate 0, 1, 2
 Save
 Publish
@@ -863,7 +909,7 @@ Save
 Publish
 Load x100=1
 Load phi0=2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=87
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=90
 Instantiate 0, 1
 Load phi1=3
 Load x100=1
@@ -873,7 +919,7 @@ Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])]=9
 Instantiate 0, 1
 Load phi1=3
 Load phi0=2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=87
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=90
 Instantiate 0, 1
 Implies
 Save
@@ -919,10 +965,10 @@ App
 Save
 Instantiate 0
 Save
-Load ksort_SortInt=144
+Load ksort_SortInt=145
 Symbol 0
 Save
-Load ((kore_dv · phi0) · phi1)=146
+Load ((kore_dv · phi0) · phi1)=147
 Instantiate 0, 1
 Save
 Symbol <generatedCounter>
@@ -941,7 +987,7 @@ Instantiate 0, 1
 Save
 Symbol ksort_SortGeneratedTopCell
 Save
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=87
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=90
 Instantiate 0, 1
 Save
 Publish
@@ -949,29 +995,28 @@ Symbol ksort_SortGeneratedCounterCell
 Save
 Symbol ksort_SortK
 Save
-Load ksort_SortInt=144
-Load ksort_SortGeneratedTopCell=164
-Load ksort_SortGeneratedTopCell=164
-Load x0=50
-Load (foo(_)_DV_Foo_Int · phi0)=148
+Load ksort_SortInt=145
+Load ksort_SortGeneratedTopCell=165
+Load ksort_SortGeneratedTopCell=165
+Load x0=48
+Load (foo(_)_DV_Foo_Int · phi0)=149
 Instantiate 0
-Load (succ(_)_DV_Foo_Foo · phi0)=150
+Load (succ(_)_DV_Foo_Foo · phi0)=151
 Instantiate 0
 EVar 1
 Save
-Load ((kore_kseq · phi0) · phi1)=154
+Load ((kore_kseq · phi0) · phi1)=155
 Instantiate 0, 1
-Load (<k> · phi0)=156
+Load (<k> · phi0)=157
 Instantiate 0
 EVar 2
-Save
-Load ((<generatedTop> · phi0) · phi1)=162
+Load ((<generatedTop> · phi0) · phi1)=163
 Instantiate 0, 1
-Load x0=50
-Load ksort_SortInt=144
+Load x0=48
+Load ksort_SortInt=145
 Symbol 1
 Save
-Load ((kore_dv · phi0) · phi1)=146
+Load ((kore_dv · phi0) · phi1)=147
 Instantiate 0, 1
 Save
 Symbol _+Int_
@@ -981,25 +1026,25 @@ Load phi1=3
 App
 Save
 Instantiate 0, 1
-Load (foo(_)_DV_Foo_Int · phi0)=148
+Load (foo(_)_DV_Foo_Int · phi0)=149
 Instantiate 0
-Load x1=169
-Load ((kore_kseq · phi0) · phi1)=154
+Load x1=170
+Load ((kore_kseq · phi0) · phi1)=155
 Instantiate 0, 1
-Load (<k> · phi0)=156
+Load (<k> · phi0)=157
 Instantiate 0
-Load x2=170
-Load ((<generatedTop> · phi0) · phi1)=162
+EVar 2
+Load ((<generatedTop> · phi0) · phi1)=163
 Instantiate 0, 1
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]]=105
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]]=108
 Instantiate 0, 1, 2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Load phi0=2
 Load phi1=3
-Load x0=50
+Load x0=48
 Load phi0=2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=87
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=90
 Instantiate 0, 1
 Load phi1=3
 Implies
@@ -1010,9 +1055,9 @@ Instantiate 0, 1
 Instantiate 0, 1
 Load phi0=2
 Load phi1=3
-Load x1=169
+Load x1=170
 Load phi0=2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=87
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=90
 Instantiate 0, 1
 Load phi1=3
 Implies
@@ -1024,9 +1069,9 @@ Instantiate 0, 1
 Instantiate 0, 1
 Load phi0=2
 Load phi1=3
-Load x2=170
+EVar 2
 Load phi0=2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=87
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=90
 Instantiate 0, 1
 Load phi1=3
 Implies
@@ -1038,8 +1083,8 @@ Instantiate 0, 1
 Instantiate 0, 1
 Save
 Publish
-Load ksort_SortGeneratedCounterCell=167
-Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=161
+Load ksort_SortGeneratedCounterCell=168
+Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=162
 Load phi0=2
 MetaVar 1eFresh, len=1 x100 
 
@@ -1048,7 +1093,7 @@ Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> 
 Instantiate 0, 1
 Load x100=1
 Load phi0=2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=87
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=90
 Instantiate 0, 1
 Load phi1=3
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])]=9
@@ -1058,8 +1103,8 @@ Instantiate 0, 1
 Instantiate 0, 1
 Save
 Publish
-Load ksort_SortK=168
-Load dotk[]=152
+Load ksort_SortK=169
+Load dotk[]=153
 Load phi0=2
 MetaVar 1eFresh, len=1 x100 
 
@@ -1068,7 +1113,7 @@ Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> 
 Instantiate 0, 1
 Load x100=1
 Load phi0=2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=87
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=90
 Instantiate 0, 1
 Load phi1=3
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])]=9
@@ -1078,8 +1123,8 @@ Instantiate 0, 1
 Instantiate 0, 1
 Save
 Publish
-Load ksort_SortInt=144
-Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 5]=147
+Load ksort_SortInt=145
+Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 5]=148
 Load phi0=2
 MetaVar 1eFresh, len=1 x100 
 
@@ -1088,7 +1133,7 @@ Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> 
 Instantiate 0, 1
 Load x100=1
 Load phi0=2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=87
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=90
 Instantiate 0, 1
 Load phi1=3
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])]=9
@@ -1098,22 +1143,22 @@ Instantiate 0, 1
 Instantiate 0, 1
 Save
 Publish
-Load ksort_SortGeneratedTopCell=164
-Load ksort_SortInt=144
-Load ksort_SortGeneratedTopCell=164
-Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 5]=147
+Load ksort_SortGeneratedTopCell=165
+Load ksort_SortInt=145
+Load ksort_SortGeneratedTopCell=165
+Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 5]=148
 Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1]=172
 Load ((_+Int_ · phi0) · phi1)=173
 Instantiate 0, 1
-Load ksort_SortInt=144
+Load ksort_SortInt=145
 Symbol 6
 Save
-Load ((kore_dv · phi0) · phi1)=146
+Load ((kore_dv · phi0) · phi1)=147
 Instantiate 0, 1
 Save
-Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=82
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=86
 Instantiate 0, 1, 2, 3
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=83
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=87
 Instantiate 0, 1
 Save
 Publish
@@ -1129,38 +1174,38 @@ Load ((∃ x100 . (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]
 Publish
 Load ((∃ x100 . (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100]) -> ((phi0 -> ⊥)[0: (∃ x5 . (phi0 -> ⊥)[0: phi0])][0: phi1] -> phi1[phi0/x5]))=34
 Publish
-Load ((∃ x100 . (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100]) -> ((phi0 -> ⊥)[0: (∃ x7 . (phi0 -> ⊥)[0: phi0])][0: phi1] -> phi1[phi0/x7]))=37
+Load ((∃ x100 . (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100]) -> ((phi0 -> ⊥)[0: (∃ x7 . (phi0 -> ⊥)[0: phi0])][0: phi1] -> phi1[phi0/x7]))=36
 Publish
-Load ((∃ x100 . (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100]) -> ((phi0 -> ⊥)[0: (∃ x6 . (phi0 -> ⊥)[0: phi0])][0: phi1] -> phi1[phi0/x6]))=40
+Load ((∃ x100 . (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100]) -> ((phi0 -> ⊥)[0: (∃ x6 . (phi0 -> ⊥)[0: phi0])][0: phi1] -> phi1[phi0/x6]))=38
 Publish
-Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 5]=147
+Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 5]=148
 Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1]=172
 Load ((_+Int_ · phi0) · phi1)=173
 Instantiate 0, 1
-Load ksort_SortInt=144
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=87
+Load ksort_SortInt=145
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=90
 Instantiate 0, 1
 Save
 Publish
 Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 6]=184
-Load ksort_SortInt=144
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=87
+Load ksort_SortInt=145
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=90
 Instantiate 0, 1
 Save
 Publish
 Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 6]=184
-Load (foo(_)_DV_Foo_Int · phi0)=148
+Load (foo(_)_DV_Foo_Int · phi0)=149
 Instantiate 0
-Load dotk[]=152
-Load ((kore_kseq · phi0) · phi1)=154
+Load dotk[]=153
+Load ((kore_kseq · phi0) · phi1)=155
 Instantiate 0, 1
-Load (<k> · phi0)=156
+Load (<k> · phi0)=157
 Instantiate 0
-Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=161
-Load ((<generatedTop> · phi0) · phi1)=162
+Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=162
+Load ((<generatedTop> · phi0) · phi1)=163
 Instantiate 0, 1
-Load ksort_SortGeneratedTopCell=164
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=87
+Load ksort_SortGeneratedTopCell=165
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=90
 Instantiate 0, 1
 Save
 Publish

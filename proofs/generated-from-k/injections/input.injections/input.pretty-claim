@@ -1,116 +1,118 @@
 Version 3.0.0
-Load ksort_SortGeneratedTopCell=142
-Load ksort_SortGeneratedTopCell=142
-Load (oof(_)_INJECTIONS-SYNTAX_Oof_Int · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 10]]=131
-Load (f(_)_INJECTIONS-SYNTAX_Foo_Foo · phi0)=132
+Load ksort_SortGeneratedTopCell=145
+Load ksort_SortGeneratedTopCell=145
+Load (oof(_)_INJECTIONS-SYNTAX_Oof_Int · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 10]]=134
+Load (f(_)_INJECTIONS-SYNTAX_Foo_Foo · phi0)=135
 Instantiate 0
-Load dotk[]=133
-Load ((kore_kseq · phi0) · phi1)=135
+Load dotk[]=136
+Load ((kore_kseq · phi0) · phi1)=138
 Instantiate 0, 1
-Load (<k> · phi0)=136
+Load (<k> · phi0)=139
 Instantiate 0
-Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=140
-Load ((<generatedTop> · phi0) · phi1)=141
+Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=143
+Load ((<generatedTop> · phi0) · phi1)=144
 Instantiate 0, 1
-Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1]=151
-Load (foo(_)_INJECTIONS-SYNTAX_Foo_Int · phi0)=165
+Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1]=154
+Load (foo(_)_INJECTIONS-SYNTAX_Foo_Int · phi0)=168
 Instantiate 0
-Load (g(_)_INJECTIONS-SYNTAX_Foo_Foo · phi0)=153
+Load (g(_)_INJECTIONS-SYNTAX_Foo_Foo · phi0)=156
 Instantiate 0
-Load dotk[]=133
-Load ((kore_kseq · phi0) · phi1)=135
+Load dotk[]=136
+Load ((kore_kseq · phi0) · phi1)=138
 Instantiate 0, 1
-Load (<k> · phi0)=136
+Load (<k> · phi0)=139
 Instantiate 0
-Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=140
-Load ((<generatedTop> · phi0) · phi1)=141
+Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=143
+Load ((<generatedTop> · phi0) · phi1)=144
 Instantiate 0, 1
-Load phi0=116
+Load phi0=120
 Load phi1=3
-Load phi0=116
+Load phi0=120
 MetaVar 2sFresh, len=1 X0 
 
-Load phi0=116
+Load phi0=120
 MetaVar 1sFresh, len=1 X0 
 
 SVar 0
-Load (kore_next · phi0)=89
+Load (kore_next · phi0)=93
 Instantiate 0
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1]=56
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1]=49
 Instantiate 0, 1
-Load (μ X0 . phi1)=117
-Load (inhabitant · phi0)[0: phi0]=52
+MetaVar 1pos, len=1 X0 
+
+Mu 0
+Load (inhabitant · phi0)[0: phi0]=58
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])]=10
 Instantiate 0, 1
 Instantiate 0, 1
 Instantiate 0, 1
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=58
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=62
 Instantiate 0, 1, 2
 Instantiate 0, 1, 2
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=70
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=74
 Instantiate 0, 1
 Save
 Publish
 	Stack:
 	0: ⊩ksort_SortGeneratedTopCell (phi1 k-> ((μ X0 . phi1) ⋀ k⊤:phi0)[0: phi0, 1: (phi1 k⋁ ♦X0)][0: phi0, 1: phi2]):phi0[0: ksort_SortGeneratedTopCell, 1: <generatedTop>(<k>((f(_)_INJECTIONS-SYNTAX_Foo_Foo(oof(_)_INJECTIONS-SYNTAX_Oof_Int(dv(10):ksort_SortInt)) ~> dotk())), <generatedCounter>(dv(0):ksort_SortInt)), 2: <generatedTop>(<k>((g(_)_INJECTIONS-SYNTAX_Foo_Foo(foo(_)_INJECTIONS-SYNTAX_Foo_Int(dv(1):ksort_SortInt)) ~> dotk())), <generatedCounter>(dv(0):ksort_SortInt))]
-Load ksort_SortGeneratedTopCell=142
-Load ksort_SortGeneratedTopCell=142
-Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1]=151
-Load (foo(_)_INJECTIONS-SYNTAX_Foo_Int · phi0)=165
+Load ksort_SortGeneratedTopCell=145
+Load ksort_SortGeneratedTopCell=145
+Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1]=154
+Load (foo(_)_INJECTIONS-SYNTAX_Foo_Int · phi0)=168
 Instantiate 0
-Load (g(_)_INJECTIONS-SYNTAX_Foo_Foo · phi0)=153
+Load (g(_)_INJECTIONS-SYNTAX_Foo_Foo · phi0)=156
 Instantiate 0
-Load dotk[]=133
-Load ((kore_kseq · phi0) · phi1)=135
+Load dotk[]=136
+Load ((kore_kseq · phi0) · phi1)=138
 Instantiate 0, 1
-Load (<k> · phi0)=136
+Load (<k> · phi0)=139
 Instantiate 0
-Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=140
-Load ((<generatedTop> · phi0) · phi1)=141
+Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=143
+Load ((<generatedTop> · phi0) · phi1)=144
 Instantiate 0, 1
-Load (g(_)_INJECTIONS-SYNTAX_Foo_Foo · phi0)[0: (oof(_)_INJECTIONS-SYNTAX_Oof_Int · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1]]]=154
-Load dotk[]=133
-Load ((kore_kseq · phi0) · phi1)=135
+Load (g(_)_INJECTIONS-SYNTAX_Foo_Foo · phi0)[0: (oof(_)_INJECTIONS-SYNTAX_Oof_Int · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1]]]=157
+Load dotk[]=136
+Load ((kore_kseq · phi0) · phi1)=138
 Instantiate 0, 1
-Load (<k> · phi0)=136
+Load (<k> · phi0)=139
 Instantiate 0
-Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=140
-Load ((<generatedTop> · phi0) · phi1)=141
+Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=143
+Load ((<generatedTop> · phi0) · phi1)=144
 Instantiate 0, 1
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]]=91
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]]=95
 Instantiate 0, 2, 1
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=70
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=74
 Instantiate 0, 1
 Save
 Publish
 	Stack:
 	0: ⊩ksort_SortGeneratedTopCell (phi1 k-> ((μ X0 . phi1) ⋀ k⊤:phi0)[0: phi0, 1: (phi1 k⋁ ♦X0)][0: phi0, 1: phi2]):phi0[0: ksort_SortGeneratedTopCell, 1: <generatedTop>(<k>((f(_)_INJECTIONS-SYNTAX_Foo_Foo(oof(_)_INJECTIONS-SYNTAX_Oof_Int(dv(10):ksort_SortInt)) ~> dotk())), <generatedCounter>(dv(0):ksort_SortInt)), 2: <generatedTop>(<k>((g(_)_INJECTIONS-SYNTAX_Foo_Foo(foo(_)_INJECTIONS-SYNTAX_Foo_Int(dv(1):ksort_SortInt)) ~> dotk())), <generatedCounter>(dv(0):ksort_SortInt))]
 	1: ⊩ksort_SortGeneratedTopCell (<generatedTop>(<k>((g(_)_INJECTIONS-SYNTAX_Foo_Foo(oof(_)_INJECTIONS-SYNTAX_Oof_Int(dv(1):ksort_SortInt)) ~> dotk())), <generatedCounter>(dv(0):ksort_SortInt)) k=> <generatedTop>(<k>((g(_)_INJECTIONS-SYNTAX_Foo_Foo(foo(_)_INJECTIONS-SYNTAX_Foo_Int(dv(1):ksort_SortInt)) ~> dotk())), <generatedCounter>(dv(0):ksort_SortInt))):ksort_SortGeneratedTopCell
-Load ksort_SortGeneratedTopCell=142
-Load ksort_SortGeneratedTopCell=142
-Load (g(_)_INJECTIONS-SYNTAX_Foo_Foo · phi0)[0: (oof(_)_INJECTIONS-SYNTAX_Oof_Int · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1]]]=154
-Load dotk[]=133
-Load ((kore_kseq · phi0) · phi1)=135
+Load ksort_SortGeneratedTopCell=145
+Load ksort_SortGeneratedTopCell=145
+Load (g(_)_INJECTIONS-SYNTAX_Foo_Foo · phi0)[0: (oof(_)_INJECTIONS-SYNTAX_Oof_Int · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1]]]=157
+Load dotk[]=136
+Load ((kore_kseq · phi0) · phi1)=138
 Instantiate 0, 1
-Load (<k> · phi0)=136
+Load (<k> · phi0)=139
 Instantiate 0
-Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=140
-Load ((<generatedTop> · phi0) · phi1)=141
+Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=143
+Load ((<generatedTop> · phi0) · phi1)=144
 Instantiate 0, 1
-Load (oof(_)_INJECTIONS-SYNTAX_Oof_Int · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 10]]=131
-Load (f(_)_INJECTIONS-SYNTAX_Foo_Foo · phi0)=132
+Load (oof(_)_INJECTIONS-SYNTAX_Oof_Int · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 10]]=134
+Load (f(_)_INJECTIONS-SYNTAX_Foo_Foo · phi0)=135
 Instantiate 0
-Load dotk[]=133
-Load ((kore_kseq · phi0) · phi1)=135
+Load dotk[]=136
+Load ((kore_kseq · phi0) · phi1)=138
 Instantiate 0, 1
-Load (<k> · phi0)=136
+Load (<k> · phi0)=139
 Instantiate 0
-Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=140
-Load ((<generatedTop> · phi0) · phi1)=141
+Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=143
+Load ((<generatedTop> · phi0) · phi1)=144
 Instantiate 0, 1
-Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]]=91
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]]=95
 Instantiate 0, 2, 1
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=70
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=74
 Instantiate 0, 1
 Save
 Publish

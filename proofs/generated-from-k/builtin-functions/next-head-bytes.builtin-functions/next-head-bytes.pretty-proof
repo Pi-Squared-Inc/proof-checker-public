@@ -1,11 +1,11 @@
 Version 3.0.0
-Load x0=51
+Load x0=45
 Load ksort_SortKItem=169
 Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=88
 Instantiate 0, 1
 Load ksort_SortGeneratedTopCell=164
 Load ksort_SortGeneratedTopCell=164
-Load x0=51
+Load x0=45
 Load dotk[]=151
 Load ((kore_kseq · phi0) · phi1)=153
 Instantiate 0, 1
@@ -14,7 +14,7 @@ Instantiate 0
 Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=161
 Load ((<generatedTop> · phi0) · phi1)=162
 Instantiate 0, 1
-Load x0=51
+Load x0=45
 Load (#next(_)_BUILTIN-FUNCTIONS-SYNTAX_KItem_KItem · phi0)=149
 Instantiate 0
 Load dotk[]=151
@@ -267,7 +267,7 @@ Instantiate 0, 1
 Load ksort_SortKItem=169
 Load ksort_SortGeneratedTopCell=164
 Load ksort_SortGeneratedTopCell=164
-Load x0=51
+Load x0=45
 Load x1=170
 Load ((kore_kseq · phi0) · phi1)=153
 Instantiate 0, 1
@@ -276,7 +276,7 @@ Instantiate 0
 Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=161
 Load ((<generatedTop> · phi0) · phi1)=162
 Instantiate 0, 1
-Load x0=51
+Load x0=45
 Load (#next(_)_BUILTIN-FUNCTIONS-SYNTAX_KItem_KItem · phi0)=149
 Instantiate 0
 Load x1=170
@@ -300,7 +300,7 @@ Instantiate 0, 1
 Instantiate 0, 1
 Implies
 Load dotk[]=151
-Load Axiom ((∃ x100 . (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100]) -> ((phi0 -> ⊥)[0: (∃ x1 . (phi0 -> ⊥)[0: phi0])][0: phi1] -> phi1[phi0/x1]))=24
+Load Axiom ((∃ x100 . (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100]) -> ((phi0 -> ⊥)[0: (∃ x1 . (phi0 -> ⊥)[0: phi0])][0: phi1] -> phi1[phi0/x1]))=23
 Instantiate 0
 Load x100=1
 Load ksort_SortK=168
@@ -537,7 +537,7 @@ Load ksort_SortK=168
 Load ksort_SortKItem=169
 Load ksort_SortGeneratedTopCell=164
 Load ksort_SortGeneratedTopCell=164
-Load x0=51
+Load x0=45
 Load (#next(_)_BUILTIN-FUNCTIONS-SYNTAX_KItem_KItem · phi0)=149
 Instantiate 0
 Load x1=170
@@ -548,7 +548,7 @@ Instantiate 0
 Load x2=171
 Load ((<generatedTop> · phi0) · phi1)=162
 Instantiate 0, 1
-Load x0=51
+Load x0=45
 Load x1=170
 Load ((kore_kseq · phi0) · phi1)=153
 Instantiate 0, 1
@@ -571,13 +571,15 @@ Instantiate 0, 1
 Load phi0=2
 Load phi1=3
 Load ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]][0: x1, 1: phi0] -> phi1)=173
-Load (phi0 -> ⊥)[0: (∃ x1 . (phi0 -> ⊥)[0: phi0])]=22
+Load (∃ x1 . (phi0 -> ⊥)[0: phi0])=21
+Load (phi0 -> ⊥)=6
+Instantiate 0
 Instantiate 0
 Instantiate 0, 1
 Instantiate 0, 1
 Implies
 Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=161
-Load Axiom ((∃ x100 . (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100]) -> ((phi0 -> ⊥)[0: (∃ x2 . (phi0 -> ⊥)[0: phi0])][0: phi1] -> phi1[phi0/x2]))=30
+Load Axiom ((∃ x100 . (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: x100]) -> ((phi0 -> ⊥)[0: (∃ x2 . (phi0 -> ⊥)[0: phi0])][0: phi1] -> phi1[phi0/x2]))=28
 Instantiate 0
 Load x100=1
 Load ksort_SortGeneratedCounterCell=167
