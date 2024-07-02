@@ -80,7 +80,7 @@ To get the cairo1-run binary, you need to:
   cargo install --locked --path .
 ```
 3. Now you can use `cairo1-run` binary to execute cairo programs if Cairo's
-   corelib is in the same directory where you're calling the `cairo1-run
+   corelib is in the same directory where you're calling the `cairo1-run`
    binary.
 4. To Prove and Verify, you need to install `platinum-prover` binary on a
    version equal or greater than `v0.9.1`. You can find the instructions
