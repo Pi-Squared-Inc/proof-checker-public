@@ -565,9 +565,6 @@ MetaVar 4
 MetaVar 4
 MetaVar 5
 Load phi2=36
-MetaVar 6appctx, len=1 x0 
-
-ESubst id=0
 Load phi0=2
 Load phi1=3
 Load phi2=36
@@ -585,9 +582,6 @@ MetaVar 4
 MetaVar 4
 MetaVar 5
 Load phi3=61
-MetaVar 6appctx, len=1 x0 
-
-ESubst id=0
 Load phi0=2
 Load phi1=3
 Load phi2=36
@@ -1015,6 +1009,31 @@ Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> 
 Instantiate 0, 1
 Save
 Publish
+Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1]=145
+Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 5]=137
+Symbol node(_,_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree_Tree
+Load phi0=2
+App
+Load phi1=3
+App
+Save
+Instantiate 0, 1
+Load (reverse(_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree · phi0)=138
+Instantiate 0
+Load ksort_SortTree=139
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=84
+Instantiate 0, 1
+Save
+Publish
+Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 5]=137
+Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1]=145
+Load ((node(_,_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree_Tree · phi0) · phi1)=150
+Instantiate 0, 1
+Load ksort_SortTree=139
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=84
+Instantiate 0, 1
+Save
+Publish
 Symbol #reverse-one-five_TREE-REVERSE-INT-SYNTAX_KItem
 Symbol dotk
 Save
@@ -1058,35 +1077,30 @@ Save
 Publish
 Symbol ksort_SortGeneratedCounterCell
 Save
-Load ksort_SortGeneratedTopCell=159
-Load ksort_SortGeneratedTopCell=159
+Load ksort_SortGeneratedTopCell=164
+Load ksort_SortGeneratedTopCell=164
 Symbol #reverse-one-five_TREE-REVERSE-INT-SYNTAX_KItem
-Load dotk[]=150
-Load ((kore_kseq · phi0) · phi1)=152
+Load dotk[]=155
+Load ((kore_kseq · phi0) · phi1)=157
 Instantiate 0, 1
-Load (<k> · phi0)=153
+Load (<k> · phi0)=158
 Instantiate 0
 EVar 0
-Load ((<generatedTop> · phi0) · phi1)=158
+Load ((<generatedTop> · phi0) · phi1)=163
 Instantiate 0, 1
 Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1]=145
 Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 5]=137
-Symbol node(_,_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree_Tree
-Load phi0=2
-App
-Load phi1=3
-App
-Save
+Load ((node(_,_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree_Tree · phi0) · phi1)=150
 Instantiate 0, 1
 Load (reverse(_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree · phi0)=138
 Instantiate 0
-Load dotk[]=150
-Load ((kore_kseq · phi0) · phi1)=152
+Load dotk[]=155
+Load ((kore_kseq · phi0) · phi1)=157
 Instantiate 0, 1
-Load (<k> · phi0)=153
+Load (<k> · phi0)=158
 Instantiate 0
 EVar 0
-Load ((<generatedTop> · phi0) · phi1)=158
+Load ((<generatedTop> · phi0) · phi1)=163
 Instantiate 0, 1
 Load phi0=2
 Load phi1=3
@@ -1115,8 +1129,8 @@ Instantiate 0, 1
 Instantiate 0, 1
 Save
 Publish
-Load ksort_SortGeneratedCounterCell=162
-Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=157
+Load ksort_SortGeneratedCounterCell=167
+Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=162
 Load phi0=2
 MetaVar 1eFresh, len=1 x100 
 
@@ -1177,24 +1191,24 @@ Save
 Publish
 Load ksort_SortTree=139
 Load ksort_SortTree=139
-Load ksort_SortGeneratedTopCell=159
+Load ksort_SortGeneratedTopCell=164
 Load ksort_SortTree=139
-Load ksort_SortGeneratedTopCell=159
+Load ksort_SortGeneratedTopCell=164
 EVar 1
 Save
 EVar 2
 Save
-Load ((node(_,_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree_Tree · phi0) · phi1)=163
+Load ((node(_,_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree_Tree · phi0) · phi1)=150
 Instantiate 0, 1
 Load (reverse(_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree · phi0)=138
 Instantiate 0
-Load x2=173
+Load x2=177
 Load (reverse(_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree · phi0)=138
 Instantiate 0
-Load x1=172
+Load x1=176
 Load (reverse(_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree · phi0)=138
 Instantiate 0
-Load ((node(_,_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree_Tree · phi0) · phi1)=163
+Load ((node(_,_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree_Tree · phi0) · phi1)=150
 Instantiate 0, 1
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=81
 Instantiate 0, 1, 2, 3
@@ -1202,7 +1216,7 @@ Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> 
 Instantiate 0, 1
 Load phi0=2
 Load phi1=3
-Load x2=173
+Load x2=177
 Load phi0=2
 Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=84
 Instantiate 0, 1
@@ -1217,7 +1231,7 @@ Instantiate 0, 1
 Instantiate 0, 1
 Load phi0=2
 Load phi1=3
-Load x1=172
+Load x1=176
 Load phi0=2
 Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=84
 Instantiate 0, 1
@@ -1254,15 +1268,15 @@ Save
 Publish
 Load ksort_SortTree=139
 Load ksort_SortInt=134
-Load ksort_SortGeneratedTopCell=159
-Load ksort_SortGeneratedTopCell=159
-Load x1=172
-Load x2=173
+Load ksort_SortGeneratedTopCell=164
+Load ksort_SortGeneratedTopCell=164
+Load x1=176
+Load x2=177
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1]=10
 Instantiate 0, 1
 Load ksort_SortTree=139
-Load x1=172
-Load ksort_SortGeneratedTopCell=159
+Load x1=176
+Load ksort_SortGeneratedTopCell=164
 Load phi0=2
 Load phi1=3
 Load phi0=2
@@ -1273,17 +1287,17 @@ Instantiate 0, 1, 2
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]]=80
 Instantiate 0, 1, 2
 Instantiate 3, 0, 2, 1
-Load x2=173
+Load x2=177
 Load ksort_SortTree=139
 Load (inhabitant · phi0)=66
 Instantiate 0
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1]=10
 Instantiate 0, 1
 Load ksort_SortTree=139
-Load x1=172
+Load x1=176
 Load (reverse(_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree · phi0)=138
 Instantiate 0
-Load ksort_SortGeneratedTopCell=159
+Load ksort_SortGeneratedTopCell=164
 Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi1, 1: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (⌈_⌉ · phi0)[0: phi2], 1: (inhabitant · phi0)[0: phi1]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi2]]][0: phi0, 1: phi1, 2: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: phi2], 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi2, 2: phi1]][0: phi0, 1: phi2, 2: phi3]]=81
 Instantiate 3, 0, 2, 1
 Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=70
@@ -1292,7 +1306,7 @@ Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> 
 Instantiate 0, 1
 Load phi0=2
 Load phi1=3
-Load x1=172
+Load x1=176
 Load phi0=2
 Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=84
 Instantiate 0, 1
@@ -1307,7 +1321,7 @@ Instantiate 0, 1
 Instantiate 0, 1
 Load phi0=2
 Load phi1=3
-Load x2=173
+Load x2=177
 Load phi0=2
 Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=84
 Instantiate 0, 1
@@ -1354,37 +1368,53 @@ Load ((∃ x100 . (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]]
 Publish
 Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1]=145
 Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 5]=137
-Load ((node(_,_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree_Tree · phi0) · phi1)=163
+Load ((node(_,_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree_Tree · phi0) · phi1)=150
 Instantiate 0, 1
 Load (reverse(_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree · phi0)=138
 Instantiate 0
-Load ksort_SortTree=139
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=84
+Load dotk[]=155
+Load ((kore_kseq · phi0) · phi1)=157
 Instantiate 0, 1
-Save
-Publish
-Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 5]=137
-Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1]=145
-Load ((node(_,_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree_Tree · phi0) · phi1)=163
-Instantiate 0, 1
-Load ksort_SortTree=139
-Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=84
-Instantiate 0, 1
-Save
-Publish
-Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 5]=137
-Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1]=145
-Load ((node(_,_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree_Tree · phi0) · phi1)=163
-Instantiate 0, 1
-Load dotk[]=150
-Load ((kore_kseq · phi0) · phi1)=152
-Instantiate 0, 1
-Load (<k> · phi0)=153
+Load (<k> · phi0)=158
 Instantiate 0
-Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=157
-Load ((<generatedTop> · phi0) · phi1)=158
+Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=162
+Load ((<generatedTop> · phi0) · phi1)=163
 Instantiate 0, 1
-Load ksort_SortGeneratedTopCell=159
+Load ksort_SortTree=139
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=84
+Instantiate 0, 1
+Save
+Publish
+Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 5]=137
+Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1]=145
+Load ((node(_,_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree_Tree · phi0) · phi1)=150
+Instantiate 0, 1
+Load dotk[]=155
+Load ((kore_kseq · phi0) · phi1)=157
+Instantiate 0, 1
+Load (<k> · phi0)=158
+Instantiate 0
+Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=162
+Load ((<generatedTop> · phi0) · phi1)=163
+Instantiate 0, 1
+Load ksort_SortTree=139
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=84
+Instantiate 0, 1
+Save
+Publish
+Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 5]=137
+Load ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 1]=145
+Load ((node(_,_)_TREE-REVERSE-INT-SYNTAX_Tree_Tree_Tree · phi0) · phi1)=150
+Instantiate 0, 1
+Load dotk[]=155
+Load ((kore_kseq · phi0) · phi1)=157
+Instantiate 0, 1
+Load (<k> · phi0)=158
+Instantiate 0
+Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=162
+Load ((<generatedTop> · phi0) · phi1)=163
+Instantiate 0, 1
+Load ksort_SortGeneratedTopCell=164
 Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> phi1)][0: phi0, 1: (inhabitant · phi0)[0: phi1]]=84
 Instantiate 0, 1
 Save

@@ -80,6 +80,49 @@ Instantiate 0, 1, 2
 Instantiate 0, 2, 1
 Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=73
 Instantiate 0, 1
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: ksort_SortGeneratedTopCell, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]][0: ksort_SortGeneratedTopCell, 1: ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ((state(_,_)_ADD-REWRITE-SYNTAX_State_Nat_Nat · phi0) · phi1)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]], 1: z()_ADD-REWRITE-SYNTAX_Nat[]], 1: dotk[]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]], 2: ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ((add(_,_)_ADD-REWRITE-SYNTAX_Nat_Nat_Nat · phi0) · phi1)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]], 1: z()_ADD-REWRITE-SYNTAX_Nat[]], 1: ((kore_kseq · phi0) · phi1)[0: ((state(_,_)_ADD-REWRITE-SYNTAX_State_Nat_Nat · phi0) · phi1)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]], 1: z()_ADD-REWRITE-SYNTAX_Nat[]], 1: dotk[]]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]]]=203
+Load x0=34
+Load Axiom ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: phi1] -> (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi2[phi0/x0], 1: phi2[phi1/x0]])=40
+Instantiate 0, 1, 2
+Load ksort_SortGeneratedTopCell=140
+Load ksort_SortGeneratedTopCell=140
+Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]=127
+Load z()_ADD-REWRITE-SYNTAX_Nat[]=123
+Load ((add(_,_)_ADD-REWRITE-SYNTAX_Nat_Nat_Nat · phi0) · phi1)=146
+Instantiate 0, 1
+Load ((kore_kseq · phi0) · phi1)[0: ((state(_,_)_ADD-REWRITE-SYNTAX_State_Nat_Nat · phi0) · phi1)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]], 1: z()_ADD-REWRITE-SYNTAX_Nat[]], 1: dotk[]]=162
+Load ((kore_kseq · phi0) · phi1)=131
+Instantiate 0, 1
+Load (<k> · phi0)=132
+Instantiate 0
+Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=138
+Load ((<generatedTop> · phi0) · phi1)=139
+Instantiate 0, 1
+Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]=127
+Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]=127
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1]=9
+Instantiate 0, 1
+Load z()_ADD-REWRITE-SYNTAX_Nat[]=123
+Load ((state(_,_)_ADD-REWRITE-SYNTAX_State_Nat_Nat · phi0) · phi1)=128
+Instantiate 0, 1
+Load dotk[]=129
+Load ((kore_kseq · phi0) · phi1)=131
+Instantiate 0, 1
+Load (<k> · phi0)=132
+Instantiate 0
+Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=138
+Load ((<generatedTop> · phi0) · phi1)=139
+Instantiate 0, 1
+Load phi0=1
+Load phi1=2
+MetaVar 2
+Load (kore_next · phi0)=90
+Instantiate 0
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Instantiate 0, 1, 2
+Instantiate 0, 2, 1
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=73
+Instantiate 0, 1
 Load ksort_SortGeneratedTopCell=140
 Load ksort_SortGeneratedTopCell=140
 Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]=127
@@ -228,6 +271,7 @@ ModusPonens
 Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]=127
 Load Axiom (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: phi0, 1: phi0], 1: phi0]=120
 Instantiate 0
+ModusPonens
 ModusPonens
 ModusPonens
 ModusPonens
@@ -5917,6 +5961,46 @@ Instantiate 0, 1, 2
 Instantiate 0, 2, 1
 Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=73
 Instantiate 0, 1
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: ksort_SortGeneratedTopCell, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]][0: ksort_SortGeneratedTopCell, 1: ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]], 1: ((kore_kseq · phi0) · phi1)[0: ((state(_,_)_ADD-REWRITE-SYNTAX_State_Nat_Nat · phi0) · phi1)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]], 1: z()_ADD-REWRITE-SYNTAX_Nat[]], 1: dotk[]]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]], 2: ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ((state(_,_)_ADD-REWRITE-SYNTAX_State_Nat_Nat · phi0) · phi1)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]], 1: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]], 1: dotk[]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]]]=199
+Load x0=34
+Load Axiom ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: phi1] -> (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi2[phi0/x0], 1: phi2[phi1/x0]])=40
+Instantiate 0, 1, 2
+Load ksort_SortGeneratedTopCell=140
+Load ksort_SortGeneratedTopCell=140
+Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]=126
+Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]=127
+Load ((state(_,_)_ADD-REWRITE-SYNTAX_State_Nat_Nat · phi0) · phi1)=128
+Instantiate 0, 1
+Load dotk[]=129
+Load ((kore_kseq · phi0) · phi1)=131
+Instantiate 0, 1
+Load (<k> · phi0)=132
+Instantiate 0
+Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=138
+Load ((<generatedTop> · phi0) · phi1)=139
+Instantiate 0, 1
+Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]=127
+Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]=127
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1]=9
+Instantiate 0, 1
+Load ((kore_kseq · phi0) · phi1)[0: ((state(_,_)_ADD-REWRITE-SYNTAX_State_Nat_Nat · phi0) · phi1)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]], 1: z()_ADD-REWRITE-SYNTAX_Nat[]], 1: dotk[]]=162
+Load ((kore_kseq · phi0) · phi1)=131
+Instantiate 0, 1
+Load (<k> · phi0)=132
+Instantiate 0
+Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=138
+Load ((<generatedTop> · phi0) · phi1)=139
+Instantiate 0, 1
+Load phi0=1
+Load phi1=2
+MetaVar 2
+Load (kore_next · phi0)=90
+Instantiate 0
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Instantiate 0, 1, 2
+Instantiate 0, 2, 1
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=73
+Instantiate 0, 1
 Load ksort_SortGeneratedTopCell=140
 Load ksort_SortGeneratedTopCell=140
 Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]=126
@@ -6056,6 +6140,7 @@ ModusPonens
 Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]=127
 Load Axiom (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: phi0, 1: phi0], 1: phi0]=120
 Instantiate 0
+ModusPonens
 ModusPonens
 ModusPonens
 ModusPonens
@@ -8209,6 +8294,49 @@ Instantiate 0, 1, 2
 Instantiate 0, 2, 1
 Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=73
 Instantiate 0, 1
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: ksort_SortGeneratedTopCell, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]][0: ksort_SortGeneratedTopCell, 1: ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ((state(_,_)_ADD-REWRITE-SYNTAX_State_Nat_Nat · phi0) · phi1)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]], 1: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]], 1: dotk[]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]], 2: ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ((add(_,_)_ADD-REWRITE-SYNTAX_Nat_Nat_Nat · phi0) · phi1)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]], 1: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]], 1: ((kore_kseq · phi0) · phi1)[0: ((state(_,_)_ADD-REWRITE-SYNTAX_State_Nat_Nat · phi0) · phi1)[0: z()_ADD-REWRITE-SYNTAX_Nat[], 1: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]], 1: dotk[]]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]]]=198
+Load x0=34
+Load Axiom ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: phi1] -> (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi2[phi0/x0], 1: phi2[phi1/x0]])=40
+Instantiate 0, 1, 2
+Load ksort_SortGeneratedTopCell=140
+Load ksort_SortGeneratedTopCell=140
+Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]=126
+Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]=127
+Load ((add(_,_)_ADD-REWRITE-SYNTAX_Nat_Nat_Nat · phi0) · phi1)=146
+Instantiate 0, 1
+Load ((kore_kseq · phi0) · phi1)[0: ((state(_,_)_ADD-REWRITE-SYNTAX_State_Nat_Nat · phi0) · phi1)[0: z()_ADD-REWRITE-SYNTAX_Nat[], 1: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]], 1: dotk[]]=180
+Load ((kore_kseq · phi0) · phi1)=131
+Instantiate 0, 1
+Load (<k> · phi0)=132
+Instantiate 0
+Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=138
+Load ((<generatedTop> · phi0) · phi1)=139
+Instantiate 0, 1
+Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]=126
+Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]=126
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1]=9
+Instantiate 0, 1
+Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]=127
+Load ((state(_,_)_ADD-REWRITE-SYNTAX_State_Nat_Nat · phi0) · phi1)=128
+Instantiate 0, 1
+Load dotk[]=129
+Load ((kore_kseq · phi0) · phi1)=131
+Instantiate 0, 1
+Load (<k> · phi0)=132
+Instantiate 0
+Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=138
+Load ((<generatedTop> · phi0) · phi1)=139
+Instantiate 0, 1
+Load phi0=1
+Load phi1=2
+MetaVar 2
+Load (kore_next · phi0)=90
+Instantiate 0
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Instantiate 0, 1, 2
+Instantiate 0, 2, 1
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=73
+Instantiate 0, 1
 Load ksort_SortGeneratedTopCell=140
 Load ksort_SortGeneratedTopCell=140
 Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]=126
@@ -8357,6 +8485,7 @@ ModusPonens
 Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]=126
 Load Axiom (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: phi0, 1: phi0], 1: phi0]=120
 Instantiate 0
+ModusPonens
 ModusPonens
 ModusPonens
 ModusPonens
@@ -12837,6 +12966,46 @@ Instantiate 0, 1, 2
 Instantiate 0, 2, 1
 Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=73
 Instantiate 0, 1
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]][0: ksort_SortGeneratedTopCell, 1: ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2][0: phi0, 1: phi1, 2: (kore_next · phi0)[0: phi2]][0: ksort_SortGeneratedTopCell, 1: ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]], 1: ((kore_kseq · phi0) · phi1)[0: ((state(_,_)_ADD-REWRITE-SYNTAX_State_Nat_Nat · phi0) · phi1)[0: z()_ADD-REWRITE-SYNTAX_Nat[], 1: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]], 1: dotk[]]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]], 2: ((<generatedTop> · phi0) · phi1)[0: (<k> · phi0)[0: ((kore_kseq · phi0) · phi1)[0: ((state(_,_)_ADD-REWRITE-SYNTAX_State_Nat_Nat · phi0) · phi1)[0: z()_ADD-REWRITE-SYNTAX_Nat[], 1: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]]], 1: dotk[]]], 1: (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]]]]=195
+Load x0=34
+Load Axiom ((phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi0, 1: phi1] -> (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi2[phi0/x0], 1: phi2[phi1/x0]])=40
+Instantiate 0, 1, 2
+Load ksort_SortGeneratedTopCell=140
+Load ksort_SortGeneratedTopCell=140
+Load z()_ADD-REWRITE-SYNTAX_Nat[]=123
+Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]]=185
+Load ((state(_,_)_ADD-REWRITE-SYNTAX_State_Nat_Nat · phi0) · phi1)=128
+Instantiate 0, 1
+Load dotk[]=129
+Load ((kore_kseq · phi0) · phi1)=131
+Instantiate 0, 1
+Load (<k> · phi0)=132
+Instantiate 0
+Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=138
+Load ((<generatedTop> · phi0) · phi1)=139
+Instantiate 0, 1
+Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]]=185
+Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]]=185
+Load (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1]=9
+Instantiate 0, 1
+Load ((kore_kseq · phi0) · phi1)[0: ((state(_,_)_ADD-REWRITE-SYNTAX_State_Nat_Nat · phi0) · phi1)[0: z()_ADD-REWRITE-SYNTAX_Nat[], 1: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]], 1: dotk[]]=180
+Load ((kore_kseq · phi0) · phi1)=131
+Instantiate 0, 1
+Load (<k> · phi0)=132
+Instantiate 0
+Load (<generatedCounter> · phi0)[0: ((kore_dv · phi0) · phi1)[0: ksort_SortInt, 1: 0]]=138
+Load ((<generatedTop> · phi0) · phi1)=139
+Instantiate 0, 1
+Load phi0=1
+Load phi1=2
+MetaVar 2
+Load (kore_next · phi0)=90
+Instantiate 0
+Load ((phi0 -> ⊥)[0: phi0] -> phi1)[0: phi0, 1: phi1][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> ⊥)[0: phi1], 1: (inhabitant · phi0)[0: phi0]][0: phi0, 1: phi1], 1: phi2]=71
+Instantiate 0, 1, 2
+Instantiate 0, 2, 1
+Load (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: phi1, 1: (inhabitant · phi0)[0: phi0]]=73
+Instantiate 0, 1
 Load ksort_SortGeneratedTopCell=140
 Load ksort_SortGeneratedTopCell=140
 Load z()_ADD-REWRITE-SYNTAX_Nat[]=123
@@ -12976,6 +13145,7 @@ ModusPonens
 Load (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: (s(_)_ADD-REWRITE-SYNTAX_Nat_Nat · phi0)[0: z()_ADD-REWRITE-SYNTAX_Nat[]]]]=185
 Load Axiom (phi0 -> ⊥)[0: (⌈_⌉ · phi0)[0: (phi0 -> ⊥)[0: phi0]]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: (phi0 -> phi1), 1: (phi1 -> phi0)][0: phi0, 1: phi1]][0: (phi0 -> ⊥)[0: (phi0 -> (phi0 -> ⊥)[0: phi1])][0: phi0, 1: phi1][0: phi0, 1: phi0], 1: phi0]=120
 Instantiate 0
+ModusPonens
 ModusPonens
 ModusPonens
 ModusPonens
