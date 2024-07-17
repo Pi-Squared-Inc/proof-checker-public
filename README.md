@@ -1,6 +1,11 @@
 $\Pi^2$ Proof Checker Implementation
 ====================================
 
+__WARNING: The code on this branch is deprecated, out of date, and uses
+old dependencies that have security issues. It is here for historical
+reference only. See the [main branch](../../tree/main) of this repo for
+details on our current publicly available code.__
+
 This repository contains implementations of the matching logic proof checker
 using Cairo, Risc0 and zkLLVM. Note that the code in this repository is
 experimental and exploratory.

@@ -1,5 +1,10 @@
 # Experiments and Evaluation of ZK Backends
 
+__WARNING: The code on this branch is deprecated, out of date, and uses
+old dependencies that have security issues. It is here for historical
+reference only. These benchmark results do not reflect results for
+current code.__
+
 This document outlines our experiments and evaluation of various Zero Knowledge (ZK) backends. Our evaluation uses two benchmark sets: Direct Implementation and Proofs of Proofs.
 
 ### Direct Implementation
